@@ -4,7 +4,7 @@
 ** AfriCallShop app is based on Linphone source code **
 ********************************
 
-This is Africallshop, a free (GPL) sip softphone based on the SIP protocol.
+This is Africallshop, a free (GPL) sip softphone based on Linphone (http://www.linphone.org/) source code.
 
 Please contact us at support@africallshop.com to get source code.
 
