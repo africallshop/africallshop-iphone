@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="group__linphone__address" kind="group">
+    <compoundname>linphone_address</compoundname>
+    <title>SIP address parser API.</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__linphone__address_1ga301c9884c0bc8b1050fe790d424e0b49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* linphone_address_new</definition>
+        <argsstring>(const char *addr)</argsstring>
+        <name>linphone_address_new</name>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a LinphoneAddress object by parsing the user supplied address, given as a string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="33" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga7b33626eea53bbd5cea9e5c4c58826df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* linphone_address_clone</definition>
+        <argsstring>(const LinphoneAddress *addr)</argsstring>
+        <name>linphone_address_clone</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clones a LinphoneAddress object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="42" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga5441e1566c08892abf8ca1f1d7cfbe6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* linphone_address_ref</definition>
+        <argsstring>(LinphoneAddress *addr)</argsstring>
+        <name>linphone_address_ref</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment reference count of LinphoneAddress object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="49" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1gae7ed90ea85c09c793e994367e6a5422e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_address_unref</definition>
+        <argsstring>(LinphoneAddress *addr)</argsstring>
+        <name>linphone_address_unref</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Decrement reference count of LinphoneAddress object. When dropped to zero, memory is freed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="56" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga3a1cb31f2ccf9ed1cc26ed109186cd00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_address_get_scheme</definition>
+        <argsstring>(const LinphoneAddress *u)</argsstring>
+        <name>linphone_address_get_scheme</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the address scheme, normally &quot;sip&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="63" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga7833893b452f330019557432dfe0cd56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_address_get_display_name</definition>
+        <argsstring>(const LinphoneAddress *u)</argsstring>
+        <name>linphone_address_get_display_name</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the display name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="70" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga4fa5a4927c1d2f3a6b7c6824e35a87bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_address_get_username</definition>
+        <argsstring>(const LinphoneAddress *u)</argsstring>
+        <name>linphone_address_get_username</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the username. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="77" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga95a356f26c67ed4ee88db878b617c65f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_address_get_domain</definition>
+        <argsstring>(const LinphoneAddress *u)</argsstring>
+        <name>linphone_address_get_domain</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the domain name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="84" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga5814d2ca174257d5e25da1e0d9c84ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_address_set_display_name</definition>
+        <argsstring>(LinphoneAddress *u, const char *display_name)</argsstring>
+        <name>linphone_address_set_display_name</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>display_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the display name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="91" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1gadf074b5a5ef0b2fb016e03cedec2106a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_address_set_username</definition>
+        <argsstring>(LinphoneAddress *uri, const char *username)</argsstring>
+        <name>linphone_address_set_username</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>uri</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the username. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="98" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga947819a2bbf6aedcd8e5903469cffec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_address_set_domain</definition>
+        <argsstring>(LinphoneAddress *uri, const char *host)</argsstring>
+        <name>linphone_address_set_domain</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>uri</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the domain. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="105" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1gae0b7f4871736c9182db6665fea2a3bf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_address_set_port</definition>
+        <argsstring>(LinphoneAddress *uri, int port)</argsstring>
+        <name>linphone_address_set_port</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>uri</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the port number. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="113" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="113" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1gacd575aa16b3458037ff71794812048d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_address_clean</definition>
+        <argsstring>(LinphoneAddress *uri)</argsstring>
+        <name>linphone_address_clean</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes address&apos;s tags and uri headers so that it is displayable to the user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="124" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga24c1a16f49f8b72f2bab65cc5d8a51af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* linphone_address_as_string</definition>
+        <argsstring>(const LinphoneAddress *u)</argsstring>
+        <name>linphone_address_as_string</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the address as a string. The returned char * must be freed by the application. Use ms_free(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="132" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1gae14a9f3157cc4421e5e5195c9ece2038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* linphone_address_as_string_uri_only</definition>
+        <argsstring>(const LinphoneAddress *u)</argsstring>
+        <name>linphone_address_as_string_uri_only</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the SIP uri only as a string, that is display name is removed. The returned char * must be freed by the application. Use ms_free(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="140" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga7f8ea59014960a5392207c556a2732a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>static bool_t strings_equals</definition>
+        <argsstring>(const char *s1, const char *s2)</argsstring>
+        <name>strings_equals</name>
+        <param>
+          <type>const char *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="144" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1gaa1a43038b407c6ba04577fbc62f598d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_address_weak_equal</definition>
+        <argsstring>(const LinphoneAddress *a1, const LinphoneAddress *a2)</argsstring>
+        <name>linphone_address_weak_equal</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>a2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare two LinphoneAddress ignoring tags and headers, basically just domain, username, and port. Returns TRUE if they are equal. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="154" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="154" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga5777f2976c71a48cf2b3f03c61818f13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_address_destroy</definition>
+        <argsstring>(LinphoneAddress *u)</argsstring>
+        <name>linphone_address_destroy</name>
+        <param>
+          <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys a LinphoneAddress object (actually calls <ref refid="group__linphone__address_1gae7ed90ea85c09c793e994367e6a5422e" kindref="member">linphone_address_unref()</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="170" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="group__linphone__address_1ga7d8ca0ecea4ad6f93914ed8491186e14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_address_get_port</definition>
+        <argsstring>(const LinphoneAddress *u)</argsstring>
+        <name>linphone_address_get_port</name>
+        <param>
+          <type>const <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get port number as an integer value. Get port number, 0 if not present. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" line="181" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/address.c" bodystart="181" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" prot="public" static="no">
+        <type>struct SalAddress</type>
+        <definition>LinphoneAddress</definition>
+        <argsstring></argsstring>
+        <name>LinphoneAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object that represents a SIP address.</para><para>The LinphoneAddress is an opaque object to represents SIP addresses, ie the content of SIP&apos;s &apos;from&apos; and &apos;to&apos; headers. A SIP address is made of display name, username, domain name, port, and various uri headers (such as tags). It looks like &apos;Alice &lt;sip:<ulink url="mailto:alice@example.net">alice@example.net</ulink>&gt;&apos;. The LinphoneAddress has methods to extract and manipulate all parts of the address. When some part of the address (for example the username) is empty, the accessor methods return NULL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="5976" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This api is useful for manipulating SIP addresses (&apos;from&apos; or &apos;to&apos; headers). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

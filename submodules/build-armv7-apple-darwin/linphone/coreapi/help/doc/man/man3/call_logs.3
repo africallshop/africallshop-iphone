@@ -1,0 +1,186 @@
+.TH "Managing call logs" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Managing call logs \- 
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fB_LinphoneCallDir\fP \fBLinphoneCallDir\fP"
+.br
+.ti -1c
+.RI "typedef enum \fB_LinphoneCallStatus\fP \fBLinphoneCallStatus\fP"
+.br
+.ti -1c
+.RI "typedef struct _LinphoneCallLog \fBLinphoneCallLog\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB_LinphoneCallDir\fP { \fBLinphoneCallOutgoing\fP, \fBLinphoneCallIncoming\fP }"
+.br
+.ti -1c
+.RI "enum \fB_LinphoneCallStatus\fP { \fBLinphoneCallSuccess\fP, \fBLinphoneCallAborted\fP, \fBLinphoneCallMissed\fP, \fBLinphoneCallDeclined\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBlinphone_call_log_to_str\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "const rtp_stats_t * \fBlinphone_call_log_get_local_stats\fP (const \fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "const rtp_stats_t * \fBlinphone_call_log_get_remote_stats\fP (const \fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_log_set_user_pointer\fP (\fBLinphoneCallLog\fP *cl, void *up)"
+.br
+.ti -1c
+.RI "void * \fBlinphone_call_log_get_user_pointer\fP (const \fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_log_set_ref_key\fP (\fBLinphoneCallLog\fP *cl, const char *refkey)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_call_log_get_ref_key\fP (const \fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "\fBLinphoneAddress\fP * \fBlinphone_call_log_get_from\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "\fBLinphoneAddress\fP * \fBlinphone_call_log_get_to\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "\fBLinphoneAddress\fP * \fBlinphone_call_log_get_remote_address\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "\fBLinphoneCallDir\fP \fBlinphone_call_log_get_dir\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "\fBLinphoneCallStatus\fP \fBlinphone_call_log_get_status\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "time_t \fBlinphone_call_log_get_start_date\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "int \fBlinphone_call_log_get_duration\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "float \fBlinphone_call_log_get_quality\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_call_log_video_enabled\fP (\fBLinphoneCallLog\fP *cl)"
+.br
+.ti -1c
+.RI "const MSList * \fBlinphone_core_get_call_logs\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_clear_call_logs\fP (\fBLinphoneCore\fP *lc)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fB_LinphoneCallDir\fP \fBLinphoneCallDir\fP"
+Typedef for enum 
+.SS "typedef enum \fB_LinphoneCallStatus\fP  \fBLinphoneCallStatus\fP"
+Enum representing the status of a call 
+.SS "typedef struct _LinphoneCallLog \fBLinphoneCallLog\fP"
+Structure representing a call log\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fB_LinphoneCallDir\fP"
+Enum representing the direction of a call\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILinphoneCallOutgoing \fP\fP
+outgoing calls 
+.TP
+\fB\fILinphoneCallIncoming \fP\fP
+incoming calls 
+.SS "enum \fB_LinphoneCallStatus\fP"
+Enum representing the status of a call 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILinphoneCallSuccess \fP\fP
+The call was sucessful 
+.TP
+\fB\fILinphoneCallAborted \fP\fP
+The call was aborted 
+.TP
+\fB\fILinphoneCallMissed \fP\fP
+The call was missed (unanswered) 
+.TP
+\fB\fILinphoneCallDeclined \fP\fP
+The call was declined, either locally or by remote end 
+.SH "Function Documentation"
+.PP 
+.SS "char* linphone_call_log_to_str (\fBLinphoneCallLog\fP *cl)"
+Returns a human readable string describing the call\&.
+.PP
+\fBNote:\fP
+.RS 4
+: the returned char* must be freed by the application (use ms_free())\&. 
+.RE
+.PP
+
+.SS "const rtp_stats_t* linphone_call_log_get_local_stats (const \fBLinphoneCallLog\fP *cl)"
+Returns RTP statistics computed locally regarding the call\&. 
+.SS "const rtp_stats_t* linphone_call_log_get_remote_stats (const \fBLinphoneCallLog\fP *cl)"
+Returns RTP statistics computed by remote end and sent back via RTCP\&.
+.PP
+\fBNote:\fP
+.RS 4
+Not implemented yet\&. 
+.RE
+.PP
+
+.SS "void linphone_call_log_set_user_pointer (\fBLinphoneCallLog\fP *cl, void *up)"
+Assign a user pointer to the call log\&. 
+.SS "void* linphone_call_log_get_user_pointer (const \fBLinphoneCallLog\fP *cl)"
+Returns the user pointer associated with the call log\&. 
+.SS "void linphone_call_log_set_ref_key (\fBLinphoneCallLog\fP *cl, const char *refkey)"
+Associate a persistent reference key to the call log\&.
+.PP
+The reference key can be for example an id to an external database\&. It is stored in the config file, thus can survive to process exits/restarts\&. 
+.SS "const char* linphone_call_log_get_ref_key (const \fBLinphoneCallLog\fP *cl)"
+Get the persistent reference key associated to the call log\&.
+.PP
+The reference key can be for example an id to an external database\&. It is stored in the config file, thus can survive to process exits/restarts\&. 
+.SS "\fBLinphoneAddress\fP* linphone_call_log_get_from (\fBLinphoneCallLog\fP *cl)"
+Returns origin (ie from) address of the call\&. 
+.SS "\fBLinphoneAddress\fP* linphone_call_log_get_to (\fBLinphoneCallLog\fP *cl)"
+Returns destination address (ie to) of the call\&. 
+.SS "\fBLinphoneAddress\fP* linphone_call_log_get_remote_address (\fBLinphoneCallLog\fP *cl)"
+Returns remote address (that is from or to depending on call direction)\&. 
+.SS "\fBLinphoneCallDir\fP linphone_call_log_get_dir (\fBLinphoneCallLog\fP *cl)"
+Returns the direction of the call\&. 
+.SS "\fBLinphoneCallStatus\fP linphone_call_log_get_status (\fBLinphoneCallLog\fP *cl)"
+Returns the status of the call\&. 
+.SS "time_t linphone_call_log_get_start_date (\fBLinphoneCallLog\fP *cl)"
+Returns the start date of the call, expressed as a POSIX time_t\&. 
+.SS "int linphone_call_log_get_duration (\fBLinphoneCallLog\fP *cl)"
+Returns duration of the call\&. 
+.SS "float linphone_call_log_get_quality (\fBLinphoneCallLog\fP *cl)"
+Returns overall quality indication of the call\&. 
+.SS "bool_t linphone_call_log_video_enabled (\fBLinphoneCallLog\fP *cl)"
+return true if video was enabled at the end of the call 
+.SS "const MSList* linphone_core_get_call_logs (\fBLinphoneCore\fP *lc)"
+Get the list of call logs (past calls)\&. 
+.SS "void linphone_core_clear_call_logs (\fBLinphoneCore\fP *lc)"
+Erase the call log\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

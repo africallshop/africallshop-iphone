@@ -1,0 +1,605 @@
+\section{Initializing liblinphone}
+\label{group__initializing}\index{Initializing liblinphone@{Initializing liblinphone}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \-\_\-\-L\-C\-Sip\-Transports}
+\item 
+struct {\bf \-\_\-\-Linphone\-Core\-V\-Table}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}~0
+\item 
+\#define {\bf L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-R\-A\-N\-D\-O\-M}~-\/1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \-\_\-\-Linphone\-Core {\bf Linphone\-Core}
+\item 
+typedef struct {\bf \-\_\-\-L\-C\-Sip\-Transports} {\bf L\-C\-Sip\-Transports}
+\item 
+typedef enum {\bf \-\_\-\-Linphone\-Ice\-State} {\bf Linphone\-Ice\-State}
+\item 
+typedef enum {\bf \-\_\-\-Linphone\-Upnp\-State} {\bf Linphone\-Upnp\-State}
+\item 
+typedef enum {\bf \-\_\-\-Linphone\-Global\-State} {\bf Linphone\-Global\-State}
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Global\-State\-Changed\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Global\-State} gstate, const char $\ast$message)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Call\-State\-Changed\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, {\bf Linphone\-Call\-State} cstate, const char $\ast$message)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Call\-Encryption\-Changed\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, bool\-\_\-t on, const char $\ast$authentication\-\_\-token)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Registration\-State\-Changed\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Proxy\-Config} $\ast$cfg, {\bf Linphone\-Registration\-State} cstate, const char $\ast$message)
+\item 
+typedef void($\ast$ {\bf Show\-Interface\-Cb} )({\bf Linphone\-Core} $\ast$lc)
+\item 
+typedef void($\ast$ {\bf Display\-Status\-Cb} )({\bf Linphone\-Core} $\ast$lc, const char $\ast$message)
+\item 
+typedef void($\ast$ {\bf Display\-Message\-Cb} )({\bf Linphone\-Core} $\ast$lc, const char $\ast$message)
+\item 
+typedef void($\ast$ {\bf Display\-Url\-Cb} )({\bf Linphone\-Core} $\ast$lc, const char $\ast$message, const char $\ast$url)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Cb\-Func} )({\bf Linphone\-Core} $\ast$lc, void $\ast$user\-\_\-data)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Notify\-Presence\-Received\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Friend} $\ast$lf)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-New\-Subscribtion\-Request\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Friend} $\ast$lf, const char $\ast$url)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Auth\-Info\-Requested\-Cb} )({\bf Linphone\-Core} $\ast$lc, const char $\ast$realm, const char $\ast$username)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Call\-Log\-Updated\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call\-Log} $\ast$newcl)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Text\-Message\-Received\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Chat\-Room} $\ast$room, const {\bf Linphone\-Address} $\ast$from, const char $\ast$message)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Message\-Received\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Chat\-Room} $\ast$room, {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Dtmf\-Received\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, int dtmf)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Refer\-Received\-Cb} )({\bf Linphone\-Core} $\ast$lc, const char $\ast$refer\-\_\-to)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Buddy\-Info\-Updated\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Friend} $\ast$lf)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Transfer\-State\-Changed\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$transfered, {\bf Linphone\-Call\-State} new\-\_\-call\-\_\-state)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Call\-Stats\-Updated\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, const {\bf Linphone\-Call\-Stats} $\ast$stats)
+\item 
+typedef void($\ast$ {\bf Linphone\-Core\-Info\-Received\-Cb} )({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, const Linphone\-Info\-Message $\ast$msg)
+\item 
+typedef struct {\bf \-\_\-\-Linphone\-Core\-V\-Table} {\bf Linphone\-Core\-V\-Table}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf \-\_\-\-Linphone\-Ice\-State} \{ \\*
+{\bf Linphone\-Ice\-State\-Not\-Activated}, 
+\\*
+{\bf Linphone\-Ice\-State\-Failed}, 
+\\*
+{\bf Linphone\-Ice\-State\-In\-Progress}, 
+\\*
+{\bf Linphone\-Ice\-State\-Host\-Connection}, 
+\\*
+{\bf Linphone\-Ice\-State\-Reflexive\-Connection}, 
+\\*
+{\bf Linphone\-Ice\-State\-Relay\-Connection}
+ \}
+\item 
+enum {\bf \-\_\-\-Linphone\-Upnp\-State} \{ \\*
+{\bf Linphone\-Upnp\-State\-Idle}, 
+\\*
+{\bf Linphone\-Upnp\-State\-Pending}, 
+\\*
+{\bf Linphone\-Upnp\-State\-Adding}, 
+\\*
+{\bf Linphone\-Upnp\-State\-Removing}, 
+\\*
+{\bf Linphone\-Upnp\-State\-Not\-Available}, 
+\\*
+{\bf Linphone\-Upnp\-State\-Ok}, 
+\\*
+{\bf Linphone\-Upnp\-State\-Ko}, 
+\\*
+{\bf Linphone\-Upnp\-State\-Blacklisted}
+ \}
+\item 
+enum {\bf \-\_\-\-Linphone\-Global\-State} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Linphone\-Core} $\ast$ {\bf linphone\-\_\-core\-\_\-new} (const {\bf Linphone\-Core\-V\-Table} $\ast$vtable, const char $\ast$config\-\_\-path, const char $\ast$factory\-\_\-config\-\_\-path, void $\ast$userdata)
+\item 
+void {\bf linphone\-\_\-core\-\_\-iterate} ({\bf Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-root\-\_\-ca} ({\bf Linphone\-Core} $\ast$lc, const char $\ast$path)
+\item 
+const char $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-root\-\_\-ca} ({\bf Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-certificates} ({\bf Linphone\-Core} $\ast$lc, bool\-\_\-t yesno)
+\item 
+void {\bf linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-cn} ({\bf Linphone\-Core} $\ast$lc, bool\-\_\-t yesno)
+\item 
+void $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data} ({\bf Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-data} ({\bf Linphone\-Core} $\ast$lc, void $\ast$userdata)
+\item 
+void {\bf linphone\-\_\-core\-\_\-destroy} ({\bf Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path} ({\bf Linphone\-Core} $\ast$lc, const char $\ast$path)
+\item 
+{\bf Linphone\-Core} $\ast$ {\bf linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config} (const {\bf Linphone\-Core\-V\-Table} $\ast$vtable, struct \-\_\-\-Lp\-Config $\ast$config, void $\ast$userdata)
+\item 
+int {\bf linphone\-\_\-core\-\_\-get\-\_\-max\-\_\-calls} ({\bf Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-max\-\_\-calls} ({\bf Linphone\-Core} $\ast$lc, int max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Initializing liblinphone@{Initializing liblinphone}!L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}}
+\index{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D~0}\label{group__initializing_ga735b4f08acd416c740f7ddd6a9791358}
+Disable a sip transport Use with \doxyref{L\-C\-Sip\-Transports}{p.}{group__initializing_gae3417c9be557f9263ffe4f03eec21df0} \index{Initializing liblinphone@{Initializing liblinphone}!L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-R\-A\-N\-D\-O\-M@{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-R\-A\-N\-D\-O\-M}}
+\index{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-R\-A\-N\-D\-O\-M@{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-R\-A\-N\-D\-O\-M}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-R\-A\-N\-D\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-\_\-\-S\-I\-P\-\_\-\-T\-R\-A\-N\-S\-P\-O\-R\-T\-\_\-\-R\-A\-N\-D\-O\-M~-\/1}\label{group__initializing_gadc507b9a498d5ce572fd219e385ad1f4}
+Randomly chose a sip port for this transport Use with \doxyref{L\-C\-Sip\-Transports}{p.}{group__initializing_gae3417c9be557f9263ffe4f03eec21df0} 
+
+\subsection{Typedef Documentation}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core@{Linphone\-Core}}
+\index{Linphone\-Core@{Linphone\-Core}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \-\_\-\-Linphone\-Core {\bf Linphone\-Core}}\label{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a}
+Linphone core main object created by function \doxyref{linphone\-\_\-core\-\_\-new()}{p.}{group__initializing_gac93ed982ae84a5a282a703c8433ca42f} . \index{Initializing liblinphone@{Initializing liblinphone}!L\-C\-Sip\-Transports@{L\-C\-Sip\-Transports}}
+\index{L\-C\-Sip\-Transports@{L\-C\-Sip\-Transports}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{L\-C\-Sip\-Transports}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-L\-C\-Sip\-Transports}  {\bf L\-C\-Sip\-Transports}}\label{group__initializing_gae3417c9be557f9263ffe4f03eec21df0}
+Linphone core S\-I\-P transport ports. Use with \doxyref{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports}{p.}{group__network__parameters_gab5d3dc270fff43b8b782b6435214fecb} \index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Ice\-State@{Linphone\-Ice\-State}}
+\index{Linphone\-Ice\-State@{Linphone\-Ice\-State}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Ice\-State}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Ice\-State} {\bf Linphone\-Ice\-State}}\label{group__initializing_gaf4faffc512588eda7db03fab8b03adfb}
+Enum describing Ice states. \index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State@{Linphone\-Upnp\-State}}
+\index{Linphone\-Upnp\-State@{Linphone\-Upnp\-State}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Upnp\-State}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Upnp\-State} {\bf Linphone\-Upnp\-State}}\label{group__initializing_ga2c19554a0988f7600aec5c3a7588d61a}
+Enum describing u\-Pn\-P states. \index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Global\-State@{Linphone\-Global\-State}}
+\index{Linphone\-Global\-State@{Linphone\-Global\-State}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Global\-State}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Global\-State} {\bf Linphone\-Global\-State}}\label{group__initializing_gae852b5b31d6d5e673de9d2c9b63aca7e}
+Linphone\-Global\-State describes the global state of the Linphone\-Core object. It is notified via the \doxyref{Linphone\-Core\-V\-Table\-::global\-\_\-state\-\_\-changed}{p.}{struct__LinphoneCoreVTable_a706e1ad8826fb8b9e431f654358ecb1f} \index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Global\-State\-Changed\-Cb@{Linphone\-Core\-Global\-State\-Changed\-Cb}}
+\index{Linphone\-Core\-Global\-State\-Changed\-Cb@{Linphone\-Core\-Global\-State\-Changed\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Global\-State\-Changed\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Global\-State\-Changed\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Global\-State} gstate, const char $\ast$message)}\label{group__initializing_ga0d5f5ae5cd47aede0521a838dcd34d52}
+Global state notification callback. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & \\
+\hline
+{\em gstate} & the global state \\
+\hline
+{\em message} & informational message. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Call\-State\-Changed\-Cb@{Linphone\-Core\-Call\-State\-Changed\-Cb}}
+\index{Linphone\-Core\-Call\-State\-Changed\-Cb@{Linphone\-Core\-Call\-State\-Changed\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Call\-State\-Changed\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Call\-State\-Changed\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, {\bf Linphone\-Call\-State} cstate, const char $\ast$message)}\label{group__initializing_gac5e9445fbd5db55076edf97e428f0761}
+Call state notification callback. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the Linphone\-Core \\
+\hline
+{\em call} & the call object whose state is changed. \\
+\hline
+{\em cstate} & the new state of the call \\
+\hline
+{\em message} & an informational message about the state. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Call\-Encryption\-Changed\-Cb@{Linphone\-Core\-Call\-Encryption\-Changed\-Cb}}
+\index{Linphone\-Core\-Call\-Encryption\-Changed\-Cb@{Linphone\-Core\-Call\-Encryption\-Changed\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Call\-Encryption\-Changed\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Call\-Encryption\-Changed\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, bool\-\_\-t on, const char $\ast$authentication\-\_\-token)}\label{group__initializing_ga8f7956cdee9fe88ada9fe4b05db272c6}
+Call encryption changed callback. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the Linphone\-Core \\
+\hline
+{\em call} & the call on which encryption is changed. \\
+\hline
+{\em on} & whether encryption is activated. \\
+\hline
+{\em authentication\-\_\-token} & an authentication\-\_\-token, currently set for Z\-R\-T\-P kind of encryption only. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Registration\-State\-Changed\-Cb@{Linphone\-Core\-Registration\-State\-Changed\-Cb}}
+\index{Linphone\-Core\-Registration\-State\-Changed\-Cb@{Linphone\-Core\-Registration\-State\-Changed\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Registration\-State\-Changed\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Registration\-State\-Changed\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Proxy\-Config} $\ast$cfg, {\bf Linphone\-Registration\-State} cstate, const char $\ast$message)}\label{group__initializing_ga2a004260e6d8ff5174edb3b5dc35708c}
+Registration state notification callback prototype \index{Initializing liblinphone@{Initializing liblinphone}!Show\-Interface\-Cb@{Show\-Interface\-Cb}}
+\index{Show\-Interface\-Cb@{Show\-Interface\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Show\-Interface\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Show\-Interface\-Cb)({\bf Linphone\-Core} $\ast$lc)}\label{group__initializing_ga78c9bec0c79c851f1680f54777da1caa}
+Callback prototype \begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]\end{DoxyRefDesc}
+\index{Initializing liblinphone@{Initializing liblinphone}!Display\-Status\-Cb@{Display\-Status\-Cb}}
+\index{Display\-Status\-Cb@{Display\-Status\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Display\-Status\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Display\-Status\-Cb)({\bf Linphone\-Core} $\ast$lc, const char $\ast$message)}\label{group__initializing_ga1b63e95d4064b3d60be16f36a87a14a1}
+Callback prototype \begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]\end{DoxyRefDesc}
+\index{Initializing liblinphone@{Initializing liblinphone}!Display\-Message\-Cb@{Display\-Message\-Cb}}
+\index{Display\-Message\-Cb@{Display\-Message\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Display\-Message\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Display\-Message\-Cb)({\bf Linphone\-Core} $\ast$lc, const char $\ast$message)}\label{group__initializing_ga36fd5827cd2db5639fba2814b0c33def}
+Callback prototype \begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]\end{DoxyRefDesc}
+\index{Initializing liblinphone@{Initializing liblinphone}!Display\-Url\-Cb@{Display\-Url\-Cb}}
+\index{Display\-Url\-Cb@{Display\-Url\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Display\-Url\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Display\-Url\-Cb)({\bf Linphone\-Core} $\ast$lc, const char $\ast$message, const char $\ast$url)}\label{group__initializing_gaa7a6c1d47bdc13c97133a2cecc57b508}
+Callback prototype \begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]\end{DoxyRefDesc}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Cb\-Func@{Linphone\-Core\-Cb\-Func}}
+\index{Linphone\-Core\-Cb\-Func@{Linphone\-Core\-Cb\-Func}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Cb\-Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Cb\-Func)({\bf Linphone\-Core} $\ast$lc, void $\ast$user\-\_\-data)}\label{group__initializing_ga2e55e712a2453d67eb7848e30eb7dcb4}
+Callback prototype \index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Notify\-Presence\-Received\-Cb@{Linphone\-Core\-Notify\-Presence\-Received\-Cb}}
+\index{Linphone\-Core\-Notify\-Presence\-Received\-Cb@{Linphone\-Core\-Notify\-Presence\-Received\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Notify\-Presence\-Received\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Notify\-Presence\-Received\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Friend} $\ast$lf)}\label{group__initializing_ga9456ee9437dd4473b94c48b045c90765}
+Report status change for a friend previously \doxyref{added }{p.}{group__buddy__list_ga3a8e9184320402082bf35226ae8d25b8} to \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a}. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a} object . \\
+\hline
+{\em lf} & Updated \doxyref{Linphone\-Friend}{p.}{group__buddy__list_ga2f0508bab6d8ded431ce8b1a679a1522} . \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-New\-Subscribtion\-Request\-Cb@{Linphone\-Core\-New\-Subscribtion\-Request\-Cb}}
+\index{Linphone\-Core\-New\-Subscribtion\-Request\-Cb@{Linphone\-Core\-New\-Subscribtion\-Request\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-New\-Subscribtion\-Request\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-New\-Subscribtion\-Request\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Friend} $\ast$lf, const char $\ast$url)}\label{group__initializing_ga2c378ba7064b3e293c9efe1187d6380b}
+Reports that a new subscription request has been received and wait for a decision. Status on this subscription request is notified by \doxyref{changing policy }{p.}{group__buddy__list_ga9ab0c9222edcc0a8e25fb068aee88bc0} for this friend 
+\begin{DoxyParams}{Parameters}
+{\em lc} & \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a} object \\
+\hline
+{\em lf} & \doxyref{Linphone\-Friend}{p.}{group__buddy__list_ga2f0508bab6d8ded431ce8b1a679a1522} corresponding to the subscriber \\
+\hline
+{\em url} & of the subscriber Callback prototype \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Auth\-Info\-Requested\-Cb@{Linphone\-Core\-Auth\-Info\-Requested\-Cb}}
+\index{Linphone\-Core\-Auth\-Info\-Requested\-Cb@{Linphone\-Core\-Auth\-Info\-Requested\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Auth\-Info\-Requested\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Auth\-Info\-Requested\-Cb)({\bf Linphone\-Core} $\ast$lc, const char $\ast$realm, const char $\ast$username)}\label{group__initializing_ga5bdb24285cc60ac0058ca73782309d4c}
+Callback for requesting authentication information to application or user. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the Linphone\-Core \\
+\hline
+{\em realm} & the realm (domain) on which authentication is required. \\
+\hline
+{\em username} & the username that needs to be authenticated. Application shall reply to this callback using \doxyref{linphone\-\_\-core\-\_\-add\-\_\-auth\-\_\-info()}{p.}{group__authentication_ga62ac5bb34f0342f7edc733c42473b7aa}. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Call\-Log\-Updated\-Cb@{Linphone\-Core\-Call\-Log\-Updated\-Cb}}
+\index{Linphone\-Core\-Call\-Log\-Updated\-Cb@{Linphone\-Core\-Call\-Log\-Updated\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Call\-Log\-Updated\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Call\-Log\-Updated\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call\-Log} $\ast$newcl)}\label{group__initializing_ga350bf5a8bfb610afed2152c66775bec9}
+Callback to notify a new call-\/log entry has been added. This is done typically when a call terminates. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the Linphone\-Core \\
+\hline
+{\em newcl} & the new call log entry added. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Text\-Message\-Received\-Cb@{Linphone\-Core\-Text\-Message\-Received\-Cb}}
+\index{Linphone\-Core\-Text\-Message\-Received\-Cb@{Linphone\-Core\-Text\-Message\-Received\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Text\-Message\-Received\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Text\-Message\-Received\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Chat\-Room} $\ast$room, const {\bf Linphone\-Address} $\ast$from, const char $\ast$message)}\label{group__initializing_gaa07b98d360c24e72be3d0cea1515be38}
+Callback prototype \begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]use \#\-Linphone\-Message\-Received instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em lc} & \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a} object \\
+\hline
+{\em room} & \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} involved in this conversation. Can be be created by the framework in case \doxyref{the from }{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} is not present in any chat room. \\
+\hline
+{\em from} & \doxyref{Linphone\-Address}{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} from \\
+\hline
+{\em message} & incoming message \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Message\-Received\-Cb@{Linphone\-Core\-Message\-Received\-Cb}}
+\index{Linphone\-Core\-Message\-Received\-Cb@{Linphone\-Core\-Message\-Received\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Message\-Received\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Message\-Received\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Chat\-Room} $\ast$room, {\bf Linphone\-Chat\-Message} $\ast$message)}\label{group__initializing_gaf4c440e7c2b553a34a0328f537a75950}
+Chat message callback prototype
+
+
+\begin{DoxyParams}{Parameters}
+{\em lc} & \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a} object \\
+\hline
+{\em room} & \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} involved in this conversation. Can be be created by the framework in case \doxyref{the from }{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} is not present in any chat room. \\
+\hline
+{\em Linphone\-Chat\-Message} & incoming message \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Dtmf\-Received\-Cb@{Linphone\-Core\-Dtmf\-Received\-Cb}}
+\index{Linphone\-Core\-Dtmf\-Received\-Cb@{Linphone\-Core\-Dtmf\-Received\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Dtmf\-Received\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Dtmf\-Received\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, int dtmf)}\label{group__initializing_ga245ce3ce5ff27fd6d6b177bc6e085275}
+Callback for being notified of D\-T\-M\-Fs received. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the linphone core \\
+\hline
+{\em call} & the call that received the dtmf \\
+\hline
+{\em dtmf} & the ascii code of the dtmf \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Refer\-Received\-Cb@{Linphone\-Core\-Refer\-Received\-Cb}}
+\index{Linphone\-Core\-Refer\-Received\-Cb@{Linphone\-Core\-Refer\-Received\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Refer\-Received\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Refer\-Received\-Cb)({\bf Linphone\-Core} $\ast$lc, const char $\ast$refer\-\_\-to)}\label{group__initializing_ga68ced292f486a95a34aa45e416b34572}
+Callback prototype \index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Buddy\-Info\-Updated\-Cb@{Linphone\-Core\-Buddy\-Info\-Updated\-Cb}}
+\index{Linphone\-Core\-Buddy\-Info\-Updated\-Cb@{Linphone\-Core\-Buddy\-Info\-Updated\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Buddy\-Info\-Updated\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Buddy\-Info\-Updated\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Friend} $\ast$lf)}\label{group__initializing_gadf96b57b5d27ad443af2719aad69a12a}
+Callback prototype \index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Transfer\-State\-Changed\-Cb@{Linphone\-Core\-Transfer\-State\-Changed\-Cb}}
+\index{Linphone\-Core\-Transfer\-State\-Changed\-Cb@{Linphone\-Core\-Transfer\-State\-Changed\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Transfer\-State\-Changed\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Transfer\-State\-Changed\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$transfered, {\bf Linphone\-Call\-State} new\-\_\-call\-\_\-state)}\label{group__initializing_ga090434c23d1339bb4f833814265edbed}
+Callback for notifying progresses of transfers. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the Linphone\-Core \\
+\hline
+{\em transfered} & the call that was transfered \\
+\hline
+{\em new\-\_\-call\-\_\-state} & the state of the call to transfer target at the far end. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Call\-Stats\-Updated\-Cb@{Linphone\-Core\-Call\-Stats\-Updated\-Cb}}
+\index{Linphone\-Core\-Call\-Stats\-Updated\-Cb@{Linphone\-Core\-Call\-Stats\-Updated\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Call\-Stats\-Updated\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Call\-Stats\-Updated\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, const {\bf Linphone\-Call\-Stats} $\ast$stats)}\label{group__initializing_ga9fa8a442c574f0d18e2ce5eceb8d46b8}
+Callback for receiving quality statistics for calls. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the Linphone\-Core \\
+\hline
+{\em call} & the call \\
+\hline
+{\em stats} & the call statistics. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-Info\-Received\-Cb@{Linphone\-Core\-Info\-Received\-Cb}}
+\index{Linphone\-Core\-Info\-Received\-Cb@{Linphone\-Core\-Info\-Received\-Cb}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-Info\-Received\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Core\-Info\-Received\-Cb)({\bf Linphone\-Core} $\ast$lc, {\bf Linphone\-Call} $\ast$call, const Linphone\-Info\-Message $\ast$msg)}\label{group__initializing_gaabca63ed39406fdd711cf2ebfa6d7451}
+Callback prototype for receiving info messages. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the Linphone\-Core \\
+\hline
+{\em call} & the call whose info message belongs to. \\
+\hline
+{\em msg} & the info message. \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Core\-V\-Table@{Linphone\-Core\-V\-Table}}
+\index{Linphone\-Core\-V\-Table@{Linphone\-Core\-V\-Table}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{Linphone\-Core\-V\-Table}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-Linphone\-Core\-V\-Table}  {\bf Linphone\-Core\-V\-Table}}\label{group__initializing_ga1ca71386f318e4044967ddf32ac7aacb}
+This structure holds all callbacks that the application should implement. None is mandatory. 
+
+\subsection{Enumeration Type Documentation}
+\index{Initializing liblinphone@{Initializing liblinphone}!\-\_\-\-Linphone\-Ice\-State@{\-\_\-\-Linphone\-Ice\-State}}
+\index{\-\_\-\-Linphone\-Ice\-State@{\-\_\-\-Linphone\-Ice\-State}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{\-\_\-\-Linphone\-Ice\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Ice\-State}}\label{group__initializing_ga60b6529245618e6ec7b19670fe7bc71d}
+Enum describing I\-C\-E states. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Linphone\-Ice\-State\-Not\-Activated@{Linphone\-Ice\-State\-Not\-Activated}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Ice\-State\-Not\-Activated@{Linphone\-Ice\-State\-Not\-Activated}}\item[{\em 
+Linphone\-Ice\-State\-Not\-Activated\label{group__initializing_gga60b6529245618e6ec7b19670fe7bc71da0d7fd71eae1589116f0c62fb2501f126}
+}]I\-C\-E has not been activated for this call \index{Linphone\-Ice\-State\-Failed@{Linphone\-Ice\-State\-Failed}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Ice\-State\-Failed@{Linphone\-Ice\-State\-Failed}}\item[{\em 
+Linphone\-Ice\-State\-Failed\label{group__initializing_gga60b6529245618e6ec7b19670fe7bc71dafdd6808b108904fef0695aeb5dfdccd6}
+}]I\-C\-E processing has failed \index{Linphone\-Ice\-State\-In\-Progress@{Linphone\-Ice\-State\-In\-Progress}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Ice\-State\-In\-Progress@{Linphone\-Ice\-State\-In\-Progress}}\item[{\em 
+Linphone\-Ice\-State\-In\-Progress\label{group__initializing_gga60b6529245618e6ec7b19670fe7bc71da4159d63afd5be9b12773ba8408ceee6a}
+}]I\-C\-E process is in progress \index{Linphone\-Ice\-State\-Host\-Connection@{Linphone\-Ice\-State\-Host\-Connection}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Ice\-State\-Host\-Connection@{Linphone\-Ice\-State\-Host\-Connection}}\item[{\em 
+Linphone\-Ice\-State\-Host\-Connection\label{group__initializing_gga60b6529245618e6ec7b19670fe7bc71da2917ccc168ab2a67299fad9909f00d89}
+}]I\-C\-E has established a direct connection to the remote host \index{Linphone\-Ice\-State\-Reflexive\-Connection@{Linphone\-Ice\-State\-Reflexive\-Connection}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Ice\-State\-Reflexive\-Connection@{Linphone\-Ice\-State\-Reflexive\-Connection}}\item[{\em 
+Linphone\-Ice\-State\-Reflexive\-Connection\label{group__initializing_gga60b6529245618e6ec7b19670fe7bc71daf099a98debd1c807212b3efb75d6d6ed}
+}]I\-C\-E has established a connection to the remote host through one or several N\-A\-Ts \index{Linphone\-Ice\-State\-Relay\-Connection@{Linphone\-Ice\-State\-Relay\-Connection}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Ice\-State\-Relay\-Connection@{Linphone\-Ice\-State\-Relay\-Connection}}\item[{\em 
+Linphone\-Ice\-State\-Relay\-Connection\label{group__initializing_gga60b6529245618e6ec7b19670fe7bc71dae02a070882cd892ecc9393f3da2733f5}
+}]I\-C\-E has established a connection through a relay \end{description}
+\end{Desc}
+\index{Initializing liblinphone@{Initializing liblinphone}!\-\_\-\-Linphone\-Upnp\-State@{\-\_\-\-Linphone\-Upnp\-State}}
+\index{\-\_\-\-Linphone\-Upnp\-State@{\-\_\-\-Linphone\-Upnp\-State}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{\-\_\-\-Linphone\-Upnp\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Upnp\-State}}\label{group__initializing_ga3d626fbc6cee8294fef83d197fa27490}
+Enum describing u\-Pn\-P states. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Linphone\-Upnp\-State\-Idle@{Linphone\-Upnp\-State\-Idle}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Idle@{Linphone\-Upnp\-State\-Idle}}\item[{\em 
+Linphone\-Upnp\-State\-Idle\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490ac0c60c390f5cd5a27a538aea39def28b}
+}]u\-Pn\-P is not activate \index{Linphone\-Upnp\-State\-Pending@{Linphone\-Upnp\-State\-Pending}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Pending@{Linphone\-Upnp\-State\-Pending}}\item[{\em 
+Linphone\-Upnp\-State\-Pending\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490adb2fdfe2a5346472b0faa631c3c01f2e}
+}]u\-Pn\-P process is in progress \index{Linphone\-Upnp\-State\-Adding@{Linphone\-Upnp\-State\-Adding}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Adding@{Linphone\-Upnp\-State\-Adding}}\item[{\em 
+Linphone\-Upnp\-State\-Adding\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490ae9de2eb7e97d1b5ab38c0e8ebb057ab3}
+}]Internal use\-: Only used by port binding \index{Linphone\-Upnp\-State\-Removing@{Linphone\-Upnp\-State\-Removing}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Removing@{Linphone\-Upnp\-State\-Removing}}\item[{\em 
+Linphone\-Upnp\-State\-Removing\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490ad6371d3688d549a64096d796faf44822}
+}]Internal use\-: Only used by port binding \index{Linphone\-Upnp\-State\-Not\-Available@{Linphone\-Upnp\-State\-Not\-Available}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Not\-Available@{Linphone\-Upnp\-State\-Not\-Available}}\item[{\em 
+Linphone\-Upnp\-State\-Not\-Available\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490a25fee6e8fd79a2368aa46daf77a6bff9}
+}]u\-Pn\-P is not available \index{Linphone\-Upnp\-State\-Ok@{Linphone\-Upnp\-State\-Ok}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Ok@{Linphone\-Upnp\-State\-Ok}}\item[{\em 
+Linphone\-Upnp\-State\-Ok\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490a69b1709a2087dcf1089d1204ed25a09a}
+}]u\-Pn\-P is enabled \index{Linphone\-Upnp\-State\-Ko@{Linphone\-Upnp\-State\-Ko}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Ko@{Linphone\-Upnp\-State\-Ko}}\item[{\em 
+Linphone\-Upnp\-State\-Ko\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490a228f1c0991292d1867ee7d29e5f5fb85}
+}]u\-Pn\-P processing has failed \index{Linphone\-Upnp\-State\-Blacklisted@{Linphone\-Upnp\-State\-Blacklisted}!Initializing liblinphone@{Initializing liblinphone}}\index{Initializing liblinphone@{Initializing liblinphone}!Linphone\-Upnp\-State\-Blacklisted@{Linphone\-Upnp\-State\-Blacklisted}}\item[{\em 
+Linphone\-Upnp\-State\-Blacklisted\label{group__initializing_gga3d626fbc6cee8294fef83d197fa27490a3b9bdacd34d15820922a89dbddd00f03}
+}]I\-G\-D router is blacklisted \end{description}
+\end{Desc}
+\index{Initializing liblinphone@{Initializing liblinphone}!\-\_\-\-Linphone\-Global\-State@{\-\_\-\-Linphone\-Global\-State}}
+\index{\-\_\-\-Linphone\-Global\-State@{\-\_\-\-Linphone\-Global\-State}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{\-\_\-\-Linphone\-Global\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Global\-State}}\label{group__initializing_ga3bca1685790c41a1729e88af318ffb1c}
+Linphone\-Global\-State describes the global state of the Linphone\-Core object. It is notified via the \doxyref{Linphone\-Core\-V\-Table\-::global\-\_\-state\-\_\-changed}{p.}{struct__LinphoneCoreVTable_a706e1ad8826fb8b9e431f654358ecb1f} 
+
+\subsection{Function Documentation}
+\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-new@{linphone\-\_\-core\-\_\-new}}
+\index{linphone\-\_\-core\-\_\-new@{linphone\-\_\-core\-\_\-new}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Core}$\ast$ linphone\-\_\-core\-\_\-new (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Core\-V\-Table} $\ast$}]{vtable, }
+\item[{const char $\ast$}]{config\-\_\-path, }
+\item[{const char $\ast$}]{factory\-\_\-config\-\_\-path, }
+\item[{void $\ast$}]{userdata}
+\end{DoxyParamCaption}
+)}\label{group__initializing_gac93ed982ae84a5a282a703c8433ca42f}
+Instanciates a Linphone\-Core object.
+
+The Linphone\-Core object is the primary handle for doing all phone actions. It should be unique within your application. 
+\begin{DoxyParams}{Parameters}
+{\em vtable} & a Linphone\-Core\-V\-Table structure holding your application callbacks \\
+\hline
+{\em config\-\_\-path} & a path to a config file. If it does not exists it will be created. The config file is used to store all settings, call logs, friends, proxies... so that all these settings become persistent over the life of the Linphone\-Core object. It is allowed to set a N\-U\-L\-L config file. In that case Linphone\-Core will not store any settings. \\
+\hline
+{\em factory\-\_\-config\-\_\-path} & a path to a read-\/only config file that can be used to to store hard-\/coded preference such as proxy settings or internal preferences. The settings in this factory file always override the one in the normal config file. It is O\-P\-T\-I\-O\-N\-A\-L, use N\-U\-L\-L if unneeded. \\
+\hline
+{\em userdata} & an opaque user pointer that can be retrieved at any time (for example in callbacks) using \doxyref{linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data()}{p.}{group__initializing_ga705206c56f9be737ce1eac53e5ba8b76}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\doxyref{linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config}{p.}{group__initializing_ga147d40a91709f6bbacd070d7358b0f17} 
+\end{DoxySeeAlso}
+\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-iterate@{linphone\-\_\-core\-\_\-iterate}}
+\index{linphone\-\_\-core\-\_\-iterate@{linphone\-\_\-core\-\_\-iterate}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-iterate}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-iterate (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga7bdac8ac386483fc4e0876e4c5d13755}
+Main loop function. It is crucial that your application call it periodically.
+
+\doxyref{linphone\-\_\-core\-\_\-iterate()}{p.}{group__initializing_ga7bdac8ac386483fc4e0876e4c5d13755} performs various backgrounds tasks\-:
+\begin{DoxyItemize}
+\item receiving of S\-I\-P messages
+\item handles timers and timeout
+\item performs registration to proxies
+\item authentication retries The application M\-U\-S\-T call this function periodically, in its main loop. Be careful that this function must be called from the same thread as other liblinphone methods. If it is not the case make sure all liblinphone calls are serialized with a mutex. 
+\end{DoxyItemize}\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-set\-\_\-root\-\_\-ca@{linphone\-\_\-core\-\_\-set\-\_\-root\-\_\-ca}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-root\-\_\-ca@{linphone\-\_\-core\-\_\-set\-\_\-root\-\_\-ca}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-root\-\_\-ca}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-root\-\_\-ca (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga24c7276e70ba9a1cccd1c55c1e15499b}
+Sets the path to a file or folder containing trusted root C\-As (P\-E\-M format)
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em lc} & The Linphone\-Core object \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-get\-\_\-root\-\_\-ca@{linphone\-\_\-core\-\_\-get\-\_\-root\-\_\-ca}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-root\-\_\-ca@{linphone\-\_\-core\-\_\-get\-\_\-root\-\_\-ca}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-root\-\_\-ca}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-core\-\_\-get\-\_\-root\-\_\-ca (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__initializing_gab098e474122584618df055f4095ed580}
+Gets the path to a file or folder containing the trusted root C\-As (P\-E\-M format)
+
+
+\begin{DoxyParams}{Parameters}
+{\em lc} & The Linphone\-Core object \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-certificates@{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-certificates}}
+\index{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-certificates@{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-certificates}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-certificates}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-certificates (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{bool\-\_\-t}]{yesno}
+\end{DoxyParamCaption}
+)}\label{group__initializing_gad8f3f77aebbad9b6fca0f50449dcad93}
+Specify whether the tls server certificate must be verified when connecting to a S\-I\-P/\-T\-L\-S server. \index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-cn@{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-cn}}
+\index{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-cn@{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-cn}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-cn}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-verify\-\_\-server\-\_\-cn (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{bool\-\_\-t}]{yesno}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga5ed6e5580ecbd560a4cf390e975e674c}
+Specify whether the tls server certificate common name must be verified when connecting to a S\-I\-P/\-T\-L\-S server. \index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data@{linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data@{linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga705206c56f9be737ce1eac53e5ba8b76}
+Retrieves the user pointer that was given to \doxyref{linphone\-\_\-core\-\_\-new()}{p.}{group__initializing_gac93ed982ae84a5a282a703c8433ca42f} \index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-data@{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-data}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-data@{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-data}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{void $\ast$}]{userdata}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga7e031f13be31db0584a213a3ce785e25}
+Associate a user pointer to the linphone core. \index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-destroy@{linphone\-\_\-core\-\_\-destroy}}
+\index{linphone\-\_\-core\-\_\-destroy@{linphone\-\_\-core\-\_\-destroy}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga5e3f2f87c8d8262caa1fa90bbd504008}
+Destroys a Linphone\-Core \index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path@{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path@{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga971a0a881b5c9990522ca12e7d2d785b}
+Sets the database filename where chat messages will be stored. If the file does not exist, it will be created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lc} & the linphone core \\
+\hline
+{\em path} & filesystem path \\
+\hline
+\end{DoxyParams}
+\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config@{linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config}}
+\index{linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config@{linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Core}$\ast$ linphone\-\_\-core\-\_\-new\-\_\-with\-\_\-config (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Core\-V\-Table} $\ast$}]{vtable, }
+\item[{struct \-\_\-\-Lp\-Config $\ast$}]{config, }
+\item[{void $\ast$}]{userdata}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga147d40a91709f6bbacd070d7358b0f17}
+Instantiates a Linphone\-Core object with a given Lp\-Config.
+
+The Linphone\-Core object is the primary handle for doing all phone actions. It should be unique within your application. 
+\begin{DoxyParams}{Parameters}
+{\em vtable} & a Linphone\-Core\-V\-Table structure holding your application callbacks \\
+\hline
+{\em config} & a pointer to an Lp\-Config object holding the configuration of the Linphone\-Core to be instantiated. \\
+\hline
+{\em userdata} & an opaque user pointer that can be retrieved at any time (for example in callbacks) using \doxyref{linphone\-\_\-core\-\_\-get\-\_\-user\-\_\-data()}{p.}{group__initializing_ga705206c56f9be737ce1eac53e5ba8b76}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\doxyref{linphone\-\_\-core\-\_\-new}{p.}{group__initializing_gac93ed982ae84a5a282a703c8433ca42f} 
+\end{DoxySeeAlso}
+\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-get\-\_\-max\-\_\-calls@{linphone\-\_\-core\-\_\-get\-\_\-max\-\_\-calls}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-max\-\_\-calls@{linphone\-\_\-core\-\_\-get\-\_\-max\-\_\-calls}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-max\-\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-get\-\_\-max\-\_\-calls (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__initializing_gafac237af98e82869b76b3954fc7f2f7c}
+Get the maximum number of simultaneous calls Linphone core can manage at a time. All new call above this limit are declined with a busy answer
+
+
+\begin{DoxyParams}{Parameters}
+{\em lc} & core \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+max number of simultaneous calls 
+\end{DoxyReturn}
+\index{Initializing liblinphone@{Initializing liblinphone}!linphone\-\_\-core\-\_\-set\-\_\-max\-\_\-calls@{linphone\-\_\-core\-\_\-set\-\_\-max\-\_\-calls}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-max\-\_\-calls@{linphone\-\_\-core\-\_\-set\-\_\-max\-\_\-calls}!Initializing liblinphone@{Initializing liblinphone}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-max\-\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-max\-\_\-calls (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{group__initializing_ga3abcbe218c3b69a115a2aac02112d5f8}
+Set the maximum number of simultaneous calls Linphone core can manage at a time. All new call above this limit are declined with a busy answer
+
+
+\begin{DoxyParams}{Parameters}
+{\em lc} & core \\
+\hline
+{\em max} & number of simultaneous calls \\
+\hline
+\end{DoxyParams}

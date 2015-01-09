@@ -1,0 +1,157 @@
+\section{Obtaining information about a running call\-: sound volumes, quality indicators}
+\label{group__call__misc}\index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \-\_\-\-Linphone\-Call\-Stats}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-D\-B\-\_\-\-L\-O\-W\-E\-S\-T}~(-\/120)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf \-\_\-\-Linphone\-Call\-Stats} {\bf Linphone\-Call\-Stats}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume} ({\bf Linphone\-Call} $\ast$call)
+\item 
+float {\bf linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume} ({\bf Linphone\-Call} $\ast$call)
+\item 
+float {\bf linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality} ({\bf Linphone\-Call} $\ast$call)
+\item 
+float {\bf linphone\-\_\-call\-\_\-get\-\_\-average\-\_\-quality} ({\bf Linphone\-Call} $\ast$call)
+\item 
+const {\bf Linphone\-Call\-Stats} $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats} ({\bf Linphone\-Call} $\ast$call)
+\item 
+const {\bf Linphone\-Call\-Stats} $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats} ({\bf Linphone\-Call} $\ast$call)
+\item 
+void {\bf linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file} ({\bf Linphone\-Call\-Params} $\ast$cp, const char $\ast$path)
+\item 
+const char $\ast$ {\bf linphone\-\_\-call\-\_\-params\-\_\-get\-\_\-record\-\_\-file} (const {\bf Linphone\-Call\-Params} $\ast$cp)
+\item 
+void {\bf linphone\-\_\-call\-\_\-start\-\_\-recording} ({\bf Linphone\-Call} $\ast$call)
+\item 
+void {\bf linphone\-\_\-call\-\_\-stop\-\_\-recording} ({\bf Linphone\-Call} $\ast$call)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When a call is running, it is possible to retrieve in real time current measured volumes and quality indicator. 
+
+\subsection{Macro Definition Documentation}
+\index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-D\-B\-\_\-\-L\-O\-W\-E\-S\-T@{L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-D\-B\-\_\-\-L\-O\-W\-E\-S\-T}}
+\index{L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-D\-B\-\_\-\-L\-O\-W\-E\-S\-T@{L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-D\-B\-\_\-\-L\-O\-W\-E\-S\-T}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-D\-B\-\_\-\-L\-O\-W\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-D\-B\-\_\-\-L\-O\-W\-E\-S\-T~(-\/120)}\label{group__call__misc_ga537911929e31ed4ca388ff40a37f97de}
+Lowest volume measurement that can be returned by \doxyref{linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume()}{p.}{group__call__misc_ga7a0ca45e0ff2bf7eaca09e795bba3486} or \doxyref{linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume()}{p.}{group__call__misc_gac4f217936eea56196afc126974a92451}, corresponding to pure silence. 
+
+\subsection{Typedef Documentation}
+\index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!Linphone\-Call\-Stats@{Linphone\-Call\-Stats}}
+\index{Linphone\-Call\-Stats@{Linphone\-Call\-Stats}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{Linphone\-Call\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-Linphone\-Call\-Stats} {\bf Linphone\-Call\-Stats}}\label{group__call__misc_ga4d22764ac0e68a8d77670761429b2ee7}
+The Linphone\-Call\-Stats objects carries various statistic informations regarding quality of audio or video streams.
+
+To receive these informations periodically and as soon as they are computed, the application is invited to place a \#\-Call\-Stats\-Updated callback in the Linphone\-Core\-V\-Table structure it passes for instanciating the Linphone\-Core object (see \doxyref{linphone\-\_\-core\-\_\-new()}{p.}{group__initializing_gac93ed982ae84a5a282a703c8433ca42f} ).
+
+At any time, the application can access last computed statistics using \doxyref{linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats()}{p.}{group__call__misc_gaa1203b7ecb6b85a05af700152c1fdf14} or \doxyref{linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats()}{p.}{group__call__misc_gae4f745821a59615910c73cf47300c234}. 
+
+\subsection{Function Documentation}
+\index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume@{linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume@{linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume}]{\setlength{\rightskip}{0pt plus 5cm}float linphone\-\_\-call\-\_\-get\-\_\-play\-\_\-volume (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_ga7a0ca45e0ff2bf7eaca09e795bba3486}
+Returns the measured sound volume played locally (received from remote). It is expressed in dbm0. \index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume@{linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume@{linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume}]{\setlength{\rightskip}{0pt plus 5cm}float linphone\-\_\-call\-\_\-get\-\_\-record\-\_\-volume (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_gac4f217936eea56196afc126974a92451}
+Returns the measured sound volume recorded locally (sent to remote). It is expressed in dbm0. \index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality@{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality@{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality}]{\setlength{\rightskip}{0pt plus 5cm}float linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_ga62c7d3d08531b0cc634b797e273a0a73}
+Obtain real-\/time quality rating of the call
+
+Based on local R\-T\-P statistics and R\-T\-C\-P feedback, a quality rating is computed and updated during all the duration of the call. This function returns its value at the time of the function call. It is expected that the rating is updated at least every 5 seconds or so. The rating is a floating point number comprised between 0 and 5.
+
+4-\/5 = good quality \par
+ 3-\/4 = average quality \par
+ 2-\/3 = poor quality \par
+ 1-\/2 = very poor quality \par
+ 0-\/1 = can't be worse, mostly unusable \par
+
+
+\begin{DoxyReturn}{Returns}
+The function returns -\/1 if no quality measurement is available, for example if no active audio stream exist. Otherwise it returns the quality rating. 
+\end{DoxyReturn}
+\index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-get\-\_\-average\-\_\-quality@{linphone\-\_\-call\-\_\-get\-\_\-average\-\_\-quality}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-average\-\_\-quality@{linphone\-\_\-call\-\_\-get\-\_\-average\-\_\-quality}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-average\-\_\-quality}]{\setlength{\rightskip}{0pt plus 5cm}float linphone\-\_\-call\-\_\-get\-\_\-average\-\_\-quality (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_gae3aaa85596484c871b57cdefafd7fd9e}
+Returns call quality averaged over all the duration of the call.
+
+See \doxyref{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-quality()}{p.}{group__call__misc_ga62c7d3d08531b0cc634b797e273a0a73} for more details about quality measurement. \index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats@{linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats@{linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Linphone\-Call\-Stats}$\ast$ linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_gaa1203b7ecb6b85a05af700152c1fdf14}
+Access last known statistics for audio stream, for a given call. \index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats@{linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats@{linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Linphone\-Call\-Stats}$\ast$ linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_gae4f745821a59615910c73cf47300c234}
+Access last known statistics for video stream, for a given call. \index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file@{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file}}
+\index{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file@{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call\-Params} $\ast$}]{cp, }
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_ga10fff1a05dc9c63249ba59dc7240d803}
+Enable recording of the call (voice-\/only). This function must be used before the call parameters are assigned to the call. The call recording can be started and paused after the call is established with \doxyref{linphone\-\_\-call\-\_\-start\-\_\-recording()}{p.}{group__call__misc_gaa92c7b4c3443ff4ae29f7b57f57cfd35} and linphone\-\_\-call\-\_\-pause\-\_\-recording(). 
+\begin{DoxyParams}{Parameters}
+{\em cp} & the call parameters \\
+\hline
+{\em path} & path and filename of the file where audio is written. \\
+\hline
+\end{DoxyParams}
+\index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-params\-\_\-get\-\_\-record\-\_\-file@{linphone\-\_\-call\-\_\-params\-\_\-get\-\_\-record\-\_\-file}}
+\index{linphone\-\_\-call\-\_\-params\-\_\-get\-\_\-record\-\_\-file@{linphone\-\_\-call\-\_\-params\-\_\-get\-\_\-record\-\_\-file}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-params\-\_\-get\-\_\-record\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-call\-\_\-params\-\_\-get\-\_\-record\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Call\-Params} $\ast$}]{cp}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_ga6cf7ae608b631943716a86db72b6050a}
+Retrieves the path for the audio recoding of the call. \index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-start\-\_\-recording@{linphone\-\_\-call\-\_\-start\-\_\-recording}}
+\index{linphone\-\_\-call\-\_\-start\-\_\-recording@{linphone\-\_\-call\-\_\-start\-\_\-recording}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-start\-\_\-recording}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-start\-\_\-recording (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_gaa92c7b4c3443ff4ae29f7b57f57cfd35}
+Start call recording. The output file where audio is recorded must be previously specified with \doxyref{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-record\-\_\-file()}{p.}{group__call__misc_ga10fff1a05dc9c63249ba59dc7240d803}. \index{Obtaining information about a running call\-: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}!linphone\-\_\-call\-\_\-stop\-\_\-recording@{linphone\-\_\-call\-\_\-stop\-\_\-recording}}
+\index{linphone\-\_\-call\-\_\-stop\-\_\-recording@{linphone\-\_\-call\-\_\-stop\-\_\-recording}!Obtaining information about a running call: sound volumes, quality indicators@{Obtaining information about a running call\-: sound volumes, quality indicators}}
+\subsubsection[{linphone\-\_\-call\-\_\-stop\-\_\-recording}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-stop\-\_\-recording (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Call} $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__misc_ga2ef01b6aa5dc8ee76a77e5ef399a7907}
+Stop call recording. 

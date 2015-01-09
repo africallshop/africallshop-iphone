@@ -1,0 +1,6 @@
+/Users/karimjimo/Downloads/linphone-iphone/liblinphone-sdk/armv7s-apple-darwin/lib/pkgconfig/libzrtpcppcore.pc
+/Users/karimjimo/Downloads/linphone-iphone/liblinphone-sdk/armv7s-apple-darwin/lib/libzrtpcppcore.a
+/Users/karimjimo/Downloads/linphone-iphone/liblinphone-sdk/armv7s-apple-darwin/include/libzrtpcpp/ZrtpCodes.h
+/Users/karimjimo/Downloads/linphone-iphone/liblinphone-sdk/armv7s-apple-darwin/include/libzrtpcpp/ZrtpConfigure.h
+/Users/karimjimo/Downloads/linphone-iphone/liblinphone-sdk/armv7s-apple-darwin/include/libzrtpcpp/ZrtpCallback.h
+/Users/karimjimo/Downloads/linphone-iphone/liblinphone-sdk/armv7s-apple-darwin/include/libzrtpcpp/ZrtpCWrapper.h

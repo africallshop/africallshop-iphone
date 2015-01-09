@@ -1,0 +1,538 @@
+\section{Miscenalleous\-: logs, version strings, config storage}
+\label{group__misc}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \-\_\-\-Linphone\-Content}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf \-\_\-\-Linphone\-Content} {\bf Linphone\-Content}
+\item 
+typedef enum {\bf \-\_\-\-Linphone\-Reason} {\bf Linphone\-Reason}
+\item 
+typedef struct \-\_\-\-Lp\-Config {\bf Lp\-Config}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf \-\_\-\-Linphone\-Reason} \{ , \\*
+{\bf Linphone\-Reason\-No\-Response}, 
+\\*
+{\bf Linphone\-Reason\-Bad\-Credentials}, 
+\\*
+{\bf Linphone\-Reason\-Declined}, 
+\\*
+{\bf Linphone\-Reason\-Not\-Found}, 
+\\*
+{\bf Linphone\-Reason\-Not\-Answered}, 
+\\*
+{\bf Linphone\-Reason\-Busy}, 
+\\*
+{\bf Linphone\-Reason\-Media}, 
+\\*
+{\bf Linphone\-Reason\-I\-O\-Error}, 
+\\*
+{\bf Linphone\-Reason\-Do\-Not\-Disturb}, 
+\\*
+{\bf Linphone\-Reason\-Unauthorized}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf linphone\-\_\-core\-\_\-enable\-\_\-logs} (F\-I\-L\-E $\ast$file)
+\item 
+void {\bf linphone\-\_\-core\-\_\-enable\-\_\-logs\-\_\-with\-\_\-cb} (Ortp\-Log\-Func logfunc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-disable\-\_\-logs} ()
+\item 
+const char $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-version} (void)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-agent} ({\bf Linphone\-Core} $\ast$lc, const char $\ast$name, const char $\ast$ver)
+\item 
+{\bf Lp\-Config} $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-config} ({\bf Linphone\-Core} $\ast$lc)
+\item 
+const char $\ast$ {\bf linphone\-\_\-reason\-\_\-to\-\_\-string} ({\bf Linphone\-Reason} err)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler} (Ortp\-Log\-Func logfunc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file} (F\-I\-L\-E $\ast$file)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level} (Ortp\-Log\-Level loglevel)
+\item 
+int {\bf linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-iso} (const char $\ast$iso)
+\item 
+int {\bf linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-e164} (const char $\ast$e164)
+\item 
+{\bf Lp\-Config} $\ast$ {\bf lp\-\_\-config\-\_\-new} (const char $\ast$filename)
+\item 
+{\bf Lp\-Config} $\ast$ {\bf lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory} (const char $\ast$config\-\_\-filename, const char $\ast$factory\-\_\-config\-\_\-filename)
+\item 
+const char $\ast$ {\bf lp\-\_\-config\-\_\-get\-\_\-string} (const {\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, const char $\ast$default\-\_\-string)
+\item 
+bool\-\_\-t {\bf lp\-\_\-config\-\_\-get\-\_\-range} (const {\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, int $\ast$min, int $\ast$max, int default\-\_\-min, int default\-\_\-max)
+\item 
+int {\bf lp\-\_\-config\-\_\-get\-\_\-int} (const {\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, int default\-\_\-value)
+\item 
+int64\-\_\-t {\bf lp\-\_\-config\-\_\-get\-\_\-int64} (const {\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, int64\-\_\-t default\-\_\-value)
+\item 
+float {\bf lp\-\_\-config\-\_\-get\-\_\-float} (const {\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, float default\-\_\-value)
+\item 
+void {\bf lp\-\_\-config\-\_\-set\-\_\-string} ({\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, const char $\ast$value)
+\item 
+void {\bf lp\-\_\-config\-\_\-set\-\_\-range} ({\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, int min\-\_\-value, int max\-\_\-value)
+\item 
+void {\bf lp\-\_\-config\-\_\-set\-\_\-int} ({\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, int value)
+\item 
+void {\bf lp\-\_\-config\-\_\-set\-\_\-int\-\_\-hex} ({\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, int value)
+\item 
+void {\bf lp\-\_\-config\-\_\-set\-\_\-int64} ({\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, int64\-\_\-t value)
+\item 
+void {\bf lp\-\_\-config\-\_\-set\-\_\-float} ({\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, const char $\ast$key, float value)
+\item 
+int {\bf lp\-\_\-config\-\_\-sync} ({\bf Lp\-Config} $\ast$lpconfig)
+\item 
+int {\bf lp\-\_\-config\-\_\-has\-\_\-section} (const {\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section)
+\item 
+void {\bf lp\-\_\-config\-\_\-clean\-\_\-section} ({\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section)
+\item 
+void {\bf lp\-\_\-config\-\_\-for\-\_\-each\-\_\-section} (const {\bf Lp\-Config} $\ast$lpconfig, void($\ast$callback)(const char $\ast$section, void $\ast$ctx), void $\ast$ctx)
+\item 
+void {\bf lp\-\_\-config\-\_\-for\-\_\-each\-\_\-entry} (const {\bf Lp\-Config} $\ast$lpconfig, const char $\ast$section, void($\ast$callback)(const char $\ast$entry, void $\ast$ctx), void $\ast$ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Content@{Linphone\-Content}}
+\index{Linphone\-Content@{Linphone\-Content}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{Linphone\-Content}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-Linphone\-Content} {\bf Linphone\-Content}}\label{group__misc_gaec435ed53168e70535e64b69a906304b}
+Alias to the Linphone\-Content struct. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason@{Linphone\-Reason}}
+\index{Linphone\-Reason@{Linphone\-Reason}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{Linphone\-Reason}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Reason} {\bf Linphone\-Reason}}\label{group__misc_gabe82a1a1ffc3d6b4e0b51a03028513b7}
+Enum describing failure reasons. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Lp\-Config@{Lp\-Config}}
+\index{Lp\-Config@{Lp\-Config}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{Lp\-Config}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \-\_\-\-Lp\-Config {\bf Lp\-Config}}\label{group__misc_ga047b6550aab7dd244268e695fab98fd6}
+The Lp\-Config object is used to manipulate a configuration file.
+
+The format of the configuration file is a .ini like format\-:
+\begin{DoxyItemize}
+\item sections are defined in []
+\item each section contains a sequence of key=value pairs.
+\end{DoxyItemize}
+
+Example\-: 
+\begin{DoxyCode}
+* [sound]
+* echocanceler=1
+* playback\_dev=ALSA: Default device
+*
+* [video]
+* enabled=1
+* 
+\end{DoxyCode}
+ 
+
+\subsection{Enumeration Type Documentation}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!\-\_\-\-Linphone\-Reason@{\-\_\-\-Linphone\-Reason}}
+\index{\-\_\-\-Linphone\-Reason@{\-\_\-\-Linphone\-Reason}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{\-\_\-\-Linphone\-Reason}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Reason}}\label{group__misc_gaf7346e9b3a064155f3d5d3811d684fb2}
+Enum describing various failure reasons or contextual information for some events. \begin{DoxySeeAlso}{See Also}
+\doxyref{linphone\-\_\-call\-\_\-get\-\_\-reason()}{p.}{group__call__control_ga312c73999c94f7e59f307423d40d16b2} 
+
+linphone\-\_\-proxy\-\_\-config\-\_\-get\-\_\-error() 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Linphone\-Reason\-No\-Response@{Linphone\-Reason\-No\-Response}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-No\-Response@{Linphone\-Reason\-No\-Response}}\item[{\em 
+Linphone\-Reason\-No\-Response\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2ac71a4d9109f8eb8a9f5961109d505331}
+}]No response received from remote \index{Linphone\-Reason\-Bad\-Credentials@{Linphone\-Reason\-Bad\-Credentials}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Bad\-Credentials@{Linphone\-Reason\-Bad\-Credentials}}\item[{\em 
+Linphone\-Reason\-Bad\-Credentials\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2ad26546a581f2bfd58410f1f3d141666a}
+}]Authentication failed due to bad \index{Linphone\-Reason\-Declined@{Linphone\-Reason\-Declined}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Declined@{Linphone\-Reason\-Declined}}\item[{\em 
+Linphone\-Reason\-Declined\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2a442fce67ace6491eee2f4a94177f34c6}
+}]The call has been declined \index{Linphone\-Reason\-Not\-Found@{Linphone\-Reason\-Not\-Found}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Not\-Found@{Linphone\-Reason\-Not\-Found}}\item[{\em 
+Linphone\-Reason\-Not\-Found\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2adf8c424e8f8e89efaf51e187c04ae7d5}
+}]Destination of the calls was not found. \index{Linphone\-Reason\-Not\-Answered@{Linphone\-Reason\-Not\-Answered}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Not\-Answered@{Linphone\-Reason\-Not\-Answered}}\item[{\em 
+Linphone\-Reason\-Not\-Answered\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2a528a41c31768cff46c03b6a5e2fcb073}
+}]The call was not answered in time \index{Linphone\-Reason\-Busy@{Linphone\-Reason\-Busy}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Busy@{Linphone\-Reason\-Busy}}\item[{\em 
+Linphone\-Reason\-Busy\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2a8ef78446b3e27f4acd2f69356f7836fa}
+}]Phone line was busy \index{Linphone\-Reason\-Media@{Linphone\-Reason\-Media}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Media@{Linphone\-Reason\-Media}}\item[{\em 
+Linphone\-Reason\-Media\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2a291316b9318da6c8471804b5f70ad10e}
+}]Incompatible media \index{Linphone\-Reason\-I\-O\-Error@{Linphone\-Reason\-I\-O\-Error}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-I\-O\-Error@{Linphone\-Reason\-I\-O\-Error}}\item[{\em 
+Linphone\-Reason\-I\-O\-Error\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2a6018a6fcf4fbf14fc8528e41df772b01}
+}]Transport error\-: connection failures, disconnections etc... \index{Linphone\-Reason\-Do\-Not\-Disturb@{Linphone\-Reason\-Do\-Not\-Disturb}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Do\-Not\-Disturb@{Linphone\-Reason\-Do\-Not\-Disturb}}\item[{\em 
+Linphone\-Reason\-Do\-Not\-Disturb\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2a1a9456d0092d6472a0d9d9a9f3903d7d}
+}]Do not disturb reason \index{Linphone\-Reason\-Unauthorized@{Linphone\-Reason\-Unauthorized}!Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!Linphone\-Reason\-Unauthorized@{Linphone\-Reason\-Unauthorized}}\item[{\em 
+Linphone\-Reason\-Unauthorized\label{group__misc_ggaf7346e9b3a064155f3d5d3811d684fb2ab7457897bc2f2c0125f7d3580a236689}
+}]Operation is unauthorized because missing credential \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-enable\-\_\-logs@{linphone\-\_\-core\-\_\-enable\-\_\-logs}}
+\index{linphone\-\_\-core\-\_\-enable\-\_\-logs@{linphone\-\_\-core\-\_\-enable\-\_\-logs}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-enable\-\_\-logs}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-enable\-\_\-logs (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{group__misc_gad70dc5268366c829238b458547fe5277}
+Enable logs in supplied F\-I\-L\-E$\ast$.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file}{p.}{group__misc_ga9de0532e1e1370f0375173bd1a3c8cc8} and \doxyref{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level}{p.}{group__misc_ga685b79d92af0184dbeac46df14bf4705} instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & a C F\-I\-L\-E$\ast$ where to fprintf logs. If null stdout is used. \\
+\hline
+\end{DoxyParams}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-enable\-\_\-logs\-\_\-with\-\_\-cb@{linphone\-\_\-core\-\_\-enable\-\_\-logs\-\_\-with\-\_\-cb}}
+\index{linphone\-\_\-core\-\_\-enable\-\_\-logs\-\_\-with\-\_\-cb@{linphone\-\_\-core\-\_\-enable\-\_\-logs\-\_\-with\-\_\-cb}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-enable\-\_\-logs\-\_\-with\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-enable\-\_\-logs\-\_\-with\-\_\-cb (
+\begin{DoxyParamCaption}
+\item[{Ortp\-Log\-Func}]{logfunc}
+\end{DoxyParamCaption}
+)}\label{group__misc_gad7314fd936348037a14ba56cd2e9093e}
+Enable logs through the user's supplied log callback.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler}{p.}{group__misc_ga1916e55f85eb1e3db57629d67a0de0cd} and \doxyref{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level}{p.}{group__misc_ga685b79d92af0184dbeac46df14bf4705} instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em logfunc} & The address of a Ortp\-Log\-Func callback whose protoype is typedef void ($\ast$\-Ortp\-Log\-Func)(Ortp\-Log\-Level lev, const char $\ast$fmt, va\-\_\-list args); \\
+\hline
+\end{DoxyParams}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-disable\-\_\-logs@{linphone\-\_\-core\-\_\-disable\-\_\-logs}}
+\index{linphone\-\_\-core\-\_\-disable\-\_\-logs@{linphone\-\_\-core\-\_\-disable\-\_\-logs}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-disable\-\_\-logs}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-disable\-\_\-logs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group__misc_gaac81b36333b8dcda6d029fd62720fae8}
+Entirely disable logging.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]Use \doxyref{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level}{p.}{group__misc_ga685b79d92af0184dbeac46df14bf4705} instead. \end{DoxyRefDesc}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-get\-\_\-version@{linphone\-\_\-core\-\_\-get\-\_\-version}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-version@{linphone\-\_\-core\-\_\-get\-\_\-version}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-core\-\_\-get\-\_\-version (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga553b61ad32d7455ce69102025d383f90}
+Returns liblinphone's version as a string. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-agent@{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-agent}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-agent@{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-agent}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-agent}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-user\-\_\-agent (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{ver}
+\end{DoxyParamCaption}
+)}\label{group__misc_gae5adf09d448504db1338b9cb8505adc5}
+Sets the user agent string used in S\-I\-P messages. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-get\-\_\-config@{linphone\-\_\-core\-\_\-get\-\_\-config}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-config@{linphone\-\_\-core\-\_\-get\-\_\-config}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lp\-Config}$\ast$ linphone\-\_\-core\-\_\-get\-\_\-config (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga0634038b0304863380c65d6743448cab}
+Returns the Lp\-Config object used to manage the storage (config) file.
+
+The application can use the Lp\-Config object to insert its own private sections and pairs of key=value in the configuration file. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-reason\-\_\-to\-\_\-string@{linphone\-\_\-reason\-\_\-to\-\_\-string}}
+\index{linphone\-\_\-reason\-\_\-to\-\_\-string@{linphone\-\_\-reason\-\_\-to\-\_\-string}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-reason\-\_\-to\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-reason\-\_\-to\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Reason}}]{err}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga55b055097d13c171e08ead648869cdc1}
+Converts a Linphone\-Reason enum to a string. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler@{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler@{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{Ortp\-Log\-Func}]{logfunc}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga1916e55f85eb1e3db57629d67a0de0cd}
+Define a log handler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em logfunc} & The function pointer of the log handler. \\
+\hline
+\end{DoxyParams}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file@{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file@{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga9de0532e1e1370f0375173bd1a3c8cc8}
+Define a log file.
+
+If the file pointer passed as an argument is N\-U\-L\-L, stdout is used instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & A pointer to the F\-I\-L\-E structure of the file to write to. \\
+\hline
+\end{DoxyParams}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level@{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level@{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-log\-\_\-level (
+\begin{DoxyParamCaption}
+\item[{Ortp\-Log\-Level}]{loglevel}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga685b79d92af0184dbeac46df14bf4705}
+Define the log level.
+
+The loglevel parameter is a bitmask parameter. Therefore to enable only warning and error messages, use O\-R\-T\-P\-\_\-\-W\-A\-R\-N\-I\-N\-G $|$ O\-R\-T\-P\-\_\-\-E\-R\-R\-O\-R. To disable logs, simply set loglevel to 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em loglevel} & A bitmask of the log levels to set. \\
+\hline
+\end{DoxyParams}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-iso@{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-iso}}
+\index{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-iso@{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-iso}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-iso}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-iso (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iso}
+\end{DoxyParamCaption}
+)}\label{group__misc_gadf2204eb2ab519f7b40be868387b9e3a}
+Function to get call country code from I\-S\-O 3166-\/1 alpha-\/2 code, ex\-: F\-R returns 33 
+\begin{DoxyParams}{Parameters}
+{\em iso} & country code alpha2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+call country code or -\/1 if not found 
+\end{DoxyReturn}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-e164@{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-e164}}
+\index{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-e164@{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-e164}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-e164}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-dial\-\_\-plan\-\_\-lookup\-\_\-ccc\-\_\-from\-\_\-e164 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{e164}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga38c2e82076bbde91124ae8867320a43c}
+Function to get call country code from an e164 number, ex\-: +33952650121 will return 33 
+\begin{DoxyParams}{Parameters}
+{\em e164} & phone number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+call country code or -\/1 if not found 
+\end{DoxyReturn}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-new@{lp\-\_\-config\-\_\-new}}
+\index{lp\-\_\-config\-\_\-new@{lp\-\_\-config\-\_\-new}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lp\-Config}$\ast$ lp\-\_\-config\-\_\-new (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga964e134940173e3c3bf1a9f90bcad06b}
+Instantiates a Lp\-Config object from a user config file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the filename of the config file to read to fill the instantiated Lp\-Config \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\doxyref{lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory}{p.}{group__misc_gaeca035860d7412231792c1aa91f75d27} 
+\end{DoxySeeAlso}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory@{lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory}}
+\index{lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory@{lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lp\-Config}$\ast$ lp\-\_\-config\-\_\-new\-\_\-with\-\_\-factory (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{config\-\_\-filename, }
+\item[{const char $\ast$}]{factory\-\_\-config\-\_\-filename}
+\end{DoxyParamCaption}
+)}\label{group__misc_gaeca035860d7412231792c1aa91f75d27}
+Instantiates a Lp\-Config object from a user config file and a factory config file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\-\_\-filename} & the filename of the user config file to read to fill the instantiated Lp\-Config \\
+\hline
+{\em factory\-\_\-config\-\_\-filename} & the filename of the factory config file to read to fill the instantiated Lp\-Config \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\doxyref{lp\-\_\-config\-\_\-new}{p.}{group__misc_ga964e134940173e3c3bf1a9f90bcad06b}
+\end{DoxySeeAlso}
+The user config file is read first to fill the Lp\-Config and then the factory config file is read. Therefore the configuration parameters defined in the user config file will be overwritten by the parameters defined in the factory config file. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-get\-\_\-string@{lp\-\_\-config\-\_\-get\-\_\-string}}
+\index{lp\-\_\-config\-\_\-get\-\_\-string@{lp\-\_\-config\-\_\-get\-\_\-string}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-get\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ lp\-\_\-config\-\_\-get\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{default\-\_\-string}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga9657ebf1d68b43184a796c9bdc68c29a}
+Retrieves a configuration item as a string, given its section, key, and default value.
+
+The default value string is returned if the config item isn't found. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-get\-\_\-range@{lp\-\_\-config\-\_\-get\-\_\-range}}
+\index{lp\-\_\-config\-\_\-get\-\_\-range@{lp\-\_\-config\-\_\-get\-\_\-range}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-get\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t lp\-\_\-config\-\_\-get\-\_\-range (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{int $\ast$}]{min, }
+\item[{int $\ast$}]{max, }
+\item[{int}]{default\-\_\-min, }
+\item[{int}]{default\-\_\-max}
+\end{DoxyParamCaption}
+)}\label{group__misc_gacce3e95a4b8327d6a8a5f162cbccb5fe}
+Retrieves a configuration item as a range, given its section, key, and default min and max values.
+
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E if the value is successfully parsed as a range, F\-A\-L\-S\-E otherwise. If F\-A\-L\-S\-E is returned, min and max are filled respectively with default\-\_\-min and default\-\_\-max values. 
+\end{DoxyReturn}
+\index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-get\-\_\-int@{lp\-\_\-config\-\_\-get\-\_\-int}}
+\index{lp\-\_\-config\-\_\-get\-\_\-int@{lp\-\_\-config\-\_\-get\-\_\-int}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-get\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}int lp\-\_\-config\-\_\-get\-\_\-int (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{int}]{default\-\_\-value}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga36d08c0cbc78d88fd4f043e61e9b9637}
+Retrieves a configuration item as an integer, given its section, key, and default value.
+
+The default integer value is returned if the config item isn't found. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-get\-\_\-int64@{lp\-\_\-config\-\_\-get\-\_\-int64}}
+\index{lp\-\_\-config\-\_\-get\-\_\-int64@{lp\-\_\-config\-\_\-get\-\_\-int64}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-get\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}int64\-\_\-t lp\-\_\-config\-\_\-get\-\_\-int64 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{int64\-\_\-t}]{default\-\_\-value}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga541795495eae7e7b7cde85beb096e20c}
+Retrieves a configuration item as a 64 bit integer, given its section, key, and default value.
+
+The default integer value is returned if the config item isn't found. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-get\-\_\-float@{lp\-\_\-config\-\_\-get\-\_\-float}}
+\index{lp\-\_\-config\-\_\-get\-\_\-float@{lp\-\_\-config\-\_\-get\-\_\-float}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-get\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}float lp\-\_\-config\-\_\-get\-\_\-float (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{float}]{default\-\_\-value}
+\end{DoxyParamCaption}
+)}\label{group__misc_gad548422b00d41c9726062869d04cd6e4}
+Retrieves a configuration item as a float, given its section, key, and default value.
+
+The default float value is returned if the config item isn't found. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-set\-\_\-string@{lp\-\_\-config\-\_\-set\-\_\-string}}
+\index{lp\-\_\-config\-\_\-set\-\_\-string@{lp\-\_\-config\-\_\-set\-\_\-string}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-set\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-set\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga2b9f058c7b12d124be96149100d9b079}
+Sets a string config item \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-set\-\_\-range@{lp\-\_\-config\-\_\-set\-\_\-range}}
+\index{lp\-\_\-config\-\_\-set\-\_\-range@{lp\-\_\-config\-\_\-set\-\_\-range}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-set\-\_\-range}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-set\-\_\-range (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{int}]{min\-\_\-value, }
+\item[{int}]{max\-\_\-value}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga21e9df0d054a1e38f85088f3ac8c7f56}
+Sets a range config item \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-set\-\_\-int@{lp\-\_\-config\-\_\-set\-\_\-int}}
+\index{lp\-\_\-config\-\_\-set\-\_\-int@{lp\-\_\-config\-\_\-set\-\_\-int}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-set\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-set\-\_\-int (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{group__misc_gab7608c4c6b40a734eb00a4b398e47ba5}
+Sets an integer config item \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-set\-\_\-int\-\_\-hex@{lp\-\_\-config\-\_\-set\-\_\-int\-\_\-hex}}
+\index{lp\-\_\-config\-\_\-set\-\_\-int\-\_\-hex@{lp\-\_\-config\-\_\-set\-\_\-int\-\_\-hex}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-set\-\_\-int\-\_\-hex}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-set\-\_\-int\-\_\-hex (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{group__misc_gac5e9e26edea055a3c5b63cc60c45a695}
+Sets an integer config item, but store it as hexadecimal \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-set\-\_\-int64@{lp\-\_\-config\-\_\-set\-\_\-int64}}
+\index{lp\-\_\-config\-\_\-set\-\_\-int64@{lp\-\_\-config\-\_\-set\-\_\-int64}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-set\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-set\-\_\-int64 (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{int64\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga3ce825cbf6fa62ecf0714540459f64b4}
+Sets a 64 bits integer config item \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-set\-\_\-float@{lp\-\_\-config\-\_\-set\-\_\-float}}
+\index{lp\-\_\-config\-\_\-set\-\_\-float@{lp\-\_\-config\-\_\-set\-\_\-float}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-set\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-set\-\_\-float (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{const char $\ast$}]{key, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}\label{group__misc_gaeaa0ff38f2af3cefdf4c401b86ec9197}
+Sets a float config item \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-sync@{lp\-\_\-config\-\_\-sync}}
+\index{lp\-\_\-config\-\_\-sync@{lp\-\_\-config\-\_\-sync}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-sync}]{\setlength{\rightskip}{0pt plus 5cm}int lp\-\_\-config\-\_\-sync (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga39f6f202e10581591ac6e68a636236bc}
+Writes the config file to disk. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-has\-\_\-section@{lp\-\_\-config\-\_\-has\-\_\-section}}
+\index{lp\-\_\-config\-\_\-has\-\_\-section@{lp\-\_\-config\-\_\-has\-\_\-section}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-has\-\_\-section}]{\setlength{\rightskip}{0pt plus 5cm}int lp\-\_\-config\-\_\-has\-\_\-section (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga15bf033627637f54ebc03380d5dfb2d1}
+Returns 1 if a given section is present in the configuration. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-clean\-\_\-section@{lp\-\_\-config\-\_\-clean\-\_\-section}}
+\index{lp\-\_\-config\-\_\-clean\-\_\-section@{lp\-\_\-config\-\_\-clean\-\_\-section}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-clean\-\_\-section}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-clean\-\_\-section (
+\begin{DoxyParamCaption}
+\item[{{\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga8ea8060c147dd9584644c52d4cd59a17}
+Removes every pair of key,value in a section and remove the section. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-for\-\_\-each\-\_\-section@{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-section}}
+\index{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-section@{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-section}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-section}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-for\-\_\-each\-\_\-section (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{void($\ast$)(const char $\ast$section, void $\ast$ctx)}]{callback, }
+\item[{void $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga3b8ef5436c281cfe1f79dd3421d0e9af}
+Call a function for each section present in the configuration. \index{Miscenalleous\-: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}!lp\-\_\-config\-\_\-for\-\_\-each\-\_\-entry@{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-entry}}
+\index{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-entry@{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-entry}!Miscenalleous: logs, version strings, config storage@{Miscenalleous\-: logs, version strings, config storage}}
+\subsubsection[{lp\-\_\-config\-\_\-for\-\_\-each\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}void lp\-\_\-config\-\_\-for\-\_\-each\-\_\-entry (
+\begin{DoxyParamCaption}
+\item[{const {\bf Lp\-Config} $\ast$}]{lpconfig, }
+\item[{const char $\ast$}]{section, }
+\item[{void($\ast$)(const char $\ast$entry, void $\ast$ctx)}]{callback, }
+\item[{void $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}\label{group__misc_ga2595b0b6d2133c44de3664e25f756f2f}
+Call a function for each entry present in a section configuration. 

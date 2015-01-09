@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="info_8c" kind="file">
+    <compoundname>info.c</compoundname>
+    <includes refid="linphonecore_8h" local="yes">linphonecore.h</includes>
+    <includes refid="private_8h" local="yes">private.h</includes>
+    <includes refid="lpconfig_8h" local="yes">lpconfig.h</includes>
+    <innerclass refid="struct__LinphoneInfoMessage" prot="public">_LinphoneInfoMessage</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="info_8c_1a133645dc42773eea0258d70358186d2f" prot="public" static="no">
+        <name>SET_STRING</name>
+        <param><defname>ptr</defname></param>
+        <param><defname>field</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>if (ptr-&gt;field) { \
+		ms_free(ptr-&gt;field); \
+		ptr-&gt;field=NULL; \
+	} \
+	if (val){ \
+		ptr-&gt;field=ms_strdup(val); \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="36" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="info_8c_1ab5d91cf1a46606bbfef53f65607ba188" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void linphone_content_copy</definition>
+        <argsstring>(LinphoneContent *obj, const LinphoneContent *ref)</argsstring>
+        <name>linphone_content_copy</name>
+        <param>
+          <type><ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="45" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="45" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1acb09ab8d188d72680488f0534a68a275" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_content_uninit</definition>
+        <argsstring>(LinphoneContent *obj)</argsstring>
+        <name>linphone_content_uninit</name>
+        <param>
+          <type><ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="60" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1a670a982a88608e90b8670ffa5630dbd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+        <definition>LinphoneContent* linphone_content_copy_from_sal_body</definition>
+        <argsstring>(LinphoneContent *obj, const SalBody *ref)</argsstring>
+        <name>linphone_content_copy_from_sal_body</name>
+        <param>
+          <type><ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const SalBody *</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="66" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="66" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1a4a81fcf4d442ea118694c7fd1afb1a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+        <definition>const LinphoneContent* linphone_content_from_sal_body</definition>
+        <argsstring>(LinphoneContent *obj, const SalBody *ref)</argsstring>
+        <name>linphone_content_from_sal_body</name>
+        <param>
+          <type><ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const SalBody *</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="82" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="82" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1a231f9dec60910dac2fd359636b60d95f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SalBody *</type>
+        <definition>SalBody* sal_body_from_content</definition>
+        <argsstring>(SalBody *body, const LinphoneContent *lc)</argsstring>
+        <name>sal_body_from_content</name>
+        <param>
+          <type>SalBody *</type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="93" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="93" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1a4d47f12b2411fc770f4c6c07520fd191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_info_message_destroy</definition>
+        <argsstring>(LinphoneInfoMessage *im)</argsstring>
+        <name>linphone_info_message_destroy</name>
+        <param>
+          <type>LinphoneInfoMessage *</type>
+          <declname>im</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a LinphoneInfoMessage </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="107" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="107" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1ac12115fcfe1a6e9378202d9ffe23183a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphoneInfoMessage *</type>
+        <definition>LinphoneInfoMessage* linphone_info_message_copy</definition>
+        <argsstring>(const LinphoneInfoMessage *orig)</argsstring>
+        <name>linphone_info_message_copy</name>
+        <param>
+          <type>const LinphoneInfoMessage *</type>
+          <declname>orig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="114" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="114" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1af944078fa60fdedf40b6812a32418bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LinphoneInfoMessage *</type>
+        <definition>LinphoneInfoMessage* linphone_core_create_info_message</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_create_info_message</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an empty info message. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new LinphoneInfoMessage.</para></simplesect>
+The info message can later be filled with information using linphone_info_message_add_header() or linphone_info_message_set_content(), and finally sent with linphone_core_send_info_message(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="129" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1a060f219ef9b0c6d467f13ed40975103e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_call_send_info_message</definition>
+        <argsstring>(LinphoneCall *call, const LinphoneInfoMessage *info)</argsstring>
+        <name>linphone_call_send_info_message</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <param>
+          <type>const LinphoneInfoMessage *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send a LinphoneInfoMessage through an established call <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the info message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="139" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="139" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1aea8b442cc5e2e77074b2bcc8d4b72382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_info_message_add_header</definition>
+        <argsstring>(LinphoneInfoMessage *im, const char *name, const char *value)</argsstring>
+        <name>linphone_info_message_add_header</name>
+        <param>
+          <type>LinphoneInfoMessage *</type>
+          <declname>im</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a header to an info message to be sent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>im</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the info message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the header&apos;name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the header&apos;s value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="151" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1ae1208437221bb6046bacb1bd3c110049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_info_message_get_header</definition>
+        <argsstring>(const LinphoneInfoMessage *im, const char *name)</argsstring>
+        <name>linphone_info_message_get_header</name>
+        <param>
+          <type>const LinphoneInfoMessage *</type>
+          <declname>im</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Obtain a header value from a received info message. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>im</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the info message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the header&apos;name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the corresponding header&apos;s value, or NULL if not exists. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="161" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1a800d90875bf73051d5471c4389d52a5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_info_message_set_content</definition>
+        <argsstring>(LinphoneInfoMessage *im, const LinphoneContent *content)</argsstring>
+        <name>linphone_info_message_set_content</name>
+        <param>
+          <type>LinphoneInfoMessage *</type>
+          <declname>im</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a content to the info message. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>im</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the linphone info message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the content described as a <ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> structure. All fields of the LinphoneContent are copied, thus the application can destroy/modify/recycloe the content object freely ater the function returns. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="171" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1abe9effd28670ca365455d2222da38936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> *</type>
+        <definition>const LinphoneContent* linphone_info_message_get_content</definition>
+        <argsstring>(const LinphoneInfoMessage *im)</argsstring>
+        <name>linphone_info_message_get_content</name>
+        <param>
+          <type>const LinphoneInfoMessage *</type>
+          <declname>im</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the info message&apos;s content as a <ref refid="group__misc_1gaec435ed53168e70535e64b69a906304b" kindref="member">LinphoneContent</ref> structure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="178" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="info_8c_1afd67cf58deea13263b61738fdfc7c967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_notify_info_message</definition>
+        <argsstring>(LinphoneCore *lc, SalOp *op, const SalBody *body)</argsstring>
+        <name>linphone_core_notify_info_message</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>SalOp *</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>const SalBody *</type>
+          <declname>body</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" line="182" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c" bodystart="182" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Thu<sp/>May<sp/><sp/>16<sp/>11:48:01<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/><sp/>2013<sp/><sp/>Belledonne<sp/>Communications<sp/>SARL</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Author<sp/>Simon<sp/>Morlat</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Email<sp/>simon<sp/>dot<sp/>morlat<sp/>at<sp/>linphone<sp/>dot<sp/>org</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;linphonecore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;private.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lpconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_LinphoneInfoMessage{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>content;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SalCustomHeader<sp/>*headers;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_STRING(ptr,field,val)<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(ptr-&gt;field)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(ptr-&gt;field);<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;field=NULL;<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(val){<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr-&gt;field=ms_strdup(val);<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>linphone_content_copy(<ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*ref){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_STRING(obj,type,ref-&gt;<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_STRING(obj,subtype,ref-&gt;<ref refid="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" kindref="member">subtype</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>=NULL;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ref-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>=ms_malloc(ref-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>+1);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>,<sp/>ref-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>,<sp/>ref-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>)[ref-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>]=</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>=ref-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>linphone_content_uninit(<ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*<sp/>obj){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj-&gt;<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref>)<sp/>ms_free(obj-&gt;<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj-&gt;<ref refid="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" kindref="member">subtype</ref>)<sp/>ms_free(obj-&gt;<ref refid="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" kindref="member">subtype</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>)<sp/>ms_free(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*linphone_content_copy_from_sal_body(<ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SalBody<sp/>*ref){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_STRING(obj,type,ref-&gt;<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_STRING(obj,subtype,ref-&gt;<ref refid="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" kindref="member">subtype</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>=NULL;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ref-&gt;data){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>=ms_malloc(ref-&gt;size+1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>,<sp/>ref-&gt;data,<sp/>ref-&gt;size);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>)[ref-&gt;size]=</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>=ref-&gt;size;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obj;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*linphone_content_from_sal_body(<ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SalBody<sp/>*ref){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ref<sp/>&amp;&amp;<sp/>ref-&gt;type){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref>=(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)ref-&gt;type;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" kindref="member">subtype</ref>=(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)ref-&gt;subtype;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>=(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)ref-&gt;data;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>=ref-&gt;size;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obj;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">SalBody<sp/>*sal_body_from_content(SalBody<sp/>*body,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*lc){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lc<sp/>&amp;&amp;<sp/>lc-&gt;<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref>){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body-&gt;type=lc-&gt;<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body-&gt;subtype=lc-&gt;<ref refid="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" kindref="member">subtype</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body-&gt;data=lc-&gt;<ref refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body-&gt;size=lc-&gt;<ref refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>body;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>linphone_info_message_destroy(LinphoneInfoMessage<sp/>*im){</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linphone_content_uninit(&amp;im-&gt;content);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sal_custom_header_free(im-&gt;headers);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(im);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">LinphoneInfoMessage<sp/>*linphone_info_message_copy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LinphoneInfoMessage<sp/>*orig){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LinphoneInfoMessage<sp/>*im=ms_new0(LinphoneInfoMessage,1);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linphone_content_copy(&amp;im-&gt;content,&amp;orig-&gt;content);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(orig-&gt;headers)<sp/>im-&gt;headers=sal_custom_header_clone(orig-&gt;headers);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>im;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">LinphoneInfoMessage<sp/>*linphone_core_create_info_message(<ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref><sp/>*lc){</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LinphoneInfoMessage<sp/>*im=ms_new0(LinphoneInfoMessage,1);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>im;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linphone_call_send_info_message(<ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref><sp/>*call,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LinphoneInfoMessage<sp/>*info){</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SalBody<sp/>body;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sal_op_set_sent_custom_header(call-&gt;op,info-&gt;headers);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sal_send_info(call-&gt;op,NULL,<sp/>NULL,<sp/>sal_body_from_content(&amp;body,&amp;info-&gt;content));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>linphone_info_message_add_header(LinphoneInfoMessage<sp/>*im,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value){</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>im-&gt;headers=sal_custom_header_append(im-&gt;headers,<sp/>name,<sp/>value);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*linphone_info_message_get_header(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LinphoneInfoMessage<sp/>*im,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name){</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sal_custom_header_find(im-&gt;headers,name);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>linphone_info_message_set_content(LinphoneInfoMessage<sp/>*im,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*content){</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linphone_content_copy(&amp;im-&gt;content,content);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct__LinphoneContent" kindref="compound">LinphoneContent</ref><sp/>*<sp/>linphone_info_message_get_content(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LinphoneInfoMessage<sp/>*im){</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>im-&gt;content.<ref refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" kindref="member">type</ref><sp/>?<sp/>&amp;im-&gt;content<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>linphone_core_notify_info_message(<ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref>*<sp/>lc,SalOp<sp/>*op,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SalBody<sp/>*body){</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref><sp/>*call=(<ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref>*)sal_op_get_user_pointer(op);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(call){</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LinphoneInfoMessage<sp/>*info=ms_new0(LinphoneInfoMessage,1);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info-&gt;headers=sal_custom_header_clone(sal_op_get_recv_custom_header(op));</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(body)<sp/>linphone_content_copy_from_sal_body(&amp;info-&gt;content,body);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lc-&gt;vtable.info_received)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lc-&gt;vtable.info_received(lc,call,info);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linphone_info_message_destroy(info);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/info.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,51 @@
+.TH "deprecated" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+deprecated \- Deprecated List 
+
+.IP "\fBGlobal \fB_LinphoneCoreVTable::display_message\fP \fP" 1c
+Callback to display a message to the user  
+.IP "\fBGlobal \fB_LinphoneCoreVTable::display_status\fP \fP" 1c
+Callback that notifies various events with human readable text\&.  
+.IP "\fBGlobal \fB_LinphoneCoreVTable::display_url\fP \fP" 1c
+.IP "\fBGlobal \fB_LinphoneCoreVTable::display_warning\fP \fP" 1c
+Callback to display a warning to the user  
+.IP "\fBGlobal \fB_LinphoneCoreVTable::show\fP \fP" 1c
+Notifies the application that it should show up  
+.IP "\fBGlobal \fBDisplayMessageCb\fP )(LinphoneCore *lc, const char *message)\fP" 1c
+.IP "\fBGlobal \fBDisplayStatusCb\fP )(LinphoneCore *lc, const char *message)\fP" 1c
+.IP "\fBGlobal \fBDisplayUrlCb\fP )(LinphoneCore *lc, const char *message, const char *url)\fP" 1c
+.IP "\fBGlobal \fBlinphone_chat_room_send_message\fP (LinphoneChatRoom *cr, const char *msg)\fP" 1c
+\fBlinphone_chat_room_send_message2()\fP gives more control on the message expedition\&.  
+.IP "\fBGlobal \fBlinphone_core_disable_logs\fP ()\fP" 1c
+Use \fBlinphone_core_set_log_level\fP instead\&.  
+.IP "\fBGlobal \fBlinphone_core_enable_logs\fP (FILE *file)\fP" 1c
+Use \fBlinphone_core_set_log_file\fP and \fBlinphone_core_set_log_level\fP instead\&. 
+.IP "\fBGlobal \fBlinphone_core_enable_logs_with_cb\fP (OrtpLogFunc logfunc)\fP" 1c
+Use \fBlinphone_core_set_log_handler\fP and \fBlinphone_core_set_log_level\fP instead\&. 
+.IP "\fBGlobal \fBlinphone_core_get_presence_info\fP (const LinphoneCore *lc)\fP" 1c
+Use \fBlinphone_core_get_presence_model()\fP instead  
+.IP "\fBGlobal \fBlinphone_core_interpret_friend_uri\fP (LinphoneCore *lc, const char *uri, char **result)\fP" 1c
+Use \fBlinphone_core_interpret_url()\fP instead  
+.IP "\fBGlobal \fBlinphone_core_set_presence_info\fP (LinphoneCore *lc, int minutes_away, const char *alternative_contact, LinphoneOnlineStatus os)\fP" 1c
+Use \fBlinphone_core_set_presence_model()\fP instead  
+.IP "\fBGlobal \fBlinphone_friend_get_status\fP (const LinphoneFriend *lf)\fP" 1c
+Use \fBlinphone_friend_get_presence_model()\fP instead  
+.IP "\fBGlobal \fBlinphone_friend_new_with_addr\fP \fP" 1c
+Use \fBlinphone_friend_new_with_address\fP instead  
+.IP "\fBGlobal \fBlinphone_friend_set_addr\fP \fP" 1c
+Use \fBlinphone_friend_set_address\fP instead  
+.IP "\fBGlobal \fBlinphone_online_status_to_string\fP (LinphoneOnlineStatus ss)\fP" 1c
+Use \fBLinphonePresenceModel\fP, \fBLinphonePresenceActivity\fP and \fBlinphone_presence_activity_to_string()\fP instead\&.  
+.IP "\fBGlobal \fBlinphone_proxy_config_new\fP (void)\fP" 1c
+, use \fBlinphone_core_create_proxy_config\fP instead Creates an empty proxy config\&.  
+.IP "\fBGlobal \fBLinphoneCoreTextMessageReceivedCb\fP )(LinphoneCore *lc, LinphoneChatRoom *room, const LinphoneAddress *from, const char *message)\fP" 1c
+use #LinphoneMessageReceived instead\&. 
+.IP "\fBGlobal \fBLinphoneOnlineStatus\fP \fP" 1c
+Use \fBLinphonePresenceModel\fP and \fBLinphonePresenceActivity\fP instead  
+.IP "\fBGlobal \fBLinphoneOnlineStatus\fP \fP" 1c
+Use \fBLinphonePresenceModel\fP and \fBLinphonePresenceActivity\fP instead  
+.IP "\fBGlobal \fBShowInterfaceCb\fP )(LinphoneCore *lc)\fP" 1c
+.PP
+

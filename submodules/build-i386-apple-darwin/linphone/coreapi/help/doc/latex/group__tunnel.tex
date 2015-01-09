@@ -1,0 +1,388 @@
+\section{Tunnel}
+\label{group__tunnel}\index{Tunnel@{Tunnel}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\-\_\-\-Linphone\-Tunnel\-Config {\bf Linphone\-Tunnel\-Config}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Linphone\-Tunnel\-Config} $\ast$ {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-new} ()
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-host} ({\bf Linphone\-Tunnel\-Config} $\ast$tunnel, const char $\ast$host)
+\item 
+const char $\ast$ {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-host} (const {\bf Linphone\-Tunnel\-Config} $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-port} ({\bf Linphone\-Tunnel\-Config} $\ast$tunnel, int port)
+\item 
+int {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-port} (const {\bf Linphone\-Tunnel\-Config} $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port} ({\bf Linphone\-Tunnel\-Config} $\ast$tunnel, int remote\-\_\-udp\-\_\-mirror\-\_\-port)
+\item 
+int {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port} (const {\bf Linphone\-Tunnel\-Config} $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-delay} ({\bf Linphone\-Tunnel\-Config} $\ast$tunnel, int delay)
+\item 
+int {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-delay} (const {\bf Linphone\-Tunnel\-Config} $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-config\-\_\-destroy} ({\bf Linphone\-Tunnel\-Config} $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-add\-\_\-server} (Linphone\-Tunnel $\ast$tunnel, {\bf Linphone\-Tunnel\-Config} $\ast$tunnel\-\_\-config)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-remove\-\_\-server} (Linphone\-Tunnel $\ast$tunnel, {\bf Linphone\-Tunnel\-Config} $\ast$tunnel\-\_\-config)
+\item 
+const M\-S\-List $\ast$ {\bf linphone\-\_\-tunnel\-\_\-get\-\_\-servers} (Linphone\-Tunnel $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-clean\-\_\-servers} (Linphone\-Tunnel $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-enable} (Linphone\-Tunnel $\ast$tunnel, bool\-\_\-t enabled)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-tunnel\-\_\-enabled} (Linphone\-Tunnel $\ast$tunnel)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-tunnel\-\_\-connected} (Linphone\-Tunnel $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-reconnect} (Linphone\-Tunnel $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-auto\-\_\-detect} (Linphone\-Tunnel $\ast$tunnel)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy} (Linphone\-Tunnel $\ast$tunnel, const char $\ast$host, int port, const char $\ast$username, const char $\ast$passwd)
+\item 
+void {\bf linphone\-\_\-tunnel\-\_\-get\-\_\-http\-\_\-proxy} (Linphone\-Tunnel $\ast$tunnel, const char $\ast$$\ast$host, int $\ast$port, const char $\ast$$\ast$username, const char $\ast$$\ast$passwd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\index{Tunnel@{Tunnel}!Linphone\-Tunnel\-Config@{Linphone\-Tunnel\-Config}}
+\index{Linphone\-Tunnel\-Config@{Linphone\-Tunnel\-Config}!Tunnel@{Tunnel}}
+\subsubsection[{Linphone\-Tunnel\-Config}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \-\_\-\-Linphone\-Tunnel\-Config {\bf Linphone\-Tunnel\-Config}}\label{group__tunnel_gac8bf0e2203614a6380c2e274d58663d7}
+This set of methods enhance Linphone\-Core functionalities in order to provide an easy to use A\-P\-I to
+\begin{DoxyItemize}
+\item provision tunnel servers ip addresses and ports. This functionality is an option not implemented under G\-P\-L.
+\item start/stop the tunneling service
+\item perform auto-\/detection whether tunneling is required, based on a test of sending/receiving a flow of U\-D\-P packets.
+\end{DoxyItemize}
+
+It takes in charge automatically the S\-I\-P registration procedure when connecting or disconnecting to a tunnel server. No other action on Linphone\-Core is required to enable full operation in tunnel mode. 
+
+\subsection{Function Documentation}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-new@{linphone\-\_\-tunnel\-\_\-config\-\_\-new}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-new@{linphone\-\_\-tunnel\-\_\-config\-\_\-new}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Tunnel\-Config}$\ast$ linphone\-\_\-tunnel\-\_\-config\-\_\-new (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gab1c60b7ee0331f532ea8a0ce9d577be3}
+Create a new tunnel configuration \index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-host@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-host}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-host@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-host}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-host}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-host (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel, }
+\item[{const char $\ast$}]{host}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga3528ad019e02f1dafbed28b588032309}
+Set address of server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+{\em host} & tunnel server ip address \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-host@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-host}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-host@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-host}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-host}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-host (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gafa66d330fd8ab9c34943141e01951062}
+Get address of server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-port}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-port}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga01f6ec956efbb074a611c4256e86eab0}
+Set tls port of server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+{\em port} & tunnel server tls port, recommended value is 443 \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-port}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-port}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga489397d1b58df97ee4060d0522ad7d4f}
+Get tls port of server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel, }
+\item[{int}]{remote\-\_\-udp\-\_\-mirror\-\_\-port}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga16b085d99ac03532ec604980c1c575cc}
+Set the remote port on the tunnel server side used to test udp reachability.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+{\em remote\-\_\-udp\-\_\-mirror\-\_\-port} & remote port on the tunnel server side used to test udp reachability, set to -\/1 to disable the feature \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-remote\-\_\-udp\-\_\-mirror\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gab2e28e4cdc76d9cd18441c7da2bad71f}
+Get the remote port on the tunnel server side used to test udp reachability.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-delay@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-delay}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-delay@{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-delay}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-config\-\_\-set\-\_\-delay (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel, }
+\item[{int}]{delay}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga16a880e0479e5ab816e910b70abc2fa7}
+Set the udp packet round trip delay in ms for a tunnel configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+{\em delay} & udp packet round trip delay in ms considered as acceptable. recommended value is 1000 ms. \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-delay@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-delay}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-delay@{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-delay}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-tunnel\-\_\-config\-\_\-get\-\_\-delay (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga7ca84486dfe60616558f5cf9ddd2313e}
+Get the udp packet round trip delay in ms for a tunnel configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-config\-\_\-destroy@{linphone\-\_\-tunnel\-\_\-config\-\_\-destroy}}
+\index{linphone\-\_\-tunnel\-\_\-config\-\_\-destroy@{linphone\-\_\-tunnel\-\_\-config\-\_\-destroy}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-config\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-config\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gaad1eea981798ed3adc92392813484fe6}
+Destroy a tunnel configuration
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & configuration object \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-add\-\_\-server@{linphone\-\_\-tunnel\-\_\-add\-\_\-server}}
+\index{linphone\-\_\-tunnel\-\_\-add\-\_\-server@{linphone\-\_\-tunnel\-\_\-add\-\_\-server}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-add\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-add\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel, }
+\item[{{\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel\-\_\-config}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga762cc31830da8eb5736017e690ced895}
+Add tunnel server configuration
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object \\
+\hline
+{\em tunnel\-\_\-config} & object \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-remove\-\_\-server@{linphone\-\_\-tunnel\-\_\-remove\-\_\-server}}
+\index{linphone\-\_\-tunnel\-\_\-remove\-\_\-server@{linphone\-\_\-tunnel\-\_\-remove\-\_\-server}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-remove\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-remove\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel, }
+\item[{{\bf Linphone\-Tunnel\-Config} $\ast$}]{tunnel\-\_\-config}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gabf2355476ef1e2e28da5d09fb9713ae7}
+Remove tunnel server configuration
+
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object \\
+\hline
+{\em tunnel\-\_\-config} & object \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-get\-\_\-servers@{linphone\-\_\-tunnel\-\_\-get\-\_\-servers}}
+\index{linphone\-\_\-tunnel\-\_\-get\-\_\-servers@{linphone\-\_\-tunnel\-\_\-get\-\_\-servers}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-get\-\_\-servers}]{\setlength{\rightskip}{0pt plus 5cm}const M\-S\-List$\ast$ linphone\-\_\-tunnel\-\_\-get\-\_\-servers (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gad8d0667d2a73b3bbba7c8da5dc4dfdad}
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object returns a string of space separated list of host\-:port of tunnel server addresses \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-clean\-\_\-servers@{linphone\-\_\-tunnel\-\_\-clean\-\_\-servers}}
+\index{linphone\-\_\-tunnel\-\_\-clean\-\_\-servers@{linphone\-\_\-tunnel\-\_\-clean\-\_\-servers}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-clean\-\_\-servers}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-clean\-\_\-servers (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga691d163b762cbf5e159883feab1e9ab4}
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object Removes all tunnel server address previously entered with add\-Server() \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-enable@{linphone\-\_\-tunnel\-\_\-enable}}
+\index{linphone\-\_\-tunnel\-\_\-enable@{linphone\-\_\-tunnel\-\_\-enable}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-enable}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-enable (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel, }
+\item[{bool\-\_\-t}]{enabled}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gad9027e17c878d915946b09def710e4f7}
+Sets whether tunneling of S\-I\-P and R\-T\-P is required. 
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object \\
+\hline
+{\em enabled} & If true enter in tunneled mode, if false exits from tunneled mode. The Tunnel\-Manager takes care of refreshing S\-I\-P registration when switching on or off the tunneled mode. \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-enabled@{linphone\-\_\-tunnel\-\_\-enabled}}
+\index{linphone\-\_\-tunnel\-\_\-enabled@{linphone\-\_\-tunnel\-\_\-enabled}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-tunnel\-\_\-enabled (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga33358846a5e2a4442957efb7daf89624}
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object Returns a boolean indicating whether tunneled operation is enabled. \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-connected@{linphone\-\_\-tunnel\-\_\-connected}}
+\index{linphone\-\_\-tunnel\-\_\-connected@{linphone\-\_\-tunnel\-\_\-connected}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-connected}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-tunnel\-\_\-connected (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga5004f3df0c18749329a9f5e67a3aa9bb}
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object Returns a boolean indicating whether tunnel is connected successfully. \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-reconnect@{linphone\-\_\-tunnel\-\_\-reconnect}}
+\index{linphone\-\_\-tunnel\-\_\-reconnect@{linphone\-\_\-tunnel\-\_\-reconnect}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-reconnect}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-reconnect (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga1676eda6a96c9bd730a873124459ac9d}
+
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object Forces reconnection to the tunnel server. This method is useful when the device switches from wifi to Edge/3\-G or vice versa. In most cases the tunnel client socket won't be notified promptly that its connection is now zombie, so it is recommended to call this method that will cause the lost connection to be closed and new connection to be issued. \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-auto\-\_\-detect@{linphone\-\_\-tunnel\-\_\-auto\-\_\-detect}}
+\index{linphone\-\_\-tunnel\-\_\-auto\-\_\-detect@{linphone\-\_\-tunnel\-\_\-auto\-\_\-detect}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-auto\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-auto\-\_\-detect (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_ga77b08bb5b5bd7feead7e666173dfb5a6}
+Start tunnel need detection. 
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & object In auto detect mode, the tunnel manager try to establish a real time rtp cummunication with the tunnel server on specified port. \par
+In case of success, the tunnel is automatically turned off. Otherwise, if no udp commmunication is feasible, tunnel mode is turned on. \par
+ Call this method each time to run the auto detection algorithm \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy@{linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy}}
+\index{linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy@{linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel, }
+\item[{const char $\ast$}]{host, }
+\item[{int}]{port, }
+\item[{const char $\ast$}]{username, }
+\item[{const char $\ast$}]{passwd}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gae0718a3a72763c91b63a2afe67205d8b}
+Set an optional http proxy to go through when connecting to tunnel server. 
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & Linphone\-Tunnel object \\
+\hline
+{\em host} & Http proxy host. \\
+\hline
+{\em port} & http proxy port. \\
+\hline
+{\em username} & optional http proxy username if the proxy request authentication. Currently only basic authentication is supported. Use N\-U\-L\-L if not needed. \\
+\hline
+{\em password} & optional http proxy password. Use N\-U\-L\-L if not needed. \\
+\hline
+\end{DoxyParams}
+\index{Tunnel@{Tunnel}!linphone\-\_\-tunnel\-\_\-get\-\_\-http\-\_\-proxy@{linphone\-\_\-tunnel\-\_\-get\-\_\-http\-\_\-proxy}}
+\index{linphone\-\_\-tunnel\-\_\-get\-\_\-http\-\_\-proxy@{linphone\-\_\-tunnel\-\_\-get\-\_\-http\-\_\-proxy}!Tunnel@{Tunnel}}
+\subsubsection[{linphone\-\_\-tunnel\-\_\-get\-\_\-http\-\_\-proxy}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-tunnel\-\_\-get\-\_\-http\-\_\-proxy (
+\begin{DoxyParamCaption}
+\item[{Linphone\-Tunnel $\ast$}]{tunnel, }
+\item[{const char $\ast$$\ast$}]{host, }
+\item[{int $\ast$}]{port, }
+\item[{const char $\ast$$\ast$}]{username, }
+\item[{const char $\ast$$\ast$}]{passwd}
+\end{DoxyParamCaption}
+)}\label{group__tunnel_gab41bfb94d11b7c31d09ab65776f7e701}
+Retrieve optional http proxy configuration previously set with \doxyref{linphone\-\_\-tunnel\-\_\-set\-\_\-http\-\_\-proxy()}{p.}{group__tunnel_gae0718a3a72763c91b63a2afe67205d8b}. 
+\begin{DoxyParams}{Parameters}
+{\em tunnel} & Linphone\-Tunnel object \\
+\hline
+{\em host} & Http proxy host. \\
+\hline
+{\em port} & http proxy port. \\
+\hline
+{\em username} & optional http proxy username if the proxy request authentication. Currently only basic authentication is supported. Use N\-U\-L\-L if not needed. \\
+\hline
+{\em password} & optional http proxy password. Use N\-U\-L\-L if not needed. \\
+\hline
+\end{DoxyParams}

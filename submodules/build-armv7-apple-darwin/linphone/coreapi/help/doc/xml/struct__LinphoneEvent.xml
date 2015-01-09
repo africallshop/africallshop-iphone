@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LinphoneEvent" kind="struct" prot="public">
+    <compoundname>_LinphoneEvent</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a23a659448928b49610b04736a5da05b7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__subscriptions_1ga317c5125e3a75ae35564895024cf24f9" kindref="member">LinphoneSubscriptionDir</ref></type>
+        <definition>LinphoneSubscriptionDir _LinphoneEvent::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="658" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1ac2db8b33e206b0bc6ffcafcc896d72ff" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+        <definition>LinphoneCore* _LinphoneEvent::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="659" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1ac452d094d9725172dad9cea2fa235dd7" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneEvent::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="660" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="660" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a5b4b1227a72d5223c43bc672aaa5e9e1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__subscriptions_1gae08ee010813d69b0bc487c704b174933" kindref="member">LinphoneSubscriptionState</ref></type>
+        <definition>LinphoneSubscriptionState _LinphoneEvent::subscription_state</definition>
+        <argsstring></argsstring>
+        <name>subscription_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="661" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a76fea6f4defe2ef5b04d25640c763b91" prot="public" static="no" mutable="no">
+        <type><ref refid="group__subscriptions_1gafb440ee528090b514289e74320923ea2" kindref="member">LinphonePublishState</ref></type>
+        <definition>LinphonePublishState _LinphoneEvent::publish_state</definition>
+        <argsstring></argsstring>
+        <name>publish_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="662" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a76fc1d05046edbfd730770bc7366073c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__misc_1gabe82a1a1ffc3d6b4e0b51a03028513b7" kindref="member">LinphoneReason</ref></type>
+        <definition>LinphoneReason _LinphoneEvent::reason</definition>
+        <argsstring></argsstring>
+        <name>reason</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="663" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1aa9b7b4aa5bc742ad89e13146533312de" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneEvent::userdata</definition>
+        <argsstring></argsstring>
+        <name>userdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="664" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1aa9bee612450b025273ae1327102dd63a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneEvent::refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="665" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a29c9ebd70c15760e51b1bb1d5a2fcea1" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneEvent::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="666" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a5328f53227f4b5efd44753a6109664ef" prot="public" static="no" mutable="no">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* _LinphoneEvent::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="667" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="667" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1a20acb696bca656f6faf4b4fdc7db4c8a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* _LinphoneEvent::resource_addr</definition>
+        <argsstring></argsstring>
+        <name>resource_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="668" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneEvent_1acedb68d06429788f96e42c050de9c71a" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneEvent::terminating</definition>
+        <argsstring></argsstring>
+        <name>terminating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="669" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="657" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="657" bodyend="670"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneEvent_1a23a659448928b49610b04736a5da05b7" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>dir</name></member>
+      <member refid="struct__LinphoneEvent_1a5328f53227f4b5efd44753a6109664ef" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>from</name></member>
+      <member refid="struct__LinphoneEvent_1ac2db8b33e206b0bc6ffcafcc896d72ff" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>lc</name></member>
+      <member refid="struct__LinphoneEvent_1a29c9ebd70c15760e51b1bb1d5a2fcea1" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>name</name></member>
+      <member refid="struct__LinphoneEvent_1ac452d094d9725172dad9cea2fa235dd7" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>op</name></member>
+      <member refid="struct__LinphoneEvent_1a76fea6f4defe2ef5b04d25640c763b91" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>publish_state</name></member>
+      <member refid="struct__LinphoneEvent_1a76fc1d05046edbfd730770bc7366073c" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>reason</name></member>
+      <member refid="struct__LinphoneEvent_1aa9bee612450b025273ae1327102dd63a" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>refcnt</name></member>
+      <member refid="struct__LinphoneEvent_1a20acb696bca656f6faf4b4fdc7db4c8a" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>resource_addr</name></member>
+      <member refid="struct__LinphoneEvent_1a5b4b1227a72d5223c43bc672aaa5e9e1" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>subscription_state</name></member>
+      <member refid="struct__LinphoneEvent_1acedb68d06429788f96e42c050de9c71a" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>terminating</name></member>
+      <member refid="struct__LinphoneEvent_1aa9b7b4aa5bc742ad89e13146533312de" prot="public" virt="non-virtual"><scope>_LinphoneEvent</scope><name>userdata</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

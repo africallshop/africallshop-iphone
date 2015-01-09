@@ -1,0 +1,2072 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="group__media__parameters" kind="group">
+    <compoundname>media_parameters</compoundname>
+    <title>Controlling media parameters</title>
+    <innerclass refid="struct__LinphoneVideoPolicy" prot="public">_LinphoneVideoPolicy</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__media__parameters_1ga83cad3d734c773e03ab7e555303d57d8" prot="public" static="no">
+        <type>struct <ref refid="struct__LinphoneVideoPolicy" kindref="compound">_LinphoneVideoPolicy</ref></type>
+        <definition>typedef struct _LinphoneVideoPolicy LinphoneVideoPolicy</definition>
+        <argsstring></argsstring>
+        <name>LinphoneVideoPolicy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure describing policy regarding video streams establishments. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="391" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__media__parameters_1ga669232e3f2bc8b06757499c14007afb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_enable_adaptive_rate_control</definition>
+        <argsstring>(LinphoneCore *lc, bool_t enabled)</argsstring>
+        <name>linphone_core_enable_adaptive_rate_control</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable adaptive rate control.</para><para>Adaptive rate control consists in using RTCP feedback provided information to dynamically control the output bitrate of the audio and video encoders, so that we can adapt to the network conditions and available bandwidth. Control of the audio encoder is done in case of audio-only call, and control of the video encoder is done for audio &amp; video calls. Adaptive rate control feature is enabled by default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1007" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1007" bodyend="1009"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga7aa556ec95ec30680e2c80c68f2ac22e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_adaptive_rate_control_enabled</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_adaptive_rate_control_enabled</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether adaptive rate control is enabled.</para><para>See <ref refid="group__media__parameters_1ga669232e3f2bc8b06757499c14007afb0" kindref="member">linphone_core_enable_adaptive_rate_control()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1018" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1018" bodyend="1020"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga1e0c01a25f78d14c6813213adf795e54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_download_bandwidth</definition>
+        <argsstring>(LinphoneCore *lc, int bw)</argsstring>
+        <name>linphone_core_set_download_bandwidth</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets maximum available download bandwidth</para><para>This is IP bandwidth, in kbit/s. This information is used signaled to other parties during calls (within SDP messages) so that the remote end can have sufficient knowledge to properly configure its audio &amp; video codec output bitrate to not overflow available bandwidth.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bandwidth in kbits/s, 0 for infinite </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1040" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1040" bodyend="1043"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gabaf184578641451f95ea7b4baa2b1b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_upload_bandwidth</definition>
+        <argsstring>(LinphoneCore *lc, int bw)</argsstring>
+        <name>linphone_core_set_upload_bandwidth</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets maximum available upload bandwidth</para><para>This is IP bandwidth, in kbit/s. This information is used by liblinphone together with remote side available bandwidth signaled in SDP messages to properly configure audio &amp; video codec&apos;s output bitrate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bandwidth in kbits/s, 0 for infinite </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1058" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1058" bodyend="1061"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga111cddb72d1f515862d10c51e441904b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_download_bandwidth</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_download_bandwidth</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the maximum available download bandwidth.</para><para>This value was set by <ref refid="group__media__parameters_1ga1e0c01a25f78d14c6813213adf795e54" kindref="member">linphone_core_set_download_bandwidth()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1071" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1071" bodyend="1073"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga4fe4a5b0770d9517ba9184434df4006d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_upload_bandwidth</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_upload_bandwidth</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the maximum available upload bandwidth.</para><para>This value was set by <ref refid="group__media__parameters_1gabaf184578641451f95ea7b4baa2b1b77" kindref="member">linphone_core_set_upload_bandwidth()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1083" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1083" bodyend="1085"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga7576261b832196c997c3cd2891784248" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_download_ptime</definition>
+        <argsstring>(LinphoneCore *lc, int ptime)</argsstring>
+        <name>linphone_core_set_download_ptime</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ptime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set audio packetization time linphone expects to receive from peer. A value of zero means that ptime is not specified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1091" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1091" bodyend="1093"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga21168e2a82d80c67b6808ba7d11d8c4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_download_ptime</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_download_ptime</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get audio packetization time linphone expects to receive from peer. A value of zero means that ptime is not specified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1100" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1100" bodyend="1102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gab1c4eef42818fba7ab3873ce32cfdf09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_upload_ptime</definition>
+        <argsstring>(LinphoneCore *lc, int ptime)</argsstring>
+        <name>linphone_core_set_upload_ptime</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ptime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set audio packetization time linphone will send (in absence of requirement from peer) A value of 0 stands for the current codec default packetization time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1110" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1110" bodyend="1112"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga394a1c972ab8c731c8c986ce741537f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_upload_ptime</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_upload_ptime</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set audio packetization time linphone will send (in absence of requirement from peer) A value of 0 stands for the current codec default packetization time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1121" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1121" bodyend="1123"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga8b649e401c9155420eba0712923cc201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const MSList *</type>
+        <definition>const MSList* linphone_core_get_audio_codecs</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_audio_codecs</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the list of available audio codecs.</para><para>This list is unmodifiable. The -&gt;data field of the MSList points a PayloadType structure holding the codec information. It is possible to make copy of the list with ms_list_copy() in order to modify it (such as the order of codecs). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1372" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1372" bodyend="1375"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga1b2b896da17654f8033e6f8a390a0589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const MSList *</type>
+        <definition>const MSList* linphone_core_get_video_codecs</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_video_codecs</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the list of available video codecs.</para><para>This list is unmodifiable. The -&gt;data field of the MSList points a PayloadType structure holding the codec information. It is possible to make copy of the list with ms_list_copy() in order to modify it (such as the order of codecs). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1386" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1386" bodyend="1389"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga1334576573101667d9cec851bf0f83df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_set_audio_codecs</definition>
+        <argsstring>(LinphoneCore *lc, MSList *codecs)</argsstring>
+        <name>linphone_core_set_audio_codecs</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>MSList *</type>
+          <declname>codecs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the list of audio codecs.</para><para>The list is taken by the LinphoneCore thus the application should not free it. This list is made of struct PayloadType describing the codec parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1519" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1519" bodyend="1525"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga3b066f817fd4c980198416b8b7a1fbdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_set_video_codecs</definition>
+        <argsstring>(LinphoneCore *lc, MSList *codecs)</argsstring>
+        <name>linphone_core_set_video_codecs</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>MSList *</type>
+          <declname>codecs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the list of video codecs.</para><para>The list is taken by the LinphoneCore thus the application should not free it. This list is made of struct PayloadType describing the codec parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1534" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1534" bodyend="1540"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga64acd21473b504e3cd1a91a913253119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_audio_jittcomp</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_audio_jittcomp</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the nominal audio jitter buffer size in milliseconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1562" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1562" bodyend="1565"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga324acd967de53ceee413a00f8f6aa82f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_video_jittcomp</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_video_jittcomp</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the nominal video jitter buffer size in milliseconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1582" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1582" bodyend="1585"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga2c7381905af4236ff0e128e7c9a56d32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_nortp_timeout</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_nortp_timeout</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value in seconds of the no-rtp timeout.</para><para>When no RTP or RTCP packets have been received for a while LinphoneCore will consider the call is broken (remote end crashed or disconnected from the network), and thus will terminate the call. The no-rtp timeout is the duration above which the call is considered broken. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1638" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1638" bodyend="1640"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gad19ea0dbf3ef765ce726ed87498e6573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_audio_jittcomp</definition>
+        <argsstring>(LinphoneCore *lc, int value)</argsstring>
+        <name>linphone_core_set_audio_jittcomp</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the nominal audio jitter buffer size in milliseconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1651" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1651" bodyend="1654"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga15e58159a4475b9c625e971375f77596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_video_jittcomp</definition>
+        <argsstring>(LinphoneCore *lc, int value)</argsstring>
+        <name>linphone_core_set_video_jittcomp</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the nominal video jitter buffer size in milliseconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1661" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1661" bodyend="1664"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaa5b56dcf8c1cbd1b7bbbe05279da9409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_audio_port_range</definition>
+        <argsstring>(LinphoneCore *lc, int min_port, int max_port)</argsstring>
+        <name>linphone_core_set_audio_port_range</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the UDP port range from which to randomly select the port used for audio streaming. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1684" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1684" bodyend="1688"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga505752de4885794d848d94f4143df7a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_video_port_range</definition>
+        <argsstring>(LinphoneCore *lc, int min_port, int max_port)</argsstring>
+        <name>linphone_core_set_video_port_range</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the UDP port range from which to randomly select the port used for video streaming. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1703" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1703" bodyend="1707"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga4d7cd6c4ddaaeee654d228a21a0b3097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_nortp_timeout</definition>
+        <argsstring>(LinphoneCore *lc, int nortp_timeout)</argsstring>
+        <name>linphone_core_set_nortp_timeout</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nortp_timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the no-rtp timeout value in seconds.</para><para>See <ref refid="group__media__parameters_1ga2c7381905af4236ff0e128e7c9a56d32" kindref="member">linphone_core_get_nortp_timeout()</ref> for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1715" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1715" bodyend="1717"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga8f12d74bb017fea6b268d0732924f25d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_get_use_info_for_dtmf</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_use_info_for_dtmf</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether SIP INFO is used for sending digits. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1724" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1724" bodyend="1727"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga4deb3152d6b1c73bb5ae130b04126bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_use_info_for_dtmf</definition>
+        <argsstring>(LinphoneCore *lc, bool_t use_info)</argsstring>
+        <name>linphone_core_set_use_info_for_dtmf</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>use_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether SIP INFO is to be used for sending digits. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1734" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1734" bodyend="1739"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaa107c110a140a5f4cc82053147db772d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_get_use_rfc2833_for_dtmf</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_use_rfc2833_for_dtmf</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether RFC2833 is used for sending digits. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1746" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1746" bodyend="1749"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga60a532c71bb575c90f1c2f572289373a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_use_rfc2833_for_dtmf</definition>
+        <argsstring>(LinphoneCore *lc, bool_t use_rfc2833)</argsstring>
+        <name>linphone_core_set_use_rfc2833_for_dtmf</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>use_rfc2833</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether RFC2833 is to be used for sending digits. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1756" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1756" bodyend="1761"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga9b23ecb53d8d7ad0062f71e482332044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_play_level</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_play_level</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get playback sound level in 0-100 scale. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3806" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3806" bodyend="3809"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gad218c5a201019d83765b3197d438602b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_ring_level</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_ring_level</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get ring sound level in 0-100 scale </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3816" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3816" bodyend="3819"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gafcf526c7bcac1131fb067096458e56d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_rec_level</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_rec_level</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get sound capture level in 0-100 scale </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3826" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3826" bodyend="3828"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga7ba1da91a653f016d6e6a22e88c320f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_ring_level</definition>
+        <argsstring>(LinphoneCore *lc, int level)</argsstring>
+        <name>linphone_core_set_ring_level</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set sound ring level in 0-100 scale </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3835" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3835" bodyend="3840"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga6fbd88f2248b5a6ca2e972589c2cb7ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_mic_gain_db</definition>
+        <argsstring>(LinphoneCore *lc, float gaindb)</argsstring>
+        <name>linphone_core_set_mic_gain_db</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gaindb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allow to control microphone level: gain in db </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3847" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3847" bodyend="3865"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga54b69b1189e053372b449d1332e1a149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_core_get_mic_gain_db</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_mic_gain_db</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get microphone gain in db. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3872" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3872" bodyend="3874"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga5916fdd8f32d8d1d49702af408eaced5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_playback_gain_db</definition>
+        <argsstring>(LinphoneCore *lc, float gaindb)</argsstring>
+        <name>linphone_core_set_playback_gain_db</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gaindb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allow to control play level before entering sound card: gain in db </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3881" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3881" bodyend="3898"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gae97e6b2a9434d42fde64130da338cdbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_core_get_playback_gain_db</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_playback_gain_db</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get playback gain in db before entering sound card. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3905" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3905" bodyend="3907"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga9339af7687042d2d8d9db3e834d35c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_play_level</definition>
+        <argsstring>(LinphoneCore *lc, int level)</argsstring>
+        <name>linphone_core_set_play_level</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set sound playback level in 0-100 scale </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3914" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3914" bodyend="3919"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga4e527c0e3d8f9dd118c1cd4d1af4081f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_rec_level</definition>
+        <argsstring>(LinphoneCore *lc, int level)</argsstring>
+        <name>linphone_core_set_rec_level</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set sound capture level in 0-100 scale </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3926" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3926" bodyend="3932"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaab43dddfbdaa177f6b07cf11eb6959a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_sound_device_can_capture</definition>
+        <argsstring>(LinphoneCore *lc, const char *devid)</argsstring>
+        <name>linphone_core_sound_device_can_capture</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>devid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the specified sound device can capture sound.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the device name as returned by <ref refid="group__media__parameters_1ga4cc376b1a17c1b8c26c25289d6177603" kindref="member">linphone_core_get_sound_devices()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3973" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3973" bodyend="3978"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga5b3674e6684eeb691e2eef8ff82e27f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_sound_device_can_playback</definition>
+        <argsstring>(LinphoneCore *lc, const char *devid)</argsstring>
+        <name>linphone_core_sound_device_can_playback</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>devid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the specified sound device can play sound.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the device name as returned by <ref refid="group__media__parameters_1ga4cc376b1a17c1b8c26c25289d6177603" kindref="member">linphone_core_get_sound_devices()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="3987" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="3987" bodyend="3992"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaf39872ecc72222f20f21f43b1d801c7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_set_ringer_device</definition>
+        <argsstring>(LinphoneCore *lc, const char *devid)</argsstring>
+        <name>linphone_core_set_ringer_device</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>devid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the sound device used for ringing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the device name as returned by <ref refid="group__media__parameters_1ga4cc376b1a17c1b8c26c25289d6177603" kindref="member">linphone_core_get_sound_devices()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4001" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4001" bodyend="4007"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga918921988d674e6709dbbf40c76fde2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_set_playback_device</definition>
+        <argsstring>(LinphoneCore *lc, const char *devid)</argsstring>
+        <name>linphone_core_set_playback_device</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>devid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the sound device used for playback.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the device name as returned by <ref refid="group__media__parameters_1ga4cc376b1a17c1b8c26c25289d6177603" kindref="member">linphone_core_get_sound_devices()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4016" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4016" bodyend="4022"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gabca57ab3569c2e4bc7811336be6ea989" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_set_capture_device</definition>
+        <argsstring>(LinphoneCore *lc, const char *devid)</argsstring>
+        <name>linphone_core_set_capture_device</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>devid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the sound device used for capture.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>devid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the device name as returned by <ref refid="group__media__parameters_1ga4cc376b1a17c1b8c26c25289d6177603" kindref="member">linphone_core_get_sound_devices()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4031" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4031" bodyend="4037"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga4ebe2c101018cb13bf50ab7d31835c6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_ringer_device</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_ringer_device</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the name of the currently assigned sound device for ringing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4045" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4045" bodyend="4049"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga3c995a9314c0f720d867c388e5f2677f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_playback_device</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_playback_device</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the name of the currently assigned sound device for playback.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4057" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4057" bodyend="4060"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gae7a5781ea8f646492f8d56f516ead722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_capture_device</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_capture_device</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the name of the currently assigned sound device for capture.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4068" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4068" bodyend="4071"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga4cc376b1a17c1b8c26c25289d6177603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char **</type>
+        <definition>const char** linphone_core_get_sound_devices</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_sound_devices</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an unmodifiable array of available sound devices.</para><para>The array is NULL terminated.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4081" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4081" bodyend="4083"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga9c0247f180842d0408fc6be1fe4f7962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char **</type>
+        <definition>const char** linphone_core_get_video_devices</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_video_devices</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an unmodifiable array of available video capture devices.</para><para>The array is NULL terminated. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4091" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4091" bodyend="4093"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gae0efd204ad22aa99abdb9983bd592d20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_ring</definition>
+        <argsstring>(LinphoneCore *lc, const char *path)</argsstring>
+        <name>linphone_core_set_ring</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the path to a wav file used for ringing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file must be a wav 16bit linear. Local ring is disabled if null </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4157" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4157" bodyend="4166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaa9e5c6b8d6887ffe4013e369e4611f10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_ring</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_ring</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the path to the wav file used for ringing.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4174" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4174" bodyend="4176"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga1c5376ecf26684886c276183d88b03d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_ringback</definition>
+        <argsstring>(LinphoneCore *lc, const char *path)</argsstring>
+        <name>linphone_core_set_ringback</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the path to a wav file used for ringing back.</para><para>Ringback means the ring that is heard when it&apos;s ringing at the remote party. The file must be a wav 16bit linear. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4246" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4246" bodyend="4251"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga9d6ec5bae6d32d9de8243b51e4f73916" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_ringback</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_ringback</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the path to the wav file used for ringing back. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4258" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4258" bodyend="4260"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga27d78a3086c520a59c742056027d0faa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_enable_echo_cancellation</definition>
+        <argsstring>(LinphoneCore *lc, bool_t val)</argsstring>
+        <name>linphone_core_enable_echo_cancellation</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disable echo cancellation. Value is saved an used for subsequent calls </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4267" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4267" bodyend="4271"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaa7e19725835efff9598aaadf23d4df71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_echo_cancellation_enabled</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_echo_cancellation_enabled</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if echo cancellation is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4279" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4279" bodyend="4281"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gac0f2f453771ca2d0da6cd07ea25afc9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_mute_mic</definition>
+        <argsstring>(LinphoneCore *lc, bool_t val)</argsstring>
+        <name>linphone_core_mute_mic</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mutes or unmutes the local microphone. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4296" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4296" bodyend="4317"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga20634cdfa45353c4b888eec615bc9d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_send_dtmf</definition>
+        <argsstring>(LinphoneCore *lc, char dtmf)</argsstring>
+        <name>linphone_core_send_dtmf</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>dtmf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send the specified dtmf.</para><para>This function only works during calls. The dtmf is automatically played to the user. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtmf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dtmf name specified as a char, such as &apos;0&apos;, &apos;#&apos; etc... </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4364" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4364" bodyend="4387"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga74f00cfd76e39c3a229095251a16b3ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_enable_video</definition>
+        <argsstring>(LinphoneCore *lc, bool_t vcap_enabled, bool_t display_enabled)</argsstring>
+        <name>linphone_core_enable_video</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>vcap_enabled</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>display_enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables video globally.</para><para>This function does not have any effect during calls. It just indicates LinphoneCore to initiate future calls with video or not. The two boolean parameters indicate in which direction video is enabled. Setting both to false disables video entirely.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vcap_enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicates whether video capture is enabled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>display_enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicates whether video display should be shown </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4652" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4652" bodyend="4668"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gac1113e7a9207bf1525f2d57f352391a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_video_enabled</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_video_enabled</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if video is enabled, FALSE otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4682" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4682" bodyend="4684"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga454ecb3bde380230da042be98bdc45c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_video_policy</definition>
+        <argsstring>(LinphoneCore *lc, const LinphoneVideoPolicy *policy)</argsstring>
+        <name>linphone_core_set_video_policy</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__media__parameters_1ga83cad3d734c773e03ab7e555303d57d8" kindref="member">LinphoneVideoPolicy</ref> *</type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the default policy for video. This policy defines whether:<itemizedlist>
+<listitem><para>video shall be initiated by default for outgoing calls</para></listitem><listitem><para>video shall be accepter by default for incoming calls </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4693" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4693" bodyend="4699"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gac669b450d881be538f3f9ec753d4d1a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__media__parameters_1ga83cad3d734c773e03ab7e555303d57d8" kindref="member">LinphoneVideoPolicy</ref> *</type>
+        <definition>const LinphoneVideoPolicy* linphone_core_get_video_policy</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_video_policy</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the default policy for video. See <ref refid="group__media__parameters_1ga454ecb3bde380230da042be98bdc45c9" kindref="member">linphone_core_set_video_policy()</ref> for more details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4706" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4706" bodyend="4708"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gabe5de40453011a6c612342224e583e19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_enable_video_preview</definition>
+        <argsstring>(LinphoneCore *lc, bool_t val)</argsstring>
+        <name>linphone_core_enable_video_preview</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Controls video preview enablement.</para><para>Video preview refers to the action of displaying the local webcam image to the user while not in call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4717" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4717" bodyend="4721"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga5921ee6c7c1619da0969b6e33d39be6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_video_preview_enabled</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_video_preview_enabled</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if video previewing is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4727" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4727" bodyend="4729"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga51442e84c5636f18e3765de9e1399f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_enable_self_view</definition>
+        <argsstring>(LinphoneCore *lc, bool_t val)</argsstring>
+        <name>linphone_core_enable_self_view</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disable self view during calls.</para><para>Self-view refers to having local webcam image inserted in corner of the video window during calls. This function works at any time, including during calls. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4739" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4739" bodyend="4753"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga2e26cb816d40b5420969fadaa1ce1f9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_self_view_enabled</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_self_view_enabled</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if self-view is enabled, FALSE otherwise.</para><para>Refer to <ref refid="group__media__parameters_1ga51442e84c5636f18e3765de9e1399f69" kindref="member">linphone_core_enable_self_view()</ref> for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4762" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4762" bodyend="4764"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga8d3a88ab89a24dc32cb6034992920665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_set_video_device</definition>
+        <argsstring>(LinphoneCore *lc, const char *id)</argsstring>
+        <name>linphone_core_set_video_device</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the active video device.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the video device as returned by <ref refid="group__media__parameters_1ga9c0247f180842d0408fc6be1fe4f7962" kindref="member">linphone_core_get_video_devices()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4773" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4773" bodyend="4795"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga605f7169d5e2ef55047c993dc6d35897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_video_device</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_video_device</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the name of the currently active video device.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4803" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4803" bodyend="4806"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga91aed51e248d68371198ee4071828702" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long linphone_core_get_native_video_window_id</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_native_video_window_id</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the native window handle of the video window, casted as an unsigned long. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4902" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4902" bodyend="4915"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga90d0abb20b5c4a93836c861e540f975c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_native_video_window_id</definition>
+        <argsstring>(LinphoneCore *lc, unsigned long id)</argsstring>
+        <name>linphone_core_set_native_video_window_id</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the native video window id where the video is to be displayed. For MacOS, Linux, Windows: if not set or zero the core will create its own window, unless the special id -1 is given. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4944" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4944" bodyend="4957"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga223b4120018db602b1a1e17ac6faf4dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long linphone_core_get_native_preview_window_id</definition>
+        <argsstring>(const LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_native_preview_window_id</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the native window handle of the video preview window, casted as an unsigned long. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4964" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4964" bodyend="4979"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga61c95bf5b044388e0b1084a9424b6d59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_native_preview_window_id</definition>
+        <argsstring>(LinphoneCore *lc, unsigned long id)</argsstring>
+        <name>linphone_core_set_native_preview_window_id</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the native window id where the preview video (local camera) is to be displayed. This has to be used in conjonction with linphone_core_use_preview_window(). MacOS, Linux, Windows: if not set or zero the core will create its own window, unless the special id -1 is given. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4987" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4987" bodyend="5002"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gae39b1bea4370f32c28fa446f97540d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_device_rotation</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_device_rotation</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns current device orientation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5029" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5029" bodyend="5031"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga309fdb0f39432b125ff1f36347cea362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_device_rotation</definition>
+        <argsstring>(LinphoneCore *lc, int rotation)</argsstring>
+        <name>linphone_core_set_device_rotation</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells the core the device current orientation. This can be used by capture filters on mobile devices to select between portrait/landscape mode and to produce properly oriented images. The exact meaning of the value in rotation if left to each device specific implementations. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>. IOS supported values are 0 for UIInterfaceOrientationPortrait and 270 for UIInterfaceOrientationLandscapeRight. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5042" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5042" bodyend="5053"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaf2d375366aba6be7f6e201fe544d4657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const MSVideoSizeDef *</type>
+        <definition>const MSVideoSizeDef* linphone_core_get_supported_video_sizes</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_supported_video_sizes</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the zero terminated table of supported video resolutions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5088" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5088" bodyend="5090"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga5580a04c427649fa2667e394cd383bbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_preferred_video_size</definition>
+        <argsstring>(LinphoneCore *lc, MSVideoSize vsize)</argsstring>
+        <name>linphone_core_set_preferred_video_size</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>MSVideoSize</type>
+          <declname>vsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the preferred video size.</para><para>This applies only to the stream that is captured and sent to the remote party, since we accept all standard video size on the receive path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5127" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5127" bodyend="5138"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga35e73bf4c1fb1c1c7f7933579b5d4aa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_preferred_video_size_by_name</definition>
+        <argsstring>(LinphoneCore *lc, const char *name)</argsstring>
+        <name>linphone_core_set_preferred_video_size_by_name</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the preferred video size by its name.</para><para>This is identical to <ref refid="group__media__parameters_1ga5580a04c427649fa2667e394cd383bbe" kindref="member">linphone_core_set_preferred_video_size()</ref> except that it takes the name of the video resolution as input. Video resolution names are: qcif, svga, cif, vga, 4cif, svga ... </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5148" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5148" bodyend="5153"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga1bea0ef8e0cb111bffb9da4a7fc29781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MSVideoSize</type>
+        <definition>MSVideoSize linphone_core_get_preferred_video_size</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_preferred_video_size</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current preferred video size for sending. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5160" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5160" bodyend="5162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga11b05c55741a236cb8d07b8a197ebcca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_play_dtmf</definition>
+        <argsstring>(LinphoneCore *lc, char dtmf, int duration_ms)</argsstring>
+        <name>linphone_core_play_dtmf</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>dtmf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>duration_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Plays a dtmf sound to the local user. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtmf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DTMF to play [&apos;0&apos;..&apos;16&apos;] | &apos;#&apos; | &apos;#&apos; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duration_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>duration in ms, -1 means play until next further call to <ref refid="group__media__parameters_1ga5d9cfc960f9779c98866250a665f3d6d" kindref="member">linphone_core_stop_dtmf()</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5246" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5246" bodyend="5256"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga5d9cfc960f9779c98866250a665f3d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_stop_dtmf</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_stop_dtmf</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stops playing a dtmf started by <ref refid="group__media__parameters_1ga11b05c55741a236cb8d07b8a197ebcca" kindref="member">linphone_core_play_dtmf()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5303" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5303" bodyend="5307"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga2b1662e5e8227bdc6ee7831d1b51f94e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_mtu</definition>
+        <argsstring>(LinphoneCore *lc, int mtu)</argsstring>
+        <name>linphone_core_set_mtu</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mtu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the maximum transmission unit size in bytes. This information is useful for sending RTP packets. Default value is 1500. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5341" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5341" bodyend="5351"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga9b2e2d8862d6d80fa873755276ebb91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_stop_ringing</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_stop_ringing</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whenever the liblinphone is playing a ring to advertise an incoming call or ringback of an outgoing call, this function stops the ringing. Typical use is to stop ringing when the user requests to ignore the call.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5952" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5952" bodyend="5959"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga12a525f4175bf236ac55de08117bf746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_enable_echo_cancellation</definition>
+        <argsstring>(LinphoneCall *call, bool_t val)</argsstring>
+        <name>linphone_call_enable_echo_cancellation</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disable echo cancellation for this call <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="589" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2064" bodyend="2069"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga376db6955f192b0c9d72d1ca40acfcce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_call_echo_cancellation_enabled</definition>
+        <argsstring>(LinphoneCall *lc)</argsstring>
+        <name>linphone_call_echo_cancellation_enabled</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if echo cancellation is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="595" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2070" bodyend="2078"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaa5e8e576eaf802f040a3b18c1ffe5c32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_enable_echo_limiter</definition>
+        <argsstring>(LinphoneCall *call, bool_t val)</argsstring>
+        <name>linphone_call_enable_echo_limiter</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disable echo limiter for this call <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="603" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2080" bodyend="2092"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga5b19034e2ce3fed2be1a172b73e1c00e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_call_echo_limiter_enabled</definition>
+        <argsstring>(const LinphoneCall *call)</argsstring>
+        <name>linphone_call_echo_limiter_enabled</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if echo limiter is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="609" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2094" bodyend="2100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gaf733e15bc6e3356f645f66b179c38d05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+        <definition>LinphoneCallParams* linphone_core_create_default_call_parameters</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_create_default_call_parameters</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get default call parameters reflecting current linphone core configuration <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>LinphoneCore</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>LinphoneCallParams </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1246" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5879" bodyend="5883"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga285df0ece7a8c03a722cec288faf8c12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PayloadType *</type>
+        <definition>PayloadType* linphone_core_find_payload_type</definition>
+        <argsstring>(LinphoneCore *lc, const char *type, int rate, int channels)</argsstring>
+        <name>linphone_core_find_payload_type</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>channels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get payload type from mime type and clock rate</para><para>This function searches in audio and video codecs for the given payload type name and clockrate. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>payload mime type (I.E SPEEX, PCMU, VP8) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can be <ref refid="group__media__parameters_1ga2306371063fd39f746ee4db99596e8c3" kindref="member">LINPHONE_FIND_PAYLOAD_IGNORE_RATE</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of channels, can be <ref refid="group__media__parameters_1ga5ae9e6b3f73ab7889082772130fc8467" kindref="member">LINPHONE_FIND_PAYLOAD_IGNORE_CHANNELS</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns NULL if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1323" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5843" bodyend="5855"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga63c9cc779bdcc9ca8887dd42569b58c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t linphone_core_is_mic_muted</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_is_mic_muted</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return mic state.</para><para>Returns whether microphone is muted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1536" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4321" bodyend="4330"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1ga636c04457d3f6f8fef91a54d9dcc2e16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_video_display_filter</definition>
+        <argsstring>(LinphoneCore *lc, const char *filter_name)</argsstring>
+        <name>linphone_core_set_video_display_filter</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filter_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the name of the mediastreamer2 filter to be used for rendering video. This is for advanced users of the library, mainly to workaround hardware/driver bugs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/misc.c" line="1291" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/misc.c" bodystart="1291" bodyend="1293"/>
+      </memberdef>
+      <memberdef kind="function" id="group__media__parameters_1gae6d7ef6182365d258fbfb489c33018df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_video_display_filter</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_video_display_filter</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the name of the mediastreamer2 filter used for rendering video. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/misc.c" line="1299" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/misc.c" bodystart="1299" bodyend="1301"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__media__parameters_1ga2306371063fd39f746ee4db99596e8c3" prot="public" static="no">
+        <name>LINPHONE_FIND_PAYLOAD_IGNORE_RATE</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wildcard value used by <ref refid="group__media__parameters_1ga285df0ece7a8c03a722cec288faf8c12" kindref="member">linphone_core_find_payload_type</ref> to ignore rate in search algorithm </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1307" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__media__parameters_1ga5ae9e6b3f73ab7889082772130fc8467" prot="public" static="no">
+        <name>LINPHONE_FIND_PAYLOAD_IGNORE_CHANNELS</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wildcard value used by <ref refid="group__media__parameters_1ga285df0ece7a8c03a722cec288faf8c12" kindref="member">linphone_core_find_payload_type</ref> to ignore channel in search algorithm </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1312" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1312" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

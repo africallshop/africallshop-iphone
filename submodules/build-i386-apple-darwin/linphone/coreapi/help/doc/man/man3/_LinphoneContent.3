@@ -1,0 +1,43 @@
+.TH "_LinphoneContent" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_LinphoneContent \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <linphonecore\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "char * \fBtype\fP"
+.br
+.ti -1c
+.RI "char * \fBsubtype\fP"
+.br
+.ti -1c
+.RI "void * \fBdata\fP"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The LinphoneContent struct holds data that can be embedded in a signaling message\&. 
+.SH "Field Documentation"
+.PP 
+.SS "char* _LinphoneContent::type"
+mime type for the data, for example 'application' 
+.SS "char* _LinphoneContent::subtype"
+mime subtype for the data, for example 'html' 
+.SS "void* _LinphoneContent::data"
+the actual data buffer, usually a string 
+.SS "size_t _LinphoneContent::size"
+the size of the data buffer, excluding null character despite null character is always set for convenience\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

@@ -1,0 +1,190 @@
+x264 configure script
+Command line options: "--prefix=/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//../liblinphone-sdk/armv7s-apple-darwin" "--host=armv7s-apple-darwin" "--enable-static" "--enable-pic" "--cross-prefix=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/" "--extra-ldflags=" "-arch" "armv7s" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk" "-miphoneos-version-min=4.0" "-DTARGET_OS_IPHONE=1" "-D__IOS" "-fms-extensions" "--extra-cflags=" "-arch" "armv7s" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk" "-miphoneos-version-min=4.0" "-DTARGET_OS_IPHONE=1" "-D__IOS" "-fms-extensions" "-mfpu=neon" "-mfloat-abi=softfp"
+
+checking whether xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions works... yes
+checking whether xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
+checking whether xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions supports __asm__("rev ip, ip");... yes
+checking whether xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions supports __asm__("movt r0, #0");... yes
+checking whether xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions supports __asm__("vadd.i16 q0, q0, q0");... yes
+checking for pthread.h... yes
+checking for return log2f(2); in math.h... yes
+checking for sws_init_context(0,0,0); in libswscale/swscale.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99  -lswscale -lavutil    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+conftest.c:1:10: fatal error: 'libswscale/swscale.h' file not found
+#include <libswscale/swscale.h>
+         ^
+1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <libswscale/swscale.h>
+int main () { sws_init_context(0,0,0); return 0; }
+--------------------------------------------------
+checking for -lpostproc... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -lpostproc    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+ld: library not found for -lpostproc
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main () {  return 0; }
+--------------------------------------------------
+checking for -lavcodec... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -lavcodec    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+ld: library not found for -lavcodec
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main () {  return 0; }
+--------------------------------------------------
+checking for -lavcore... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -lavcore    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+ld: library not found for -lavcore
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main () {  return 0; }
+--------------------------------------------------
+checking for -lswscale... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -lswscale    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+ld: library not found for -lswscale
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main () {  return 0; }
+--------------------------------------------------
+checking for -lavutil... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -lavutil    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+ld: library not found for -lavutil
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main () {  return 0; }
+--------------------------------------------------
+checking for -lm... yes
+checking for -lz... yes
+checking for -lbz2... yes
+checking for -lpthread... yes
+checking for -lavifil32... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -lavifil32    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+ld: library not found for -lavifil32
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main () {  return 0; }
+--------------------------------------------------
+checking for avformat_close_input(0); in libavformat/avformat.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99  -L. -lavformat -lm -lz -lbz2 -lpthread    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+conftest.c:1:10: fatal error: 'libavformat/avformat.h' file not found
+#include <libavformat/avformat.h>
+         ^
+1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <libavformat/avformat.h>
+int main () { avformat_close_input(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99  -lffms2    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+conftest.c:1:10: fatal error: 'ffms.h' file not found
+#include <ffms.h>
+         ^
+1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main () { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99  -lffms2 -lstdc++ -L. -lavformat -lm -lz -lbz2 -lpthread    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+conftest.c:1:10: fatal error: 'ffms.h' file not found
+#include <ffms.h>
+         ^
+1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main () { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for -lz... yes
+checking for gpac/isomedia.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -lgpac_static -lz    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+conftest.c:1:10: fatal error: 'gpac/isomedia.h' file not found
+#include <gpac/isomedia.h>
+         ^
+1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <gpac/isomedia.h>
+int main () {  return 0; }
+--------------------------------------------------
+checking for uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3}; in stdint.h... yes
+checking for stdio.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun clang -std=c99  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions conftest.c  -Wall -I. -I$(SRCPATH)  -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -mfpu=neon -mfloat-abi=softfp -falign-loops=16 -std=gnu99 -fPIC -shared -Wl,-Bsymbolic    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -lm -lpthread -o conftest
+ld: unknown option: -Bsymbolic
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <stdio.h>
+int main () {  return 0; }
+--------------------------------------------------
+checking for -fno-tree-vectorize... yes
+checking for fseeko(stdin,0,0); in stdio.h... yes
+checking for -Wshadow... yes
+
+platform:      ARM
+system:        MACOSX
+cli:           yes
+libx264:       internal
+shared:        no
+static:        yes
+asm:           yes
+interlaced:    yes
+avs:           no
+lavf:          no
+ffms:          no
+gpac:          no
+gpl:           yes
+thread:        posix
+filters:       crop select_every 
+debug:         no
+gprof:         no
+strip:         no
+PIC:           yes
+visualize:     no
+bit depth:     8
+chroma format: all

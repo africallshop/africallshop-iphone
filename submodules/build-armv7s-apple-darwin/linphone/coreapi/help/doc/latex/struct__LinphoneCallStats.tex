@@ -1,0 +1,79 @@
+\section{\-\_\-\-Linphone\-Call\-Stats Struct Reference}
+\label{struct__LinphoneCallStats}\index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}}
+
+
+{\ttfamily \#include $<$linphonecore.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf type}
+\item 
+jitter\-\_\-stats\-\_\-t {\bf jitter\-\_\-stats}
+\item 
+mblk\-\_\-t $\ast$ {\bf received\-\_\-rtcp}
+\item 
+mblk\-\_\-t $\ast$ {\bf sent\-\_\-rtcp}
+\item 
+float {\bf round\-\_\-trip\-\_\-delay}
+\item 
+{\bf Linphone\-Ice\-State} {\bf ice\-\_\-state}
+\item 
+{\bf Linphone\-Upnp\-State} {\bf upnp\-\_\-state}
+\item 
+float {\bf download\-\_\-bandwidth}
+\item 
+float {\bf upload\-\_\-bandwidth}
+\item 
+float {\bf local\-\_\-late\-\_\-rate}
+\item 
+float {\bf local\-\_\-loss\-\_\-rate}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Linphone\-Call\-Stats objects carries various statistic informations regarding quality of audio or video streams.
+
+To receive these informations periodically and as soon as they are computed, the application is invited to place a \#\-Call\-Stats\-Updated callback in the Linphone\-Core\-V\-Table structure it passes for instanciating the Linphone\-Core object (see \doxyref{linphone\-\_\-core\-\_\-new()}{p.}{group__initializing_gac93ed982ae84a5a282a703c8433ca42f} ).
+
+At any time, the application can access last computed statistics using \doxyref{linphone\-\_\-call\-\_\-get\-\_\-audio\-\_\-stats()}{p.}{group__call__misc_gaa1203b7ecb6b85a05af700152c1fdf14} or \doxyref{linphone\-\_\-call\-\_\-get\-\_\-video\-\_\-stats()}{p.}{group__call__misc_gae4f745821a59615910c73cf47300c234}. 
+
+\subsection{Field Documentation}
+\index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!type@{type}}
+\index{type@{type}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-\-Linphone\-Call\-Stats\-::type}\label{struct__LinphoneCallStats_af5fbd8dd6f793147e526b105c29d0ee5}
+Can be either L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-S\-\_\-\-A\-U\-D\-I\-O or L\-I\-N\-P\-H\-O\-N\-E\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-S\-\_\-\-V\-I\-D\-E\-O \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!jitter\-\_\-stats@{jitter\-\_\-stats}}
+\index{jitter\-\_\-stats@{jitter\-\_\-stats}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{jitter\-\_\-stats}]{\setlength{\rightskip}{0pt plus 5cm}jitter\-\_\-stats\-\_\-t \-\_\-\-Linphone\-Call\-Stats\-::jitter\-\_\-stats}\label{struct__LinphoneCallStats_a8a8b954105336bfda51e6a1eed7008fb}
+jitter buffer statistics, see o\-R\-T\-P documentation for details \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!received\-\_\-rtcp@{received\-\_\-rtcp}}
+\index{received\-\_\-rtcp@{received\-\_\-rtcp}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{received\-\_\-rtcp}]{\setlength{\rightskip}{0pt plus 5cm}mblk\-\_\-t$\ast$ \-\_\-\-Linphone\-Call\-Stats\-::received\-\_\-rtcp}\label{struct__LinphoneCallStats_ae348f8e725ff57e8b43e1e48a7b9ad15}
+Last R\-T\-C\-P packet received, as a mblk\-\_\-t structure. See o\-R\-T\-P documentation for details how to extract information from it \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!sent\-\_\-rtcp@{sent\-\_\-rtcp}}
+\index{sent\-\_\-rtcp@{sent\-\_\-rtcp}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{sent\-\_\-rtcp}]{\setlength{\rightskip}{0pt plus 5cm}mblk\-\_\-t$\ast$ \-\_\-\-Linphone\-Call\-Stats\-::sent\-\_\-rtcp}\label{struct__LinphoneCallStats_a6c4670ac143ef768db848ea7828b0f59}
+Last R\-T\-C\-P packet sent, as a mblk\-\_\-t structure. See o\-R\-T\-P documentation for details how to extract information from it \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!round\-\_\-trip\-\_\-delay@{round\-\_\-trip\-\_\-delay}}
+\index{round\-\_\-trip\-\_\-delay@{round\-\_\-trip\-\_\-delay}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{round\-\_\-trip\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}float \-\_\-\-Linphone\-Call\-Stats\-::round\-\_\-trip\-\_\-delay}\label{struct__LinphoneCallStats_ae902e24f2fb3ae64a54f3ea25bb12910}
+Round trip propagation time in seconds if known, -\/1 if unknown. \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!ice\-\_\-state@{ice\-\_\-state}}
+\index{ice\-\_\-state@{ice\-\_\-state}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{ice\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Ice\-State} \-\_\-\-Linphone\-Call\-Stats\-::ice\-\_\-state}\label{struct__LinphoneCallStats_a9986d647f13d56c2d752ae5f78f28428}
+State of I\-C\-E processing. \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!upnp\-\_\-state@{upnp\-\_\-state}}
+\index{upnp\-\_\-state@{upnp\-\_\-state}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{upnp\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Upnp\-State} \-\_\-\-Linphone\-Call\-Stats\-::upnp\-\_\-state}\label{struct__LinphoneCallStats_a6f78c4d4bb974ecd0a12acab3891fcec}
+State of u\-Pn\-P processing. \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!download\-\_\-bandwidth@{download\-\_\-bandwidth}}
+\index{download\-\_\-bandwidth@{download\-\_\-bandwidth}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{download\-\_\-bandwidth}]{\setlength{\rightskip}{0pt plus 5cm}float \-\_\-\-Linphone\-Call\-Stats\-::download\-\_\-bandwidth}\label{struct__LinphoneCallStats_a374fba6a87240c558dfbd73a9172ed66}
+Download bandwidth measurement of received stream, expressed in kbit/s, including I\-P/\-U\-D\-P/\-R\-T\-P headers \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!upload\-\_\-bandwidth@{upload\-\_\-bandwidth}}
+\index{upload\-\_\-bandwidth@{upload\-\_\-bandwidth}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{upload\-\_\-bandwidth}]{\setlength{\rightskip}{0pt plus 5cm}float \-\_\-\-Linphone\-Call\-Stats\-::upload\-\_\-bandwidth}\label{struct__LinphoneCallStats_a76758bb52b889691f2ea8b25fcbc545c}
+Download bandwidth measurement of sent stream, expressed in kbit/s, including I\-P/\-U\-D\-P/\-R\-T\-P headers \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!local\-\_\-late\-\_\-rate@{local\-\_\-late\-\_\-rate}}
+\index{local\-\_\-late\-\_\-rate@{local\-\_\-late\-\_\-rate}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{local\-\_\-late\-\_\-rate}]{\setlength{\rightskip}{0pt plus 5cm}float \-\_\-\-Linphone\-Call\-Stats\-::local\-\_\-late\-\_\-rate}\label{struct__LinphoneCallStats_a806b9ddc325b0a07895a366f6a470aaf}
+percentage of packet received too late over last second \index{\-\_\-\-Linphone\-Call\-Stats@{\-\_\-\-Linphone\-Call\-Stats}!local\-\_\-loss\-\_\-rate@{local\-\_\-loss\-\_\-rate}}
+\index{local\-\_\-loss\-\_\-rate@{local\-\_\-loss\-\_\-rate}!_LinphoneCallStats@{\-\_\-\-Linphone\-Call\-Stats}}
+\subsubsection[{local\-\_\-loss\-\_\-rate}]{\setlength{\rightskip}{0pt plus 5cm}float \-\_\-\-Linphone\-Call\-Stats\-::local\-\_\-loss\-\_\-rate}\label{struct__LinphoneCallStats_ac5805dd8961d7c7d053f1fcdc14bbc67}
+percentage of lost packet over last second 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+linphonecore.\-h\end{DoxyCompactItemize}

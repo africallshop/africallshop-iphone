@@ -1,0 +1,318 @@
+.TH "Tunnel" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Tunnel \- 
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct 
+.br
+_LinphoneTunnelConfig \fBLinphoneTunnelConfig\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinphoneTunnelConfig\fP * \fBlinphone_tunnel_config_new\fP ()"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_config_set_host\fP (\fBLinphoneTunnelConfig\fP *tunnel, const char *host)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_tunnel_config_get_host\fP (const \fBLinphoneTunnelConfig\fP *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_config_set_port\fP (\fBLinphoneTunnelConfig\fP *tunnel, int port)"
+.br
+.ti -1c
+.RI "int \fBlinphone_tunnel_config_get_port\fP (const \fBLinphoneTunnelConfig\fP *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_config_set_remote_udp_mirror_port\fP (\fBLinphoneTunnelConfig\fP *tunnel, int remote_udp_mirror_port)"
+.br
+.ti -1c
+.RI "int \fBlinphone_tunnel_config_get_remote_udp_mirror_port\fP (const \fBLinphoneTunnelConfig\fP *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_config_set_delay\fP (\fBLinphoneTunnelConfig\fP *tunnel, int delay)"
+.br
+.ti -1c
+.RI "int \fBlinphone_tunnel_config_get_delay\fP (const \fBLinphoneTunnelConfig\fP *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_config_destroy\fP (\fBLinphoneTunnelConfig\fP *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_add_server\fP (LinphoneTunnel *tunnel, \fBLinphoneTunnelConfig\fP *tunnel_config)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_remove_server\fP (LinphoneTunnel *tunnel, \fBLinphoneTunnelConfig\fP *tunnel_config)"
+.br
+.ti -1c
+.RI "const MSList * \fBlinphone_tunnel_get_servers\fP (LinphoneTunnel *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_clean_servers\fP (LinphoneTunnel *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_enable\fP (LinphoneTunnel *tunnel, bool_t enabled)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_tunnel_enabled\fP (LinphoneTunnel *tunnel)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_tunnel_connected\fP (LinphoneTunnel *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_reconnect\fP (LinphoneTunnel *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_auto_detect\fP (LinphoneTunnel *tunnel)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_set_http_proxy\fP (LinphoneTunnel *tunnel, const char *host, int port, const char *username, const char *passwd)"
+.br
+.ti -1c
+.RI "void \fBlinphone_tunnel_get_http_proxy\fP (LinphoneTunnel *tunnel, const char **host, int *port, const char **username, const char **passwd)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct _LinphoneTunnelConfig \fBLinphoneTunnelConfig\fP"
+This set of methods enhance LinphoneCore functionalities in order to provide an easy to use API to
+.IP "\(bu" 2
+provision tunnel servers ip addresses and ports\&. This functionality is an option not implemented under GPL\&.
+.IP "\(bu" 2
+start/stop the tunneling service
+.IP "\(bu" 2
+perform auto-detection whether tunneling is required, based on a test of sending/receiving a flow of UDP packets\&.
+.PP
+.PP
+It takes in charge automatically the SIP registration procedure when connecting or disconnecting to a tunnel server\&. No other action on LinphoneCore is required to enable full operation in tunnel mode\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBLinphoneTunnelConfig\fP* linphone_tunnel_config_new ()"
+Create a new tunnel configuration 
+.SS "void linphone_tunnel_config_set_host (\fBLinphoneTunnelConfig\fP *tunnel, const char *host)"
+Set address of server\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.br
+\fIhost\fP tunnel server ip address 
+.RE
+.PP
+
+.SS "const char* linphone_tunnel_config_get_host (const \fBLinphoneTunnelConfig\fP *tunnel)"
+Get address of server\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.RE
+.PP
+
+.SS "void linphone_tunnel_config_set_port (\fBLinphoneTunnelConfig\fP *tunnel, intport)"
+Set tls port of server\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.br
+\fIport\fP tunnel server tls port, recommended value is 443 
+.RE
+.PP
+
+.SS "int linphone_tunnel_config_get_port (const \fBLinphoneTunnelConfig\fP *tunnel)"
+Get tls port of server\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.RE
+.PP
+
+.SS "void linphone_tunnel_config_set_remote_udp_mirror_port (\fBLinphoneTunnelConfig\fP *tunnel, intremote_udp_mirror_port)"
+Set the remote port on the tunnel server side used to test udp reachability\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.br
+\fIremote_udp_mirror_port\fP remote port on the tunnel server side used to test udp reachability, set to -1 to disable the feature 
+.RE
+.PP
+
+.SS "int linphone_tunnel_config_get_remote_udp_mirror_port (const \fBLinphoneTunnelConfig\fP *tunnel)"
+Get the remote port on the tunnel server side used to test udp reachability\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.RE
+.PP
+
+.SS "void linphone_tunnel_config_set_delay (\fBLinphoneTunnelConfig\fP *tunnel, intdelay)"
+Set the udp packet round trip delay in ms for a tunnel configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.br
+\fIdelay\fP udp packet round trip delay in ms considered as acceptable\&. recommended value is 1000 ms\&. 
+.RE
+.PP
+
+.SS "int linphone_tunnel_config_get_delay (const \fBLinphoneTunnelConfig\fP *tunnel)"
+Get the udp packet round trip delay in ms for a tunnel configuration\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.RE
+.PP
+
+.SS "void linphone_tunnel_config_destroy (\fBLinphoneTunnelConfig\fP *tunnel)"
+Destroy a tunnel configuration
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP configuration object 
+.RE
+.PP
+
+.SS "void linphone_tunnel_add_server (LinphoneTunnel *tunnel, \fBLinphoneTunnelConfig\fP *tunnel_config)"
+Add tunnel server configuration
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object 
+.br
+\fItunnel_config\fP object 
+.RE
+.PP
+
+.SS "void linphone_tunnel_remove_server (LinphoneTunnel *tunnel, \fBLinphoneTunnelConfig\fP *tunnel_config)"
+Remove tunnel server configuration
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object 
+.br
+\fItunnel_config\fP object 
+.RE
+.PP
+
+.SS "const MSList* linphone_tunnel_get_servers (LinphoneTunnel *tunnel)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object returns a string of space separated list of host:port of tunnel server addresses 
+.RE
+.PP
+
+.SS "void linphone_tunnel_clean_servers (LinphoneTunnel *tunnel)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object Removes all tunnel server address previously entered with addServer() 
+.RE
+.PP
+
+.SS "void linphone_tunnel_enable (LinphoneTunnel *tunnel, bool_tenabled)"
+Sets whether tunneling of SIP and RTP is required\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object 
+.br
+\fIenabled\fP If true enter in tunneled mode, if false exits from tunneled mode\&. The TunnelManager takes care of refreshing SIP registration when switching on or off the tunneled mode\&. 
+.RE
+.PP
+
+.SS "bool_t linphone_tunnel_enabled (LinphoneTunnel *tunnel)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object Returns a boolean indicating whether tunneled operation is enabled\&. 
+.RE
+.PP
+
+.SS "bool_t linphone_tunnel_connected (LinphoneTunnel *tunnel)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object Returns a boolean indicating whether tunnel is connected successfully\&. 
+.RE
+.PP
+
+.SS "void linphone_tunnel_reconnect (LinphoneTunnel *tunnel)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object Forces reconnection to the tunnel server\&. This method is useful when the device switches from wifi to Edge/3G or vice versa\&. In most cases the tunnel client socket won't be notified promptly that its connection is now zombie, so it is recommended to call this method that will cause the lost connection to be closed and new connection to be issued\&. 
+.RE
+.PP
+
+.SS "void linphone_tunnel_auto_detect (LinphoneTunnel *tunnel)"
+Start tunnel need detection\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP object In auto detect mode, the tunnel manager try to establish a real time rtp cummunication with the tunnel server on specified port\&. 
+.br
+In case of success, the tunnel is automatically turned off\&. Otherwise, if no udp commmunication is feasible, tunnel mode is turned on\&. 
+.br
+ Call this method each time to run the auto detection algorithm 
+.RE
+.PP
+
+.SS "void linphone_tunnel_set_http_proxy (LinphoneTunnel *tunnel, const char *host, intport, const char *username, const char *passwd)"
+Set an optional http proxy to go through when connecting to tunnel server\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP LinphoneTunnel object 
+.br
+\fIhost\fP Http proxy host\&. 
+.br
+\fIport\fP http proxy port\&. 
+.br
+\fIusername\fP optional http proxy username if the proxy request authentication\&. Currently only basic authentication is supported\&. Use NULL if not needed\&. 
+.br
+\fIpassword\fP optional http proxy password\&. Use NULL if not needed\&. 
+.RE
+.PP
+
+.SS "void linphone_tunnel_get_http_proxy (LinphoneTunnel *tunnel, const char **host, int *port, const char **username, const char **passwd)"
+Retrieve optional http proxy configuration previously set with \fBlinphone_tunnel_set_http_proxy()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItunnel\fP LinphoneTunnel object 
+.br
+\fIhost\fP Http proxy host\&. 
+.br
+\fIport\fP http proxy port\&. 
+.br
+\fIusername\fP optional http proxy username if the proxy request authentication\&. Currently only basic authentication is supported\&. Use NULL if not needed\&. 
+.br
+\fIpassword\fP optional http proxy password\&. Use NULL if not needed\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

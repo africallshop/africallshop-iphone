@@ -1,0 +1,7 @@
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/cleandist.dir
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/dist.dir
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/srcpackage.dir
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/srcpackage_local.dir
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/svncheck.dir
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/uninstall.dir
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/src/CMakeFiles/zrtpcppcore.dir

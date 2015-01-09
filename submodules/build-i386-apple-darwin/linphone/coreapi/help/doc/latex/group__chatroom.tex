@@ -1,0 +1,663 @@
+\section{Chat room and Messaging}
+\label{group__chatroom}\index{Chat room and Messaging@{Chat room and Messaging}}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \-\_\-\-Linphone\-Chat\-Message {\bf Linphone\-Chat\-Message}
+\item 
+typedef struct \-\_\-\-Linphone\-Chat\-Room {\bf Linphone\-Chat\-Room}
+\item 
+typedef enum \\*
+{\bf \-\_\-\-Linphone\-Chat\-Message\-States} {\bf Linphone\-Chat\-Message\-State}
+\item 
+typedef void($\ast$ {\bf Linphone\-Chat\-Message\-State\-Changed\-Cb} )({\bf Linphone\-Chat\-Message} $\ast$msg, {\bf Linphone\-Chat\-Message\-State} state, void $\ast$ud)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf \-\_\-\-Linphone\-Chat\-Message\-States} \{ \\*
+{\bf Linphone\-Chat\-Message\-State\-Idle}, 
+\\*
+{\bf Linphone\-Chat\-Message\-State\-In\-Progress}, 
+\\*
+{\bf Linphone\-Chat\-Message\-State\-Delivered}, 
+\\*
+{\bf Linphone\-Chat\-Message\-State\-Not\-Delivered}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+M\-S\-List $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-rooms} ({\bf Linphone\-Core} $\ast$lc)
+\item 
+{\bf Linphone\-Chat\-Room} $\ast$ {\bf linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room} ({\bf Linphone\-Core} $\ast$lc, const char $\ast$to)
+\item 
+{\bf Linphone\-Chat\-Room} $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-or\-\_\-create\-\_\-chat\-\_\-room} ({\bf Linphone\-Core} $\ast$lc, const char $\ast$to)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-room\-\_\-destroy} ({\bf Linphone\-Chat\-Room} $\ast$cr)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message} ({\bf Linphone\-Chat\-Room} $\ast$cr, const char $\ast$msg)
+\item 
+{\bf Linphone\-Chat\-Room} $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-room} ({\bf Linphone\-Core} $\ast$lc, const {\bf Linphone\-Address} $\ast$addr)
+\item 
+{\bf Linphone\-Core} $\ast$ {\bf linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-lc} ({\bf Linphone\-Chat\-Room} $\ast$cr)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-room\-\_\-set\-\_\-user\-\_\-data} ({\bf Linphone\-Chat\-Room} $\ast$cr, void $\ast$ud)
+\item 
+void $\ast$ {\bf linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-user\-\_\-data} ({\bf Linphone\-Chat\-Room} $\ast$cr)
+\item 
+const {\bf Linphone\-Address} $\ast$ {\bf linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-peer\-\_\-address} ({\bf Linphone\-Chat\-Room} $\ast$cr)
+\item 
+{\bf Linphone\-Chat\-Message} $\ast$ {\bf linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message} ({\bf Linphone\-Chat\-Room} $\ast$cr, const char $\ast$message)
+\item 
+{\bf Linphone\-Chat\-Message} $\ast$ {\bf linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message\-\_\-2} ({\bf Linphone\-Chat\-Room} $\ast$cr, const char $\ast$message, const char $\ast$external\-\_\-body\-\_\-url, {\bf Linphone\-Chat\-Message\-State} state, time\-\_\-t time, bool\-\_\-t is\-\_\-read, bool\-\_\-t is\-\_\-incoming)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2} ({\bf Linphone\-Chat\-Room} $\ast$cr, {\bf Linphone\-Chat\-Message} $\ast$msg, {\bf Linphone\-Chat\-Message\-State\-Changed\-Cb} status\-\_\-cb, void $\ast$ud)
+\item 
+const char $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-state\-\_\-to\-\_\-string} (const {\bf Linphone\-Chat\-Message\-State} state)
+\item 
+{\bf Linphone\-Chat\-Room} $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-chat\-\_\-room} ({\bf Linphone\-Chat\-Message} $\ast$msg)
+\item 
+const {\bf Linphone\-Address} $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-peer\-\_\-address} ({\bf Linphone\-Chat\-Message} $\ast$msg)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-user\-\_\-data} ({\bf Linphone\-Chat\-Message} $\ast$message, void $\ast$ud)
+\item 
+void $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-user\-\_\-data} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+const char $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-external\-\_\-body\-\_\-url} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-external\-\_\-body\-\_\-url} ({\bf Linphone\-Chat\-Message} $\ast$message, const char $\ast$url)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-from} ({\bf Linphone\-Chat\-Message} $\ast$message, const {\bf Linphone\-Address} $\ast$from)
+\item 
+const {\bf Linphone\-Address} $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-from} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-to} ({\bf Linphone\-Chat\-Message} $\ast$message, const {\bf Linphone\-Address} $\ast$to)
+\item 
+const {\bf Linphone\-Address} $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-to} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+{\bf Linphone\-Address} $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-local\-\_\-address} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+time\-\_\-t {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-time} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+{\bf Linphone\-Chat\-Message\-State} {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-state} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+const char $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-text} (const {\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-message\-\_\-add\-\_\-custom\-\_\-header} ({\bf Linphone\-Chat\-Message} $\ast$message, const char $\ast$header\-\_\-name, const char $\ast$header\-\_\-value)
+\item 
+const char $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-custom\-\_\-header} ({\bf Linphone\-Chat\-Message} $\ast$message, const char $\ast$header\-\_\-name)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-read} ({\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-outgoing} ({\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+unsigned int {\bf linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-storage\-\_\-id} ({\bf Linphone\-Chat\-Message} $\ast$message)
+\item 
+{\bf Linphone\-Chat\-Message} $\ast$ {\bf linphone\-\_\-chat\-\_\-message\-\_\-clone} (const {\bf Linphone\-Chat\-Message} $\ast$msg)
+\item 
+void {\bf linphone\-\_\-chat\-\_\-message\-\_\-destroy} ({\bf Linphone\-Chat\-Message} $\ast$msg)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path} ({\bf Linphone\-Core} $\ast$lc, const char $\ast$path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+{\bfseries  Exchanging text messages} \par
+ Messages are sent using \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} object. First step is to create a \doxyref{chat room }{p.}{group__chatroom_ga84f6a24baf60bb2ca0dbc16f81838ebf} from a peer sip uri. 
+\begin{DoxyCode}
+LinphoneChatRoom* chat\_room = linphone_core_create_chat_room(lc,\textcolor{stringliteral}{"sip:joe@sip.linphone.org"});
+\end{DoxyCode}
+
+
+\par
+Once created, messages are sent using function \doxyref{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message()}{p.}{group__chatroom_ga5d70a868f932e0793991c8aca1289591} . 
+\begin{DoxyCode}
+linphone_chat_room_send_message(chat\_room,\textcolor{stringliteral}{"Hello world"}); \textcolor{comment}{/*sending message*/}
+\end{DoxyCode}
+ \par
+Incoming message are received from call back Linphone\-Core\-V\-Table.\-text\-\_\-received 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} text\_received(LinphoneCore *lc, LinphoneChatRoom *room, \textcolor{keyword}{const} 
+      LinphoneAddress *from, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *message) \{
+        printf(\textcolor{stringliteral}{" Message [%s] received from [%s] \(\backslash\)n"},message,
+      linphone_address_as_string (from));
+\}
+\end{DoxyCode}
+ \par
+ A complete tutorial can be found at \-: \doxyref{Chat room tutorial}{p.}{group__chatroom__tuto} 
+
+\subsection{Typedef Documentation}
+\index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Message@{Linphone\-Chat\-Message}}
+\index{Linphone\-Chat\-Message@{Linphone\-Chat\-Message}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{Linphone\-Chat\-Message}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \-\_\-\-Linphone\-Chat\-Message {\bf Linphone\-Chat\-Message}}\label{group__chatroom_gada79c4417919389b5247e254279f7833}
+A chat room message to old content to be sent. \par
+ Can be created by \doxyref{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message()}{p.}{group__chatroom_gae728d496de00d1e7abfab5960a1dee8a}. \index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Room@{Linphone\-Chat\-Room}}
+\index{Linphone\-Chat\-Room@{Linphone\-Chat\-Room}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{Linphone\-Chat\-Room}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \-\_\-\-Linphone\-Chat\-Room {\bf Linphone\-Chat\-Room}}\label{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299}
+A chat room is the place where text messages are exchanged. \par
+ Can be created by \doxyref{linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room()}{p.}{group__chatroom_ga84f6a24baf60bb2ca0dbc16f81838ebf}. \index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Message\-State@{Linphone\-Chat\-Message\-State}}
+\index{Linphone\-Chat\-Message\-State@{Linphone\-Chat\-Message\-State}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{Linphone\-Chat\-Message\-State}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Chat\-Message\-States} {\bf Linphone\-Chat\-Message\-State}}\label{group__chatroom_gadab712e39be19281e32958e9dfff8bae}
+Linphone\-Chat\-Message\-State is used to notify if messages have been succesfully delivered or not. \index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Message\-State\-Changed\-Cb@{Linphone\-Chat\-Message\-State\-Changed\-Cb}}
+\index{Linphone\-Chat\-Message\-State\-Changed\-Cb@{Linphone\-Chat\-Message\-State\-Changed\-Cb}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{Linphone\-Chat\-Message\-State\-Changed\-Cb}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Linphone\-Chat\-Message\-State\-Changed\-Cb)({\bf Linphone\-Chat\-Message} $\ast$msg, {\bf Linphone\-Chat\-Message\-State} state, void $\ast$ud)}\label{group__chatroom_ga9101c652a172270c61e4e387b40663c8}
+Call back used to notify message delivery status 
+\begin{DoxyParams}{Parameters}
+{\em msg} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} object \\
+\hline
+{\em status} & Linphone\-Chat\-Message\-State \\
+\hline
+{\em ud} & application user data \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Chat room and Messaging@{Chat room and Messaging}!\-\_\-\-Linphone\-Chat\-Message\-States@{\-\_\-\-Linphone\-Chat\-Message\-States}}
+\index{\-\_\-\-Linphone\-Chat\-Message\-States@{\-\_\-\-Linphone\-Chat\-Message\-States}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{\-\_\-\-Linphone\-Chat\-Message\-States}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Chat\-Message\-States}}\label{group__chatroom_gab8b95c6f271c12b636b2eb63d930bc33}
+Linphone\-Chat\-Message\-State is used to notify if messages have been succesfully delivered or not. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Linphone\-Chat\-Message\-State\-Idle@{Linphone\-Chat\-Message\-State\-Idle}!Chat room and Messaging@{Chat room and Messaging}}\index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Message\-State\-Idle@{Linphone\-Chat\-Message\-State\-Idle}}\item[{\em 
+Linphone\-Chat\-Message\-State\-Idle\label{group__chatroom_ggab8b95c6f271c12b636b2eb63d930bc33ae171a0bd65958442e555c212c1bd0e91}
+}]initial state \index{Linphone\-Chat\-Message\-State\-In\-Progress@{Linphone\-Chat\-Message\-State\-In\-Progress}!Chat room and Messaging@{Chat room and Messaging}}\index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Message\-State\-In\-Progress@{Linphone\-Chat\-Message\-State\-In\-Progress}}\item[{\em 
+Linphone\-Chat\-Message\-State\-In\-Progress\label{group__chatroom_ggab8b95c6f271c12b636b2eb63d930bc33aefe743267c1917171b6865a1f4595396}
+}]delivery in progress \index{Linphone\-Chat\-Message\-State\-Delivered@{Linphone\-Chat\-Message\-State\-Delivered}!Chat room and Messaging@{Chat room and Messaging}}\index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Message\-State\-Delivered@{Linphone\-Chat\-Message\-State\-Delivered}}\item[{\em 
+Linphone\-Chat\-Message\-State\-Delivered\label{group__chatroom_ggab8b95c6f271c12b636b2eb63d930bc33a3deb067e35a26effceb3ca8da87110bd}
+}]message succesffully delivered an acknoleged by remote end point \index{Linphone\-Chat\-Message\-State\-Not\-Delivered@{Linphone\-Chat\-Message\-State\-Not\-Delivered}!Chat room and Messaging@{Chat room and Messaging}}\index{Chat room and Messaging@{Chat room and Messaging}!Linphone\-Chat\-Message\-State\-Not\-Delivered@{Linphone\-Chat\-Message\-State\-Not\-Delivered}}\item[{\em 
+Linphone\-Chat\-Message\-State\-Not\-Delivered\label{group__chatroom_ggab8b95c6f271c12b636b2eb63d930bc33ae60cbcd9da2cba25ace9a6ddf2f7cf08}
+}]message was not delivered \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-rooms@{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-rooms}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-rooms@{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-rooms}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-rooms}]{\setlength{\rightskip}{0pt plus 5cm}M\-S\-List $\ast$ linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-rooms (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga936fa841ef09333fd45e495fc1317235}
+Returns an array of chat rooms 
+\begin{DoxyParams}{Parameters}
+{\em lc} & \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of \#\-Linpĥone\-Chat\-Room 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room@{linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room}}
+\index{linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room@{linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Room} $\ast$ linphone\-\_\-core\-\_\-create\-\_\-chat\-\_\-room (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{to}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga84f6a24baf60bb2ca0dbc16f81838ebf}
+Create a new chat room for messaging from a sip uri like sip\-:{\tt joe@sip.\-linphone.\-org} 
+\begin{DoxyParams}{Parameters}
+{\em lc} & \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a} object \\
+\hline
+{\em to} & destination address for messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} where messaging can take place. 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-core\-\_\-get\-\_\-or\-\_\-create\-\_\-chat\-\_\-room@{linphone\-\_\-core\-\_\-get\-\_\-or\-\_\-create\-\_\-chat\-\_\-room}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-or\-\_\-create\-\_\-chat\-\_\-room@{linphone\-\_\-core\-\_\-get\-\_\-or\-\_\-create\-\_\-chat\-\_\-room}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-or\-\_\-create\-\_\-chat\-\_\-room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Room} $\ast$ linphone\-\_\-core\-\_\-get\-\_\-or\-\_\-create\-\_\-chat\-\_\-room (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{to}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga5a9a9ed5adf4c484f0e4e883992a5233}
+Create a new chat room for messaging from a sip uri like sip\-:{\tt joe@sip.\-linphone.\-org} if not already existing, else return exisiting one 
+\begin{DoxyParams}{Parameters}
+{\em lc} & \doxyref{Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a} object \\
+\hline
+{\em to} & destination address for messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} where messaging can take place. 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-destroy@{linphone\-\_\-chat\-\_\-room\-\_\-destroy}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-destroy@{linphone\-\_\-chat\-\_\-room\-\_\-destroy}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-room\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gaa2ae6260190b412b2183d5b70b7c7ea9}
+Destroy a Linphone\-Chat\-Room. 
+\begin{DoxyParams}{Parameters}
+{\em cr} & \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} object \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message@{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message@{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr, }
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga5d70a868f932e0793991c8aca1289591}
+Send a message to peer member of this chat room. \begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]\doxyref{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2()}{p.}{group__chatroom_ga6ef733efe6b97e46be6196dcdb95ef76} gives more control on the message expedition. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em cr} & \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} object \\
+\hline
+{\em msg} & message to be sent \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-room@{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-room}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-room@{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-room}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Room} $\ast$ linphone\-\_\-core\-\_\-get\-\_\-chat\-\_\-room (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{const {\bf Linphone\-Address} $\ast$}]{addr}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gaea65d5975a726903fdd4670a2d06a9a5}
+Retrieve an existing chat room whose peer is the supplied address, if exists. 
+\begin{DoxyParams}{Parameters}
+{\em lc} & the linphone core \\
+\hline
+{\em add} & a linphone address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the matching chatroom, or N\-U\-L\-L if no such chatroom exists. 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-lc@{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-lc}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-lc@{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-lc}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-lc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Core} $\ast$ linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-lc (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gae537d461673edcece28ba9726e94d761}
+Returns back pointer to Linphone\-Core object. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-set\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-room\-\_\-set\-\_\-user\-\_\-data}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-set\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-room\-\_\-set\-\_\-user\-\_\-data}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-set\-\_\-user\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-room\-\_\-set\-\_\-user\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr, }
+\item[{void $\ast$}]{ud}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga8a3d47c51304c9ae8d9acdd22e0916b1}
+Assign a user pointer to the chat room. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-user\-\_\-data}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-user\-\_\-data}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-user\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-user\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga39253e8ed05152c4b2670531eb03303c}
+Retrieve the user pointer associated with the chat room. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-peer\-\_\-address@{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-peer\-\_\-address}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-peer\-\_\-address@{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-peer\-\_\-address}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-peer\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Linphone\-Address} $\ast$ linphone\-\_\-chat\-\_\-room\-\_\-get\-\_\-peer\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gad87bdc00d505482b7c569c2b0a613749}
+get peer address \doxyref{associated to }{p.}{group__chatroom_ga84f6a24baf60bb2ca0dbc16f81838ebf} this \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} 
+\begin{DoxyParams}{Parameters}
+{\em cr} & \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linphone\-Address}{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} peer address 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message@{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message@{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Message} $\ast$ linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr, }
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gae728d496de00d1e7abfab5960a1dee8a}
+Create a message attached to a dedicated chat room; 
+\begin{DoxyParams}{Parameters}
+{\em cr} & the chat room. \\
+\hline
+{\em message} & text message, N\-U\-L\-L if absent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message\-\_\-2@{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message\-\_\-2}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message\-\_\-2@{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message\-\_\-2}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Message} $\ast$ linphone\-\_\-chat\-\_\-room\-\_\-create\-\_\-message\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr, }
+\item[{const char $\ast$}]{message, }
+\item[{const char $\ast$}]{external\-\_\-body\-\_\-url, }
+\item[{{\bf Linphone\-Chat\-Message\-State}}]{state, }
+\item[{time\-\_\-t}]{time, }
+\item[{bool\-\_\-t}]{is\-\_\-read, }
+\item[{bool\-\_\-t}]{is\-\_\-incoming}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gaf8071a8926ba9f2c6763404e34bfd282}
+Create a message attached to a dedicated chat room; 
+\begin{DoxyParams}{Parameters}
+{\em cr} & the chat room. \\
+\hline
+{\em message} & text message, N\-U\-L\-L if absent. \\
+\hline
+{\em external\-\_\-body\-\_\-url} & the U\-R\-L given in external body or N\-U\-L\-L. \\
+\hline
+{\em state} & the Linphone\-Chat\-Message.\-State of the message. \\
+\hline
+{\em time} & the time\-\_\-t at which the message has been received/sent. \\
+\hline
+{\em is\-\_\-read} & T\-R\-U\-E if the message should be flagged as read, F\-A\-L\-S\-E otherwise. \\
+\hline
+{\em is\-\_\-incoming} & T\-R\-U\-E if the message has been received, F\-A\-L\-S\-E otherwise. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2@{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2}}
+\index{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2@{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-room\-\_\-send\-\_\-message2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Room} $\ast$}]{cr, }
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{msg, }
+\item[{{\bf Linphone\-Chat\-Message\-State\-Changed\-Cb}}]{status\-\_\-cb, }
+\item[{void $\ast$}]{ud}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga6ef733efe6b97e46be6196dcdb95ef76}
+Send a message to peer member of this chat room. 
+\begin{DoxyParams}{Parameters}
+{\em cr} & \doxyref{Linphone\-Chat\-Room}{p.}{group__chatroom_ga37902f3fc715b7f6451c241d0efd0299} object \\
+\hline
+{\em msg} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} message to be sent \\
+\hline
+{\em status\-\_\-cb} & Linphone\-Chat\-Message\-State\-Change\-Cb status callback invoked when message is delivered or could not be delivered. May be N\-U\-L\-L \\
+\hline
+{\em ud} & user data for the status cb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The Linphone\-Chat\-Message must not be destroyed until the the callback is called. 
+\end{DoxyNote}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-state\-\_\-to\-\_\-string@{linphone\-\_\-chat\-\_\-message\-\_\-state\-\_\-to\-\_\-string}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-state\-\_\-to\-\_\-string@{linphone\-\_\-chat\-\_\-message\-\_\-state\-\_\-to\-\_\-string}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-state\-\_\-to\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-state\-\_\-to\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message\-State}}]{state}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga661fb082f0920b0eea7acde8f63f76a3}
+Returns a \doxyref{Linphone\-Chat\-Message\-State}{p.}{group__chatroom_gadab712e39be19281e32958e9dfff8bae} as a string. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-chat\-\_\-room@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-chat\-\_\-room}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-chat\-\_\-room@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-chat\-\_\-room}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-chat\-\_\-room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Room} $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-chat\-\_\-room (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gab79130d37ef661e16973642482e4ab67}
+Returns the chatroom this message belongs to. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-peer\-\_\-address@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-peer\-\_\-address}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-peer\-\_\-address@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-peer\-\_\-address}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-peer\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Linphone\-Address} $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-peer\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga67567c770b15d6cc7225f8e96cec8873}
+Returns the peer (remote) address for the message. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-user\-\_\-data}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-user\-\_\-data}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-user\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-user\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message, }
+\item[{void $\ast$}]{ud}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga242deba97dc6453405f961fef39246b7}
+User pointer set function \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-user\-\_\-data}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-user\-\_\-data@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-user\-\_\-data}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-user\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-user\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gacc5964d13307d79f1df709d9b7022365}
+User pointer get function \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-external\-\_\-body\-\_\-url@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-external\-\_\-body\-\_\-url}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-external\-\_\-body\-\_\-url@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-external\-\_\-body\-\_\-url}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-external\-\_\-body\-\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-external\-\_\-body\-\_\-url (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gaefb598bade47a76454ed7698f06044c9}
+Linphone message can carry external body as defined by rfc2017 
+\begin{DoxyParams}{Parameters}
+{\em message} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+external body url or N\-U\-L\-L if not present. 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-external\-\_\-body\-\_\-url@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-external\-\_\-body\-\_\-url}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-external\-\_\-body\-\_\-url@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-external\-\_\-body\-\_\-url}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-external\-\_\-body\-\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-external\-\_\-body\-\_\-url (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message, }
+\item[{const char $\ast$}]{url}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gaffab519662201c3477cedfead3ae65dc}
+Linphone message can carry external body as defined by rfc2017
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & a Linphone\-Chat\-Message \\
+\hline
+{\em url} & ex\-: access-\/type=U\-R\-L; U\-R\-L=\char`\"{}http\-://www.\-foo.\-com/file\char`\"{} \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-from@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-from}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-from@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-from}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-from}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-from (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message, }
+\item[{const {\bf Linphone\-Address} $\ast$}]{from}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gae32dc9ccf7fc96e8376b23c1a68211e8}
+Set origin of the message 
+\begin{DoxyParams}{Parameters}
+{\em message} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} obj \\
+\hline
+{\em from} & \doxyref{Linphone\-Address}{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} origin of this message (copied) \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-from@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-from}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-from@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-from}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-from}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Linphone\-Address} $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-from (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga2ad13d9aae7e5dc9ba38e85f79a9b917}
+Get origin of the message 
+\begin{DoxyParams}{Parameters}
+{\em message} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} obj \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linphone\-Address}{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-to@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-to}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-to@{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-to}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-message\-\_\-set\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message, }
+\item[{const {\bf Linphone\-Address} $\ast$}]{to}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga27e7162325a2c571f52a17a829532cca}
+Set destination of the message 
+\begin{DoxyParams}{Parameters}
+{\em message} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} obj \\
+\hline
+{\em to} & \doxyref{Linphone\-Address}{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} destination of this message (copied) \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-to@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-to}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-to@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-to}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Linphone\-Address} $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gaf3f5d467674b51ac353f46b20a28deb9}
+Get destination of the message 
+\begin{DoxyParams}{Parameters}
+{\em message} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} obj \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linphone\-Address}{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-local\-\_\-address@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-local\-\_\-address}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-local\-\_\-address@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-local\-\_\-address}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-local\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Address} $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-local\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gad338768636f947017d1c18edc52b9a92}
+Returns the origin address of a message if it was a outgoing message, or the destination address if it was an incoming message. 
+\begin{DoxyParams}{Parameters}
+{\em message} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} obj \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linphone\-Address}{p.}{group__linphone__address_gaa017e66840f5ee578168bd469b6c3e91} 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-time@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-time}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-time@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-time}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}time\-\_\-t linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga4e1e898a61341ca4136ab66b2164a380}
+Get the time the message was sent. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-state@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-state}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-state@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-state}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Message\-State} linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga3a1a1c0902cefcb0381f7be04966644f}
+Get the state of the message 
+\begin{DoxyParams}{Parameters}
+{\em message} & \doxyref{Linphone\-Chat\-Message}{p.}{group__chatroom_gada79c4417919389b5247e254279f7833} obj \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Linphone\-Chat\-Message\-State}{p.}{group__chatroom_gadab712e39be19281e32958e9dfff8bae} 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-text@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-text}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-text@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-text}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-text (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga3e04036b7866741817b983b5d0c4a81a}
+Get text part of this message \begin{DoxyReturn}{Returns}
+text or N\-U\-L\-L if no text. 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-add\-\_\-custom\-\_\-header@{linphone\-\_\-chat\-\_\-message\-\_\-add\-\_\-custom\-\_\-header}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-add\-\_\-custom\-\_\-header@{linphone\-\_\-chat\-\_\-message\-\_\-add\-\_\-custom\-\_\-header}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-add\-\_\-custom\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-message\-\_\-add\-\_\-custom\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message, }
+\item[{const char $\ast$}]{header\-\_\-name, }
+\item[{const char $\ast$}]{header\-\_\-value}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga7f64fe2eb0c031205e92e7e0e33fa811}
+Add custom headers to the message. 
+\begin{DoxyParams}{Parameters}
+{\em message} & the message \\
+\hline
+{\em header\-\_\-name} & name of the header\-\_\-name \\
+\hline
+{\em header\-\_\-value} & header value \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-custom\-\_\-header@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-custom\-\_\-header}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-custom\-\_\-header@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-custom\-\_\-header}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-custom\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-custom\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message, }
+\item[{const char $\ast$}]{header\-\_\-name}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga778382ba8e2f351d3631cc4357a82dea}
+Retrieve a custom header value given its name. 
+\begin{DoxyParams}{Parameters}
+{\em message} & the message \\
+\hline
+{\em header\-\_\-name} & header name searched \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-read@{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-read}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-read@{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-read}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga5981d1a8152bab00920210495686b61f}
+Returns T\-R\-U\-E if the message has been read, otherwise returns F\-A\-L\-S\-E. 
+\begin{DoxyParams}{Parameters}
+{\em message} & the message \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-outgoing@{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-outgoing}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-outgoing@{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-outgoing}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-outgoing}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-chat\-\_\-message\-\_\-is\-\_\-outgoing (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga850ae9e1523cbddb1d668dd984909d2b}
+Returns T\-R\-U\-E if the message has been sent, returns F\-A\-L\-S\-E if the message has been received. 
+\begin{DoxyParams}{Parameters}
+{\em message} & the message \\
+\hline
+\end{DoxyParams}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-storage\-\_\-id@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-storage\-\_\-id}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-storage\-\_\-id@{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-storage\-\_\-id}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-storage\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int linphone\-\_\-chat\-\_\-message\-\_\-get\-\_\-storage\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gac54b358980f5df0184954202e2395b93}
+Returns the id used to identify this message in the storage database 
+\begin{DoxyParams}{Parameters}
+{\em message} & the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the id 
+\end{DoxyReturn}
+\index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-clone@{linphone\-\_\-chat\-\_\-message\-\_\-clone}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-clone@{linphone\-\_\-chat\-\_\-message\-\_\-clone}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linphone\-Chat\-Message} $\ast$ linphone\-\_\-chat\-\_\-message\-\_\-clone (
+\begin{DoxyParamCaption}
+\item[{const {\bf Linphone\-Chat\-Message} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_gab2fc7998fae75be76e9be29a31c3584e}
+Duplicate a Linphone\-Chat\-Message \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-chat\-\_\-message\-\_\-destroy@{linphone\-\_\-chat\-\_\-message\-\_\-destroy}}
+\index{linphone\-\_\-chat\-\_\-message\-\_\-destroy@{linphone\-\_\-chat\-\_\-message\-\_\-destroy}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-chat\-\_\-message\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-chat\-\_\-message\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Chat\-Message} $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga5de9eb78775fee4bd6250e3005912aef}
+Destroys a Linphone\-Chat\-Message. \index{Chat room and Messaging@{Chat room and Messaging}!linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path@{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path@{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path}!Chat room and Messaging@{Chat room and Messaging}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-chat\-\_\-database\-\_\-path (
+\begin{DoxyParamCaption}
+\item[{{\bf Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\label{group__chatroom_ga971a0a881b5c9990522ca12e7d2d785b}
+Sets the database filename where chat messages will be stored. If the file does not exist, it will be created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lc} & the linphone core \\
+\hline
+{\em path} & filesystem path \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,131 @@
+\section{Basic call}
+\label{group__basic__call__tutorials}\index{Basic call@{Basic call}}
+This program is a {\itshape very} simple usage example of liblinphone. It just takes a sip-\/uri as first argument and attempts to call it
+
+
+\begin{DoxyCodeInclude}
+
+\textcolor{comment}{/*}
+\textcolor{comment}{linphone}
+\textcolor{comment}{Copyright (C) 2010  Belledonne Communications SARL }
+\textcolor{comment}{ (simon.morlat@linphone.org)}
+\textcolor{comment}{}
+\textcolor{comment}{This program is free software; you can redistribute it and/or}
+\textcolor{comment}{modify it under the terms of the GNU General Public License}
+\textcolor{comment}{as published by the Free Software Foundation; either version 2}
+\textcolor{comment}{of the License, or (at your option) any later version.}
+\textcolor{comment}{}
+\textcolor{comment}{This program is distributed in the hope that it will be useful,}
+\textcolor{comment}{but WITHOUT ANY WARRANTY; without even the implied warranty of}
+\textcolor{comment}{MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+\textcolor{comment}{GNU General Public License for more details.}
+\textcolor{comment}{}
+\textcolor{comment}{You should have received a copy of the GNU General Public License}
+\textcolor{comment}{along with this program; if not, write to the Free Software}
+\textcolor{comment}{Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.}
+\textcolor{comment}{*/}
+
+\textcolor{preprocessor}{#ifdef IN\_LINPHONE}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#include "linphonecore.h"}
+\textcolor{preprocessor}{#else}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#include "linphone/linphonecore.h"}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{#include <signal.h>}
+
+\textcolor{keyword}{static} bool\_t running=TRUE;
+
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} stop(\textcolor{keywordtype}{int} signum)\{
+        running=FALSE;
+\}
+
+\textcolor{comment}{/*}
+\textcolor{comment}{ * Call state notification callback}
+\textcolor{comment}{ */}
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} call\_state\_changed(LinphoneCore *lc, LinphoneCall *call, 
+      LinphoneCallState cstate, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *msg)\{
+        \textcolor{keywordflow}{switch}(cstate)\{
+                \textcolor{keywordflow}{case} LinphoneCallOutgoingRinging:
+                        printf(\textcolor{stringliteral}{"It is now ringing remotely !\(\backslash\)n"});
+                \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} LinphoneCallOutgoingEarlyMedia:
+                        printf(\textcolor{stringliteral}{"Receiving some early media\(\backslash\)n"});
+                \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} LinphoneCallConnected:
+                        printf(\textcolor{stringliteral}{"We are connected !\(\backslash\)n"});
+                \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} LinphoneCallStreamsRunning:
+                        printf(\textcolor{stringliteral}{"Media streams established !\(\backslash\)n"});
+                \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} LinphoneCallEnd:
+                        printf(\textcolor{stringliteral}{"Call is terminated.\(\backslash\)n"});
+                \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} LinphoneCallError:
+                        printf(\textcolor{stringliteral}{"Call failure !"});
+                \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{default}:
+                        printf(\textcolor{stringliteral}{"Unhandled notification %i\(\backslash\)n"},cstate);
+        \}
+\}
+
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])\{
+        LinphoneCoreVTable vtable=\{0\};
+        LinphoneCore *lc;
+        LinphoneCall *call=NULL;
+        \textcolor{keyword}{const} \textcolor{keywordtype}{char} *dest=NULL;
+
+        \textcolor{comment}{/* take the destination sip uri from the command line arguments */}
+        \textcolor{keywordflow}{if} (argc>1)\{
+                dest=argv[1];
+        \}
+
+        signal(SIGINT,stop);
+
+\textcolor{preprocessor}{#ifdef DEBUG}
+\textcolor{preprocessor}{}        linphone_core_enable_logs(NULL); \textcolor{comment}{/*enable liblinphone logs.*/}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}        \textcolor{comment}{/* }
+\textcolor{comment}{         Fill the LinphoneCoreVTable with application callbacks.}
+\textcolor{comment}{         All are optional. Here we only use the call\_state\_changed callbacks}
+\textcolor{comment}{         in order to get notifications about the progress of the call.}
+\textcolor{comment}{         */}
+        vtable.call_state_changed=call\_state\_changed;
+
+        \textcolor{comment}{/*}
+\textcolor{comment}{         Instanciate a LinphoneCore object given the LinphoneCoreVTable}
+\textcolor{comment}{        */}
+        lc=linphone_core_new(&vtable,NULL,NULL,NULL);
+
+        \textcolor{keywordflow}{if} (dest)\{
+                \textcolor{comment}{/*}
+\textcolor{comment}{                 Place an outgoing call}
+\textcolor{comment}{                */}
+                call=linphone_core_invite(lc,dest);
+                \textcolor{keywordflow}{if} (call==NULL)\{
+                        printf(\textcolor{stringliteral}{"Could not place call to %s\(\backslash\)n"},dest);
+                        \textcolor{keywordflow}{goto} end;
+                \}\textcolor{keywordflow}{else} printf(\textcolor{stringliteral}{"Call to %s is in progress..."},dest);
+                linphone_call_ref(call);
+        \}
+        \textcolor{comment}{/* main loop for receiving notifications and doing background linphonecore work: */}
+        \textcolor{keywordflow}{while}(running)\{
+                linphone_core_iterate(lc);
+                ms\_usleep(50000);
+        \}
+        \textcolor{keywordflow}{if} (call && linphone_call_get_state(call)!=LinphoneCallEnd)\{
+                \textcolor{comment}{/* terminate the call */}
+                printf(\textcolor{stringliteral}{"Terminating the call...\(\backslash\)n"});
+                linphone_core_terminate_call(lc,call);
+                \textcolor{comment}{/*at this stage we don't need the call object */}
+                linphone_call_unref(call);
+        \}
+
+end:
+        printf(\textcolor{stringliteral}{"Shutting down...\(\backslash\)n"});
+        linphone_core_destroy(lc);
+        printf(\textcolor{stringliteral}{"Exited\(\backslash\)n"});
+        \textcolor{keywordflow}{return} 0;
+\}
+
+\end{DoxyCodeInclude}
+ 

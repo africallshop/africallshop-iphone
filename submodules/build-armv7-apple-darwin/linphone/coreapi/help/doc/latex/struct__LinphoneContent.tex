@@ -1,0 +1,40 @@
+\section{\-\_\-\-Linphone\-Content Struct Reference}
+\label{struct__LinphoneContent}\index{\-\_\-\-Linphone\-Content@{\-\_\-\-Linphone\-Content}}
+
+
+{\ttfamily \#include $<$linphonecore.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf type}
+\item 
+char $\ast$ {\bf subtype}
+\item 
+void $\ast$ {\bf data}
+\item 
+size\-\_\-t {\bf size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Linphone\-Content struct holds data that can be embedded in a signaling message. 
+
+\subsection{Field Documentation}
+\index{\-\_\-\-Linphone\-Content@{\-\_\-\-Linphone\-Content}!type@{type}}
+\index{type@{type}!_LinphoneContent@{\-\_\-\-Linphone\-Content}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ \-\_\-\-Linphone\-Content\-::type}\label{struct__LinphoneContent_a8a86c24d70252b4c790085f8d5b94fdc}
+mime type for the data, for example \char`\"{}application\char`\"{} \index{\-\_\-\-Linphone\-Content@{\-\_\-\-Linphone\-Content}!subtype@{subtype}}
+\index{subtype@{subtype}!_LinphoneContent@{\-\_\-\-Linphone\-Content}}
+\subsubsection[{subtype}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ \-\_\-\-Linphone\-Content\-::subtype}\label{struct__LinphoneContent_a26cbb8fe30763eea41a5b84028dd1f9b}
+mime subtype for the data, for example \char`\"{}html\char`\"{} \index{\-\_\-\-Linphone\-Content@{\-\_\-\-Linphone\-Content}!data@{data}}
+\index{data@{data}!_LinphoneContent@{\-\_\-\-Linphone\-Content}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \-\_\-\-Linphone\-Content\-::data}\label{struct__LinphoneContent_a086b012e35d02be9c68c8f0fd4661f39}
+the actual data buffer, usually a string \index{\-\_\-\-Linphone\-Content@{\-\_\-\-Linphone\-Content}!size@{size}}
+\index{size@{size}!_LinphoneContent@{\-\_\-\-Linphone\-Content}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t \-\_\-\-Linphone\-Content\-::size}\label{struct__LinphoneContent_a6ea21723404888691dbe0aaa547ec4cb}
+the size of the data buffer, excluding null character despite null character is always set for convenience. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+linphonecore.\-h\end{DoxyCompactItemize}

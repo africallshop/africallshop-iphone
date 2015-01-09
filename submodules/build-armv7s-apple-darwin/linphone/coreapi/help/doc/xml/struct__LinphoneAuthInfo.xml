@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LinphoneAuthInfo" kind="struct" prot="public">
+    <compoundname>_LinphoneAuthInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1a1582b3757e99c1854ad122fcf1f62595" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAuthInfo::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="413" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1ad0e1f789236b282d9d3e128b7f6262b6" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAuthInfo::realm</definition>
+        <argsstring></argsstring>
+        <name>realm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="414" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1aea5a46b9b628b97f247f4279506f55b0" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAuthInfo::userid</definition>
+        <argsstring></argsstring>
+        <name>userid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="415" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1aeb967f759d11e4355d6ac0ea69bd2a02" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAuthInfo::passwd</definition>
+        <argsstring></argsstring>
+        <name>passwd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="416" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1a8ae6a4b1272736e3a1285ef467136cd4" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneAuthInfo::ha1</definition>
+        <argsstring></argsstring>
+        <name>ha1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="417" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1aaa68d39055f31b287c278b27ff5a17f5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneAuthInfo::usecount</definition>
+        <argsstring></argsstring>
+        <name>usecount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="418" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1af56ff020696110a0e15c37a895bbc62a" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneAuthInfo::last_use_time</definition>
+        <argsstring></argsstring>
+        <name>last_use_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="419" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneAuthInfo_1acc08444665d4eff968a30b4dfc5f0e1f" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneAuthInfo::works</definition>
+        <argsstring></argsstring>
+        <name>works</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="420" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="412" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="411" bodyend="421"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneAuthInfo_1a8ae6a4b1272736e3a1285ef467136cd4" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>ha1</name></member>
+      <member refid="struct__LinphoneAuthInfo_1af56ff020696110a0e15c37a895bbc62a" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>last_use_time</name></member>
+      <member refid="struct__LinphoneAuthInfo_1aeb967f759d11e4355d6ac0ea69bd2a02" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>passwd</name></member>
+      <member refid="struct__LinphoneAuthInfo_1ad0e1f789236b282d9d3e128b7f6262b6" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>realm</name></member>
+      <member refid="struct__LinphoneAuthInfo_1aaa68d39055f31b287c278b27ff5a17f5" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>usecount</name></member>
+      <member refid="struct__LinphoneAuthInfo_1aea5a46b9b628b97f247f4279506f55b0" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>userid</name></member>
+      <member refid="struct__LinphoneAuthInfo_1a1582b3757e99c1854ad122fcf1f62595" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>username</name></member>
+      <member refid="struct__LinphoneAuthInfo_1acc08444665d4eff968a30b4dfc5f0e1f" prot="public" virt="non-virtual"><scope>_LinphoneAuthInfo</scope><name>works</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

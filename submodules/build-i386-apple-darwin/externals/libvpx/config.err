@@ -1,0 +1,276 @@
+# /Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//externals/libvpx/configure --prefix=/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//../liblinphone-sdk/i386-apple-darwin --sdk-path=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/../../ --libc=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk --enable-static --disable-shared --enable-error-concealment --disable-examples --enable-realtime-only --enable-spatial-resampling --enable-vp8 --enable-multithread --target=x86-darwin10-gcc
+Configuring selected codecs
+  enabling vp8_encoder
+  enabling vp8_decoder
+Configuring for target 'x86-darwin10-gcc'
+  enabling x86
+check_cpp
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#ifndef __ILP32__
+    2	#error "not x32"
+    3	#endif
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+-mmacosx-version-min=10.6 -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//externals/libvpx/build/make/configure.sh: line 281: -mmacosx-version-min=10.6: command not found
+  enabling runtime_cpu_detect
+  enabling mmx
+  enabling sse
+  enabling sse2
+  enabling sse3
+  enabling ssse3
+  enabling sse4_1
+check_cxxflags -fomit-frame-pointer
+check_cxx -Werror -fomit-frame-pointer
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -Werror -fomit-frame-pointer -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -fomit-frame-pointer
+check_cc -fomit-frame-pointer
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+  using yasm
+check_cxxflags -O3
+check_cxx -Werror -O3
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -O3 -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -O3
+check_cc -O3
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cc
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	    unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_header pthread.h
+check_cpp
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#include "pthread.h"
+    2	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_header unistd.h
+check_cpp
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#include "unistd.h"
+    2	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wall
+check_cxx -Werror -Wall
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wall -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wall
+check_cc -Wall
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wdeclaration-after-statement
+check_cxx -Werror -Wdeclaration-after-statement
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wdeclaration-after-statement -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wdeclaration-after-statement
+check_cc -Wdeclaration-after-statement
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wdisabled-optimization
+check_cxx -Werror -Wdisabled-optimization
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wdisabled-optimization -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wdisabled-optimization
+check_cc -Wdisabled-optimization
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wpointer-arith
+check_cxx -Werror -Wpointer-arith
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wpointer-arith -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wpointer-arith
+check_cc -Wpointer-arith
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wtype-limits
+check_cxx -Werror -Wtype-limits
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wtype-limits -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wtype-limits
+check_cc -Wtype-limits
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wcast-qual
+check_cxx -Werror -Wcast-qual
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wcast-qual -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wcast-qual
+check_cc -Wcast-qual
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wimplicit-function-declaration
+check_cxx -Werror -Wimplicit-function-declaration
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wimplicit-function-declaration -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wimplicit-function-declaration
+check_cc -Wimplicit-function-declaration
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wuninitialized
+check_cxx -Werror -Wuninitialized
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wuninitialized -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wuninitialized
+check_cc -Wuninitialized
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wunused-variable
+check_cxx -Werror -Wunused-variable
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wunused-variable -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wunused-variable
+check_cc -Wunused-variable
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+check_cxxflags -Wunused-but-set-variable
+check_cxx -Werror -Wunused-but-set-variable
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wunused-but-set-variable -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wunused-but-set-variable
+check_cc -Wunused-but-set-variable
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.
+check_cxxflags -Wno-unused-function
+check_cxx -Werror -Wno-unused-function
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -Werror -Wno-unused-function -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: error: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+check_cflags -Wno-unused-function
+check_cc -Wno-unused-function
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -Wno-unused-function -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.
+  enabling postproc
+check_cxx
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int z;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+g++ -mmacosx-version-min=10.6 -m32 -arch i386 -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+  enabling unit_tests
+check_header stdio.h
+check_cpp
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#include "stdio.h"
+    2	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -Wno-unused-function -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.
+check_ld
+check_cc
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	int main(void) {return 0;}
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -Wno-unused-function -c -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.
+gcc -mmacosx-version-min=10.6 -m32 -arch i386 -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-15103.x /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o -lpthread
+check_header stdint.h
+check_cpp
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#include "stdint.h"
+    2	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -Wno-unused-function -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.
+check_header pthread.h
+check_cpp
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#include "pthread.h"
+    2	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -Wno-unused-function -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.
+check_header sys/mman.h
+check_cpp
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#include "sys/mman.h"
+    2	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -Wno-unused-function -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.
+check_header vpx/vpx_integer.h -I/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//externals/libvpx
+check_cpp -I/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//externals/libvpx
+BEGIN /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+    1	#include "vpx/vpx_integer.h"
+    2	int x;
+END /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+gcc -mmacosx-version-min=10.6 -m32 -fomit-frame-pointer -arch i386 -O3 -Wall -Wdeclaration-after-statement -Wdisabled-optimization -Wpointer-arith -Wtype-limits -Wcast-qual -Wimplicit-function-declaration -Wuninitialized -Wunused-variable -Wunused-but-set-variable -Wno-unused-function -I/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//externals/libvpx -E -o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-303.o /var/folders/3f/497pgqqn6z77q6gwdsss32h00000gn/T//vpx-conf-84839-3003.c
+warning: unknown warning option '-Wunused-but-set-variable'; did you mean '-Wunused-variable'? [-Wunknown-warning-option]
+1 warning generated.

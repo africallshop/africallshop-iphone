@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LinphoneCallLog" kind="struct" prot="public">
+    <compoundname>_LinphoneCallLog</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1ab976c00738e58e73ed666d164da70bf1" prot="public" static="no" mutable="no">
+        <type>struct _LinphoneCore *</type>
+        <definition>struct _LinphoneCore* _LinphoneCallLog::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="100" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a80b29b195febff1a54d0d3bc76dbfaed" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__logs_1ga779ac636d8b652c5130da18827c13e5a" kindref="member">LinphoneCallDir</ref></type>
+        <definition>LinphoneCallDir _LinphoneCallLog::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The direction of the call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="101" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a48b79800064f82a624584b175bcdac57" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__logs_1gafd125fb704d3254856f4a826a6e60a11" kindref="member">LinphoneCallStatus</ref></type>
+        <definition>LinphoneCallStatus _LinphoneCallLog::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The status of the call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="102" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1ae3d363a34177db87f304b7b3f255f701" prot="public" static="no" mutable="no">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* _LinphoneCallLog::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Originator of the call as a LinphoneAddress object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="103" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1ac2da59dead284f65174214f2e00209b3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* _LinphoneCallLog::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destination of the call as a LinphoneAddress object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="104" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a92b1a5b4900068fd6ee7fc9afccc4777" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _LinphoneCallLog::start_date[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>start_date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Human readable string containing the start date </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="105" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a5773a72ec719085a68a6092c46540592" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCallLog::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duration of the call in seconds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="106" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1adc17e2661931b607b4f4ae565cbccf8e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCallLog::refkey</definition>
+        <argsstring></argsstring>
+        <name>refkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="107" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a27a7cf397caf8cc10108c35bfd847075" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneCallLog::user_pointer</definition>
+        <argsstring></argsstring>
+        <name>user_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="108" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a4826e6cb8523605a535a526c6eca7183" prot="public" static="no" mutable="no">
+        <type>rtp_stats_t</type>
+        <definition>rtp_stats_t _LinphoneCallLog::local_stats</definition>
+        <argsstring></argsstring>
+        <name>local_stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="109" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a6dc6358c77faf6ad8f93b13f11adeba5" prot="public" static="no" mutable="no">
+        <type>rtp_stats_t</type>
+        <definition>rtp_stats_t _LinphoneCallLog::remote_stats</definition>
+        <argsstring></argsstring>
+        <name>remote_stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="110" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a1588d5b1bebda39b83a6ba673b6d8415" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _LinphoneCallLog::quality</definition>
+        <argsstring></argsstring>
+        <name>quality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="111" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1aba6c6d199841399be947bb5676b597b4" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneCallLog::start_date_time</definition>
+        <argsstring></argsstring>
+        <name>start_date_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="112" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1a91746d00534c375f5e58927c66af6379" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCallLog::call_id</definition>
+        <argsstring></argsstring>
+        <name>call_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start date of the call in seconds as expressed in a time_t </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="113" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCallLog_1acb37ec6ded2333bf4c369b7f108246df" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCallLog::video_enabled</definition>
+        <argsstring></argsstring>
+        <name>video_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unique id of a call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="114" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="99" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="99" bodyend="115"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneCallLog_1a91746d00534c375f5e58927c66af6379" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>call_id</name></member>
+      <member refid="struct__LinphoneCallLog_1a80b29b195febff1a54d0d3bc76dbfaed" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>dir</name></member>
+      <member refid="struct__LinphoneCallLog_1a5773a72ec719085a68a6092c46540592" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>duration</name></member>
+      <member refid="struct__LinphoneCallLog_1ae3d363a34177db87f304b7b3f255f701" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>from</name></member>
+      <member refid="struct__LinphoneCallLog_1ab976c00738e58e73ed666d164da70bf1" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>lc</name></member>
+      <member refid="struct__LinphoneCallLog_1a4826e6cb8523605a535a526c6eca7183" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>local_stats</name></member>
+      <member refid="struct__LinphoneCallLog_1a1588d5b1bebda39b83a6ba673b6d8415" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>quality</name></member>
+      <member refid="struct__LinphoneCallLog_1adc17e2661931b607b4f4ae565cbccf8e" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>refkey</name></member>
+      <member refid="struct__LinphoneCallLog_1a6dc6358c77faf6ad8f93b13f11adeba5" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>remote_stats</name></member>
+      <member refid="struct__LinphoneCallLog_1a92b1a5b4900068fd6ee7fc9afccc4777" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>start_date</name></member>
+      <member refid="struct__LinphoneCallLog_1aba6c6d199841399be947bb5676b597b4" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>start_date_time</name></member>
+      <member refid="struct__LinphoneCallLog_1a48b79800064f82a624584b175bcdac57" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>status</name></member>
+      <member refid="struct__LinphoneCallLog_1ac2da59dead284f65174214f2e00209b3" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>to</name></member>
+      <member refid="struct__LinphoneCallLog_1a27a7cf397caf8cc10108c35bfd847075" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>user_pointer</name></member>
+      <member refid="struct__LinphoneCallLog_1acb37ec6ded2333bf4c369b7f108246df" prot="public" virt="non-virtual"><scope>_LinphoneCallLog</scope><name>video_enabled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

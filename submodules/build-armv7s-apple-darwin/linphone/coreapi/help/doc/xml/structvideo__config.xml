@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="structvideo__config" kind="struct" prot="public">
+    <compoundname>video_config</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvideo__config_1a37db3b2c75bc417835c5b6a95ae20a72" prot="public" static="no" mutable="no">
+        <type>struct _MSWebCam *</type>
+        <definition>struct _MSWebCam* video_config::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="536" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvideo__config_1a3d9dba195d01a1a4941fcdfa0345551b" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char** video_config::cams</definition>
+        <argsstring></argsstring>
+        <name>cams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="537" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvideo__config_1a9bbbf4fa47a64d152b9498ec7e44f59f" prot="public" static="no" mutable="no">
+        <type>MSVideoSize</type>
+        <definition>MSVideoSize video_config::vsize</definition>
+        <argsstring></argsstring>
+        <name>vsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="538" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvideo__config_1a48cb80031f356192d6e9387e3a23489a" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t video_config::capture</definition>
+        <argsstring></argsstring>
+        <name>capture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="539" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvideo__config_1a00144d871accc2c5cdcea7cd027e4505" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t video_config::show_local</definition>
+        <argsstring></argsstring>
+        <name>show_local</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="540" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="540" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvideo__config_1a4dbc2af3db59b11bf0a46d3bc3d29165" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t video_config::display</definition>
+        <argsstring></argsstring>
+        <name>display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="541" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvideo__config_1a765fb1c3cc66701710b99bde727639fa" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t video_config::selfview</definition>
+        <argsstring></argsstring>
+        <name>selfview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="542" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="542" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="535" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="535" bodyend="543"/>
+    <listofallmembers>
+      <member refid="structvideo__config_1a3d9dba195d01a1a4941fcdfa0345551b" prot="public" virt="non-virtual"><scope>video_config</scope><name>cams</name></member>
+      <member refid="structvideo__config_1a48cb80031f356192d6e9387e3a23489a" prot="public" virt="non-virtual"><scope>video_config</scope><name>capture</name></member>
+      <member refid="structvideo__config_1a37db3b2c75bc417835c5b6a95ae20a72" prot="public" virt="non-virtual"><scope>video_config</scope><name>device</name></member>
+      <member refid="structvideo__config_1a4dbc2af3db59b11bf0a46d3bc3d29165" prot="public" virt="non-virtual"><scope>video_config</scope><name>display</name></member>
+      <member refid="structvideo__config_1a765fb1c3cc66701710b99bde727639fa" prot="public" virt="non-virtual"><scope>video_config</scope><name>selfview</name></member>
+      <member refid="structvideo__config_1a00144d871accc2c5cdcea7cd027e4505" prot="public" virt="non-virtual"><scope>video_config</scope><name>show_local</name></member>
+      <member refid="structvideo__config_1a9bbbf4fa47a64d152b9498ec7e44f59f" prot="public" virt="non-virtual"><scope>video_config</scope><name>vsize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,163 @@
+.TH "_LinphoneCoreVTable" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_LinphoneCoreVTable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <linphonecore\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBLinphoneCoreGlobalStateChangedCb\fP \fBglobal_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreRegistrationStateChangedCb\fP \fBregistration_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreCallStateChangedCb\fP \fBcall_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreNotifyPresenceReceivedCb\fP \fBnotify_presence_recv\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreNewSubscribtionRequestCb\fP \fBnew_subscription_request\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreAuthInfoRequestedCb\fP \fBauth_info_requested\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreCallLogUpdatedCb\fP \fBcall_log_updated\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreDtmfReceivedCb\fP \fBdtmf_received\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreReferReceivedCb\fP \fBrefer_received\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreCallEncryptionChangedCb\fP \fBcall_encryption_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreTransferStateChangedCb\fP \fBtransfer_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreBuddyInfoUpdatedCb\fP \fBbuddy_info_updated\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreCallStatsUpdatedCb\fP \fBcall_stats_updated\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreInfoReceivedCb\fP \fBinfo_received\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreSubscriptionStateChangedCb\fP \fBsubscription_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCoreIncomingNotifyCb\fP \fBnotify_received\fP"
+.br
+.ti -1c
+.RI "\fBDisplayStatusCb\fP \fBdisplay_status\fP"
+.br
+.ti -1c
+.RI "\fBDisplayMessageCb\fP \fBdisplay_message\fP"
+.br
+.ti -1c
+.RI "\fBDisplayMessageCb\fP \fBdisplay_warning\fP"
+.br
+.ti -1c
+.RI "\fBDisplayUrlCb\fP \fBdisplay_url\fP"
+.br
+.ti -1c
+.RI "\fBShowInterfaceCb\fP \fBshow\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This structure holds all callbacks that the application should implement\&. None is mandatory\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fBLinphoneCoreGlobalStateChangedCb\fP _LinphoneCoreVTable::global_state_changed"
+Notifies global state changes 
+.SS "\fBLinphoneCoreRegistrationStateChangedCb\fP _LinphoneCoreVTable::registration_state_changed"
+Notifies registration state changes 
+.SS "\fBLinphoneCoreCallStateChangedCb\fP _LinphoneCoreVTable::call_state_changed"
+Notifies call state changes 
+.SS "\fBLinphoneCoreNotifyPresenceReceivedCb\fP _LinphoneCoreVTable::notify_presence_recv"
+Notify received presence events 
+.SS "\fBLinphoneCoreNewSubscribtionRequestCb\fP _LinphoneCoreVTable::new_subscription_request"
+Notify about pending presence subscription request 
+.SS "\fBLinphoneCoreAuthInfoRequestedCb\fP _LinphoneCoreVTable::auth_info_requested"
+Ask the application some authentication information 
+.SS "\fBLinphoneCoreCallLogUpdatedCb\fP _LinphoneCoreVTable::call_log_updated"
+Notifies that call log list has been updated 
+.SS "\fBLinphoneCoreDtmfReceivedCb\fP _LinphoneCoreVTable::dtmf_received"
+a message is received, can be text or external body A dtmf has been received received 
+.SS "\fBLinphoneCoreReferReceivedCb\fP _LinphoneCoreVTable::refer_received"
+An out of call refer was received 
+.SS "\fBLinphoneCoreCallEncryptionChangedCb\fP _LinphoneCoreVTable::call_encryption_changed"
+Notifies on change in the encryption of call streams 
+.SS "\fBLinphoneCoreTransferStateChangedCb\fP _LinphoneCoreVTable::transfer_state_changed"
+Notifies when a transfer is in progress 
+.SS "\fBLinphoneCoreBuddyInfoUpdatedCb\fP _LinphoneCoreVTable::buddy_info_updated"
+a LinphoneFriend's BuddyInfo has changed 
+.SS "\fBLinphoneCoreCallStatsUpdatedCb\fP _LinphoneCoreVTable::call_stats_updated"
+Notifies on refreshing of call's statistics\&. 
+.SS "\fBLinphoneCoreInfoReceivedCb\fP _LinphoneCoreVTable::info_received"
+Notifies an incoming informational message received\&. 
+.SS "\fBLinphoneCoreSubscriptionStateChangedCb\fP _LinphoneCoreVTable::subscription_state_changed"
+Notifies subscription state change 
+.SS "\fBLinphoneCoreIncomingNotifyCb\fP _LinphoneCoreVTable::notify_received"
+Notifies a an event notification, see \fBlinphone_core_subscribe()\fP 
+.SS "\fBDisplayStatusCb\fP _LinphoneCoreVTable::display_status"
+Notifies publish state change (only from \fBLinphoneEvent\fP api) 
+.PP
+\fBDeprecated\fP
+.RS 4
+Callback that notifies various events with human readable text\&. 
+.RE
+.PP
+
+.SS "\fBDisplayMessageCb\fP _LinphoneCoreVTable::display_message"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+Callback to display a message to the user 
+.RE
+.PP
+
+.SS "\fBDisplayMessageCb\fP _LinphoneCoreVTable::display_warning"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+Callback to display a warning to the user 
+.RE
+.PP
+
+.SS "\fBDisplayUrlCb\fP _LinphoneCoreVTable::display_url"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "\fBShowInterfaceCb\fP _LinphoneCoreVTable::show"
+
+.PP
+\fBDeprecated\fP
+.RS 4
+Notifies the application that it should show up 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

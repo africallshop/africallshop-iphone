@@ -1,0 +1,790 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="lpconfig_8h" kind="file">
+    <compoundname>lpconfig.h</compoundname>
+    <includes refid="linphonecore_8h" local="yes">linphonecore.h</includes>
+    <includes local="no">ortp/port.h</includes>
+    <includedby refid="address_8c" local="yes">address.c</includedby>
+    <includedby refid="authentication_8c" local="yes">authentication.c</includedby>
+    <includedby refid="callbacks_8c" local="yes">callbacks.c</includedby>
+    <includedby refid="chat_8c" local="yes">chat.c</includedby>
+    <includedby refid="conference_8c" local="yes">conference.c</includedby>
+    <includedby refid="ec-calibrator_8c" local="yes">ec-calibrator.c</includedby>
+    <includedby refid="event_8c" local="yes">event.c</includedby>
+    <includedby refid="friend_8c" local="yes">friend.c</includedby>
+    <includedby refid="info_8c" local="yes">info.c</includedby>
+    <includedby refid="linphone__tunnel__stubs_8c" local="yes">linphone_tunnel_stubs.c</includedby>
+    <includedby refid="linphonecall_8c" local="yes">linphonecall.c</includedby>
+    <includedby refid="linphonecore_8c" local="yes">linphonecore.c</includedby>
+    <includedby refid="lpconfig_8c" local="yes">lpconfig.c</includedby>
+    <includedby refid="misc_8c" local="yes">misc.c</includedby>
+    <includedby refid="presence_8c" local="yes">presence.c</includedby>
+    <includedby refid="proxy_8c" local="yes">proxy.c</includedby>
+    <includedby refid="upnp_8c" local="yes">upnp.c</includedby>
+    <incdepgraph>
+      <node id="104">
+        <label>ortp/port.h</label>
+      </node>
+      <node id="103">
+        <label>lpconfig.h</label>
+        <link refid="lpconfig.h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lpconfig_8h_1ad0fe71fc97a6a7f48ca30e85c8522709" prot="public" static="no">
+        <name>LP_CONFIG_DEFAULT_STRING</name>
+        <param><defname>config</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>default</defname></param>
+        <initializer>(config) ? (<ref refid="group__misc_1ga9657ebf1d68b43184a796c9bdc68c29a" kindref="member">lp_config_get_string</ref>(config, &quot;default_values&quot;, name, default)) : (default)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="55" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lpconfig_8h_1ad65f476d2eafdb1c921d5deeada2b37e" prot="public" static="no">
+        <name>LP_CONFIG_DEFAULT_INT</name>
+        <param><defname>config</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>default</defname></param>
+        <initializer>(config) ? (<ref refid="group__misc_1ga36d08c0cbc78d88fd4f043e61e9b9637" kindref="member">lp_config_get_int</ref>(config, &quot;default_values&quot;, name, default)) : (default)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="58" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lpconfig_8h_1ad2f2b18d2a572e4ddb10a7c802b2e9e4" prot="public" static="no">
+        <name>LP_CONFIG_DEFAULT_INT64</name>
+        <param><defname>config</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>default</defname></param>
+        <initializer>(config) ? (<ref refid="group__misc_1ga541795495eae7e7b7cde85beb096e20c" kindref="member">lp_config_get_int64</ref>(config, &quot;default_values&quot;, name, default)) : (default)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="61" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lpconfig_8h_1a3d5a8f0abfee357979c9c4a4ebf68708" prot="public" static="no">
+        <name>LP_CONFIG_DEFAULT_FLOAT</name>
+        <param><defname>config</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>default</defname></param>
+        <initializer>(config) ? (<ref refid="group__misc_1gad548422b00d41c9726062869d04cd6e4" kindref="member">lp_config_get_float</ref>(config, &quot;default_values&quot;, name, default)) : (default)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="64" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__misc_1ga047b6550aab7dd244268e695fab98fd6" prot="public" static="no">
+        <type>struct _LpConfig</type>
+        <definition>typedef struct _LpConfig LpConfig</definition>
+        <argsstring></argsstring>
+        <name>LpConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LpConfig object is used to manipulate a configuration file.</para><para>The format of the configuration file is a .ini like format:<itemizedlist>
+<listitem><para>sections are defined in []</para></listitem><listitem><para>each section contains a sequence of key=value pairs.</para></listitem></itemizedlist>
+</para><para>Example: <programlisting><codeline><highlight class="normal">*<sp/>[sound]</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>echocanceler=1</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>playback_dev=ALSA:<sp/>Default<sp/>device</highlight></codeline>
+<codeline><highlight class="normal">*</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[video]</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>enabled=1</highlight></codeline>
+<codeline><highlight class="normal">*<sp/></highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="64" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__misc_1ga964e134940173e3c3bf1a9f90bcad06b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+        <definition>LpConfig* lp_config_new</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>lp_config_new</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates a LpConfig object from a user config file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filename of the config file to read to fill the instantiated LpConfig </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__misc_1gaeca035860d7412231792c1aa91f75d27" kindref="member">lp_config_new_with_factory</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="75" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="217" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gaeca035860d7412231792c1aa91f75d27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+        <definition>LpConfig* lp_config_new_with_factory</definition>
+        <argsstring>(const char *config_filename, const char *factory_config_filename)</argsstring>
+        <name>lp_config_new_with_factory</name>
+        <param>
+          <type>const char *</type>
+          <declname>config_filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>factory_config_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates a LpConfig object from a user config file and a factory config file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filename of the user config file to read to fill the instantiated LpConfig </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory_config_filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filename of the factory config file to read to fill the instantiated LpConfig </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__misc_1ga964e134940173e3c3bf1a9f90bcad06b" kindref="member">lp_config_new</ref></para></simplesect>
+The user config file is read first to fill the LpConfig and then the factory config file is read. Therefore the configuration parameters defined in the user config file will be overwritten by the parameters defined in the factory config file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="89" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="221" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="lpconfig_8h_1a0c2c509a731d7da74a6671b4147a251d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lp_config_read_file</definition>
+        <argsstring>(LpConfig *lpconfig, const char *filename)</argsstring>
+        <name>lp_config_read_file</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="91" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="253" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga9657ebf1d68b43184a796c9bdc68c29a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* lp_config_get_string</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section, const char *key, const char *default_string)</argsstring>
+        <name>lp_config_get_string</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>default_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a configuration item as a string, given its section, key, and default value.</para><para>The default value string is returned if the config item isn&apos;t found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="99" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="283" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gacce3e95a4b8327d6a8a5f162cbccb5fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t lp_config_get_range</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section, const char *key, int *min, int *max, int default_min, int default_max)</argsstring>
+        <name>lp_config_get_range</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>default_min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>default_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a configuration item as a range, given its section, key, and default min and max values.</para><para><simplesect kind="return"><para>TRUE if the value is successfully parsed as a range, FALSE otherwise. If FALSE is returned, min and max are filled respectively with default_min and default_max values. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="108" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="294" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga36d08c0cbc78d88fd4f043e61e9b9637" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lp_config_get_int</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section, const char *key, int default_value)</argsstring>
+        <name>lp_config_get_int</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a configuration item as an integer, given its section, key, and default value.</para><para>The default integer value is returned if the config item isn&apos;t found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="116" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="313" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga541795495eae7e7b7cde85beb096e20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t lp_config_get_int64</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section, const char *key, int64_t default_value)</argsstring>
+        <name>lp_config_get_int64</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a configuration item as a 64 bit integer, given its section, key, and default value.</para><para>The default integer value is returned if the config item isn&apos;t found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="124" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="325" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gad548422b00d41c9726062869d04cd6e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float lp_config_get_float</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section, const char *key, float default_value)</argsstring>
+        <name>lp_config_get_float</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a configuration item as a float, given its section, key, and default value.</para><para>The default float value is returned if the config item isn&apos;t found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="132" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="337" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga2b9f058c7b12d124be96149100d9b079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_set_string</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section, const char *key, const char *value)</argsstring>
+        <name>lp_config_set_string</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a string config item </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="139" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="345" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga21e9df0d054a1e38f85088f3ac8c7f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_set_range</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section, const char *key, int min_value, int max_value)</argsstring>
+        <name>lp_config_set_range</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a range config item </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="146" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="366" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gab7608c4c6b40a734eb00a4b398e47ba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_set_int</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section, const char *key, int value)</argsstring>
+        <name>lp_config_set_int</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets an integer config item </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="153" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="372" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gac5e9e26edea055a3c5b63cc60c45a695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_set_int_hex</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section, const char *key, int value)</argsstring>
+        <name>lp_config_set_int_hex</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets an integer config item, but store it as hexadecimal </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="160" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="378" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga3ce825cbf6fa62ecf0714540459f64b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_set_int64</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section, const char *key, int64_t value)</argsstring>
+        <name>lp_config_set_int64</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a 64 bits integer config item </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="167" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="384" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gaeaa0ff38f2af3cefdf4c401b86ec9197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_set_float</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section, const char *key, float value)</argsstring>
+        <name>lp_config_set_float</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a float config item </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="174" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="391" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga39f6f202e10581591ac6e68a636236bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lp_config_sync</definition>
+        <argsstring>(LpConfig *lpconfig)</argsstring>
+        <name>lp_config_sync</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the config file to disk. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="181" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="407" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga15bf033627637f54ebc03380d5dfb2d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lp_config_has_section</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section)</argsstring>
+        <name>lp_config_has_section</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns 1 if a given section is present in the configuration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="188" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="427" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga8ea8060c147dd9584644c52d4cd59a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_clean_section</definition>
+        <argsstring>(LpConfig *lpconfig, const char *section)</argsstring>
+        <name>lp_config_clean_section</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes every pair of key,value in a section and remove the section. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="195" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="453" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga3b8ef5436c281cfe1f79dd3421d0e9af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_for_each_section</definition>
+        <argsstring>(const LpConfig *lpconfig, void(*callback)(const char *section, void *ctx), void *ctx)</argsstring>
+        <name>lp_config_for_each_section</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>void(*)(const char *section, void *ctx)</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call a function for each section present in the configuration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="202" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="432" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga2595b0b6d2133c44de3664e25f756f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_for_each_entry</definition>
+        <argsstring>(const LpConfig *lpconfig, const char *section, void(*callback)(const char *entry, void *ctx), void *ctx)</argsstring>
+        <name>lp_config_for_each_entry</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>void(*)(const char *entry, void *ctx)</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call a function for each entry present in a section configuration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="209" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="441" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="lpconfig_8h_1a3f73e9e538bced52b2239d83d23055ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lp_config_needs_commit</definition>
+        <argsstring>(const LpConfig *lpconfig)</argsstring>
+        <name>lp_config_needs_commit</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>lpconfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="212" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="461" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="lpconfig_8h_1a5e9eaccee2c0b11ccf97311cec4989e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lp_config_destroy</definition>
+        <argsstring>(LpConfig *cfg)</argsstring>
+        <name>lp_config_destroy</name>
+        <param>
+          <type><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h" line="213" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="271" bodyend="276"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lpconfig.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Thu<sp/>Mar<sp/>10<sp/>15:02:49<sp/>2005</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/><sp/>2005<sp/><sp/>Simon<sp/>Morlat</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>Email<sp/>simon.morlat@linphone.org</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>GNU<sp/>Library<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LPCONFIG_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LPCONFIG_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;linphonecore.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*to<sp/>get<sp/>LINPHONE_PUBLIC,<sp/>maybe<sp/>we<sp/>can<sp/>include<sp/>less<sp/>stuff*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ortp/port.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_LpConfig<sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LP_CONFIG_DEFAULT_STRING(config,<sp/>name,<sp/>default)<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(config)<sp/>?<sp/>(lp_config_get_string(config,<sp/>&quot;default_values&quot;,<sp/>name,<sp/>default))<sp/>:<sp/>(default)</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LP_CONFIG_DEFAULT_INT(config,<sp/>name,<sp/>default)<sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(config)<sp/>?<sp/>(lp_config_get_int(config,<sp/>&quot;default_values&quot;,<sp/>name,<sp/>default))<sp/>:<sp/>(default)</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LP_CONFIG_DEFAULT_INT64(config,<sp/>name,<sp/>default)<sp/>\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(config)<sp/>?<sp/>(lp_config_get_int64(config,<sp/>&quot;default_values&quot;,<sp/>name,<sp/>default))<sp/>:<sp/>(default)</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LP_CONFIG_DEFAULT_FLOAT(config,<sp/>name,<sp/>default)<sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(config)<sp/>?<sp/>(lp_config_get_float(config,<sp/>&quot;default_values&quot;,<sp/>name,<sp/>default))<sp/>:<sp/>(default)</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">LINPHONE_PUBLIC<sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*<sp/><ref refid="group__misc_1ga964e134940173e3c3bf1a9f90bcad06b" kindref="member">lp_config_new</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">LINPHONE_PUBLIC<sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*<sp/><ref refid="group__misc_1gaeca035860d7412231792c1aa91f75d27" kindref="member">lp_config_new_with_factory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*config_filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*factory_config_filename);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lp_config_read_file(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__misc_1ga9657ebf1d68b43184a796c9bdc68c29a" kindref="member">lp_config_get_string</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*default_string);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">LINPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__misc_1gacce3e95a4b8327d6a8a5f162cbccb5fe" kindref="member">lp_config_get_range</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*min,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*max,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>default_min,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>default_max);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga36d08c0cbc78d88fd4f043e61e9b9637" kindref="member">lp_config_get_int</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>default_value);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">LINPHONE_PUBLIC<sp/>int64_t<sp/><ref refid="group__misc_1ga541795495eae7e7b7cde85beb096e20c" kindref="member">lp_config_get_int64</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/>int64_t<sp/>default_value);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__misc_1gad548422b00d41c9726062869d04cd6e4" kindref="member">lp_config_get_float</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>default_value);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga2b9f058c7b12d124be96149100d9b079" kindref="member">lp_config_set_string</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga21e9df0d054a1e38f85088f3ac8c7f56" kindref="member">lp_config_set_range</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_value,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_value);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1gab7608c4c6b40a734eb00a4b398e47ba5" kindref="member">lp_config_set_int</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1gac5e9e26edea055a3c5b63cc60c45a695" kindref="member">lp_config_set_int_hex</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga3ce825cbf6fa62ecf0714540459f64b4" kindref="member">lp_config_set_int64</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/>int64_t<sp/>value);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">LINPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1gaeaa0ff38f2af3cefdf4c401b86ec9197" kindref="member">lp_config_set_float</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value);<sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga39f6f202e10581591ac6e68a636236bc" kindref="member">lp_config_sync</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga15bf033627637f54ebc03380d5dfb2d1" kindref="member">lp_config_has_section</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga8ea8060c147dd9584644c52d4cd59a17" kindref="member">lp_config_clean_section</ref>(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga3b8ef5436c281cfe1f79dd3421d0e9af" kindref="member">lp_config_for_each_section</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*callback)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga2595b0b6d2133c44de3664e25f756f2f" kindref="member">lp_config_for_each_entry</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*callback)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*entry,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">/*tells<sp/>whether<sp/>uncommited<sp/>(with<sp/>lp_config_sync())<sp/>modifications<sp/>exist*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lp_config_needs_commit(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*lpconfig);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lp_config_destroy(<ref refid="group__misc_1ga047b6550aab7dd244268e695fab98fd6" kindref="member">LpConfig</ref><sp/>*cfg);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="216"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.h"/>
+  </compounddef>
+</doxygen>

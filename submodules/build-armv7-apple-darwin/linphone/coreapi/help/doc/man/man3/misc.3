@@ -1,0 +1,395 @@
+.TH "Miscenalleous: logs, version strings, config storage" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Miscenalleous: logs, version strings, config storage \- 
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_LinphoneContent\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB_LinphoneContent\fP \fBLinphoneContent\fP"
+.br
+.ti -1c
+.RI "typedef enum \fB_LinphoneReason\fP \fBLinphoneReason\fP"
+.br
+.ti -1c
+.RI "typedef struct _LpConfig \fBLpConfig\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB_LinphoneReason\fP { , \fBLinphoneReasonNoResponse\fP, \fBLinphoneReasonBadCredentials\fP, \fBLinphoneReasonDeclined\fP, \fBLinphoneReasonNotFound\fP, \fBLinphoneReasonNotAnswered\fP, \fBLinphoneReasonBusy\fP, \fBLinphoneReasonMedia\fP, \fBLinphoneReasonIOError\fP, \fBLinphoneReasonDoNotDisturb\fP, \fBLinphoneReasonUnauthorized\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBlinphone_core_enable_logs\fP (FILE *file)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_enable_logs_with_cb\fP (OrtpLogFunc logfunc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_disable_logs\fP ()"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_core_get_version\fP (void)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_user_agent\fP (\fBLinphoneCore\fP *lc, const char *name, const char *ver)"
+.br
+.ti -1c
+.RI "\fBLpConfig\fP * \fBlinphone_core_get_config\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_reason_to_string\fP (\fBLinphoneReason\fP err)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_log_handler\fP (OrtpLogFunc logfunc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_log_file\fP (FILE *file)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_log_level\fP (OrtpLogLevel loglevel)"
+.br
+.ti -1c
+.RI "int \fBlinphone_dial_plan_lookup_ccc_from_iso\fP (const char *iso)"
+.br
+.ti -1c
+.RI "int \fBlinphone_dial_plan_lookup_ccc_from_e164\fP (const char *e164)"
+.br
+.ti -1c
+.RI "\fBLpConfig\fP * \fBlp_config_new\fP (const char *filename)"
+.br
+.ti -1c
+.RI "\fBLpConfig\fP * \fBlp_config_new_with_factory\fP (const char *config_filename, const char *factory_config_filename)"
+.br
+.ti -1c
+.RI "const char * \fBlp_config_get_string\fP (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *default_string)"
+.br
+.ti -1c
+.RI "bool_t \fBlp_config_get_range\fP (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, int *min, int *max, int default_min, int default_max)"
+.br
+.ti -1c
+.RI "int \fBlp_config_get_int\fP (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, int default_value)"
+.br
+.ti -1c
+.RI "int64_t \fBlp_config_get_int64\fP (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, int64_t default_value)"
+.br
+.ti -1c
+.RI "float \fBlp_config_get_float\fP (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, float default_value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_string\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_range\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, int min_value, int max_value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_int\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, int value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_int_hex\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, int value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_int64\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, int64_t value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_float\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, float value)"
+.br
+.ti -1c
+.RI "int \fBlp_config_sync\fP (\fBLpConfig\fP *lpconfig)"
+.br
+.ti -1c
+.RI "int \fBlp_config_has_section\fP (const \fBLpConfig\fP *lpconfig, const char *section)"
+.br
+.ti -1c
+.RI "void \fBlp_config_clean_section\fP (\fBLpConfig\fP *lpconfig, const char *section)"
+.br
+.ti -1c
+.RI "void \fBlp_config_for_each_section\fP (const \fBLpConfig\fP *lpconfig, void(*callback)(const char *section, void *ctx), void *ctx)"
+.br
+.ti -1c
+.RI "void \fBlp_config_for_each_entry\fP (const \fBLpConfig\fP *lpconfig, const char *section, void(*callback)(const char *entry, void *ctx), void *ctx)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fB_LinphoneContent\fP \fBLinphoneContent\fP"
+Alias to the LinphoneContent struct\&. 
+.SS "typedef enum \fB_LinphoneReason\fP \fBLinphoneReason\fP"
+Enum describing failure reasons\&. 
+.SS "typedef struct _LpConfig \fBLpConfig\fP"
+The LpConfig object is used to manipulate a configuration file\&.
+.PP
+The format of the configuration file is a \&.ini like format:
+.IP "\(bu" 2
+sections are defined in []
+.IP "\(bu" 2
+each section contains a sequence of key=value pairs\&.
+.PP
+.PP
+Example: 
+.PP
+.nf
+* [sound]
+* echocanceler=1
+* playback_dev=ALSA: Default device
+*
+* [video]
+* enabled=1
+* 
+
+.fi
+.PP
+ 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fB_LinphoneReason\fP"
+Enum describing various failure reasons or contextual information for some events\&. 
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBlinphone_call_get_reason()\fP 
+.PP
+linphone_proxy_config_get_error() 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILinphoneReasonNoResponse \fP\fP
+No response received from remote 
+.TP
+\fB\fILinphoneReasonBadCredentials \fP\fP
+Authentication failed due to bad 
+.TP
+\fB\fILinphoneReasonDeclined \fP\fP
+The call has been declined 
+.TP
+\fB\fILinphoneReasonNotFound \fP\fP
+Destination of the calls was not found\&. 
+.TP
+\fB\fILinphoneReasonNotAnswered \fP\fP
+The call was not answered in time 
+.TP
+\fB\fILinphoneReasonBusy \fP\fP
+Phone line was busy 
+.TP
+\fB\fILinphoneReasonMedia \fP\fP
+Incompatible media 
+.TP
+\fB\fILinphoneReasonIOError \fP\fP
+Transport error: connection failures, disconnections etc\&.\&.\&. 
+.TP
+\fB\fILinphoneReasonDoNotDisturb \fP\fP
+Do not disturb reason 
+.TP
+\fB\fILinphoneReasonUnauthorized \fP\fP
+Operation is unauthorized because missing credential 
+.SH "Function Documentation"
+.PP 
+.SS "void linphone_core_enable_logs (FILE *file)"
+Enable logs in supplied FILE*\&.
+.PP
+\fBDeprecated\fP
+.RS 4
+Use \fBlinphone_core_set_log_file\fP and \fBlinphone_core_set_log_level\fP instead\&.
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfile\fP a C FILE* where to fprintf logs\&. If null stdout is used\&. 
+.RE
+.PP
+
+.SS "void linphone_core_enable_logs_with_cb (OrtpLogFunclogfunc)"
+Enable logs through the user's supplied log callback\&.
+.PP
+\fBDeprecated\fP
+.RS 4
+Use \fBlinphone_core_set_log_handler\fP and \fBlinphone_core_set_log_level\fP instead\&.
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlogfunc\fP The address of a OrtpLogFunc callback whose protoype is typedef void (*OrtpLogFunc)(OrtpLogLevel lev, const char *fmt, va_list args); 
+.RE
+.PP
+
+.SS "void linphone_core_disable_logs (void)"
+Entirely disable logging\&.
+.PP
+\fBDeprecated\fP
+.RS 4
+Use \fBlinphone_core_set_log_level\fP instead\&. 
+.RE
+.PP
+
+.SS "const char* linphone_core_get_version (void)"
+Returns liblinphone's version as a string\&. 
+.SS "void linphone_core_set_user_agent (\fBLinphoneCore\fP *lc, const char *name, const char *ver)"
+Sets the user agent string used in SIP messages\&. 
+.SS "\fBLpConfig\fP* linphone_core_get_config (\fBLinphoneCore\fP *lc)"
+Returns the LpConfig object used to manage the storage (config) file\&.
+.PP
+The application can use the LpConfig object to insert its own private sections and pairs of key=value in the configuration file\&. 
+.SS "const char* linphone_reason_to_string (\fBLinphoneReason\fPerr)"
+Converts a LinphoneReason enum to a string\&. 
+.SS "void linphone_core_set_log_handler (OrtpLogFunclogfunc)"
+Define a log handler\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlogfunc\fP The function pointer of the log handler\&. 
+.RE
+.PP
+
+.SS "void linphone_core_set_log_file (FILE *file)"
+Define a log file\&.
+.PP
+If the file pointer passed as an argument is NULL, stdout is used instead\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfile\fP A pointer to the FILE structure of the file to write to\&. 
+.RE
+.PP
+
+.SS "void linphone_core_set_log_level (OrtpLogLevelloglevel)"
+Define the log level\&.
+.PP
+The loglevel parameter is a bitmask parameter\&. Therefore to enable only warning and error messages, use ORTP_WARNING | ORTP_ERROR\&. To disable logs, simply set loglevel to 0\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloglevel\fP A bitmask of the log levels to set\&. 
+.RE
+.PP
+
+.SS "int linphone_dial_plan_lookup_ccc_from_iso (const char *iso)"
+Function to get call country code from ISO 3166-1 alpha-2 code, ex: FR returns 33 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIiso\fP country code alpha2 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+call country code or -1 if not found 
+.RE
+.PP
+
+.SS "int linphone_dial_plan_lookup_ccc_from_e164 (const char *e164)"
+Function to get call country code from an e164 number, ex: +33952650121 will return 33 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe164\fP phone number 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+call country code or -1 if not found 
+.RE
+.PP
+
+.SS "\fBLpConfig\fP* lp_config_new (const char *filename)"
+Instantiates a LpConfig object from a user config file\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilename\fP the filename of the config file to read to fill the instantiated LpConfig 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBlp_config_new_with_factory\fP 
+.RE
+.PP
+
+.SS "\fBLpConfig\fP* lp_config_new_with_factory (const char *config_filename, const char *factory_config_filename)"
+Instantiates a LpConfig object from a user config file and a factory config file\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIconfig_filename\fP the filename of the user config file to read to fill the instantiated LpConfig 
+.br
+\fIfactory_config_filename\fP the filename of the factory config file to read to fill the instantiated LpConfig 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBlp_config_new\fP
+.RE
+.PP
+The user config file is read first to fill the LpConfig and then the factory config file is read\&. Therefore the configuration parameters defined in the user config file will be overwritten by the parameters defined in the factory config file\&. 
+.SS "const char* lp_config_get_string (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *default_string)"
+Retrieves a configuration item as a string, given its section, key, and default value\&.
+.PP
+The default value string is returned if the config item isn't found\&. 
+.SS "bool_t lp_config_get_range (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, int *min, int *max, intdefault_min, intdefault_max)"
+Retrieves a configuration item as a range, given its section, key, and default min and max values\&.
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE if the value is successfully parsed as a range, FALSE otherwise\&. If FALSE is returned, min and max are filled respectively with default_min and default_max values\&. 
+.RE
+.PP
+
+.SS "int lp_config_get_int (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, intdefault_value)"
+Retrieves a configuration item as an integer, given its section, key, and default value\&.
+.PP
+The default integer value is returned if the config item isn't found\&. 
+.SS "int64_t lp_config_get_int64 (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, int64_tdefault_value)"
+Retrieves a configuration item as a 64 bit integer, given its section, key, and default value\&.
+.PP
+The default integer value is returned if the config item isn't found\&. 
+.SS "float lp_config_get_float (const \fBLpConfig\fP *lpconfig, const char *section, const char *key, floatdefault_value)"
+Retrieves a configuration item as a float, given its section, key, and default value\&.
+.PP
+The default float value is returned if the config item isn't found\&. 
+.SS "void lp_config_set_string (\fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *value)"
+Sets a string config item 
+.SS "void lp_config_set_range (\fBLpConfig\fP *lpconfig, const char *section, const char *key, intmin_value, intmax_value)"
+Sets a range config item 
+.SS "void lp_config_set_int (\fBLpConfig\fP *lpconfig, const char *section, const char *key, intvalue)"
+Sets an integer config item 
+.SS "void lp_config_set_int_hex (\fBLpConfig\fP *lpconfig, const char *section, const char *key, intvalue)"
+Sets an integer config item, but store it as hexadecimal 
+.SS "void lp_config_set_int64 (\fBLpConfig\fP *lpconfig, const char *section, const char *key, int64_tvalue)"
+Sets a 64 bits integer config item 
+.SS "void lp_config_set_float (\fBLpConfig\fP *lpconfig, const char *section, const char *key, floatvalue)"
+Sets a float config item 
+.SS "int lp_config_sync (\fBLpConfig\fP *lpconfig)"
+Writes the config file to disk\&. 
+.SS "int lp_config_has_section (const \fBLpConfig\fP *lpconfig, const char *section)"
+Returns 1 if a given section is present in the configuration\&. 
+.SS "void lp_config_clean_section (\fBLpConfig\fP *lpconfig, const char *section)"
+Removes every pair of key,value in a section and remove the section\&. 
+.SS "void lp_config_for_each_section (const \fBLpConfig\fP *lpconfig, void(*)(const char *section, void *ctx)callback, void *ctx)"
+Call a function for each section present in the configuration\&. 
+.SS "void lp_config_for_each_entry (const \fBLpConfig\fP *lpconfig, const char *section, void(*)(const char *entry, void *ctx)callback, void *ctx)"
+Call a function for each entry present in a section configuration\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

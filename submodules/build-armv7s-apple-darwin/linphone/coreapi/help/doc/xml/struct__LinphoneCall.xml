@@ -1,0 +1,881 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LinphoneCall" kind="struct" prot="public">
+    <compoundname>_LinphoneCall</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneCall_1a6fad2ebc7ae13c9943da6a36dc6964d7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCall::magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="155" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a3057ff3a6183bcf85109ebe59d7276bc" prot="public" static="no" mutable="no">
+        <type>struct _LinphoneCore *</type>
+        <definition>struct _LinphoneCore* _LinphoneCall::core</definition>
+        <argsstring></argsstring>
+        <name>core</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="156" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a800c50c5693ae16ed640cd71c8106755" prot="public" static="no" mutable="no">
+        <type>SalMediaDescription *</type>
+        <definition>SalMediaDescription* _LinphoneCall::localdesc</definition>
+        <argsstring></argsstring>
+        <name>localdesc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="157" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1ad55cfafecdca59903176df1aff7328da" prot="public" static="no" mutable="no">
+        <type>SalMediaDescription *</type>
+        <definition>SalMediaDescription* _LinphoneCall::resultdesc</definition>
+        <argsstring></argsstring>
+        <name>resultdesc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="158" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a7e07fdf8e1420043dbb72d44bdc90fdb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__logs_1ga779ac636d8b652c5130da18827c13e5a" kindref="member">LinphoneCallDir</ref></type>
+        <definition>LinphoneCallDir _LinphoneCall::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="159" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1aa8ef78d10b5057de2a8d4bd73eb6d319" prot="public" static="no" mutable="no">
+        <type>struct _RtpProfile *</type>
+        <definition>struct _RtpProfile* _LinphoneCall::audio_profile</definition>
+        <argsstring></argsstring>
+        <name>audio_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="160" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a2f789a77d3b1eda17855b414dc4edd8c" prot="public" static="no" mutable="no">
+        <type>struct _RtpProfile *</type>
+        <definition>struct _RtpProfile* _LinphoneCall::video_profile</definition>
+        <argsstring></argsstring>
+        <name>video_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="161" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a34373aa13aad8d0e0dd80f2e693f423a" prot="public" static="no" mutable="no">
+        <type>struct _LinphoneCallLog *</type>
+        <definition>struct _LinphoneCallLog* _LinphoneCall::log</definition>
+        <argsstring></argsstring>
+        <name>log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="162" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1ae80b1dffcde4be6634e08b2edb2ad6bb" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneCall::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="163" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a65ad42f07631376a30b626c4629de130" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneCall::ping_op</definition>
+        <argsstring></argsstring>
+        <name>ping_op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="164" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a7002add5cd95993d33e5eba0a7af3cb8" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _LinphoneCall::localip[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>localip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="165" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a8aee565e3b14c6452257978cafda8698" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneCall::start_time</definition>
+        <argsstring></argsstring>
+        <name>start_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="166" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a341c8805074b40f5576e1c73e90a510b" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneCall::media_start_time</definition>
+        <argsstring></argsstring>
+        <name>media_start_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="167" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1aa75258f902802e431dc1bd8545f61343" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1ga37dad1a4f935d9cc26ec1f9d2b23691a" kindref="member">LinphoneCallState</ref></type>
+        <definition>LinphoneCallState _LinphoneCall::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="168" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a139a1430e2b7239ee7e236ff4514c6da" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1ga37dad1a4f935d9cc26ec1f9d2b23691a" kindref="member">LinphoneCallState</ref></type>
+        <definition>LinphoneCallState _LinphoneCall::prevstate</definition>
+        <argsstring></argsstring>
+        <name>prevstate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="169" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a5a78b3a0c71481f68db62387fa9ee0d4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1ga37dad1a4f935d9cc26ec1f9d2b23691a" kindref="member">LinphoneCallState</ref></type>
+        <definition>LinphoneCallState _LinphoneCall::transfer_state</definition>
+        <argsstring></argsstring>
+        <name>transfer_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="170" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1afef40004b9de04ed82896b6a9c8291f7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__misc_1gabe82a1a1ffc3d6b4e0b51a03028513b7" kindref="member">LinphoneReason</ref></type>
+        <definition>LinphoneReason _LinphoneCall::reason</definition>
+        <argsstring></argsstring>
+        <name>reason</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="171" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a3334c200c6a0310e6e9f0be9cd4eb19d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__proxies_1ga1879a0d59e068457b688138da97f2d0b" kindref="member">LinphoneProxyConfig</ref> *</type>
+        <definition>LinphoneProxyConfig* _LinphoneCall::dest_proxy</definition>
+        <argsstring></argsstring>
+        <name>dest_proxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="172" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1ad43e09bab41f39a763734e6d187dc97f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCall::refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="173" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a0a44b676d2662b8ed596fc5797beba46" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneCall::user_pointer</definition>
+        <argsstring></argsstring>
+        <name>user_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="174" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1afe59a816db8e9c21ba72c4d698d70c67" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCall::audio_port</definition>
+        <argsstring></argsstring>
+        <name>audio_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="175" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a18979b231c10d4d76ba3fe4681c3b124" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCall::video_port</definition>
+        <argsstring></argsstring>
+        <name>video_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="176" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a15de6954d8c5b3edf677b6d40a2b5d88" prot="public" static="no" mutable="no">
+        <type>StunCandidate</type>
+        <definition>StunCandidate _LinphoneCall::ac</definition>
+        <argsstring></argsstring>
+        <name>ac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="177" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a4ec61d6baa3a45cb02440d99818b7847" prot="public" static="no" mutable="no">
+        <type>StunCandidate</type>
+        <definition>StunCandidate _LinphoneCall::vc</definition>
+        <argsstring></argsstring>
+        <name>vc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="177" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a5f60068bd7e26c329ad7ee4d1a4573f8" prot="public" static="no" mutable="no">
+        <type>struct _AudioStream *</type>
+        <definition>struct _AudioStream* _LinphoneCall::audiostream</definition>
+        <argsstring></argsstring>
+        <name>audiostream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="178" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a418a10a216f91c87074bf8fbb0398c8f" prot="public" static="no" mutable="no">
+        <type>struct _VideoStream *</type>
+        <definition>struct _VideoStream* _LinphoneCall::videostream</definition>
+        <argsstring></argsstring>
+        <name>videostream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="179" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a353d1bc79e799e7adb5d6a217da0fdf1" prot="public" static="no" mutable="no">
+        <type>MSAudioEndpoint *</type>
+        <definition>MSAudioEndpoint* _LinphoneCall::endpoint</definition>
+        <argsstring></argsstring>
+        <name>endpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="180" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a1dcec98bca853e9a5bfc4652d4412b32" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCall::refer_to</definition>
+        <argsstring></argsstring>
+        <name>refer_to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="181" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a3e0b370d2d9b41837b0faa4ea5cf8db6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref></type>
+        <definition>LinphoneCallParams _LinphoneCall::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="182" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a36b0e2d5b2ba6921bbf70917a4c1de3a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref></type>
+        <definition>LinphoneCallParams _LinphoneCall::current_params</definition>
+        <argsstring></argsstring>
+        <name>current_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="183" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a356f9985d41370ca584b05193692508d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref></type>
+        <definition>LinphoneCallParams _LinphoneCall::remote_params</definition>
+        <argsstring></argsstring>
+        <name>remote_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="184" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1adb487cfd5bf1c0ece9e3438ab25856fe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCall::up_bw</definition>
+        <argsstring></argsstring>
+        <name>up_bw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="185" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1adbf54e4e4df57ee6158d5bab3bb23b76" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCall::audio_bw</definition>
+        <argsstring></argsstring>
+        <name>audio_bw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="186" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a8ff09cbe62d01547d0c9042cd5cc6963" prot="public" static="no" mutable="no">
+        <type>OrtpEvQueue *</type>
+        <definition>OrtpEvQueue* _LinphoneCall::audiostream_app_evq</definition>
+        <argsstring></argsstring>
+        <name>audiostream_app_evq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="187" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1adab192d19e59a9dde0e5314558b9afda" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneCall::auth_token</definition>
+        <argsstring></argsstring>
+        <name>auth_token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="188" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a3440dfb5fe34ee25edeab63ab9aa06a6" prot="public" static="no" mutable="no">
+        <type>OrtpEvQueue *</type>
+        <definition>OrtpEvQueue* _LinphoneCall::videostream_app_evq</definition>
+        <argsstring></argsstring>
+        <name>videostream_app_evq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="189" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1aa80108f535e264038097bc26adc7512e" prot="public" static="no" mutable="no">
+        <type>CallCallbackObj</type>
+        <definition>CallCallbackObj _LinphoneCall::nextVideoFrameDecoded</definition>
+        <argsstring></argsstring>
+        <name>nextVideoFrameDecoded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="190" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a7c1820148a786336c33ff031e2fc71e1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__misc_1ga4d22764ac0e68a8d77670761429b2ee7" kindref="member">LinphoneCallStats</ref></type>
+        <definition>LinphoneCallStats _LinphoneCall::stats[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="191" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a6ba310fafc395995aac0fcbf6e60ca39" prot="public" static="no" mutable="no">
+        <type>IceSession *</type>
+        <definition>IceSession* _LinphoneCall::ice_session</definition>
+        <argsstring></argsstring>
+        <name>ice_session</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="195" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1af45cafe6dfdc7fe7fb2f06a65d3dbd14" prot="public" static="no" mutable="no">
+        <type><ref refid="group__chatroom_1gada79c4417919389b5247e254279f7833" kindref="member">LinphoneChatMessage</ref> *</type>
+        <definition>LinphoneChatMessage* _LinphoneCall::pending_message</definition>
+        <argsstring></argsstring>
+        <name>pending_message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="196" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a60548ddf0d98d3e4d4cf45cee227f6a5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneCall::ping_time</definition>
+        <argsstring></argsstring>
+        <name>ping_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="197" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a8adce5ab0cea5a912211d3737a811c54" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int _LinphoneCall::remote_session_id</definition>
+        <argsstring></argsstring>
+        <name>remote_session_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="198" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1afcb9e0b2d935bedfc661afff6df8bc83" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int _LinphoneCall::remote_session_ver</definition>
+        <argsstring></argsstring>
+        <name>remote_session_ver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="199" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a0a2c75e1b7c3e8544464420355bbfc2c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+        <definition>LinphoneCall* _LinphoneCall::referer</definition>
+        <argsstring></argsstring>
+        <name>referer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="200" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a4e20427e9d5e74f7510d460dcb20e85f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+        <definition>LinphoneCall* _LinphoneCall::transfer_target</definition>
+        <argsstring></argsstring>
+        <name>transfer_target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="201" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a1b11a43f29d01aee44978222195fa02c" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::refer_pending</definition>
+        <argsstring></argsstring>
+        <name>refer_pending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="202" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a9997591c5b587c245b5b1adf69dceb27" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::media_pending</definition>
+        <argsstring></argsstring>
+        <name>media_pending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="203" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a419d0cb0a6226d0939ff3f212e67d93a" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::audio_muted</definition>
+        <argsstring></argsstring>
+        <name>audio_muted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="204" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a5651fe8650a231599114c56f571afb87" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::camera_active</definition>
+        <argsstring></argsstring>
+        <name>camera_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="205" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a614338637d8fb35843b3342f11b6c25b" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::all_muted</definition>
+        <argsstring></argsstring>
+        <name>all_muted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="207" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a1a581337c81bc4ebe21a06cf0878bb54" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::playing_ringbacktone</definition>
+        <argsstring></argsstring>
+        <name>playing_ringbacktone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="208" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1ae02d75f9de191fc977623a7056af7e07" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::owns_call_log</definition>
+        <argsstring></argsstring>
+        <name>owns_call_log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="209" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1af7306698265bfc286fb47ced25a47cfe" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::ringing_beep</definition>
+        <argsstring></argsstring>
+        <name>ringing_beep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="210" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a42dd0e8a62850788fc2a06a3b19babbd" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::videostream_encrypted</definition>
+        <argsstring></argsstring>
+        <name>videostream_encrypted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="212" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a84c76345324dc65d0c496a123cf3a1c5" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::audiostream_encrypted</definition>
+        <argsstring></argsstring>
+        <name>audiostream_encrypted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="213" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1ae76bfd17976bcf7f3ad4a3741cb78ce6" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::auth_token_verified</definition>
+        <argsstring></argsstring>
+        <name>auth_token_verified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="214" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a686b288aae79c470c16fd3486d2b2369" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::defer_update</definition>
+        <argsstring></argsstring>
+        <name>defer_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="215" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a4982ff4b66a91a2ad7fcf33945da2d3a" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::was_automatically_paused</definition>
+        <argsstring></argsstring>
+        <name>was_automatically_paused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="217" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a1bc656dd9eae0bf5ef5d617ae87b4f0d" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::ping_replied</definition>
+        <argsstring></argsstring>
+        <name>ping_replied</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="218" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1a72986bf789592a8d35a05917677e25f8" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::record_active</definition>
+        <argsstring></argsstring>
+        <name>record_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="219" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneCall_1aef132c9f2021b4f13b844bf20eb06468" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneCall::paused_by_app</definition>
+        <argsstring></argsstring>
+        <name>paused_by_app</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="220" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="28">
+        <label>_LinphoneCallStats</label>
+        <link refid="struct__LinphoneCallStats"/>
+      </node>
+      <node id="27">
+        <label>_LinphoneCall</label>
+        <childnode refid="28" relation="usage">
+          <edgelabel>stats</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="154" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="153" bodyend="221"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneCall_1a15de6954d8c5b3edf677b6d40a2b5d88" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>ac</name></member>
+      <member refid="struct__LinphoneCall_1a614338637d8fb35843b3342f11b6c25b" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>all_muted</name></member>
+      <member refid="struct__LinphoneCall_1adbf54e4e4df57ee6158d5bab3bb23b76" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>audio_bw</name></member>
+      <member refid="struct__LinphoneCall_1a419d0cb0a6226d0939ff3f212e67d93a" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>audio_muted</name></member>
+      <member refid="struct__LinphoneCall_1afe59a816db8e9c21ba72c4d698d70c67" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>audio_port</name></member>
+      <member refid="struct__LinphoneCall_1aa8ef78d10b5057de2a8d4bd73eb6d319" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>audio_profile</name></member>
+      <member refid="struct__LinphoneCall_1a5f60068bd7e26c329ad7ee4d1a4573f8" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>audiostream</name></member>
+      <member refid="struct__LinphoneCall_1a8ff09cbe62d01547d0c9042cd5cc6963" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>audiostream_app_evq</name></member>
+      <member refid="struct__LinphoneCall_1a84c76345324dc65d0c496a123cf3a1c5" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>audiostream_encrypted</name></member>
+      <member refid="struct__LinphoneCall_1adab192d19e59a9dde0e5314558b9afda" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>auth_token</name></member>
+      <member refid="struct__LinphoneCall_1ae76bfd17976bcf7f3ad4a3741cb78ce6" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>auth_token_verified</name></member>
+      <member refid="struct__LinphoneCall_1a5651fe8650a231599114c56f571afb87" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>camera_active</name></member>
+      <member refid="struct__LinphoneCall_1a3057ff3a6183bcf85109ebe59d7276bc" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>core</name></member>
+      <member refid="struct__LinphoneCall_1a36b0e2d5b2ba6921bbf70917a4c1de3a" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>current_params</name></member>
+      <member refid="struct__LinphoneCall_1a686b288aae79c470c16fd3486d2b2369" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>defer_update</name></member>
+      <member refid="struct__LinphoneCall_1a3334c200c6a0310e6e9f0be9cd4eb19d" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>dest_proxy</name></member>
+      <member refid="struct__LinphoneCall_1a7e07fdf8e1420043dbb72d44bdc90fdb" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>dir</name></member>
+      <member refid="struct__LinphoneCall_1a353d1bc79e799e7adb5d6a217da0fdf1" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>endpoint</name></member>
+      <member refid="struct__LinphoneCall_1a6ba310fafc395995aac0fcbf6e60ca39" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>ice_session</name></member>
+      <member refid="struct__LinphoneCall_1a800c50c5693ae16ed640cd71c8106755" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>localdesc</name></member>
+      <member refid="struct__LinphoneCall_1a7002add5cd95993d33e5eba0a7af3cb8" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>localip</name></member>
+      <member refid="struct__LinphoneCall_1a34373aa13aad8d0e0dd80f2e693f423a" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>log</name></member>
+      <member refid="struct__LinphoneCall_1a6fad2ebc7ae13c9943da6a36dc6964d7" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>magic</name></member>
+      <member refid="struct__LinphoneCall_1a9997591c5b587c245b5b1adf69dceb27" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>media_pending</name></member>
+      <member refid="struct__LinphoneCall_1a341c8805074b40f5576e1c73e90a510b" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>media_start_time</name></member>
+      <member refid="struct__LinphoneCall_1aa80108f535e264038097bc26adc7512e" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>nextVideoFrameDecoded</name></member>
+      <member refid="struct__LinphoneCall_1ae80b1dffcde4be6634e08b2edb2ad6bb" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>op</name></member>
+      <member refid="struct__LinphoneCall_1ae02d75f9de191fc977623a7056af7e07" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>owns_call_log</name></member>
+      <member refid="struct__LinphoneCall_1a3e0b370d2d9b41837b0faa4ea5cf8db6" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>params</name></member>
+      <member refid="struct__LinphoneCall_1aef132c9f2021b4f13b844bf20eb06468" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>paused_by_app</name></member>
+      <member refid="struct__LinphoneCall_1af45cafe6dfdc7fe7fb2f06a65d3dbd14" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>pending_message</name></member>
+      <member refid="struct__LinphoneCall_1a65ad42f07631376a30b626c4629de130" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>ping_op</name></member>
+      <member refid="struct__LinphoneCall_1a1bc656dd9eae0bf5ef5d617ae87b4f0d" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>ping_replied</name></member>
+      <member refid="struct__LinphoneCall_1a60548ddf0d98d3e4d4cf45cee227f6a5" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>ping_time</name></member>
+      <member refid="struct__LinphoneCall_1a1a581337c81bc4ebe21a06cf0878bb54" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>playing_ringbacktone</name></member>
+      <member refid="struct__LinphoneCall_1a139a1430e2b7239ee7e236ff4514c6da" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>prevstate</name></member>
+      <member refid="struct__LinphoneCall_1afef40004b9de04ed82896b6a9c8291f7" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>reason</name></member>
+      <member refid="struct__LinphoneCall_1a72986bf789592a8d35a05917677e25f8" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>record_active</name></member>
+      <member refid="struct__LinphoneCall_1ad43e09bab41f39a763734e6d187dc97f" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>refcnt</name></member>
+      <member refid="struct__LinphoneCall_1a1b11a43f29d01aee44978222195fa02c" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>refer_pending</name></member>
+      <member refid="struct__LinphoneCall_1a1dcec98bca853e9a5bfc4652d4412b32" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>refer_to</name></member>
+      <member refid="struct__LinphoneCall_1a0a2c75e1b7c3e8544464420355bbfc2c" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>referer</name></member>
+      <member refid="struct__LinphoneCall_1a356f9985d41370ca584b05193692508d" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>remote_params</name></member>
+      <member refid="struct__LinphoneCall_1a8adce5ab0cea5a912211d3737a811c54" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>remote_session_id</name></member>
+      <member refid="struct__LinphoneCall_1afcb9e0b2d935bedfc661afff6df8bc83" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>remote_session_ver</name></member>
+      <member refid="struct__LinphoneCall_1ad55cfafecdca59903176df1aff7328da" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>resultdesc</name></member>
+      <member refid="struct__LinphoneCall_1af7306698265bfc286fb47ced25a47cfe" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>ringing_beep</name></member>
+      <member refid="struct__LinphoneCall_1a8aee565e3b14c6452257978cafda8698" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>start_time</name></member>
+      <member refid="struct__LinphoneCall_1aa75258f902802e431dc1bd8545f61343" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>state</name></member>
+      <member refid="struct__LinphoneCall_1a7c1820148a786336c33ff031e2fc71e1" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>stats</name></member>
+      <member refid="struct__LinphoneCall_1a5a78b3a0c71481f68db62387fa9ee0d4" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>transfer_state</name></member>
+      <member refid="struct__LinphoneCall_1a4e20427e9d5e74f7510d460dcb20e85f" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>transfer_target</name></member>
+      <member refid="struct__LinphoneCall_1adb487cfd5bf1c0ece9e3438ab25856fe" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>up_bw</name></member>
+      <member refid="struct__LinphoneCall_1a0a44b676d2662b8ed596fc5797beba46" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>user_pointer</name></member>
+      <member refid="struct__LinphoneCall_1a4ec61d6baa3a45cb02440d99818b7847" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>vc</name></member>
+      <member refid="struct__LinphoneCall_1a18979b231c10d4d76ba3fe4681c3b124" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>video_port</name></member>
+      <member refid="struct__LinphoneCall_1a2f789a77d3b1eda17855b414dc4edd8c" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>video_profile</name></member>
+      <member refid="struct__LinphoneCall_1a418a10a216f91c87074bf8fbb0398c8f" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>videostream</name></member>
+      <member refid="struct__LinphoneCall_1a3440dfb5fe34ee25edeab63ab9aa06a6" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>videostream_app_evq</name></member>
+      <member refid="struct__LinphoneCall_1a42dd0e8a62850788fc2a06a3b19babbd" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>videostream_encrypted</name></member>
+      <member refid="struct__LinphoneCall_1a4982ff4b66a91a2ad7fcf33945da2d3a" prot="public" virt="non-virtual"><scope>_LinphoneCall</scope><name>was_automatically_paused</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

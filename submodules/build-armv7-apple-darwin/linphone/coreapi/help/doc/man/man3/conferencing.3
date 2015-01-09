@@ -1,0 +1,201 @@
+.TH "Making an audio conference." 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Making an audio conference. \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fBlinphone_core_get_conference_local_input_volume\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_add_to_conference\fP (\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_remove_from_conference\fP (\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_core_is_in_conference\fP (const \fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_leave_conference\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_enter_conference\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_add_all_to_conference\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_terminate_conference\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_get_conference_size\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_call_is_in_conference\fP (const \fBLinphoneCall\fP *call)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This API allows to create a conference entirely managed by the client\&. No server capabilities are required\&. The way such conference is created is by doing the following:
+.br
+ The application shall makes 'normal' calls to several destinations (using \fBlinphone_core_invite()\fP ), one after another\&. While initiating the second call, the first one is automatically paused\&. Then, once the second call is established, the application has the possibility to merge the two calls to form a conference where each participant (the local participant, the remote destination of the first call, the remote destination of the second call) can talk together\&. This must be done by adding the two calls to the conference using \fBlinphone_call_add_to_conference()\fP
+.PP
+Once merged into a conference the LinphoneCall objects representing the calls that were established remain unchanged, except that they are tagged as part of the conference (see \fBlinphone_call_is_in_conference()\fP )\&. The calls in a conference are in the LinphoneCallStreamsRunning state\&.
+.PP
+Only a single conference can be created: the purpose of this feature is to allow the local user to create, take part and manage the conference\&. This API is not designed to create a conference server application\&.
+.PP
+Up to 10 calls can be merged into the conference, however depending on the CPU usage required for doing the encoding/decoding of the streams of each participants, the effective limit can be lower\&. 
+.SH "Function Documentation"
+.PP 
+.SS "float linphone_core_get_conference_local_input_volume (\fBLinphoneCore\fP *lc)"
+Returns the sound volume (mic input) of the local participant of the conference\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the measured input volume expressed in dbm0\&. 
+.RE
+.PP
+
+.SS "int linphone_core_add_to_conference (\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call)"
+Merge a call into a conference\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.br
+\fIcall\fP an established call, either in LinphoneCallStreamsRunning or LinphoneCallPaused state\&.
+.RE
+.PP
+If this is the first call that enters the conference, the virtual conference will be created automatically\&. If the local user was actively part of the call (ie not in paused state), then the local user is automatically entered into the conference\&. If the call was in paused state, then it is automatically resumed when entering into the conference\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful, -1 otherwise\&. 
+.RE
+.PP
+
+.SS "int linphone_core_remove_from_conference (\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call)"
+Remove a call from the conference\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.br
+\fIcall\fP a call that has been previously merged into the conference\&.
+.RE
+.PP
+After removing the remote participant belonging to the supplied call, the call becomes a normal call in paused state\&. If one single remote participant is left alone together with the local user in the conference after the removal, then the conference is automatically transformed into a simple call in StreamsRunning state\&. The conference's resources are then automatically destroyed\&.
+.PP
+In other words, unless \fBlinphone_core_leave_conference()\fP is explicitely called, the last remote participant of a conference is automatically put in a simple call in running state\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful, -1 otherwise\&. 
+.RE
+.PP
+
+.SS "bool_t linphone_core_is_in_conference (const \fBLinphoneCore\fP *lc)"
+Indicates whether the local participant is part of the conference\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+TRUE if the local participant is in the conference, FALSE otherwise\&. 
+.RE
+.PP
+
+.SS "int linphone_core_leave_conference (\fBLinphoneCore\fP *lc)"
+Moves the local participant out of the conference\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core When the local participant is out of the conference, the remote participants can continue to talk normally\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful, -1 otherwise\&. 
+.RE
+.PP
+
+.SS "int linphone_core_enter_conference (\fBLinphoneCore\fP *lc)"
+Moves the local participant inside the conference\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core
+.RE
+.PP
+Makes the local participant to join the conference\&. Typically, the local participant is by default always part of the conference when joining an active call into a conference\&. However, by calling \fBlinphone_core_leave_conference()\fP and \fBlinphone_core_enter_conference()\fP the application can decide to temporarily move out and in the local participant from the conference\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful, -1 otherwise 
+.RE
+.PP
+
+.SS "int linphone_core_add_all_to_conference (\fBLinphoneCore\fP *lc)"
+Add all calls into a conference\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core
+.RE
+.PP
+Merge all established calls (either in LinphoneCallStreamsRunning or LinphoneCallPaused) into a conference\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful, -1 otherwise 
+.RE
+.PP
+
+.SS "int linphone_core_terminate_conference (\fBLinphoneCore\fP *lc)"
+Terminates the conference and the calls associated with it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core
+.RE
+.PP
+All the calls that were merged to the conference are terminated, and the conference resources are destroyed\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful, -1 otherwise 
+.RE
+.PP
+
+.SS "int linphone_core_get_conference_size (\fBLinphoneCore\fP *lc)"
+Returns the number of participants to the conference, including the local participant\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core
+.RE
+.PP
+Typically, after merging two calls into the conference, there is total of 3 participants: the local participant (or local user), and two remote participants that were the destinations of the two previously establised calls\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the number of participants to the conference 
+.RE
+.PP
+
+.SS "bool_t linphone_call_is_in_conference (const \fBLinphoneCall\fP *call)"
+Returns true if the call is part of the conference\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

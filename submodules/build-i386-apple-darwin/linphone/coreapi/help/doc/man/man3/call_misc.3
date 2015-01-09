@@ -1,0 +1,131 @@
+.TH "Obtaining information about a running call: sound volumes, quality indicators" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Obtaining information about a running call: sound volumes, quality indicators \- 
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_LinphoneCallStats\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLINPHONE_VOLUME_DB_LOWEST\fP   (-120)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB_LinphoneCallStats\fP \fBLinphoneCallStats\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fBlinphone_call_get_play_volume\fP (\fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "float \fBlinphone_call_get_record_volume\fP (\fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "float \fBlinphone_call_get_current_quality\fP (\fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "float \fBlinphone_call_get_average_quality\fP (\fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "const \fBLinphoneCallStats\fP * \fBlinphone_call_get_audio_stats\fP (\fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "const \fBLinphoneCallStats\fP * \fBlinphone_call_get_video_stats\fP (\fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_params_set_record_file\fP (\fBLinphoneCallParams\fP *cp, const char *path)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_call_params_get_record_file\fP (const \fBLinphoneCallParams\fP *cp)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_start_recording\fP (\fBLinphoneCall\fP *call)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_stop_recording\fP (\fBLinphoneCall\fP *call)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+When a call is running, it is possible to retrieve in real time current measured volumes and quality indicator\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LINPHONE_VOLUME_DB_LOWEST   (-120)"
+Lowest volume measurement that can be returned by \fBlinphone_call_get_play_volume()\fP or \fBlinphone_call_get_record_volume()\fP, corresponding to pure silence\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fB_LinphoneCallStats\fP \fBLinphoneCallStats\fP"
+The LinphoneCallStats objects carries various statistic informations regarding quality of audio or video streams\&.
+.PP
+To receive these informations periodically and as soon as they are computed, the application is invited to place a #CallStatsUpdated callback in the LinphoneCoreVTable structure it passes for instanciating the LinphoneCore object (see \fBlinphone_core_new()\fP )\&.
+.PP
+At any time, the application can access last computed statistics using \fBlinphone_call_get_audio_stats()\fP or \fBlinphone_call_get_video_stats()\fP\&. 
+.SH "Function Documentation"
+.PP 
+.SS "float linphone_call_get_play_volume (\fBLinphoneCall\fP *call)"
+Returns the measured sound volume played locally (received from remote)\&. It is expressed in dbm0\&. 
+.SS "float linphone_call_get_record_volume (\fBLinphoneCall\fP *call)"
+Returns the measured sound volume recorded locally (sent to remote)\&. It is expressed in dbm0\&. 
+.SS "float linphone_call_get_current_quality (\fBLinphoneCall\fP *call)"
+Obtain real-time quality rating of the call
+.PP
+Based on local RTP statistics and RTCP feedback, a quality rating is computed and updated during all the duration of the call\&. This function returns its value at the time of the function call\&. It is expected that the rating is updated at least every 5 seconds or so\&. The rating is a floating point number comprised between 0 and 5\&.
+.PP
+4-5 = good quality 
+.br
+ 3-4 = average quality 
+.br
+ 2-3 = poor quality 
+.br
+ 1-2 = very poor quality 
+.br
+ 0-1 = can't be worse, mostly unusable 
+.br
+.PP
+\fBReturns:\fP
+.RS 4
+The function returns -1 if no quality measurement is available, for example if no active audio stream exist\&. Otherwise it returns the quality rating\&. 
+.RE
+.PP
+
+.SS "float linphone_call_get_average_quality (\fBLinphoneCall\fP *call)"
+Returns call quality averaged over all the duration of the call\&.
+.PP
+See \fBlinphone_call_get_current_quality()\fP for more details about quality measurement\&. 
+.SS "const \fBLinphoneCallStats\fP* linphone_call_get_audio_stats (\fBLinphoneCall\fP *call)"
+Access last known statistics for audio stream, for a given call\&. 
+.SS "const \fBLinphoneCallStats\fP* linphone_call_get_video_stats (\fBLinphoneCall\fP *call)"
+Access last known statistics for video stream, for a given call\&. 
+.SS "void linphone_call_params_set_record_file (\fBLinphoneCallParams\fP *cp, const char *path)"
+Enable recording of the call (voice-only)\&. This function must be used before the call parameters are assigned to the call\&. The call recording can be started and paused after the call is established with \fBlinphone_call_start_recording()\fP and linphone_call_pause_recording()\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcp\fP the call parameters 
+.br
+\fIpath\fP path and filename of the file where audio is written\&. 
+.RE
+.PP
+
+.SS "const char* linphone_call_params_get_record_file (const \fBLinphoneCallParams\fP *cp)"
+Retrieves the path for the audio recoding of the call\&. 
+.SS "void linphone_call_start_recording (\fBLinphoneCall\fP *call)"
+Start call recording\&. The output file where audio is recorded must be previously specified with \fBlinphone_call_params_set_record_file()\fP\&. 
+.SS "void linphone_call_stop_recording (\fBLinphoneCall\fP *call)"
+Stop call recording\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

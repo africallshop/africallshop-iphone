@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LinphoneProxyConfig" kind="struct" prot="public">
+    <compoundname>_LinphoneProxyConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a078b697e15617aa863243b9edbe91cae" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneProxyConfig::magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="384" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a565e88efff65ca8f87f855e161e899d0" prot="public" static="no" mutable="no">
+        <type>struct _LinphoneCore *</type>
+        <definition>struct _LinphoneCore* _LinphoneProxyConfig::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="385" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a5cf8dcc3ef88ea93c9b4e1b799e4f77f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneProxyConfig::reg_proxy</definition>
+        <argsstring></argsstring>
+        <name>reg_proxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="386" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a57424fa0f747082022ce7fc3d8e596ce" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneProxyConfig::reg_identity</definition>
+        <argsstring></argsstring>
+        <name>reg_identity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="387" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1af4fa86771d32095c9831b54d650b45b2" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneProxyConfig::reg_route</definition>
+        <argsstring></argsstring>
+        <name>reg_route</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="388" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a04bab0305485393e901e2c4451e1fbc0" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneProxyConfig::realm</definition>
+        <argsstring></argsstring>
+        <name>realm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="389" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a81c7b85683b61d223c017ce2b23df009" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneProxyConfig::contact_params</definition>
+        <argsstring></argsstring>
+        <name>contact_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="390" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a64583a59e80f6917991e0f8dbd7cf3f3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneProxyConfig::expires</definition>
+        <argsstring></argsstring>
+        <name>expires</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="391" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a280163b03d304513809d464a42a32b20" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneProxyConfig::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="392" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a2bf5e5dc2192df3bbd57bcfb03a095ad" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneProxyConfig::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="393" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a395b2485798673c116a3c4350ac78ca5" prot="public" static="no" mutable="no">
+        <type>struct _SipSetupContext *</type>
+        <definition>struct _SipSetupContext* _LinphoneProxyConfig::ssctx</definition>
+        <argsstring></argsstring>
+        <name>ssctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="394" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1aede486f0ac5be0b5d601546d8ad37d27" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _LinphoneProxyConfig::auth_failures</definition>
+        <argsstring></argsstring>
+        <name>auth_failures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="395" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a7c10a118e6595d0a6322e9f962f93ac0" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneProxyConfig::dial_prefix</definition>
+        <argsstring></argsstring>
+        <name>dial_prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="396" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a5a981341b56ab7f9eac8d59d9d07c475" prot="public" static="no" mutable="no">
+        <type><ref refid="group__proxies_1ga698cb4228fac724b9e7c3cc5f499f7a8" kindref="member">LinphoneRegistrationState</ref></type>
+        <definition>LinphoneRegistrationState _LinphoneProxyConfig::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="397" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1abbc5ae1d7c204d29dc225b2d2a10a5ec" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _LinphoneProxyConfig::publish_op</definition>
+        <argsstring></argsstring>
+        <name>publish_op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="398" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1af6f53e9add3850f84f2f5f53cb60f3b6" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneProxyConfig::commit</definition>
+        <argsstring></argsstring>
+        <name>commit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="399" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1af48ae36c74fc45472ec419a6a560d2ae" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneProxyConfig::reg_sendregister</definition>
+        <argsstring></argsstring>
+        <name>reg_sendregister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="400" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1ab10026141cfd873b68980ed91cf2963a" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneProxyConfig::publish</definition>
+        <argsstring></argsstring>
+        <name>publish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="401" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a29d5d6c0bff5910b8a645bac0d353fcd" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneProxyConfig::dial_escape_plus</definition>
+        <argsstring></argsstring>
+        <name>dial_escape_plus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="402" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a603473ec144b796fb3ecf88b9d3fd3ab" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneProxyConfig::send_publish</definition>
+        <argsstring></argsstring>
+        <name>send_publish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="403" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a8cd286ceaf933cb1cc45b92629264d69" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _LinphoneProxyConfig::pad[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="404" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1a603f94b755bd2468fc25baa92d40a32d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneProxyConfig::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="405" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1aca5f1b593f932047ca6148682ed988b0" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _LinphoneProxyConfig::deletion_date</definition>
+        <argsstring></argsstring>
+        <name>deletion_date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="406" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1aee8adffffba7bddd79d83b59d0c89378" prot="public" static="no" mutable="no">
+        <type><ref refid="group__misc_1gabe82a1a1ffc3d6b4e0b51a03028513b7" kindref="member">LinphoneReason</ref></type>
+        <definition>LinphoneReason _LinphoneProxyConfig::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="407" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneProxyConfig_1aeb69be8116487c2fbdbb925a4612029e" prot="public" static="no" mutable="no">
+        <type>LinphonePrivacyMask</type>
+        <definition>LinphonePrivacyMask _LinphoneProxyConfig::privacy</definition>
+        <argsstring></argsstring>
+        <name>privacy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="408" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="383" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="382" bodyend="409"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneProxyConfig_1aede486f0ac5be0b5d601546d8ad37d27" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>auth_failures</name></member>
+      <member refid="struct__LinphoneProxyConfig_1af6f53e9add3850f84f2f5f53cb60f3b6" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>commit</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a81c7b85683b61d223c017ce2b23df009" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>contact_params</name></member>
+      <member refid="struct__LinphoneProxyConfig_1aca5f1b593f932047ca6148682ed988b0" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>deletion_date</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a29d5d6c0bff5910b8a645bac0d353fcd" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>dial_escape_plus</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a7c10a118e6595d0a6322e9f962f93ac0" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>dial_prefix</name></member>
+      <member refid="struct__LinphoneProxyConfig_1aee8adffffba7bddd79d83b59d0c89378" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>error</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a64583a59e80f6917991e0f8dbd7cf3f3" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>expires</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a565e88efff65ca8f87f855e161e899d0" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>lc</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a078b697e15617aa863243b9edbe91cae" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>magic</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a280163b03d304513809d464a42a32b20" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>op</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a8cd286ceaf933cb1cc45b92629264d69" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>pad</name></member>
+      <member refid="struct__LinphoneProxyConfig_1aeb69be8116487c2fbdbb925a4612029e" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>privacy</name></member>
+      <member refid="struct__LinphoneProxyConfig_1ab10026141cfd873b68980ed91cf2963a" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>publish</name></member>
+      <member refid="struct__LinphoneProxyConfig_1abbc5ae1d7c204d29dc225b2d2a10a5ec" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>publish_op</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a04bab0305485393e901e2c4451e1fbc0" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>realm</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a57424fa0f747082022ce7fc3d8e596ce" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>reg_identity</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a5cf8dcc3ef88ea93c9b4e1b799e4f77f" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>reg_proxy</name></member>
+      <member refid="struct__LinphoneProxyConfig_1af4fa86771d32095c9831b54d650b45b2" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>reg_route</name></member>
+      <member refid="struct__LinphoneProxyConfig_1af48ae36c74fc45472ec419a6a560d2ae" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>reg_sendregister</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a603473ec144b796fb3ecf88b9d3fd3ab" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>send_publish</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a395b2485798673c116a3c4350ac78ca5" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>ssctx</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a5a981341b56ab7f9eac8d59d9d07c475" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>state</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a2bf5e5dc2192df3bbd57bcfb03a095ad" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>type</name></member>
+      <member refid="struct__LinphoneProxyConfig_1a603f94b755bd2468fc25baa92d40a32d" prot="public" virt="non-virtual"><scope>_LinphoneProxyConfig</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

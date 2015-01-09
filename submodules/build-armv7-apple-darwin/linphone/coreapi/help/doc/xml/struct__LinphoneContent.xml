@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LinphoneContent" kind="struct" prot="public">
+    <compoundname>_LinphoneContent</compoundname>
+    <includes local="no">linphonecore.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneContent::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mime type for the data, for example &quot;application&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="113" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneContent::subtype</definition>
+        <argsstring></argsstring>
+        <name>subtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mime subtype for the data, for example &quot;html&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="114" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneContent::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the actual data buffer, usually a string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="115" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t _LinphoneContent::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the size of the data buffer, excluding null character despite null character is always set for convenience. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="116" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The LinphoneContent struct holds data that can be embedded in a signaling message. </para>    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="112" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="112" bodyend="117"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneContent_1a086b012e35d02be9c68c8f0fd4661f39" prot="public" virt="non-virtual"><scope>_LinphoneContent</scope><name>data</name></member>
+      <member refid="struct__LinphoneContent_1a6ea21723404888691dbe0aaa547ec4cb" prot="public" virt="non-virtual"><scope>_LinphoneContent</scope><name>size</name></member>
+      <member refid="struct__LinphoneContent_1a26cbb8fe30763eea41a5b84028dd1f9b" prot="public" virt="non-virtual"><scope>_LinphoneContent</scope><name>subtype</name></member>
+      <member refid="struct__LinphoneContent_1a8a86c24d70252b4c790085f8d5b94fdc" prot="public" virt="non-virtual"><scope>_LinphoneContent</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

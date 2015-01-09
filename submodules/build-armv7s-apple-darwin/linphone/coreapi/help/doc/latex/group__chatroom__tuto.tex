@@ -1,0 +1,97 @@
+\section{Chat room and messaging}
+\label{group__chatroom__tuto}\index{Chat room and messaging@{Chat room and messaging}}
+This program is a {\itshape very} simple usage example of liblinphone, desmonstrating how to send/receive S\-I\-P M\-E\-S\-S\-A\-G\-E from a sip uri identity passed from the command line. \par
+Argument must be like sip\-:{\tt jehan@sip.\-linphone.\-org} . \par
+ ex chatroom sip\-:{\tt jehan@sip.\-linphone.\-org} \par
+ 
+\begin{DoxyCodeInclude}
+
+\textcolor{comment}{/*}
+\textcolor{comment}{linphone}
+\textcolor{comment}{Copyright (C) 2010  Belledonne Communications SARL }
+\textcolor{comment}{}
+\textcolor{comment}{This program is free software; you can redistribute it and/or}
+\textcolor{comment}{modify it under the terms of the GNU General Public License}
+\textcolor{comment}{as published by the Free Software Foundation; either version 2}
+\textcolor{comment}{of the License, or (at your option) any later version.}
+\textcolor{comment}{}
+\textcolor{comment}{This program is distributed in the hope that it will be useful,}
+\textcolor{comment}{but WITHOUT ANY WARRANTY; without even the implied warranty of}
+\textcolor{comment}{MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+\textcolor{comment}{GNU General Public License for more details.}
+\textcolor{comment}{}
+\textcolor{comment}{You should have received a copy of the GNU General Public License}
+\textcolor{comment}{along with this program; if not, write to the Free Software}
+\textcolor{comment}{Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.}
+\textcolor{comment}{*/}
+
+\textcolor{preprocessor}{#ifdef IN\_LINPHONE}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#include "linphonecore.h"}
+\textcolor{preprocessor}{#else}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#include "linphone/linphonecore.h"}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{#include <signal.h>}
+
+\textcolor{keyword}{static} bool\_t running=TRUE;
+
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} stop(\textcolor{keywordtype}{int} signum)\{
+        running=FALSE;
+\}
+\textcolor{keywordtype}{void} text\_received(LinphoneCore *lc, LinphoneChatRoom *room, \textcolor{keyword}{const} 
+      LinphoneAddress *from, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *message) \{
+        printf(\textcolor{stringliteral}{" Message [%s] received from [%s] \(\backslash\)n"},message,
+      linphone_address_as_string (from));
+\}
+
+
+LinphoneCore *lc;
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])\{
+        LinphoneCoreVTable vtable=\{0\};
+
+        \textcolor{keywordtype}{char}* dest\_friend=NULL;
+
+
+        \textcolor{comment}{/* takes   sip uri  identity from the command line arguments */}
+        \textcolor{keywordflow}{if} (argc>1)\{
+                dest\_friend=argv[1];
+        \}
+
+        signal(SIGINT,stop);
+\textcolor{comment}{//#define DEBUG}
+\textcolor{preprocessor}{#ifdef DEBUG}
+\textcolor{preprocessor}{}        linphone_core_enable_logs(NULL); \textcolor{comment}{/*enable liblinphone logs.*/}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}        \textcolor{comment}{/* }
+\textcolor{comment}{         Fill the LinphoneCoreVTable with application callbacks.}
+\textcolor{comment}{         All are optional. Here we only use the text\_received callback}
+\textcolor{comment}{         in order to get notifications about incoming message.}
+\textcolor{comment}{         */}
+        vtable.text\_received=text\_received;
+
+        \textcolor{comment}{/*}
+\textcolor{comment}{         Instantiate a LinphoneCore object given the LinphoneCoreVTable}
+\textcolor{comment}{        */}
+        lc=linphone_core_new(&vtable,NULL,NULL,NULL);
+
+
+        \textcolor{comment}{/*Next step is to create a chat root*/}
+        LinphoneChatRoom* chat\_room = linphone_core_create_chat_room(lc,dest\_friend);
+
+        linphone_chat_room_send_message(chat\_room,\textcolor{stringliteral}{"Hello world"}); \textcolor{comment}{/*sending message*/}
+
+        \textcolor{comment}{/* main loop for receiving incoming messages and doing background linphone core work: */}
+        \textcolor{keywordflow}{while}(running)\{
+                linphone_core_iterate(lc);
+                ms\_usleep(50000);
+        \}
+
+        printf(\textcolor{stringliteral}{"Shutting down...\(\backslash\)n"});
+        linphone_chat_room_destroy(chat\_room);
+        linphone_core_destroy(lc);
+        printf(\textcolor{stringliteral}{"Exited\(\backslash\)n"});
+        \textcolor{keywordflow}{return} 0;
+\}
+
+\end{DoxyCodeInclude}
+ 

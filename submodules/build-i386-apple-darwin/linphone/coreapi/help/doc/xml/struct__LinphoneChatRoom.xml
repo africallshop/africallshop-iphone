@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LinphoneChatRoom" kind="struct" prot="public">
+    <compoundname>_LinphoneChatRoom</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1acd80f6242340206c2eb5fde06f043e81" prot="public" static="no" mutable="no">
+        <type>struct _LinphoneCore *</type>
+        <definition>struct _LinphoneCore* _LinphoneChatRoom::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="424" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a8a714cf8cc0abbd298b1d7ee1082628a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LinphoneChatRoom::peer</definition>
+        <argsstring></argsstring>
+        <name>peer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="425" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a7e2234d7769a8dde644df847ddc65c47" prot="public" static="no" mutable="no">
+        <type><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> *</type>
+        <definition>LinphoneAddress* _LinphoneChatRoom::peer_url</definition>
+        <argsstring></argsstring>
+        <name>peer_url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="426" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1ab84b3c1a8cfa8ffbf18bcc29190448e7" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _LinphoneChatRoom::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="427" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LinphoneChatRoom_1a17410cceaaad18fd933e963a995cd634" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _LinphoneChatRoom::messages_hist</definition>
+        <argsstring></argsstring>
+        <name>messages_hist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="428" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="423" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="423" bodyend="429"/>
+    <listofallmembers>
+      <member refid="struct__LinphoneChatRoom_1acd80f6242340206c2eb5fde06f043e81" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>lc</name></member>
+      <member refid="struct__LinphoneChatRoom_1a17410cceaaad18fd933e963a995cd634" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>messages_hist</name></member>
+      <member refid="struct__LinphoneChatRoom_1a8a714cf8cc0abbd298b1d7ee1082628a" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>peer</name></member>
+      <member refid="struct__LinphoneChatRoom_1a7e2234d7769a8dde644df847ddc65c47" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>peer_url</name></member>
+      <member refid="struct__LinphoneChatRoom_1ab84b3c1a8cfa8ffbf18bcc29190448e7" prot="public" virt="non-virtual"><scope>_LinphoneChatRoom</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="structnet__config" kind="struct" prot="public">
+    <compoundname>net_config</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnet__config_1a63bf5f3f3b6ff6d73e4e088403d284e5" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* net_config::nat_address</definition>
+        <argsstring></argsstring>
+        <name>nat_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="494" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1a6cb68da1fa2b0af94458b42b793b25e1" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* net_config::nat_address_ip</definition>
+        <argsstring></argsstring>
+        <name>nat_address_ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="495" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1a45e19f75be991b9a5c40275d3c864741" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* net_config::stun_server</definition>
+        <argsstring></argsstring>
+        <name>stun_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="496" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1a5fb91872b9f9b48a62035f4a491bbe1e" prot="public" static="no" mutable="no">
+        <type>struct addrinfo *</type>
+        <definition>struct addrinfo* net_config::stun_addrinfo</definition>
+        <argsstring></argsstring>
+        <name>stun_addrinfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="497" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1ace06aeb109dc5b89e57c65d68d1ada58" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long net_config::stun_res_id</definition>
+        <argsstring></argsstring>
+        <name>stun_res_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="498" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1a0f91b1921e1f46c5d2d98949cc966869" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* net_config::relay</definition>
+        <argsstring></argsstring>
+        <name>relay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="499" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1ac125ebd10b80c219c5d4ccc321481a73" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int net_config::download_bw</definition>
+        <argsstring></argsstring>
+        <name>download_bw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="500" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1af488fcdefdca9d014c26b3f12a0d04e3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int net_config::upload_bw</definition>
+        <argsstring></argsstring>
+        <name>upload_bw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="501" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1a24ff140e364eeffb2254f7f13da7b410" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int net_config::mtu</definition>
+        <argsstring></argsstring>
+        <name>mtu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="502" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnet__config_1a889c2291a99cdef439f828d9f5636f39" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t net_config::nat_sdp_only</definition>
+        <argsstring></argsstring>
+        <name>nat_sdp_only</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="503" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="493" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="492" bodyend="504"/>
+    <listofallmembers>
+      <member refid="structnet__config_1ac125ebd10b80c219c5d4ccc321481a73" prot="public" virt="non-virtual"><scope>net_config</scope><name>download_bw</name></member>
+      <member refid="structnet__config_1a24ff140e364eeffb2254f7f13da7b410" prot="public" virt="non-virtual"><scope>net_config</scope><name>mtu</name></member>
+      <member refid="structnet__config_1a63bf5f3f3b6ff6d73e4e088403d284e5" prot="public" virt="non-virtual"><scope>net_config</scope><name>nat_address</name></member>
+      <member refid="structnet__config_1a6cb68da1fa2b0af94458b42b793b25e1" prot="public" virt="non-virtual"><scope>net_config</scope><name>nat_address_ip</name></member>
+      <member refid="structnet__config_1a889c2291a99cdef439f828d9f5636f39" prot="public" virt="non-virtual"><scope>net_config</scope><name>nat_sdp_only</name></member>
+      <member refid="structnet__config_1a0f91b1921e1f46c5d2d98949cc966869" prot="public" virt="non-virtual"><scope>net_config</scope><name>relay</name></member>
+      <member refid="structnet__config_1a5fb91872b9f9b48a62035f4a491bbe1e" prot="public" virt="non-virtual"><scope>net_config</scope><name>stun_addrinfo</name></member>
+      <member refid="structnet__config_1ace06aeb109dc5b89e57c65d68d1ada58" prot="public" virt="non-virtual"><scope>net_config</scope><name>stun_res_id</name></member>
+      <member refid="structnet__config_1a45e19f75be991b9a5c40275d3c864741" prot="public" virt="non-virtual"><scope>net_config</scope><name>stun_server</name></member>
+      <member refid="structnet__config_1af488fcdefdca9d014c26b3f12a0d04e3" prot="public" virt="non-virtual"><scope>net_config</scope><name>upload_bw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

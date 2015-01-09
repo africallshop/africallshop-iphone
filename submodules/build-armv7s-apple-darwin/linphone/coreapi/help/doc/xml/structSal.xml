@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="structSal" kind="struct" prot="public">
+    <compoundname>Sal</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structSal_1ae2325cb1ed119067b7a83952463ab261" prot="public" static="no" mutable="no">
+        <type>SalCallbacks</type>
+        <definition>SalCallbacks Sal::callbacks</definition>
+        <argsstring></argsstring>
+        <name>callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="32" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1ae4f235c61dfd47d04a04a8eeea9fa507" prot="public" static="no" mutable="no">
+        <type>SalTransport</type>
+        <definition>SalTransport Sal::transport</definition>
+        <argsstring></argsstring>
+        <name>transport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="33" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a332c6bec0b1b960e492e322202bc6c79" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* Sal::calls</definition>
+        <argsstring></argsstring>
+        <name>calls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="34" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a4bbd4b9338d111371673195b11ceb4a9" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* Sal::registers</definition>
+        <argsstring></argsstring>
+        <name>registers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="35" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a8eac7be5691d6187376b97497945727c" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* Sal::out_subscribes</definition>
+        <argsstring></argsstring>
+        <name>out_subscribes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="36" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a415203aced444023bb12606292e94e30" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* Sal::in_subscribes</definition>
+        <argsstring></argsstring>
+        <name>in_subscribes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="37" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1adf89ae4f95fcfab99d79304651c72107" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* Sal::pending_auths</definition>
+        <argsstring></argsstring>
+        <name>pending_auths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="38" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1ad5cc2ca1e5937d343b08e59dd8e39710" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* Sal::other_transactions</definition>
+        <argsstring></argsstring>
+        <name>other_transactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="39" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1ae10751ade5f6e727c7093f660d4be4af" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sal::running</definition>
+        <argsstring></argsstring>
+        <name>running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="40" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1ac811d9efe88e53abad83c963a9ad6d93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sal::session_expires</definition>
+        <argsstring></argsstring>
+        <name>session_expires</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="41" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1af2d3716201c5c703785bb30565d81568" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sal::keepalive_period</definition>
+        <argsstring></argsstring>
+        <name>keepalive_period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="42" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a1a5c0384622449ab93cf1e0b28323054" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Sal::up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="43" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a7e7fdc9a1593c33e21430e53b51dfc97" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Sal::rootCa</definition>
+        <argsstring></argsstring>
+        <name>rootCa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="44" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1ae50f27a3da1f4baaa3d5a66986c99e60" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Sal::dscp</definition>
+        <argsstring></argsstring>
+        <name>dscp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="45" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1afa28fbafb0f74c3ce7cd8fb2be4b776f" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::one_matching_codec</definition>
+        <argsstring></argsstring>
+        <name>one_matching_codec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="46" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a62b3360d1f62a6aaa2dacad45f3be4a2" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::double_reg</definition>
+        <argsstring></argsstring>
+        <name>double_reg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="47" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1ae015fcd8083905976927ee8a7f1dd3fa" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::use_rports</definition>
+        <argsstring></argsstring>
+        <name>use_rports</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="48" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a0a7fc52ec97d9ec50ff67558853c60b2" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::use_101</definition>
+        <argsstring></argsstring>
+        <name>use_101</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="49" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1aef63eaa88cf8655b43b1cee1ebfd0d51" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::reuse_authorization</definition>
+        <argsstring></argsstring>
+        <name>reuse_authorization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="50" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a5ae68170deed0da4ec84c8ad3dd96fd9" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::verify_server_certs</definition>
+        <argsstring></argsstring>
+        <name>verify_server_certs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="51" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a1b9b991a0716d596004b4314de6bffbf" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::verify_server_cn</definition>
+        <argsstring></argsstring>
+        <name>verify_server_cn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="52" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a8b4794fc342d61188ae80ff91d63ea56" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::expire_old_contact</definition>
+        <argsstring></argsstring>
+        <name>expire_old_contact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="53" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1aabd696ee1481520d783c5b107ccd34f1" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::add_dates</definition>
+        <argsstring></argsstring>
+        <name>add_dates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="54" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSal_1a979f0c83569246836df79d4fecb2e59c" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t Sal::tcp_tls_keepalive</definition>
+        <argsstring></argsstring>
+        <name>tcp_tls_keepalive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="55" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="31" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" bodystart="31" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structSal_1aabd696ee1481520d783c5b107ccd34f1" prot="public" virt="non-virtual"><scope>Sal</scope><name>add_dates</name></member>
+      <member refid="structSal_1ae2325cb1ed119067b7a83952463ab261" prot="public" virt="non-virtual"><scope>Sal</scope><name>callbacks</name></member>
+      <member refid="structSal_1a332c6bec0b1b960e492e322202bc6c79" prot="public" virt="non-virtual"><scope>Sal</scope><name>calls</name></member>
+      <member refid="structSal_1a62b3360d1f62a6aaa2dacad45f3be4a2" prot="public" virt="non-virtual"><scope>Sal</scope><name>double_reg</name></member>
+      <member refid="structSal_1ae50f27a3da1f4baaa3d5a66986c99e60" prot="public" virt="non-virtual"><scope>Sal</scope><name>dscp</name></member>
+      <member refid="structSal_1a8b4794fc342d61188ae80ff91d63ea56" prot="public" virt="non-virtual"><scope>Sal</scope><name>expire_old_contact</name></member>
+      <member refid="structSal_1a415203aced444023bb12606292e94e30" prot="public" virt="non-virtual"><scope>Sal</scope><name>in_subscribes</name></member>
+      <member refid="structSal_1af2d3716201c5c703785bb30565d81568" prot="public" virt="non-virtual"><scope>Sal</scope><name>keepalive_period</name></member>
+      <member refid="structSal_1afa28fbafb0f74c3ce7cd8fb2be4b776f" prot="public" virt="non-virtual"><scope>Sal</scope><name>one_matching_codec</name></member>
+      <member refid="structSal_1ad5cc2ca1e5937d343b08e59dd8e39710" prot="public" virt="non-virtual"><scope>Sal</scope><name>other_transactions</name></member>
+      <member refid="structSal_1a8eac7be5691d6187376b97497945727c" prot="public" virt="non-virtual"><scope>Sal</scope><name>out_subscribes</name></member>
+      <member refid="structSal_1adf89ae4f95fcfab99d79304651c72107" prot="public" virt="non-virtual"><scope>Sal</scope><name>pending_auths</name></member>
+      <member refid="structSal_1a4bbd4b9338d111371673195b11ceb4a9" prot="public" virt="non-virtual"><scope>Sal</scope><name>registers</name></member>
+      <member refid="structSal_1aef63eaa88cf8655b43b1cee1ebfd0d51" prot="public" virt="non-virtual"><scope>Sal</scope><name>reuse_authorization</name></member>
+      <member refid="structSal_1a7e7fdc9a1593c33e21430e53b51dfc97" prot="public" virt="non-virtual"><scope>Sal</scope><name>rootCa</name></member>
+      <member refid="structSal_1ae10751ade5f6e727c7093f660d4be4af" prot="public" virt="non-virtual"><scope>Sal</scope><name>running</name></member>
+      <member refid="structSal_1ac811d9efe88e53abad83c963a9ad6d93" prot="public" virt="non-virtual"><scope>Sal</scope><name>session_expires</name></member>
+      <member refid="structSal_1a979f0c83569246836df79d4fecb2e59c" prot="public" virt="non-virtual"><scope>Sal</scope><name>tcp_tls_keepalive</name></member>
+      <member refid="structSal_1ae4f235c61dfd47d04a04a8eeea9fa507" prot="public" virt="non-virtual"><scope>Sal</scope><name>transport</name></member>
+      <member refid="structSal_1a1a5c0384622449ab93cf1e0b28323054" prot="public" virt="non-virtual"><scope>Sal</scope><name>up</name></member>
+      <member refid="structSal_1a0a7fc52ec97d9ec50ff67558853c60b2" prot="public" virt="non-virtual"><scope>Sal</scope><name>use_101</name></member>
+      <member refid="structSal_1ae015fcd8083905976927ee8a7f1dd3fa" prot="public" virt="non-virtual"><scope>Sal</scope><name>use_rports</name></member>
+      <member refid="structSal_1a5ae68170deed0da4ec84c8ad3dd96fd9" prot="public" virt="non-virtual"><scope>Sal</scope><name>verify_server_certs</name></member>
+      <member refid="structSal_1a1b9b991a0716d596004b4314de6bffbf" prot="public" virt="non-virtual"><scope>Sal</scope><name>verify_server_cn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

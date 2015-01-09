@@ -1,0 +1,25 @@
+Determining if the function EVP_CipherInit_ex exists in the crypto failed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec1223148788/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec1223148788.dir/build.make CMakeFiles/cmTryCompileExec1223148788.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1223148788.dir/CheckFunctionExists.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch i386  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -DCHECK_FUNCTION_EXISTS=EVP_CipherInit_ex   -o CMakeFiles/cmTryCompileExec1223148788.dir/CheckFunctionExists.c.obj   -c /opt/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1223148788
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1223148788.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch i386  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions -DCHECK_FUNCTION_EXISTS=EVP_CipherInit_ex    CMakeFiles/cmTryCompileExec1223148788.dir/CheckFunctionExists.c.obj  -o cmTryCompileExec1223148788  -L/opt/local/lib  -lcrypto 
+ld: warning: ignoring file /opt/local/lib/libcrypto.dylib, file was built for x86_64 which is not the architecture being linked (i386): /opt/local/lib/libcrypto.dylib
+Undefined symbols for architecture i386:
+  "_EVP_CipherInit_ex", referenced from:
+      _main in CheckFunctionExists.c.obj
+ld: symbol(s) not found for architecture i386
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[3]: *** [cmTryCompileExec1223148788] Erreur 1
+gmake[2]: *** [cmTryCompileExec1223148788/fast] Erreur 2
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-i386-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+

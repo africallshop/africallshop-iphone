@@ -1,0 +1,1242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="group__initializing" kind="group">
+    <compoundname>initializing</compoundname>
+    <title>Initializing liblinphone</title>
+    <innerclass refid="struct__LCSipTransports" prot="public">_LCSipTransports</innerclass>
+    <innerclass refid="struct__LinphoneCoreVTable" prot="public">_LinphoneCoreVTable</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__initializing_1ga60b6529245618e6ec7b19670fe7bc71d" prot="public" static="no">
+        <name>_LinphoneIceState</name>
+        <enumvalue id="group__initializing_1gga60b6529245618e6ec7b19670fe7bc71da0d7fd71eae1589116f0c62fb2501f126" prot="public">
+          <name>LinphoneIceStateNotActivated</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has not been activated for this call </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga60b6529245618e6ec7b19670fe7bc71dafdd6808b108904fef0695aeb5dfdccd6" prot="public">
+          <name>LinphoneIceStateFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE processing has failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga60b6529245618e6ec7b19670fe7bc71da4159d63afd5be9b12773ba8408ceee6a" prot="public">
+          <name>LinphoneIceStateInProgress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE process is in progress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga60b6529245618e6ec7b19670fe7bc71da2917ccc168ab2a67299fad9909f00d89" prot="public">
+          <name>LinphoneIceStateHostConnection</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has established a direct connection to the remote host </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga60b6529245618e6ec7b19670fe7bc71daf099a98debd1c807212b3efb75d6d6ed" prot="public">
+          <name>LinphoneIceStateReflexiveConnection</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has established a connection to the remote host through one or several NATs </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga60b6529245618e6ec7b19670fe7bc71dae02a070882cd892ecc9393f3da2733f5" prot="public">
+          <name>LinphoneIceStateRelayConnection</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has established a connection through a relay </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing ICE states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="426" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="426" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__initializing_1ga3d626fbc6cee8294fef83d197fa27490" prot="public" static="no">
+        <name>_LinphoneUpnpState</name>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490ac0c60c390f5cd5a27a538aea39def28b" prot="public">
+          <name>LinphoneUpnpStateIdle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP is not activate </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490adb2fdfe2a5346472b0faa631c3c01f2e" prot="public">
+          <name>LinphoneUpnpStatePending</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP process is in progress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490ae9de2eb7e97d1b5ab38c0e8ebb057ab3" prot="public">
+          <name>LinphoneUpnpStateAdding</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Internal use: Only used by port binding </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490ad6371d3688d549a64096d796faf44822" prot="public">
+          <name>LinphoneUpnpStateRemoving</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Internal use: Only used by port binding </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490a25fee6e8fd79a2368aa46daf77a6bff9" prot="public">
+          <name>LinphoneUpnpStateNotAvailable</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP is not available </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490a69b1709a2087dcf1089d1204ed25a09a" prot="public">
+          <name>LinphoneUpnpStateOk</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP is enabled </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490a228f1c0991292d1867ee7d29e5f5fb85" prot="public">
+          <name>LinphoneUpnpStateKo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP processing has failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3d626fbc6cee8294fef83d197fa27490a3b9bdacd34d15820922a89dbddd00f03" prot="public">
+          <name>LinphoneUpnpStateBlacklisted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IGD router is blacklisted </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing uPnP states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="445" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="445" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__initializing_1ga3bca1685790c41a1729e88af318ffb1c" prot="public" static="no">
+        <name>_LinphoneGlobalState</name>
+        <enumvalue id="group__initializing_1gga3bca1685790c41a1729e88af318ffb1ca2aaecf0f0faeac0c4f4244412c379e7e" prot="public">
+          <name>LinphoneGlobalOff</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3bca1685790c41a1729e88af318ffb1ca49a0eb19bc708557f21ef4045184a462" prot="public">
+          <name>LinphoneGlobalStartup</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3bca1685790c41a1729e88af318ffb1ca6b0be8b322525c48b5757e4d510ed83f" prot="public">
+          <name>LinphoneGlobalOn</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga3bca1685790c41a1729e88af318ffb1ca31c7c67e9b100ffd14e7091c9ee3f31d" prot="public">
+          <name>LinphoneGlobalShutdown</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LinphoneGlobalState describes the global state of the LinphoneCore object. It is notified via the <ref refid="struct__LinphoneCoreVTable_1a706e1ad8826fb8b9e431f654358ecb1f" kindref="member">LinphoneCoreVTable::global_state_changed</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="912" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="912" bodyend="917"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" prot="public" static="no">
+        <type>struct _LinphoneCore</type>
+        <definition>typedef struct _LinphoneCore LinphoneCore</definition>
+        <argsstring></argsstring>
+        <name>LinphoneCore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linphone core main object created by function <ref refid="group__initializing_1gac93ed982ae84a5a282a703c8433ca42f" kindref="member">linphone_core_new()</ref> . </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="5976" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gae3417c9be557f9263ffe4f03eec21df0" prot="public" static="no">
+        <type>struct <ref refid="struct__LCSipTransports" kindref="compound">_LCSipTransports</ref></type>
+        <definition>typedef struct _LCSipTransports  LCSipTransports</definition>
+        <argsstring></argsstring>
+        <name>LCSipTransports</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Linphone core SIP transport ports. Use with <ref refid="group__network__parameters_1gab5d3dc270fff43b8b782b6435214fecb" kindref="member">linphone_core_set_sip_transports</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaf4faffc512588eda7db03fab8b03adfb" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1ga60b6529245618e6ec7b19670fe7bc71d" kindref="member">_LinphoneIceState</ref></type>
+        <definition>typedef enum _LinphoneIceState LinphoneIceState</definition>
+        <argsstring></argsstring>
+        <name>LinphoneIceState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing Ice states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="391" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga2c19554a0988f7600aec5c3a7588d61a" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1ga3d626fbc6cee8294fef83d197fa27490" kindref="member">_LinphoneUpnpState</ref></type>
+        <definition>typedef enum _LinphoneUpnpState LinphoneUpnpState</definition>
+        <argsstring></argsstring>
+        <name>LinphoneUpnpState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing uPnP states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="391" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="460" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gae852b5b31d6d5e673de9d2c9b63aca7e" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1ga3bca1685790c41a1729e88af318ffb1c" kindref="member">_LinphoneGlobalState</ref></type>
+        <definition>typedef enum _LinphoneGlobalState LinphoneGlobalState</definition>
+        <argsstring></argsstring>
+        <name>LinphoneGlobalState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LinphoneGlobalState describes the global state of the LinphoneCore object. It is notified via the <ref refid="struct__LinphoneCoreVTable_1a706e1ad8826fb8b9e431f654358ecb1f" kindref="member">LinphoneCoreVTable::global_state_changed</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="917" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga0d5f5ae5cd47aede0521a838dcd34d52" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreGlobalStateChangedCb)(LinphoneCore *lc, LinphoneGlobalState gstate, const char *message)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneGlobalState gstate, const char *message)</argsstring>
+        <name>LinphoneCoreGlobalStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global state notification callback. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gstate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the global state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>informational message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="928" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="928" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gac5e9445fbd5db55076edf97e428f0761" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreCallStateChangedCb)(LinphoneCore *lc, LinphoneCall *call, LinphoneCallState cstate, const char *message)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneCall *call, LinphoneCallState cstate, const char *message)</argsstring>
+        <name>LinphoneCoreCallStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call state notification callback. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call object whose state is changed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cstate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new state of the call </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an informational message about the state. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="936" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="936" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga8f7956cdee9fe88ada9fe4b05db272c6" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreCallEncryptionChangedCb)(LinphoneCore *lc, LinphoneCall *call, bool_t on, const char *authentication_token)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneCall *call, bool_t on, const char *authentication_token)</argsstring>
+        <name>LinphoneCoreCallEncryptionChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call encryption changed callback. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call on which encryption is changed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>on</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether encryption is activated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>authentication_token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an authentication_token, currently set for ZRTP kind of encryption only. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="945" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="945" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga2a004260e6d8ff5174edb3b5dc35708c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreRegistrationStateChangedCb)(LinphoneCore *lc, LinphoneProxyConfig *cfg, LinphoneRegistrationState cstate, const char *message)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneProxyConfig *cfg, LinphoneRegistrationState cstate, const char *message)</argsstring>
+        <name>LinphoneCoreRegistrationStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registration state notification callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="950" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="950" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga78c9bec0c79c851f1680f54777da1caa" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ShowInterfaceCb)(LinphoneCore *lc)</definition>
+        <argsstring>)(LinphoneCore *lc)</argsstring>
+        <name>ShowInterfaceCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000005"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="954" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="954" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga1b63e95d4064b3d60be16f36a87a14a1" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* DisplayStatusCb)(LinphoneCore *lc, const char *message)</definition>
+        <argsstring>)(LinphoneCore *lc, const char *message)</argsstring>
+        <name>DisplayStatusCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000006"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="958" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="958" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga36fd5827cd2db5639fba2814b0c33def" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* DisplayMessageCb)(LinphoneCore *lc, const char *message)</definition>
+        <argsstring>)(LinphoneCore *lc, const char *message)</argsstring>
+        <name>DisplayMessageCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="962" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="962" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaa7a6c1d47bdc13c97133a2cecc57b508" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* DisplayUrlCb)(LinphoneCore *lc, const char *message, const char *url)</definition>
+        <argsstring>)(LinphoneCore *lc, const char *message, const char *url)</argsstring>
+        <name>DisplayUrlCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="966" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="966" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga2e55e712a2453d67eb7848e30eb7dcb4" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreCbFunc)(LinphoneCore *lc, void *user_data)</definition>
+        <argsstring>)(LinphoneCore *lc, void *user_data)</argsstring>
+        <name>LinphoneCoreCbFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="969" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="969" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga9456ee9437dd4473b94c48b045c90765" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreNotifyPresenceReceivedCb)(LinphoneCore *lc, LinphoneFriend *lf)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneFriend *lf)</argsstring>
+        <name>LinphoneCoreNotifyPresenceReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report status change for a friend previously <ref refid="group__buddy__list_1ga3a8e9184320402082bf35226ae8d25b8" kindref="member">added </ref> to <ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object . </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated <ref refid="group__buddy__list_1ga2f0508bab6d8ded431ce8b1a679a1522" kindref="member">LinphoneFriend</ref> . </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="975" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="975" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga2c378ba7064b3e293c9efe1187d6380b" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreNewSubscribtionRequestCb)(LinphoneCore *lc, LinphoneFriend *lf, const char *url)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneFriend *lf, const char *url)</argsstring>
+        <name>LinphoneCoreNewSubscribtionRequestCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports that a new subscription request has been received and wait for a decision. Status on this subscription request is notified by <ref refid="group__buddy__list_1ga9ab0c9222edcc0a8e25fb068aee88bc0" kindref="member">changing policy </ref> for this friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga2f0508bab6d8ded431ce8b1a679a1522" kindref="member">LinphoneFriend</ref> corresponding to the subscriber </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the subscriber Callback prototype </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="984" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="984" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga5bdb24285cc60ac0058ca73782309d4c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreAuthInfoRequestedCb)(LinphoneCore *lc, const char *realm, const char *username)</definition>
+        <argsstring>)(LinphoneCore *lc, const char *realm, const char *username)</argsstring>
+        <name>LinphoneCoreAuthInfoRequestedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for requesting authentication information to application or user. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>realm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the realm (domain) on which authentication is required. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username that needs to be authenticated. Application shall reply to this callback using <ref refid="group__authentication_1ga62ac5bb34f0342f7edc733c42473b7aa" kindref="member">linphone_core_add_auth_info()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="992" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="992" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga350bf5a8bfb610afed2152c66775bec9" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreCallLogUpdatedCb)(LinphoneCore *lc, LinphoneCallLog *newcl)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneCallLog *newcl)</argsstring>
+        <name>LinphoneCoreCallLogUpdatedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to notify a new call-log entry has been added. This is done typically when a call terminates. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newcl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new call log entry added. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1000" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1000" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaa07b98d360c24e72be3d0cea1515be38" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreTextMessageReceivedCb)(LinphoneCore *lc, LinphoneChatRoom *room, const LinphoneAddress *from, const char *message)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneChatRoom *room, const LinphoneAddress *from, const char *message)</argsstring>
+        <name>LinphoneCoreTextMessageReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000009"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use #LinphoneMessageReceived instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>room</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1ga37902f3fc715b7f6451c241d0efd0299" kindref="member">LinphoneChatRoom</ref> involved in this conversation. Can be be created by the framework in case <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">the from </ref> is not present in any chat room. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">LinphoneAddress</ref> from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incoming message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1011" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1011" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaf4c440e7c2b553a34a0328f537a75950" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreMessageReceivedCb)(LinphoneCore *lc, LinphoneChatRoom *room, LinphoneChatMessage *message)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneChatRoom *room, LinphoneChatMessage *message)</argsstring>
+        <name>LinphoneCoreMessageReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Chat message callback prototype</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>room</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1ga37902f3fc715b7f6451c241d0efd0299" kindref="member">LinphoneChatRoom</ref> involved in this conversation. Can be be created by the framework in case <ref refid="group__linphone__address_1gaa017e66840f5ee578168bd469b6c3e91" kindref="member">the from </ref> is not present in any chat room. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LinphoneChatMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incoming message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1020" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1020" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga245ce3ce5ff27fd6d6b177bc6e085275" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreDtmfReceivedCb)(LinphoneCore *lc, LinphoneCall *call, int dtmf)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneCall *call, int dtmf)</argsstring>
+        <name>LinphoneCoreDtmfReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for being notified of DTMFs received. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the linphone core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call that received the dtmf </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtmf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ascii code of the dtmf </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1028" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1028" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga68ced292f486a95a34aa45e416b34572" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreReferReceivedCb)(LinphoneCore *lc, const char *refer_to)</definition>
+        <argsstring>)(LinphoneCore *lc, const char *refer_to)</argsstring>
+        <name>LinphoneCoreReferReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1031" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1031" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gadf96b57b5d27ad443af2719aad69a12a" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreBuddyInfoUpdatedCb)(LinphoneCore *lc, LinphoneFriend *lf)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneFriend *lf)</argsstring>
+        <name>LinphoneCoreBuddyInfoUpdatedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1033" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1033" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga090434c23d1339bb4f833814265edbed" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreTransferStateChangedCb)(LinphoneCore *lc, LinphoneCall *transfered, LinphoneCallState new_call_state)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneCall *transfered, LinphoneCallState new_call_state)</argsstring>
+        <name>LinphoneCoreTransferStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for notifying progresses of transfers. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transfered</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call that was transfered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_call_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state of the call to transfer target at the far end. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1040" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1040" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga9fa8a442c574f0d18e2ce5eceb8d46b8" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreCallStatsUpdatedCb)(LinphoneCore *lc, LinphoneCall *call, const LinphoneCallStats *stats)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneCall *call, const LinphoneCallStats *stats)</argsstring>
+        <name>LinphoneCoreCallStatsUpdatedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for receiving quality statistics for calls. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call statistics. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1048" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1048" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaabca63ed39406fdd711cf2ebfa6d7451" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LinphoneCoreInfoReceivedCb)(LinphoneCore *lc, LinphoneCall *call, const LinphoneInfoMessage *msg)</definition>
+        <argsstring>)(LinphoneCore *lc, LinphoneCall *call, const LinphoneInfoMessage *msg)</argsstring>
+        <name>LinphoneCoreInfoReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype for receiving info messages. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LinphoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call whose info message belongs to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the info message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1056" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="1056" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga1ca71386f318e4044967ddf32ac7aacb" prot="public" static="no">
+        <type>struct <ref refid="struct__LinphoneCoreVTable" kindref="compound">_LinphoneCoreVTable</ref></type>
+        <definition>typedef struct _LinphoneCoreVTable  LinphoneCoreVTable</definition>
+        <argsstring></argsstring>
+        <name>LinphoneCoreVTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This structure holds all callbacks that the application should implement. None is mandatory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1087" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__initializing_1gac93ed982ae84a5a282a703c8433ca42f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+        <definition>LinphoneCore* linphone_core_new</definition>
+        <argsstring>(const LinphoneCoreVTable *vtable, const char *config_path, const char *factory_config_path, void *userdata)</argsstring>
+        <name>linphone_core_new</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1ca71386f318e4044967ddf32ac7aacb" kindref="member">LinphoneCoreVTable</ref> *</type>
+          <declname>vtable</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>config_path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>factory_config_path</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instanciates a LinphoneCore object.</para><para>The LinphoneCore object is the primary handle for doing all phone actions. It should be unique within your application. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a LinphoneCoreVTable structure holding your application callbacks </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a path to a config file. If it does not exists it will be created. The config file is used to store all settings, call logs, friends, proxies... so that all these settings become persistent over the life of the LinphoneCore object. It is allowed to set a NULL config file. In that case LinphoneCore will not store any settings. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory_config_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a path to a read-only config file that can be used to to store hard-coded preference such as proxy settings or internal preferences. The settings in this factory file always override the one in the normal config file. It is OPTIONAL, use NULL if unneeded. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an opaque user pointer that can be retrieved at any time (for example in callbacks) using <ref refid="group__initializing_1ga705206c56f9be737ce1eac53e5ba8b76" kindref="member">linphone_core_get_user_data()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__initializing_1ga147d40a91709f6bbacd070d7358b0f17" kindref="member">linphone_core_new_with_config</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="1349" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1349" bodyend="1354"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga7bdac8ac386483fc4e0876e4c5d13755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_iterate</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_iterate</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main loop function. It is crucial that your application call it periodically.</para><para><ref refid="group__initializing_1ga7bdac8ac386483fc4e0876e4c5d13755" kindref="member">linphone_core_iterate()</ref> performs various backgrounds tasks:<itemizedlist>
+<listitem><para>receiving of SIP messages</para></listitem><listitem><para>handles timers and timeout</para></listitem><listitem><para>performs registration to proxies</para></listitem><listitem><para>authentication retries The application MUST call this function periodically, in its main loop. Be careful that this function must be called from the same thread as other liblinphone methods. If it is not the case make sure all liblinphone calls are serialized with a mutex. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="2108" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="2108" bodyend="2225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga24c7276e70ba9a1cccd1c55c1e15499b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_root_ca</definition>
+        <argsstring>(LinphoneCore *lc, const char *path)</argsstring>
+        <name>linphone_core_set_root_ca</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the path to a file or folder containing trusted root CAs (PEM format)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4186" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4186" bodyend="4188"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gab098e474122584618df055f4095ed580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_core_get_root_ca</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_root_ca</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the path to a file or folder containing the trusted root CAs (PEM format)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LinphoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4197" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4197" bodyend="4199"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gad8f3f77aebbad9b6fca0f50449dcad93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_verify_server_certificates</definition>
+        <argsstring>(LinphoneCore *lc, bool_t yesno)</argsstring>
+        <name>linphone_core_verify_server_certificates</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>yesno</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specify whether the tls server certificate must be verified when connecting to a SIP/TLS server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4206" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4206" bodyend="4208"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga5ed6e5580ecbd560a4cf390e975e674c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_verify_server_cn</definition>
+        <argsstring>(LinphoneCore *lc, bool_t yesno)</argsstring>
+        <name>linphone_core_verify_server_cn</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>yesno</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specify whether the tls server certificate common name must be verified when connecting to a SIP/TLS server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="4214" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="4214" bodyend="4216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga705206c56f9be737ce1eac53e5ba8b76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* linphone_core_get_user_data</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_user_data</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the user pointer that was given to <ref refid="group__initializing_1gac93ed982ae84a5a282a703c8433ca42f" kindref="member">linphone_core_new()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5316" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5316" bodyend="5318"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga7e031f13be31db0584a213a3ce785e25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_user_data</definition>
+        <argsstring>(LinphoneCore *lc, void *userdata)</argsstring>
+        <name>linphone_core_set_user_data</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associate a user pointer to the linphone core. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5326" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5326" bodyend="5328"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga5e3f2f87c8d8262caa1fa90bbd504008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_destroy</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_destroy</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys a LinphoneCore </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="5754" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5754" bodyend="5757"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga971a0a881b5c9990522ca12e7d2d785b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_chat_database_path</definition>
+        <argsstring>(LinphoneCore *lc, const char *path)</argsstring>
+        <name>linphone_core_set_chat_database_path</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the database filename where chat messages will be stored. If the file does not exist, it will be created.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the linphone core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filesystem path </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" line="6236" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="6236" bodyend="6245"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaf4f24de18ae43d1a8f2812652b4aa656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_global_state_to_string</definition>
+        <argsstring>(LinphoneGlobalState gs)</argsstring>
+        <name>linphone_global_state_to_string</name>
+        <param>
+          <type><ref refid="group__initializing_1gae852b5b31d6d5e673de9d2c9b63aca7e" kindref="member">LinphoneGlobalState</ref></type>
+          <declname>gs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="919" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5857" bodyend="5873"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga147d40a91709f6bbacd070d7358b0f17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+        <definition>LinphoneCore* linphone_core_new_with_config</definition>
+        <argsstring>(const LinphoneCoreVTable *vtable, struct _LpConfig *config, void *userdata)</argsstring>
+        <name>linphone_core_new_with_config</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1ca71386f318e4044967ddf32ac7aacb" kindref="member">LinphoneCoreVTable</ref> *</type>
+          <declname>vtable</declname>
+        </param>
+        <param>
+          <type>struct _LpConfig *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates a LinphoneCore object with a given LpConfig.</para><para>The LinphoneCore object is the primary handle for doing all phone actions. It should be unique within your application. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a LinphoneCoreVTable structure holding your application callbacks </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to an LpConfig object holding the configuration of the LinphoneCore to be instantiated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an opaque user pointer that can be retrieved at any time (for example in callbacks) using <ref refid="group__initializing_1ga705206c56f9be737ce1eac53e5ba8b76" kindref="member">linphone_core_get_user_data()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__initializing_1gac93ed982ae84a5a282a703c8433ca42f" kindref="member">linphone_core_new</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1170" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="1356" bodyend="1361"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gafac237af98e82869b76b3954fc7f2f7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linphone_core_get_max_calls</definition>
+        <argsstring>(LinphoneCore *lc)</argsstring>
+        <name>linphone_core_get_max_calls</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the maximum number of simultaneous calls Linphone core can manage at a time. All new call above this limit are declined with a busy answer</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>core </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>max number of simultaneous calls </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1726" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5967" bodyend="5969"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga3abcbe218c3b69a115a2aac02112d5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_core_set_max_calls</definition>
+        <argsstring>(LinphoneCore *lc, int max)</argsstring>
+        <name>linphone_core_set_max_calls</name>
+        <param>
+          <type><ref refid="group__initializing_1gaa5cf635b82dd338e7ee2dd3599d05f0a" kindref="member">LinphoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum number of simultaneous calls Linphone core can manage at a time. All new call above this limit are declined with a busy answer</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of simultaneous calls </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="1733" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.c" bodystart="5970" bodyend="5972"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__initializing_1ga735b4f08acd416c740f7ddd6a9791358" prot="public" static="no">
+        <name>LC_SIP_TRANSPORT_DISABLED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable a sip transport Use with <ref refid="group__initializing_1gae3417c9be557f9263ffe4f03eec21df0" kindref="member">LCSipTransports</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="59" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__initializing_1gadc507b9a498d5ce572fd219e385ad1f4" prot="public" static="no">
+        <name>LC_SIP_TRANSPORT_RANDOM</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Randomly chose a sip port for this transport Use with <ref refid="group__initializing_1gae3417c9be557f9263ffe4f03eec21df0" kindref="member">LCSipTransports</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="65" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

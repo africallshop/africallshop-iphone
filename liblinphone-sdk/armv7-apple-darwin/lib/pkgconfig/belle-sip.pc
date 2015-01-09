@@ -1,0 +1,11 @@
+# This is a comment
+prefix=/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//../liblinphone-sdk/armv7-apple-darwin
+exec_prefix=${prefix}
+includedir=${prefix}/include
+
+Name: belle-sip 
+Description: A c based implementation of the SIP (RFC 3261)  telephony protocol 
+Requires.private: 
+Version: 1.2.1
+Libs: -L${exec_prefix}/lib -lbellesip
+Cflags: -I${prefix}/include 

@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="sal__eXosip2_8h" kind="file">
+    <compoundname>sal_eXosip2.h</compoundname>
+    <includes local="yes">sal.h</includes>
+    <includes local="no">eXosip2/eXosip.h</includes>
+    <includedby refid="sal__eXosip2_8c" local="yes">sal_eXosip2.c</includedby>
+    <includedby refid="sal__eXosip2__presence_8c" local="yes">sal_eXosip2_presence.c</includedby>
+    <incdepgraph>
+      <node id="163">
+        <label>sal_eXosip2.h</label>
+        <link refid="sal_eXosip2.h"/>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+      </node>
+      <node id="164">
+        <label>sal.h</label>
+      </node>
+      <node id="165">
+        <label>eXosip2/eXosip.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structSal" prot="public">Sal</innerclass>
+    <innerclass refid="structSalOp" prot="public">SalOp</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sal__eXosip2_8h_1ad51e16633f6066c6421d186ff5d8285c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sdp_message_t *</type>
+        <definition>sdp_message_t* media_description_to_sdp</definition>
+        <argsstring>(const SalMediaDescription *sal)</argsstring>
+        <name>media_description_to_sdp</name>
+        <param>
+          <type>const SalMediaDescription *</type>
+          <declname>sal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="28" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_sdp.c" bodystart="394" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a53e8980859ac215a7feee93590df3185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sdp_to_media_description</definition>
+        <argsstring>(sdp_message_t *sdp, SalMediaDescription *desc)</argsstring>
+        <name>sdp_to_media_description</name>
+        <param>
+          <type>sdp_message_t *</type>
+          <declname>sdp</declname>
+        </param>
+        <param>
+          <type>SalMediaDescription *</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="29" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_sdp.c" bodystart="434" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1ad3994364dbcdcdffb431f1e20acad0e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_remove_out_subscribe</definition>
+        <argsstring>(Sal *sal, SalOp *op)</argsstring>
+        <name>sal_remove_out_subscribe</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>SalOp *</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="84" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1aa4ed82c1a7038fd34e6fd17c99673cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_remove_in_subscribe</definition>
+        <argsstring>(Sal *sal, SalOp *op)</argsstring>
+        <name>sal_remove_in_subscribe</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>SalOp *</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="85" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1acf713d81a419c1ccb09928c50abf4868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_add_other</definition>
+        <argsstring>(Sal *sal, SalOp *op, osip_message_t *request)</argsstring>
+        <name>sal_add_other</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>SalOp *</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>osip_message_t *</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="86" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.c" bodystart="115" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a73b622921a145959d55eeaba2d7b5196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_exosip_subscription_recv</definition>
+        <argsstring>(Sal *sal, eXosip_event_t *ev)</argsstring>
+        <name>sal_exosip_subscription_recv</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>eXosip_event_t *</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="88" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="698" bodyend="719"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a8e517ddfa5ab39317f1df011f0d61359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_exosip_subscription_answered</definition>
+        <argsstring>(Sal *sal, eXosip_event_t *ev)</argsstring>
+        <name>sal_exosip_subscription_answered</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>eXosip_event_t *</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="89" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="789" bodyend="796"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1af93c58ea217542bb465cba905d7d0d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_exosip_notify_recv</definition>
+        <argsstring>(Sal *sal, eXosip_event_t *ev)</argsstring>
+        <name>sal_exosip_notify_recv</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>eXosip_event_t *</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="90" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="721" bodyend="787"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1ac37320acada7fcd9e2f06e760cb26bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_exosip_subscription_closed</definition>
+        <argsstring>(Sal *sal, eXosip_event_t *ev)</argsstring>
+        <name>sal_exosip_subscription_closed</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>eXosip_event_t *</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="91" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="817" bodyend="827"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a8d87405383afec2cb35e687c0901b8d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_exosip_in_subscription_closed</definition>
+        <argsstring>(Sal *sal, eXosip_event_t *ev)</argsstring>
+        <name>sal_exosip_in_subscription_closed</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>eXosip_event_t *</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="93" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="798" bodyend="815"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a341ba0db772e097f8f11174a1a0bbb28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SalOp *</type>
+        <definition>SalOp* sal_find_out_subscribe</definition>
+        <argsstring>(Sal *sal, int sid)</argsstring>
+        <name>sal_find_out_subscribe</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="94" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="35" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a98fe44096636f0603f484d9476f68abe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SalOp *</type>
+        <definition>SalOp* sal_find_in_subscribe</definition>
+        <argsstring>(Sal *sal, int nid)</argsstring>
+        <name>sal_find_in_subscribe</name>
+        <param>
+          <type>Sal *</type>
+          <declname>sal</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="95" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2_presence.c" bodystart="54" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1afa151aa40161af1478e98c9d5bccc809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_exosip_fix_route</definition>
+        <argsstring>(SalOp *op)</argsstring>
+        <name>sal_exosip_fix_route</name>
+        <param>
+          <type>SalOp *</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="96" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.c" bodystart="139" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a0d916506ec96c2888e65745f4a130977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_exosip_add_custom_headers</definition>
+        <argsstring>(osip_message_t *msg, SalCustomHeader *ch)</argsstring>
+        <name>sal_exosip_add_custom_headers</name>
+        <param>
+          <type>osip_message_t *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>SalCustomHeader *</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="97" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.c" bodystart="2673" bodyend="2679"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1af7199d4e41cf004fb8e92def6f2787d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SalCustomHeader *</type>
+        <definition>SalCustomHeader* sal_exosip_get_custom_headers</definition>
+        <argsstring>(osip_message_t *msg)</argsstring>
+        <name>sal_exosip_get_custom_headers</name>
+        <param>
+          <type>osip_message_t *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="98" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.c" bodystart="2681" bodyend="2691"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a4336feaf492f26d346970cadafbf30eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _osip_list_set_empty</definition>
+        <argsstring>(osip_list_t *l, void(*freefunc)(void *))</argsstring>
+        <name>_osip_list_set_empty</name>
+        <param>
+          <type>osip_list_t *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>freefunc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="100" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.c" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="sal__eXosip2_8h_1a8ecb9175531c4c1172a78f09ad1fcd93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sal_message_add_route</definition>
+        <argsstring>(osip_message_t *msg, const char *proxy)</argsstring>
+        <name>sal_message_add_route</name>
+        <param>
+          <type>osip_message_t *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>proxy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h" line="102" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.c" bodystart="2325" bodyend="2341"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">linphone</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2010<sp/><sp/>Simon<sp/>MORLAT<sp/>(simon.morlat@free.fr)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>sal_exosip2_h</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>sal_exosip2_h</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eXosip2/eXosip.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">sdp_message_t<sp/>*media_description_to_sdp(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SalMediaDescription<sp/>*sal);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sdp_to_media_description(sdp_message_t<sp/>*sdp,<sp/>SalMediaDescription<sp/>*desc);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Sal{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SalCallbacks<sp/>callbacks;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SalTransport<sp/>transport;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSList<sp/>*calls;<sp/></highlight><highlight class="comment">/*MSList<sp/>of<sp/>SalOp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSList<sp/>*registers;</highlight><highlight class="comment">/*MSList<sp/>of<sp/>SalOp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSList<sp/>*out_subscribes;</highlight><highlight class="comment">/*MSList<sp/>of<sp/>SalOp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSList<sp/>*in_subscribes;</highlight><highlight class="comment">/*MSList<sp/>of<sp/>SalOp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSList<sp/>*pending_auths;</highlight><highlight class="comment">/*MSList<sp/>of<sp/>SalOp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSList<sp/>*other_transactions;<sp/></highlight><highlight class="comment">/*MSList<sp/>of<sp/>SalOp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>running;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>session_expires;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keepalive_period;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*up;<sp/></highlight><highlight class="comment">/*user<sp/>pointer*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>rootCa;<sp/></highlight><highlight class="comment">/*<sp/>File<sp/>_or_<sp/>folder<sp/>containing<sp/>root<sp/>CA<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dscp;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>one_matching_codec;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>double_reg;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>use_rports;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>use_101;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>reuse_authorization;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>verify_server_certs;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>verify_server_cn;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>expire_old_contact;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>add_dates;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>tcp_tls_keepalive;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">SalOp{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SalOpBase<sp/>base;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cid;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>did;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tid;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rid;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sid;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nid;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>expires;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SalMediaDescription<sp/>*result;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sdp_message_t<sp/>*sdp_answer;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eXosip_event_t<sp/>*pending_auth;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>osip_call_id_t<sp/>*call_id;<sp/></highlight><highlight class="comment">/*used<sp/>for<sp/>out<sp/>of<sp/>calls<sp/>transaction<sp/>in<sp/>order</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>retrieve<sp/>the<sp/>operation<sp/>when<sp/>receiving<sp/>a<sp/>response*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*replaces;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*referred_by;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SalAuthInfo<sp/>*auth_info;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sipfrag_pending;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>supports_session_timers;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>sdp_offering;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>reinvite;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>masquerade_via;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>auto_answer_asked;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>terminated;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_remove_out_subscribe(Sal<sp/>*sal,<sp/>SalOp<sp/>*op);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_remove_in_subscribe(Sal<sp/>*sal,<sp/>SalOp<sp/>*op);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_add_other(Sal<sp/>*sal,<sp/>SalOp<sp/>*op,<sp/><sp/>osip_message_t<sp/>*request);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_exosip_subscription_recv(Sal<sp/>*sal,<sp/>eXosip_event_t<sp/>*ev);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_exosip_subscription_answered(Sal<sp/>*sal,eXosip_event_t<sp/>*ev);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_exosip_notify_recv(Sal<sp/>*sal,eXosip_event_t<sp/>*ev);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_exosip_subscription_closed(Sal<sp/>*sal,eXosip_event_t<sp/>*ev);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_exosip_in_subscription_closed(Sal<sp/>*sal,<sp/>eXosip_event_t<sp/>*ev);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">SalOp<sp/>*<sp/>sal_find_out_subscribe(Sal<sp/>*sal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sid);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">SalOp<sp/>*<sp/>sal_find_in_subscribe(Sal<sp/>*sal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nid);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_exosip_fix_route(SalOp<sp/>*op);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_exosip_add_custom_headers(osip_message_t<sp/>*msg,<sp/>SalCustomHeader<sp/>*ch);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">SalCustomHeader<sp/>*<sp/>sal_exosip_get_custom_headers(osip_message_t<sp/>*msg);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_osip_list_set_empty(osip_list_t<sp/>*l,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*freefunc)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sal_message_add_route(osip_message_t<sp/>*msg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*proxy);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/sal_eXosip2.h"/>
+  </compounddef>
+</doxygen>

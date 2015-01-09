@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="structcodecs__config" kind="struct" prot="public">
+    <compoundname>codecs_config</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcodecs__config_1a39d11969b178b93dca4d137427cc1247" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* codecs_config::audio_codecs</definition>
+        <argsstring></argsstring>
+        <name>audio_codecs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="531" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcodecs__config_1a1088ab7cfcd3be80f26b68db74abe832" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* codecs_config::video_codecs</definition>
+        <argsstring></argsstring>
+        <name>video_codecs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="532" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" line="530" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/private.h" bodystart="529" bodyend="533"/>
+    <listofallmembers>
+      <member refid="structcodecs__config_1a39d11969b178b93dca4d137427cc1247" prot="public" virt="non-virtual"><scope>codecs_config</scope><name>audio_codecs</name></member>
+      <member refid="structcodecs__config_1a1088ab7cfcd3be80f26b68db74abe832" prot="public" virt="non-virtual"><scope>codecs_config</scope><name>video_codecs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

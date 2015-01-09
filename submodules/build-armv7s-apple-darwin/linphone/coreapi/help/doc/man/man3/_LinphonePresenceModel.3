@@ -1,0 +1,36 @@
+.TH "_LinphonePresenceModel" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_LinphonePresenceModel \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "MSList * \fBservices\fP"
+.br
+.ti -1c
+.RI "MSList * \fBpersons\fP"
+.br
+.ti -1c
+.RI "MSList * \fBnotes\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents the presence model as defined in RFC 4479 and RFC 4480\&. This model is not complete\&. For example, it does not handle devices\&. 
+.SH "Field Documentation"
+.PP 
+.SS "MSList* _LinphonePresenceModel::services"
+A list of _LinphonePresenceService structures\&. Also named tuples in the RFC\&. 
+.SS "MSList* _LinphonePresenceModel::persons"
+A list of _LinphonePresencePerson structures\&. 
+.SS "MSList* _LinphonePresenceModel::notes"
+A list of _LinphonePresenceNote structures\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

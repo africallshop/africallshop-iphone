@@ -1,0 +1,43 @@
+.TH "_LCSipTransports" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_LCSipTransports \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <linphonecore\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "int \fBudp_port\fP"
+.br
+.ti -1c
+.RI "int \fBtcp_port\fP"
+.br
+.ti -1c
+.RI "int \fBdtls_port\fP"
+.br
+.ti -1c
+.RI "int \fBtls_port\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Linphone core SIP transport ports\&. Use with \fBlinphone_core_set_sip_transports\fP 
+.SH "Field Documentation"
+.PP 
+.SS "int _LCSipTransports::udp_port"
+udp port to listening on, negative value if not set 
+.SS "int _LCSipTransports::tcp_port"
+tcp port to listening on, negative value if not set 
+.SS "int _LCSipTransports::dtls_port"
+dtls port to listening on, negative value if not set 
+.SS "int _LCSipTransports::tls_port"
+tls port to listening on, negative value if not set 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

@@ -1,0 +1,340 @@
+The target system is: Generic -  - armv7s
+The host system is: Darwin - 12.5.0 - i386
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
+Build flags: ;-arch;armv7s;;-isysroot;/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk;-miphoneos-version-min=4.0;-DTARGET_OS_IPHONE=1;-D__IOS;-fms-extensions
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/2.8.12/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
+Build flags: ;-arch;armv7s;;-isysroot;/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk;-miphoneos-version-min=4.0;-DTARGET_OS_IPHONE=1;-D__IOS;-fms-extensions
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/2.8.12/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec1891740693/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec1891740693.dir/build.make CMakeFiles/cmTryCompileExec1891740693.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1891740693.dir/testCCompiler.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec1891740693.dir/testCCompiler.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec1891740693
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1891740693.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec1891740693.dir/testCCompiler.c.obj  -o cmTryCompileExec1891740693  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec2692735101/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec2692735101.dir/build.make CMakeFiles/cmTryCompileExec2692735101.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj   -c /opt/local/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec2692735101
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2692735101.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions   -v CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj  -o cmTryCompileExec2692735101   
+Apple LLVM version 5.0 (clang-500.2.76) (based on LLVM 3.3svn)
+Target: arm-apple-darwin12.5.0
+Thread model: posix
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch armv7s -iphoneos_version_min 4.0.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -o cmTryCompileExec2692735101 -lcrt1.3.1.o CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj -lSystem -lgcc_s.1 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/opt/local/bin/gmake "cmTryCompileExec2692735101/fast"]
+  ignore line: [gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »]
+  ignore line: [/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec2692735101.dir/build.make CMakeFiles/cmTryCompileExec2692735101.dir/build]
+  ignore line: [gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »]
+  ignore line: [/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj   -c /opt/local/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec2692735101]
+  ignore line: [/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2692735101.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions   -v CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj  -o cmTryCompileExec2692735101   ]
+  ignore line: [Apple LLVM version 5.0 (clang-500.2.76) (based on LLVM 3.3svn)]
+  ignore line: [Target: arm-apple-darwin12.5.0]
+  ignore line: [Thread model: posix]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch armv7s -iphoneos_version_min 4.0.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -o cmTryCompileExec2692735101 -lcrt1.3.1.o CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj -lSystem -lgcc_s.1 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [armv7s] ==> ignore
+    arg [-iphoneos_version_min] ==> ignore
+    arg [4.0.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2692735101] ==> ignore
+    arg [-lcrt1.3.1.o] ==> lib [crt1.3.1.o]
+    arg [CMakeFiles/cmTryCompileExec2692735101.dir/CMakeCCompilerABI.c.obj] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [-lgcc_s.1] ==> lib [gcc_s.1]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+  remove lib [crt1.3.1.o]
+  remove lib [System]
+  remove lib [gcc_s.1]
+  collapse lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+  implicit libs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+  implicit dirs: []
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec1781178471/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec1781178471.dir/build.make CMakeFiles/cmTryCompileExec1781178471.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1781178471.dir/testCXXCompiler.cxx.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec1781178471.dir/testCXXCompiler.cxx.obj -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec1781178471
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1781178471.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec1781178471.dir/testCXXCompiler.cxx.obj  -o cmTryCompileExec1781178471  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec4178897673/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec4178897673.dir/build.make CMakeFiles/cmTryCompileExec4178897673.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/local/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec4178897673
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4178897673.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions   -v CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTryCompileExec4178897673   
+Apple LLVM version 5.0 (clang-500.2.76) (based on LLVM 3.3svn)
+Target: arm-apple-darwin12.5.0
+Thread model: posix
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch armv7s -iphoneos_version_min 4.0.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -o cmTryCompileExec4178897673 -lcrt1.3.1.o CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj -lSystem -lgcc_s.1 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/opt/local/bin/gmake "cmTryCompileExec4178897673/fast"]
+  ignore line: [gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »]
+  ignore line: [/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec4178897673.dir/build.make CMakeFiles/cmTryCompileExec4178897673.dir/build]
+  ignore line: [gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »]
+  ignore line: [/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/local/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec4178897673]
+  ignore line: [/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4178897673.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang    -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions   -v CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj  -o cmTryCompileExec4178897673   ]
+  ignore line: [Apple LLVM version 5.0 (clang-500.2.76) (based on LLVM 3.3svn)]
+  ignore line: [Target: arm-apple-darwin12.5.0]
+  ignore line: [Thread model: posix]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch armv7s -iphoneos_version_min 4.0.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -o cmTryCompileExec4178897673 -lcrt1.3.1.o CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj -lSystem -lgcc_s.1 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [armv7s] ==> ignore
+    arg [-iphoneos_version_min] ==> ignore
+    arg [4.0.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec4178897673] ==> ignore
+    arg [-lcrt1.3.1.o] ==> lib [crt1.3.1.o]
+    arg [CMakeFiles/cmTryCompileExec4178897673.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [-lgcc_s.1] ==> lib [gcc_s.1]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+  remove lib [crt1.3.1.o]
+  remove lib [System]
+  remove lib [gcc_s.1]
+  collapse lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/lib/darwin/libclang_rt.ios.a] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+  implicit libs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a]
+  implicit dirs: []
+  implicit fwks: []
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec2839421783/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec2839421783.dir/build.make CMakeFiles/cmTryCompileExec2839421783.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2839421783.dir/CheckIncludeFiles.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec2839421783.dir/CheckIncludeFiles.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec2839421783
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2839421783.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec2839421783.dir/CheckIncludeFiles.c.obj  -o cmTryCompileExec2839421783  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec4036851694/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec4036851694.dir/build.make CMakeFiles/cmTryCompileExec4036851694.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4036851694.dir/CheckSymbolExists.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions    -o CMakeFiles/cmTryCompileExec4036851694.dir/CheckSymbolExists.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec4036851694
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4036851694.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec4036851694.dir/CheckSymbolExists.c.obj  -o cmTryCompileExec4036851694  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+File /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if files openssl/bn.h exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec3439504069/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec3439504069.dir/build.make CMakeFiles/cmTryCompileExec3439504069.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3439504069.dir/CheckIncludeFiles.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -I/opt/local/include    -o CMakeFiles/cmTryCompileExec3439504069.dir/CheckIncludeFiles.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3439504069
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3439504069.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec3439504069.dir/CheckIncludeFiles.c.obj  -o cmTryCompileExec3439504069  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Determining if files openssl/aes.h exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec1544541106/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec1544541106.dir/build.make CMakeFiles/cmTryCompileExec1544541106.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1544541106.dir/CheckIncludeFiles.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -I/opt/local/include    -o CMakeFiles/cmTryCompileExec1544541106.dir/CheckIncludeFiles.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec1544541106
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1544541106.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec1544541106.dir/CheckIncludeFiles.c.obj  -o cmTryCompileExec1544541106  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Determining if files openssl/sha.h exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec35358308/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec35358308.dir/build.make CMakeFiles/cmTryCompileExec35358308.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec35358308.dir/CheckIncludeFiles.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -I/opt/local/include    -o CMakeFiles/cmTryCompileExec35358308.dir/CheckIncludeFiles.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec35358308
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec35358308.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec35358308.dir/CheckIncludeFiles.c.obj  -o cmTryCompileExec35358308  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Determining if files openssl/ec.h exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec255646457/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec255646457.dir/build.make CMakeFiles/cmTryCompileExec255646457.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec255646457.dir/CheckIncludeFiles.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -I/opt/local/include    -o CMakeFiles/cmTryCompileExec255646457.dir/CheckIncludeFiles.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec255646457
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec255646457.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec255646457.dir/CheckIncludeFiles.c.obj  -o cmTryCompileExec255646457  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec3315153485/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec3315153485.dir/build.make CMakeFiles/cmTryCompileExec3315153485.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3315153485.dir/CheckIncludeFiles.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -I/opt/local/include    -o CMakeFiles/cmTryCompileExec3315153485.dir/CheckIncludeFiles.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3315153485
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3315153485.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec3315153485.dir/CheckIncludeFiles.c.obj  -o cmTryCompileExec3315153485  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+
+Determining if files string.h exist passed with the following output:
+Change Dir: /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp
+
+Run Build Command:/opt/local/bin/gmake "cmTryCompileExec3258392050/fast"
+gmake[2] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/gmake -f CMakeFiles/cmTryCompileExec3258392050.dir/build.make CMakeFiles/cmTryCompileExec3258392050.dir/build
+gmake[3] : on entre dans le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+/opt/local/bin/cmake -E cmake_progress_report /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3258392050.dir/CheckIncludeFiles.c.obj
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions  -I/opt/local/include    -o CMakeFiles/cmTryCompileExec3258392050.dir/CheckIncludeFiles.c.obj   -c /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3258392050
+/opt/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3258392050.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch armv7s  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -miphoneos-version-min=4.0 -DTARGET_OS_IPHONE=1 -D__IOS -fms-extensions     CMakeFiles/cmTryCompileExec3258392050.dir/CheckIncludeFiles.c.obj  -o cmTryCompileExec3258392050  
+gmake[3] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+gmake[2] : on quitte le répertoire « /Users/karimjimo/Downloads/linphone-iphone/submodules/build-armv7s-apple-darwin/externals/zrtpcpp/CMakeFiles/CMakeTmp »
+
+

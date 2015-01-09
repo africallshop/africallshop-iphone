@@ -1,0 +1,11 @@
+prefix=/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//../liblinphone-sdk/armv7s-apple-darwin
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Requires: mediastreamer ortp
+Name: liblinphone
+Description: All in one linphone libs.
+Version: 3.6.99
+Libs: -L${exec_prefix}/lib -llinphone -llpc2xml -lxml2lpc
+Cflags: -I${prefix}/include -I${prefix}/include/linphone

@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="group__call__misc" kind="group">
+    <compoundname>call_misc</compoundname>
+    <title>Obtaining information about a running call: sound volumes, quality indicators</title>
+    <innerclass refid="struct__LinphoneCallStats" prot="public">_LinphoneCallStats</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__call__misc_1ga4d22764ac0e68a8d77670761429b2ee7" prot="public" static="no">
+        <type>struct <ref refid="struct__LinphoneCallStats" kindref="compound">_LinphoneCallStats</ref></type>
+        <definition>typedef struct _LinphoneCallStats LinphoneCallStats</definition>
+        <argsstring></argsstring>
+        <name>LinphoneCallStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LinphoneCallStats objects carries various statistic informations regarding quality of audio or video streams.</para><para>To receive these informations periodically and as soon as they are computed, the application is invited to place a #CallStatsUpdated callback in the LinphoneCoreVTable structure it passes for instanciating the LinphoneCore object (see <ref refid="group__initializing_1gac93ed982ae84a5a282a703c8433ca42f" kindref="member">linphone_core_new()</ref> ).</para><para>At any time, the application can access last computed statistics using <ref refid="group__call__misc_1gaa1203b7ecb6b85a05af700152c1fdf14" kindref="member">linphone_call_get_audio_stats()</ref> or <ref refid="group__call__misc_1gae4f745821a59615910c73cf47300c234" kindref="member">linphone_call_get_video_stats()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="391" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__call__misc_1ga7a0ca45e0ff2bf7eaca09e795bba3486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_call_get_play_volume</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_get_play_volume</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the measured sound volume played locally (received from remote). It is expressed in dbm0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2111" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2111" bodyend="2120"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1gac4f217936eea56196afc126974a92451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_call_get_record_volume</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_get_record_volume</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the measured sound volume recorded locally (sent to remote). It is expressed in dbm0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2126" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2126" bodyend="2135"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1ga62c7d3d08531b0cc634b797e273a0a73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_call_get_current_quality</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_get_current_quality</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Obtain real-time quality rating of the call</para><para>Based on local RTP statistics and RTCP feedback, a quality rating is computed and updated during all the duration of the call. This function returns its value at the time of the function call. It is expected that the rating is updated at least every 5 seconds or so. The rating is a floating point number comprised between 0 and 5.</para><para>4-5 = good quality <linebreak/>
+ 3-4 = average quality <linebreak/>
+ 2-3 = poor quality <linebreak/>
+ 1-2 = very poor quality <linebreak/>
+ 0-1 = can&apos;t be worse, mostly unusable <linebreak/>
+</para><para><simplesect kind="return"><para>The function returns -1 if no quality measurement is available, for example if no active audio stream exist. Otherwise it returns the quality rating. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2154" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2154" bodyend="2169"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1gae3aaa85596484c871b57cdefafd7fd9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float linphone_call_get_average_quality</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_get_average_quality</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns call quality averaged over all the duration of the call.</para><para>See <ref refid="group__call__misc_1ga62c7d3d08531b0cc634b797e273a0a73" kindref="member">linphone_call_get_current_quality()</ref> for more details about quality measurement. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2176" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2176" bodyend="2181"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1ga43c82908bcc83bdc6d2db4aa8c844092" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void update_local_stats</definition>
+        <argsstring>(LinphoneCallStats *stats, MediaStream *stream)</argsstring>
+        <name>update_local_stats</name>
+        <param>
+          <type><ref refid="group__call__misc_1ga4d22764ac0e68a8d77670761429b2ee7" kindref="member">LinphoneCallStats</ref> *</type>
+          <declname>stats</declname>
+        </param>
+        <param>
+          <type>MediaStream *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2183" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2183" bodyend="2189"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1gaa1203b7ecb6b85a05af700152c1fdf14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__call__misc_1ga4d22764ac0e68a8d77670761429b2ee7" kindref="member">LinphoneCallStats</ref> *</type>
+        <definition>const LinphoneCallStats* linphone_call_get_audio_stats</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_get_audio_stats</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access last known statistics for audio stream, for a given call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2194" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2194" bodyend="2200"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1gae4f745821a59615910c73cf47300c234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__call__misc_1ga4d22764ac0e68a8d77670761429b2ee7" kindref="member">LinphoneCallStats</ref> *</type>
+        <definition>const LinphoneCallStats* linphone_call_get_video_stats</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_get_video_stats</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access last known statistics for video stream, for a given call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2205" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2205" bodyend="2211"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1ga10fff1a05dc9c63249ba59dc7240d803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_params_set_record_file</definition>
+        <argsstring>(LinphoneCallParams *cp, const char *path)</argsstring>
+        <name>linphone_call_params_set_record_file</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable recording of the call (voice-only). This function must be used before the call parameters are assigned to the call. The call recording can be started and paused after the call is established with <ref refid="group__call__misc_1gaa92c7b4c3443ff4ae29f7b57f57cfd35" kindref="member">linphone_call_start_recording()</ref> and linphone_call_pause_recording(). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call parameters </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path and filename of the file where audio is written. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2221" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2221" bodyend="2227"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1ga6cf7ae608b631943716a86db72b6050a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* linphone_call_params_get_record_file</definition>
+        <argsstring>(const LinphoneCallParams *cp)</argsstring>
+        <name>linphone_call_params_get_record_file</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa91f7e76e8f038ae9acdf42d1bc80a22" kindref="member">LinphoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the path for the audio recoding of the call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2232" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2232" bodyend="2234"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1gaa92c7b4c3443ff4ae29f7b57f57cfd35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_start_recording</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_start_recording</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start call recording. The output file where audio is recorded must be previously specified with <ref refid="group__call__misc_1ga10fff1a05dc9c63249ba59dc7240d803" kindref="member">linphone_call_params_set_record_file()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2240" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2240" bodyend="2249"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__misc_1ga2ef01b6aa5dc8ee76a77e5ef399a7907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linphone_call_stop_recording</definition>
+        <argsstring>(LinphoneCall *call)</argsstring>
+        <name>linphone_call_stop_recording</name>
+        <param>
+          <type><ref refid="group__call__control_1gac0a4861d7c4702c64f7106f2b893c69e" kindref="member">LinphoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop call recording. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" line="2254" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecall.c" bodystart="2254" bodyend="2259"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__call__misc_1ga3aaf768a67bef73e3798ff1352a03523" prot="public" static="no">
+        <name>LINPHONE_CALL_STATS_AUDIO</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="419" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__call__misc_1ga7e84e05e3fa3bac2517ce5921558b4db" prot="public" static="no">
+        <name>LINPHONE_CALL_STATS_VIDEO</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="420" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__call__misc_1ga537911929e31ed4ca388ff40a37f97de" prot="public" static="no">
+        <name>LINPHONE_VOLUME_DB_LOWEST</name>
+        <initializer>(-120)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lowest volume measurement that can be returned by <ref refid="group__call__misc_1ga7a0ca45e0ff2bf7eaca09e795bba3486" kindref="member">linphone_call_get_play_volume()</ref> or <ref refid="group__call__misc_1gac4f217936eea56196afc126974a92451" kindref="member">linphone_call_get_record_volume()</ref>, corresponding to pure silence. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" line="617" column="9" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/linphonecore.h" bodystart="617" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>When a call is running, it is possible to retrieve in real time current measured volumes and quality indicator. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

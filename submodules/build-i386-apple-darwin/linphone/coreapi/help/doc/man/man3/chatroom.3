@@ -1,0 +1,590 @@
+.TH "Chat room and Messaging" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Chat room and Messaging \- 
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _LinphoneChatMessage \fBLinphoneChatMessage\fP"
+.br
+.ti -1c
+.RI "typedef struct _LinphoneChatRoom \fBLinphoneChatRoom\fP"
+.br
+.ti -1c
+.RI "typedef enum 
+.br
+\fB_LinphoneChatMessageStates\fP \fBLinphoneChatMessageState\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneChatMessageStateChangedCb\fP )(\fBLinphoneChatMessage\fP *msg, \fBLinphoneChatMessageState\fP state, void *ud)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB_LinphoneChatMessageStates\fP { \fBLinphoneChatMessageStateIdle\fP, \fBLinphoneChatMessageStateInProgress\fP, \fBLinphoneChatMessageStateDelivered\fP, \fBLinphoneChatMessageStateNotDelivered\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "MSList * \fBlinphone_core_get_chat_rooms\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatRoom\fP * \fBlinphone_core_create_chat_room\fP (\fBLinphoneCore\fP *lc, const char *to)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatRoom\fP * \fBlinphone_core_get_or_create_chat_room\fP (\fBLinphoneCore\fP *lc, const char *to)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_room_destroy\fP (\fBLinphoneChatRoom\fP *cr)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_room_send_message\fP (\fBLinphoneChatRoom\fP *cr, const char *msg)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatRoom\fP * \fBlinphone_core_get_chat_room\fP (\fBLinphoneCore\fP *lc, const \fBLinphoneAddress\fP *addr)"
+.br
+.ti -1c
+.RI "\fBLinphoneCore\fP * \fBlinphone_chat_room_get_lc\fP (\fBLinphoneChatRoom\fP *cr)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_room_set_user_data\fP (\fBLinphoneChatRoom\fP *cr, void *ud)"
+.br
+.ti -1c
+.RI "void * \fBlinphone_chat_room_get_user_data\fP (\fBLinphoneChatRoom\fP *cr)"
+.br
+.ti -1c
+.RI "const \fBLinphoneAddress\fP * \fBlinphone_chat_room_get_peer_address\fP (\fBLinphoneChatRoom\fP *cr)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatMessage\fP * \fBlinphone_chat_room_create_message\fP (\fBLinphoneChatRoom\fP *cr, const char *message)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatMessage\fP * \fBlinphone_chat_room_create_message_2\fP (\fBLinphoneChatRoom\fP *cr, const char *message, const char *external_body_url, \fBLinphoneChatMessageState\fP state, time_t time, bool_t is_read, bool_t is_incoming)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_room_send_message2\fP (\fBLinphoneChatRoom\fP *cr, \fBLinphoneChatMessage\fP *msg, \fBLinphoneChatMessageStateChangedCb\fP status_cb, void *ud)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_chat_message_state_to_string\fP (const \fBLinphoneChatMessageState\fP state)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatRoom\fP * \fBlinphone_chat_message_get_chat_room\fP (\fBLinphoneChatMessage\fP *msg)"
+.br
+.ti -1c
+.RI "const \fBLinphoneAddress\fP * \fBlinphone_chat_message_get_peer_address\fP (\fBLinphoneChatMessage\fP *msg)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_message_set_user_data\fP (\fBLinphoneChatMessage\fP *message, void *ud)"
+.br
+.ti -1c
+.RI "void * \fBlinphone_chat_message_get_user_data\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_chat_message_get_external_body_url\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_message_set_external_body_url\fP (\fBLinphoneChatMessage\fP *message, const char *url)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_message_set_from\fP (\fBLinphoneChatMessage\fP *message, const \fBLinphoneAddress\fP *from)"
+.br
+.ti -1c
+.RI "const \fBLinphoneAddress\fP * \fBlinphone_chat_message_get_from\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_message_set_to\fP (\fBLinphoneChatMessage\fP *message, const \fBLinphoneAddress\fP *to)"
+.br
+.ti -1c
+.RI "const \fBLinphoneAddress\fP * \fBlinphone_chat_message_get_to\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "\fBLinphoneAddress\fP * \fBlinphone_chat_message_get_local_address\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "time_t \fBlinphone_chat_message_get_time\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatMessageState\fP \fBlinphone_chat_message_get_state\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_chat_message_get_text\fP (const \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_message_add_custom_header\fP (\fBLinphoneChatMessage\fP *message, const char *header_name, const char *header_value)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_chat_message_get_custom_header\fP (\fBLinphoneChatMessage\fP *message, const char *header_name)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_chat_message_is_read\fP (\fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_chat_message_is_outgoing\fP (\fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "unsigned int \fBlinphone_chat_message_get_storage_id\fP (\fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "\fBLinphoneChatMessage\fP * \fBlinphone_chat_message_clone\fP (const \fBLinphoneChatMessage\fP *msg)"
+.br
+.ti -1c
+.RI "void \fBlinphone_chat_message_destroy\fP (\fBLinphoneChatMessage\fP *msg)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_chat_database_path\fP (\fBLinphoneCore\fP *lc, const char *path)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fB Exchanging text messages\fP 
+.br
+ Messages are sent using \fBLinphoneChatRoom\fP object\&. First step is to create a \fBchat room \fP from a peer sip uri\&. 
+.PP
+.nf
+LinphoneChatRoom* chat_room = linphone_core_create_chat_room(lc,"sip:joe@sip\&.linphone\&.org");
+
+.fi
+.PP
+.PP
+
+.br
+Once created, messages are sent using function \fBlinphone_chat_room_send_message()\fP \&. 
+.PP
+.nf
+linphone_chat_room_send_message(chat_room,"Hello world"); /*sending message*/
+
+.fi
+.PP
+ 
+.br
+Incoming message are received from call back LinphoneCoreVTable\&.text_received 
+.PP
+.nf
+void text_received(LinphoneCore *lc, LinphoneChatRoom *room, const LinphoneAddress *from, const char *message) {
+        printf(" Message [%s] received from [%s] \n",message,linphone_address_as_string (from));
+}
+
+.fi
+.PP
+ 
+.br
+ A complete tutorial can be found at : \fBChat room tutorial\fP 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct _LinphoneChatMessage \fBLinphoneChatMessage\fP"
+A chat room message to old content to be sent\&. 
+.br
+ Can be created by \fBlinphone_chat_room_create_message()\fP\&. 
+.SS "typedef struct _LinphoneChatRoom \fBLinphoneChatRoom\fP"
+A chat room is the place where text messages are exchanged\&. 
+.br
+ Can be created by \fBlinphone_core_create_chat_room()\fP\&. 
+.SS "typedef enum \fB_LinphoneChatMessageStates\fP \fBLinphoneChatMessageState\fP"
+LinphoneChatMessageState is used to notify if messages have been succesfully delivered or not\&. 
+.SS "typedef void(* LinphoneChatMessageStateChangedCb)(\fBLinphoneChatMessage\fP *msg, \fBLinphoneChatMessageState\fP state, void *ud)"
+Call back used to notify message delivery status 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImsg\fP \fBLinphoneChatMessage\fP object 
+.br
+\fIstatus\fP LinphoneChatMessageState 
+.br
+\fIud\fP application user data 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fB_LinphoneChatMessageStates\fP"
+LinphoneChatMessageState is used to notify if messages have been succesfully delivered or not\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILinphoneChatMessageStateIdle \fP\fP
+initial state 
+.TP
+\fB\fILinphoneChatMessageStateInProgress \fP\fP
+delivery in progress 
+.TP
+\fB\fILinphoneChatMessageStateDelivered \fP\fP
+message succesffully delivered an acknoleged by remote end point 
+.TP
+\fB\fILinphoneChatMessageStateNotDelivered \fP\fP
+message was not delivered 
+.SH "Function Documentation"
+.PP 
+.SS "MSList * linphone_core_get_chat_rooms (\fBLinphoneCore\fP *lc)"
+Returns an array of chat rooms 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An array of #LinpĥoneChatRoom 
+.RE
+.PP
+
+.SS "\fBLinphoneChatRoom\fP * linphone_core_create_chat_room (\fBLinphoneCore\fP *lc, const char *to)"
+Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.br
+\fIto\fP destination address for messages 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLinphoneChatRoom\fP where messaging can take place\&. 
+.RE
+.PP
+
+.SS "\fBLinphoneChatRoom\fP * linphone_core_get_or_create_chat_room (\fBLinphoneCore\fP *lc, const char *to)"
+Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org if not already existing, else return exisiting one 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.br
+\fIto\fP destination address for messages 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLinphoneChatRoom\fP where messaging can take place\&. 
+.RE
+.PP
+
+.SS "void linphone_chat_room_destroy (\fBLinphoneChatRoom\fP *cr)"
+Destroy a LinphoneChatRoom\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcr\fP \fBLinphoneChatRoom\fP object 
+.RE
+.PP
+
+.SS "void linphone_chat_room_send_message (\fBLinphoneChatRoom\fP *cr, const char *msg)"
+Send a message to peer member of this chat room\&. 
+.PP
+\fBDeprecated\fP
+.RS 4
+\fBlinphone_chat_room_send_message2()\fP gives more control on the message expedition\&. 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcr\fP \fBLinphoneChatRoom\fP object 
+.br
+\fImsg\fP message to be sent 
+.RE
+.PP
+
+.SS "\fBLinphoneChatRoom\fP * linphone_core_get_chat_room (\fBLinphoneCore\fP *lc, const \fBLinphoneAddress\fP *addr)"
+Retrieve an existing chat room whose peer is the supplied address, if exists\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.br
+\fIadd\fP a linphone address\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the matching chatroom, or NULL if no such chatroom exists\&. 
+.RE
+.PP
+
+.SS "\fBLinphoneCore\fP * linphone_chat_room_get_lc (\fBLinphoneChatRoom\fP *cr)"
+Returns back pointer to LinphoneCore object\&. 
+.SS "void linphone_chat_room_set_user_data (\fBLinphoneChatRoom\fP *cr, void *ud)"
+Assign a user pointer to the chat room\&. 
+.SS "void * linphone_chat_room_get_user_data (\fBLinphoneChatRoom\fP *cr)"
+Retrieve the user pointer associated with the chat room\&. 
+.SS "const \fBLinphoneAddress\fP * linphone_chat_room_get_peer_address (\fBLinphoneChatRoom\fP *cr)"
+get peer address \fBassociated to \fP this \fBLinphoneChatRoom\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcr\fP \fBLinphoneChatRoom\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLinphoneAddress\fP peer address 
+.RE
+.PP
+
+.SS "\fBLinphoneChatMessage\fP * linphone_chat_room_create_message (\fBLinphoneChatRoom\fP *cr, const char *message)"
+Create a message attached to a dedicated chat room; 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcr\fP the chat room\&. 
+.br
+\fImessage\fP text message, NULL if absent\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBLinphoneChatMessage\fP 
+.RE
+.PP
+
+.SS "\fBLinphoneChatMessage\fP * linphone_chat_room_create_message_2 (\fBLinphoneChatRoom\fP *cr, const char *message, const char *external_body_url, \fBLinphoneChatMessageState\fPstate, time_ttime, bool_tis_read, bool_tis_incoming)"
+Create a message attached to a dedicated chat room; 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcr\fP the chat room\&. 
+.br
+\fImessage\fP text message, NULL if absent\&. 
+.br
+\fIexternal_body_url\fP the URL given in external body or NULL\&. 
+.br
+\fIstate\fP the LinphoneChatMessage\&.State of the message\&. 
+.br
+\fItime\fP the time_t at which the message has been received/sent\&. 
+.br
+\fIis_read\fP TRUE if the message should be flagged as read, FALSE otherwise\&. 
+.br
+\fIis_incoming\fP TRUE if the message has been received, FALSE otherwise\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a new \fBLinphoneChatMessage\fP 
+.RE
+.PP
+
+.SS "void linphone_chat_room_send_message2 (\fBLinphoneChatRoom\fP *cr, \fBLinphoneChatMessage\fP *msg, \fBLinphoneChatMessageStateChangedCb\fPstatus_cb, void *ud)"
+Send a message to peer member of this chat room\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcr\fP \fBLinphoneChatRoom\fP object 
+.br
+\fImsg\fP \fBLinphoneChatMessage\fP message to be sent 
+.br
+\fIstatus_cb\fP LinphoneChatMessageStateChangeCb status callback invoked when message is delivered or could not be delivered\&. May be NULL 
+.br
+\fIud\fP user data for the status cb\&. 
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The LinphoneChatMessage must not be destroyed until the the callback is called\&. 
+.RE
+.PP
+
+.SS "const char * linphone_chat_message_state_to_string (const \fBLinphoneChatMessageState\fPstate)"
+Returns a \fBLinphoneChatMessageState\fP as a string\&. 
+.SS "\fBLinphoneChatRoom\fP * linphone_chat_message_get_chat_room (\fBLinphoneChatMessage\fP *msg)"
+Returns the chatroom this message belongs to\&. 
+.SS "const \fBLinphoneAddress\fP * linphone_chat_message_get_peer_address (\fBLinphoneChatMessage\fP *msg)"
+Returns the peer (remote) address for the message\&. 
+.SS "void linphone_chat_message_set_user_data (\fBLinphoneChatMessage\fP *message, void *ud)"
+User pointer set function 
+.SS "void * linphone_chat_message_get_user_data (const \fBLinphoneChatMessage\fP *message)"
+User pointer get function 
+.SS "const char * linphone_chat_message_get_external_body_url (const \fBLinphoneChatMessage\fP *message)"
+Linphone message can carry external body as defined by rfc2017 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBLinphoneChatMessage\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+external body url or NULL if not present\&. 
+.RE
+.PP
+
+.SS "void linphone_chat_message_set_external_body_url (\fBLinphoneChatMessage\fP *message, const char *url)"
+Linphone message can carry external body as defined by rfc2017
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP a LinphoneChatMessage 
+.br
+\fIurl\fP ex: access-type=URL; URL='http://www\&.foo\&.com/file' 
+.RE
+.PP
+
+.SS "void linphone_chat_message_set_from (\fBLinphoneChatMessage\fP *message, const \fBLinphoneAddress\fP *from)"
+Set origin of the message 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBLinphoneChatMessage\fP obj 
+.br
+\fIfrom\fP \fBLinphoneAddress\fP origin of this message (copied) 
+.RE
+.PP
+
+.SS "const \fBLinphoneAddress\fP * linphone_chat_message_get_from (const \fBLinphoneChatMessage\fP *message)"
+Get origin of the message 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBLinphoneChatMessage\fP obj 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLinphoneAddress\fP 
+.RE
+.PP
+
+.SS "void linphone_chat_message_set_to (\fBLinphoneChatMessage\fP *message, const \fBLinphoneAddress\fP *to)"
+Set destination of the message 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBLinphoneChatMessage\fP obj 
+.br
+\fIto\fP \fBLinphoneAddress\fP destination of this message (copied) 
+.RE
+.PP
+
+.SS "const \fBLinphoneAddress\fP * linphone_chat_message_get_to (const \fBLinphoneChatMessage\fP *message)"
+Get destination of the message 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBLinphoneChatMessage\fP obj 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLinphoneAddress\fP 
+.RE
+.PP
+
+.SS "\fBLinphoneAddress\fP * linphone_chat_message_get_local_address (const \fBLinphoneChatMessage\fP *message)"
+Returns the origin address of a message if it was a outgoing message, or the destination address if it was an incoming message\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBLinphoneChatMessage\fP obj 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLinphoneAddress\fP 
+.RE
+.PP
+
+.SS "time_t linphone_chat_message_get_time (const \fBLinphoneChatMessage\fP *message)"
+Get the time the message was sent\&. 
+.SS "\fBLinphoneChatMessageState\fP linphone_chat_message_get_state (const \fBLinphoneChatMessage\fP *message)"
+Get the state of the message 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP \fBLinphoneChatMessage\fP obj 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBLinphoneChatMessageState\fP 
+.RE
+.PP
+
+.SS "const char * linphone_chat_message_get_text (const \fBLinphoneChatMessage\fP *message)"
+Get text part of this message 
+.PP
+\fBReturns:\fP
+.RS 4
+text or NULL if no text\&. 
+.RE
+.PP
+
+.SS "void linphone_chat_message_add_custom_header (\fBLinphoneChatMessage\fP *message, const char *header_name, const char *header_value)"
+Add custom headers to the message\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP the message 
+.br
+\fIheader_name\fP name of the header_name 
+.br
+\fIheader_value\fP header value 
+.RE
+.PP
+
+.SS "const char * linphone_chat_message_get_custom_header (\fBLinphoneChatMessage\fP *message, const char *header_name)"
+Retrieve a custom header value given its name\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP the message 
+.br
+\fIheader_name\fP header name searched 
+.RE
+.PP
+
+.SS "bool_t linphone_chat_message_is_read (\fBLinphoneChatMessage\fP *message)"
+Returns TRUE if the message has been read, otherwise returns FALSE\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP the message 
+.RE
+.PP
+
+.SS "bool_t linphone_chat_message_is_outgoing (\fBLinphoneChatMessage\fP *message)"
+Returns TRUE if the message has been sent, returns FALSE if the message has been received\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP the message 
+.RE
+.PP
+
+.SS "unsigned int linphone_chat_message_get_storage_id (\fBLinphoneChatMessage\fP *message)"
+Returns the id used to identify this message in the storage database 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP the message 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the id 
+.RE
+.PP
+
+.SS "\fBLinphoneChatMessage\fP * linphone_chat_message_clone (const \fBLinphoneChatMessage\fP *msg)"
+Duplicate a LinphoneChatMessage 
+.SS "void linphone_chat_message_destroy (\fBLinphoneChatMessage\fP *msg)"
+Destroys a LinphoneChatMessage\&. 
+.SS "void linphone_core_set_chat_database_path (\fBLinphoneCore\fP *lc, const char *path)"
+Sets the database filename where chat messages will be stored\&. If the file does not exist, it will be created\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.br
+\fIpath\fP filesystem path 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

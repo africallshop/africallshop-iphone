@@ -1,0 +1,593 @@
+.TH "Initializing liblinphone" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Initializing liblinphone \- 
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_LCSipTransports\fP"
+.br
+.ti -1c
+.RI "struct \fB_LinphoneCoreVTable\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLC_SIP_TRANSPORT_DISABLED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBLC_SIP_TRANSPORT_RANDOM\fP   -1"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _LinphoneCore \fBLinphoneCore\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_LCSipTransports\fP \fBLCSipTransports\fP"
+.br
+.ti -1c
+.RI "typedef enum \fB_LinphoneIceState\fP \fBLinphoneIceState\fP"
+.br
+.ti -1c
+.RI "typedef enum \fB_LinphoneUpnpState\fP \fBLinphoneUpnpState\fP"
+.br
+.ti -1c
+.RI "typedef enum \fB_LinphoneGlobalState\fP \fBLinphoneGlobalState\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreGlobalStateChangedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneGlobalState\fP gstate, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreCallStateChangedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, \fBLinphoneCallState\fP cstate, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreCallEncryptionChangedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, bool_t on, const char *authentication_token)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreRegistrationStateChangedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneProxyConfig\fP *cfg, \fBLinphoneRegistrationState\fP cstate, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBShowInterfaceCb\fP )(\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "typedef void(* \fBDisplayStatusCb\fP )(\fBLinphoneCore\fP *lc, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBDisplayMessageCb\fP )(\fBLinphoneCore\fP *lc, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBDisplayUrlCb\fP )(\fBLinphoneCore\fP *lc, const char *message, const char *url)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreCbFunc\fP )(\fBLinphoneCore\fP *lc, void *user_data)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreNotifyPresenceReceivedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneFriend\fP *lf)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreNewSubscribtionRequestCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneFriend\fP *lf, const char *url)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreAuthInfoRequestedCb\fP )(\fBLinphoneCore\fP *lc, const char *realm, const char *username)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreCallLogUpdatedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneCallLog\fP *newcl)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreTextMessageReceivedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneChatRoom\fP *room, const \fBLinphoneAddress\fP *from, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreMessageReceivedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneChatRoom\fP *room, \fBLinphoneChatMessage\fP *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreDtmfReceivedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, int dtmf)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreReferReceivedCb\fP )(\fBLinphoneCore\fP *lc, const char *refer_to)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreBuddyInfoUpdatedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneFriend\fP *lf)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreTransferStateChangedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *transfered, \fBLinphoneCallState\fP new_call_state)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreCallStatsUpdatedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, const \fBLinphoneCallStats\fP *stats)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreInfoReceivedCb\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, const LinphoneInfoMessage *msg)"
+.br
+.ti -1c
+.RI "typedef struct \fB_LinphoneCoreVTable\fP \fBLinphoneCoreVTable\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB_LinphoneIceState\fP { \fBLinphoneIceStateNotActivated\fP, \fBLinphoneIceStateFailed\fP, \fBLinphoneIceStateInProgress\fP, \fBLinphoneIceStateHostConnection\fP, \fBLinphoneIceStateReflexiveConnection\fP, \fBLinphoneIceStateRelayConnection\fP }"
+.br
+.ti -1c
+.RI "enum \fB_LinphoneUpnpState\fP { \fBLinphoneUpnpStateIdle\fP, \fBLinphoneUpnpStatePending\fP, \fBLinphoneUpnpStateAdding\fP, \fBLinphoneUpnpStateRemoving\fP, \fBLinphoneUpnpStateNotAvailable\fP, \fBLinphoneUpnpStateOk\fP, \fBLinphoneUpnpStateKo\fP, \fBLinphoneUpnpStateBlacklisted\fP }"
+.br
+.ti -1c
+.RI "enum \fB_LinphoneGlobalState\fP "
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinphoneCore\fP * \fBlinphone_core_new\fP (const \fBLinphoneCoreVTable\fP *vtable, const char *config_path, const char *factory_config_path, void *userdata)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_iterate\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_root_ca\fP (\fBLinphoneCore\fP *lc, const char *path)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_core_get_root_ca\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_verify_server_certificates\fP (\fBLinphoneCore\fP *lc, bool_t yesno)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_verify_server_cn\fP (\fBLinphoneCore\fP *lc, bool_t yesno)"
+.br
+.ti -1c
+.RI "void * \fBlinphone_core_get_user_data\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_user_data\fP (\fBLinphoneCore\fP *lc, void *userdata)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_destroy\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_chat_database_path\fP (\fBLinphoneCore\fP *lc, const char *path)"
+.br
+.ti -1c
+.RI "\fBLinphoneCore\fP * \fBlinphone_core_new_with_config\fP (const \fBLinphoneCoreVTable\fP *vtable, struct _LpConfig *config, void *userdata)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_get_max_calls\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_max_calls\fP (\fBLinphoneCore\fP *lc, int max)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LC_SIP_TRANSPORT_DISABLED   0"
+Disable a sip transport Use with \fBLCSipTransports\fP 
+.SS "#define LC_SIP_TRANSPORT_RANDOM   -1"
+Randomly chose a sip port for this transport Use with \fBLCSipTransports\fP 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct _LinphoneCore \fBLinphoneCore\fP"
+Linphone core main object created by function \fBlinphone_core_new()\fP \&. 
+.SS "typedef struct \fB_LCSipTransports\fP  \fBLCSipTransports\fP"
+Linphone core SIP transport ports\&. Use with \fBlinphone_core_set_sip_transports\fP 
+.SS "typedef enum \fB_LinphoneIceState\fP \fBLinphoneIceState\fP"
+Enum describing Ice states\&. 
+.SS "typedef enum \fB_LinphoneUpnpState\fP \fBLinphoneUpnpState\fP"
+Enum describing uPnP states\&. 
+.SS "typedef enum \fB_LinphoneGlobalState\fP \fBLinphoneGlobalState\fP"
+LinphoneGlobalState describes the global state of the LinphoneCore object\&. It is notified via the \fBLinphoneCoreVTable::global_state_changed\fP 
+.SS "typedef void(* LinphoneCoreGlobalStateChangedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneGlobalState\fP gstate, const char *message)"
+Global state notification callback\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP 
+.br
+\fIgstate\fP the global state 
+.br
+\fImessage\fP informational message\&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreCallStateChangedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, \fBLinphoneCallState\fP cstate, const char *message)"
+Call state notification callback\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fIcall\fP the call object whose state is changed\&. 
+.br
+\fIcstate\fP the new state of the call 
+.br
+\fImessage\fP an informational message about the state\&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreCallEncryptionChangedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, bool_t on, const char *authentication_token)"
+Call encryption changed callback\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fIcall\fP the call on which encryption is changed\&. 
+.br
+\fIon\fP whether encryption is activated\&. 
+.br
+\fIauthentication_token\fP an authentication_token, currently set for ZRTP kind of encryption only\&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreRegistrationStateChangedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneProxyConfig\fP *cfg, \fBLinphoneRegistrationState\fP cstate, const char *message)"
+Registration state notification callback prototype 
+.SS "typedef void(* ShowInterfaceCb)(\fBLinphoneCore\fP *lc)"
+Callback prototype 
+.PP
+\fBDeprecated\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "typedef void(* DisplayStatusCb)(\fBLinphoneCore\fP *lc, const char *message)"
+Callback prototype 
+.PP
+\fBDeprecated\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "typedef void(* DisplayMessageCb)(\fBLinphoneCore\fP *lc, const char *message)"
+Callback prototype 
+.PP
+\fBDeprecated\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "typedef void(* DisplayUrlCb)(\fBLinphoneCore\fP *lc, const char *message, const char *url)"
+Callback prototype 
+.PP
+\fBDeprecated\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreCbFunc)(\fBLinphoneCore\fP *lc, void *user_data)"
+Callback prototype 
+.SS "typedef void(* LinphoneCoreNotifyPresenceReceivedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneFriend\fP *lf)"
+Report status change for a friend previously \fBadded \fP to \fBLinphoneCore\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object \&. 
+.br
+\fIlf\fP Updated \fBLinphoneFriend\fP \&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreNewSubscribtionRequestCb)(\fBLinphoneCore\fP *lc, \fBLinphoneFriend\fP *lf, const char *url)"
+Reports that a new subscription request has been received and wait for a decision\&. Status on this subscription request is notified by \fBchanging policy \fP for this friend 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.br
+\fIlf\fP \fBLinphoneFriend\fP corresponding to the subscriber 
+.br
+\fIurl\fP of the subscriber Callback prototype 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreAuthInfoRequestedCb)(\fBLinphoneCore\fP *lc, const char *realm, const char *username)"
+Callback for requesting authentication information to application or user\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fIrealm\fP the realm (domain) on which authentication is required\&. 
+.br
+\fIusername\fP the username that needs to be authenticated\&. Application shall reply to this callback using \fBlinphone_core_add_auth_info()\fP\&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreCallLogUpdatedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneCallLog\fP *newcl)"
+Callback to notify a new call-log entry has been added\&. This is done typically when a call terminates\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fInewcl\fP the new call log entry added\&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreTextMessageReceivedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneChatRoom\fP *room, const \fBLinphoneAddress\fP *from, const char *message)"
+Callback prototype 
+.PP
+\fBDeprecated\fP
+.RS 4
+use #LinphoneMessageReceived instead\&.
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.br
+\fIroom\fP \fBLinphoneChatRoom\fP involved in this conversation\&. Can be be created by the framework in case \fBthe from \fP is not present in any chat room\&. 
+.br
+\fIfrom\fP \fBLinphoneAddress\fP from 
+.br
+\fImessage\fP incoming message 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreMessageReceivedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneChatRoom\fP *room, \fBLinphoneChatMessage\fP *message)"
+Chat message callback prototype
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.br
+\fIroom\fP \fBLinphoneChatRoom\fP involved in this conversation\&. Can be be created by the framework in case \fBthe from \fP is not present in any chat room\&. 
+.br
+\fILinphoneChatMessage\fP incoming message 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreDtmfReceivedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, int dtmf)"
+Callback for being notified of DTMFs received\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.br
+\fIcall\fP the call that received the dtmf 
+.br
+\fIdtmf\fP the ascii code of the dtmf 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreReferReceivedCb)(\fBLinphoneCore\fP *lc, const char *refer_to)"
+Callback prototype 
+.SS "typedef void(* LinphoneCoreBuddyInfoUpdatedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneFriend\fP *lf)"
+Callback prototype 
+.SS "typedef void(* LinphoneCoreTransferStateChangedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *transfered, \fBLinphoneCallState\fP new_call_state)"
+Callback for notifying progresses of transfers\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fItransfered\fP the call that was transfered 
+.br
+\fInew_call_state\fP the state of the call to transfer target at the far end\&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreCallStatsUpdatedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, const \fBLinphoneCallStats\fP *stats)"
+Callback for receiving quality statistics for calls\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fIcall\fP the call 
+.br
+\fIstats\fP the call statistics\&. 
+.RE
+.PP
+
+.SS "typedef void(* LinphoneCoreInfoReceivedCb)(\fBLinphoneCore\fP *lc, \fBLinphoneCall\fP *call, const LinphoneInfoMessage *msg)"
+Callback prototype for receiving info messages\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fIcall\fP the call whose info message belongs to\&. 
+.br
+\fImsg\fP the info message\&. 
+.RE
+.PP
+
+.SS "typedef struct \fB_LinphoneCoreVTable\fP  \fBLinphoneCoreVTable\fP"
+This structure holds all callbacks that the application should implement\&. None is mandatory\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fB_LinphoneIceState\fP"
+Enum describing ICE states\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILinphoneIceStateNotActivated \fP\fP
+ICE has not been activated for this call 
+.TP
+\fB\fILinphoneIceStateFailed \fP\fP
+ICE processing has failed 
+.TP
+\fB\fILinphoneIceStateInProgress \fP\fP
+ICE process is in progress 
+.TP
+\fB\fILinphoneIceStateHostConnection \fP\fP
+ICE has established a direct connection to the remote host 
+.TP
+\fB\fILinphoneIceStateReflexiveConnection \fP\fP
+ICE has established a connection to the remote host through one or several NATs 
+.TP
+\fB\fILinphoneIceStateRelayConnection \fP\fP
+ICE has established a connection through a relay 
+.SS "enum \fB_LinphoneUpnpState\fP"
+Enum describing uPnP states\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILinphoneUpnpStateIdle \fP\fP
+uPnP is not activate 
+.TP
+\fB\fILinphoneUpnpStatePending \fP\fP
+uPnP process is in progress 
+.TP
+\fB\fILinphoneUpnpStateAdding \fP\fP
+Internal use: Only used by port binding 
+.TP
+\fB\fILinphoneUpnpStateRemoving \fP\fP
+Internal use: Only used by port binding 
+.TP
+\fB\fILinphoneUpnpStateNotAvailable \fP\fP
+uPnP is not available 
+.TP
+\fB\fILinphoneUpnpStateOk \fP\fP
+uPnP is enabled 
+.TP
+\fB\fILinphoneUpnpStateKo \fP\fP
+uPnP processing has failed 
+.TP
+\fB\fILinphoneUpnpStateBlacklisted \fP\fP
+IGD router is blacklisted 
+.SS "enum \fB_LinphoneGlobalState\fP"
+LinphoneGlobalState describes the global state of the LinphoneCore object\&. It is notified via the \fBLinphoneCoreVTable::global_state_changed\fP 
+.SH "Function Documentation"
+.PP 
+.SS "\fBLinphoneCore\fP* linphone_core_new (const \fBLinphoneCoreVTable\fP *vtable, const char *config_path, const char *factory_config_path, void *userdata)"
+Instanciates a LinphoneCore object\&.
+.PP
+The LinphoneCore object is the primary handle for doing all phone actions\&. It should be unique within your application\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvtable\fP a LinphoneCoreVTable structure holding your application callbacks 
+.br
+\fIconfig_path\fP a path to a config file\&. If it does not exists it will be created\&. The config file is used to store all settings, call logs, friends, proxies\&.\&.\&. so that all these settings become persistent over the life of the LinphoneCore object\&. It is allowed to set a NULL config file\&. In that case LinphoneCore will not store any settings\&. 
+.br
+\fIfactory_config_path\fP a path to a read-only config file that can be used to to store hard-coded preference such as proxy settings or internal preferences\&. The settings in this factory file always override the one in the normal config file\&. It is OPTIONAL, use NULL if unneeded\&. 
+.br
+\fIuserdata\fP an opaque user pointer that can be retrieved at any time (for example in callbacks) using \fBlinphone_core_get_user_data()\fP\&. 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBlinphone_core_new_with_config\fP 
+.RE
+.PP
+
+.SS "void linphone_core_iterate (\fBLinphoneCore\fP *lc)"
+Main loop function\&. It is crucial that your application call it periodically\&.
+.PP
+\fBlinphone_core_iterate()\fP performs various backgrounds tasks:
+.IP "\(bu" 2
+receiving of SIP messages
+.IP "\(bu" 2
+handles timers and timeout
+.IP "\(bu" 2
+performs registration to proxies
+.IP "\(bu" 2
+authentication retries The application MUST call this function periodically, in its main loop\&. Be careful that this function must be called from the same thread as other liblinphone methods\&. If it is not the case make sure all liblinphone calls are serialized with a mutex\&. 
+.PP
+
+.SS "void linphone_core_set_root_ca (\fBLinphoneCore\fP *lc, const char *path)"
+Sets the path to a file or folder containing trusted root CAs (PEM format)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP 
+.br
+\fIlc\fP The LinphoneCore object 
+.RE
+.PP
+
+.SS "const char* linphone_core_get_root_ca (\fBLinphoneCore\fP *lc)"
+Gets the path to a file or folder containing the trusted root CAs (PEM format)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP The LinphoneCore object 
+.RE
+.PP
+
+.SS "void linphone_core_verify_server_certificates (\fBLinphoneCore\fP *lc, bool_tyesno)"
+Specify whether the tls server certificate must be verified when connecting to a SIP/TLS server\&. 
+.SS "void linphone_core_verify_server_cn (\fBLinphoneCore\fP *lc, bool_tyesno)"
+Specify whether the tls server certificate common name must be verified when connecting to a SIP/TLS server\&. 
+.SS "void* linphone_core_get_user_data (\fBLinphoneCore\fP *lc)"
+Retrieves the user pointer that was given to \fBlinphone_core_new()\fP 
+.SS "void linphone_core_set_user_data (\fBLinphoneCore\fP *lc, void *userdata)"
+Associate a user pointer to the linphone core\&. 
+.SS "void linphone_core_destroy (\fBLinphoneCore\fP *lc)"
+Destroys a LinphoneCore 
+.SS "void linphone_core_set_chat_database_path (\fBLinphoneCore\fP *lc, const char *path)"
+Sets the database filename where chat messages will be stored\&. If the file does not exist, it will be created\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the linphone core 
+.br
+\fIpath\fP filesystem path 
+.RE
+.PP
+
+.SS "\fBLinphoneCore\fP* linphone_core_new_with_config (const \fBLinphoneCoreVTable\fP *vtable, struct _LpConfig *config, void *userdata)"
+Instantiates a LinphoneCore object with a given LpConfig\&.
+.PP
+The LinphoneCore object is the primary handle for doing all phone actions\&. It should be unique within your application\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvtable\fP a LinphoneCoreVTable structure holding your application callbacks 
+.br
+\fIconfig\fP a pointer to an LpConfig object holding the configuration of the LinphoneCore to be instantiated\&. 
+.br
+\fIuserdata\fP an opaque user pointer that can be retrieved at any time (for example in callbacks) using \fBlinphone_core_get_user_data()\fP\&. 
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBlinphone_core_new\fP 
+.RE
+.PP
+
+.SS "int linphone_core_get_max_calls (\fBLinphoneCore\fP *lc)"
+Get the maximum number of simultaneous calls Linphone core can manage at a time\&. All new call above this limit are declined with a busy answer
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP core 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+max number of simultaneous calls 
+.RE
+.PP
+
+.SS "void linphone_core_set_max_calls (\fBLinphoneCore\fP *lc, intmax)"
+Set the maximum number of simultaneous calls Linphone core can manage at a time\&. All new call above this limit are declined with a busy answer
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP core 
+.br
+\fImax\fP number of simultaneous calls 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

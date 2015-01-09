@@ -1,0 +1,82 @@
+.TH "_LinphoneCallStats" 3 "Sun Oct 13 2013" "Version 3.6.99" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_LinphoneCallStats \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <linphonecore\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "int \fBtype\fP"
+.br
+.ti -1c
+.RI "jitter_stats_t \fBjitter_stats\fP"
+.br
+.ti -1c
+.RI "mblk_t * \fBreceived_rtcp\fP"
+.br
+.ti -1c
+.RI "mblk_t * \fBsent_rtcp\fP"
+.br
+.ti -1c
+.RI "float \fBround_trip_delay\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneIceState\fP \fBice_state\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneUpnpState\fP \fBupnp_state\fP"
+.br
+.ti -1c
+.RI "float \fBdownload_bandwidth\fP"
+.br
+.ti -1c
+.RI "float \fBupload_bandwidth\fP"
+.br
+.ti -1c
+.RI "float \fBlocal_late_rate\fP"
+.br
+.ti -1c
+.RI "float \fBlocal_loss_rate\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The LinphoneCallStats objects carries various statistic informations regarding quality of audio or video streams\&.
+.PP
+To receive these informations periodically and as soon as they are computed, the application is invited to place a #CallStatsUpdated callback in the LinphoneCoreVTable structure it passes for instanciating the LinphoneCore object (see \fBlinphone_core_new()\fP )\&.
+.PP
+At any time, the application can access last computed statistics using \fBlinphone_call_get_audio_stats()\fP or \fBlinphone_call_get_video_stats()\fP\&. 
+.SH "Field Documentation"
+.PP 
+.SS "int _LinphoneCallStats::type"
+Can be either LINPHONE_CALL_STATS_AUDIO or LINPHONE_CALL_STATS_VIDEO 
+.SS "jitter_stats_t _LinphoneCallStats::jitter_stats"
+jitter buffer statistics, see oRTP documentation for details 
+.SS "mblk_t* _LinphoneCallStats::received_rtcp"
+Last RTCP packet received, as a mblk_t structure\&. See oRTP documentation for details how to extract information from it 
+.SS "mblk_t* _LinphoneCallStats::sent_rtcp"
+Last RTCP packet sent, as a mblk_t structure\&. See oRTP documentation for details how to extract information from it 
+.SS "float _LinphoneCallStats::round_trip_delay"
+Round trip propagation time in seconds if known, -1 if unknown\&. 
+.SS "\fBLinphoneIceState\fP _LinphoneCallStats::ice_state"
+State of ICE processing\&. 
+.SS "\fBLinphoneUpnpState\fP _LinphoneCallStats::upnp_state"
+State of uPnP processing\&. 
+.SS "float _LinphoneCallStats::download_bandwidth"
+Download bandwidth measurement of received stream, expressed in kbit/s, including IP/UDP/RTP headers 
+.SS "float _LinphoneCallStats::upload_bandwidth"
+Download bandwidth measurement of sent stream, expressed in kbit/s, including IP/UDP/RTP headers 
+.SS "float _LinphoneCallStats::local_late_rate"
+percentage of packet received too late over last second 
+.SS "float _LinphoneCallStats::local_loss_rate"
+percentage of lost packet over last second 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code\&.

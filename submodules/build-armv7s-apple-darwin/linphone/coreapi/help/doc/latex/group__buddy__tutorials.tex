@@ -1,0 +1,202 @@
+\section{Basic buddy status notification}
+\label{group__buddy__tutorials}\index{Basic buddy status notification@{Basic buddy status notification}}
+This program is a {\itshape very} simple usage example of liblinphone, demonstrating how to initiate S\-I\-P subscriptions and receive notifications from a sip uri identity passed from the command line. \par
+Argument must be like sip\-:{\tt jehan@sip.\-linphone.\-org} . \par
+ ex budy\-\_\-list sip\-:{\tt jehan@sip.\-linphone.\-org} \par
+Subscription is cleared on S\-I\-G\-I\-N\-T \par
+ 
+\begin{DoxyCodeInclude}
+
+\textcolor{comment}{/*}
+\textcolor{comment}{buddy\_status}
+\textcolor{comment}{Copyright (C) 2010  Belledonne Communications SARL }
+\textcolor{comment}{}
+\textcolor{comment}{This program is free software; you can redistribute it and/or}
+\textcolor{comment}{modify it under the terms of the GNU General Public License}
+\textcolor{comment}{as published by the Free Software Foundation; either version 2}
+\textcolor{comment}{of the License, or (at your option) any later version.}
+\textcolor{comment}{}
+\textcolor{comment}{This program is distributed in the hope that it will be useful,}
+\textcolor{comment}{but WITHOUT ANY WARRANTY; without even the implied warranty of}
+\textcolor{comment}{MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the}
+\textcolor{comment}{GNU General Public License for more details.}
+\textcolor{comment}{}
+\textcolor{comment}{You should have received a copy of the GNU General Public License}
+\textcolor{comment}{along with this program; if not, write to the Free Software}
+\textcolor{comment}{Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.}
+\textcolor{comment}{*/}
+
+\textcolor{preprocessor}{#ifdef IN\_LINPHONE}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#include "linphonecore.h"}
+\textcolor{preprocessor}{#else}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{#include "linphone/linphonecore.h"}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{#include <signal.h>}
+
+\textcolor{keyword}{static} bool\_t running=TRUE;
+
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} stop(\textcolor{keywordtype}{int} signum)\{
+        running=FALSE;
+\}
+
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} notify\_presence\_recv\_updated (LinphoneCore *lc,  LinphoneFriend *\textcolor{keyword}{friend}) \{
+        \textcolor{keyword}{const} LinphonePresenceModel* model = linphone_friend_get_presence_model(\textcolor{keyword}{friend});
+        \textcolor{keyword}{const} LinphoneAddress* friend\_address = linphone_friend_get_address(\textcolor{keyword}{friend});
+        LinphonePresenceActivity *activity = 
+      linphone_presence_model_get_activity(model);
+        \textcolor{keywordtype}{char} *activity\_str = linphone_presence_activity_to_string(activity);
+        printf(\textcolor{stringliteral}{"New state state [%s] for user id [%s] \(\backslash\)n"}
+                                ,activity\_str
+                                ,linphone_address_as_string (friend\_address));
+\}
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} new\_subscription\_request (LinphoneCore *lc,  LinphoneFriend *\textcolor{keyword}{friend}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* url) \{
+        \textcolor{keyword}{const} LinphoneAddress* friend\_address = linphone_friend_get_address(\textcolor{keyword}{friend});
+        printf(\textcolor{stringliteral}{" [%s] wants to see your status, accepting\(\backslash\)n"}
+                                ,linphone_address_as_string (friend\_address));
+        linphone_friend_edit(\textcolor{keyword}{friend}); \textcolor{comment}{/* start editing friend */}
+        linphone_friend_set_inc_subscribe_policy(\textcolor{keyword}{friend},LinphoneSPAccept); \textcolor{comment}{/* Accept incoming subscription
+       request for this friend*/}
+        linphone_friend_done(\textcolor{keyword}{friend}); \textcolor{comment}{/*commit change*/}
+        linphone_core_add_friend(lc,\textcolor{keyword}{friend}); \textcolor{comment}{/* add this new friend to the buddy list*/}
+
+\}
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} registration\_state\_changed(\textcolor{keyword}{struct} \_LinphoneCore *lc, 
+      LinphoneProxyConfig *cfg, LinphoneRegistrationState cstate, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *message)\{
+                printf(\textcolor{stringliteral}{"New registration state %s for user id [%s] at proxy [%s]\(\backslash\)n"}
+                                ,linphone_registration_state_to_string(cstate)
+                                ,linphone_proxy_config_get_identity(cfg)
+                                ,linphone_proxy_config_get_addr(cfg));
+\}
+
+LinphoneCore *lc;
+\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])\{
+        LinphoneCoreVTable vtable=\{0\};
+
+        \textcolor{keywordtype}{char}* dest\_friend=NULL;
+        \textcolor{keywordtype}{char}* identity=NULL;
+        \textcolor{keywordtype}{char}* password=NULL;
+
+        \textcolor{comment}{/* takes   sip uri  identity from the command line arguments */}
+        \textcolor{keywordflow}{if} (argc>1)\{
+                dest\_friend=argv[1];
+        \}
+        \textcolor{comment}{/* takes   sip uri  identity from the command line arguments */}
+        \textcolor{keywordflow}{if} (argc>2)\{
+                identity=argv[2];
+        \}
+        \textcolor{comment}{/* takes   password from the command line arguments */}
+        \textcolor{keywordflow}{if} (argc>3)\{
+                password=argv[3];
+        \}
+        signal(SIGINT,stop);
+\textcolor{comment}{//#define DEBUG}
+\textcolor{preprocessor}{#ifdef DEBUG}
+\textcolor{preprocessor}{}        linphone_core_enable_logs(NULL); \textcolor{comment}{/*enable liblinphone logs.*/}
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}        \textcolor{comment}{/* }
+\textcolor{comment}{         Fill the LinphoneCoreVTable with application callbacks.}
+\textcolor{comment}{         All are optional. Here we only use the both notify\_presence\_recv and new\_subscription\_request
+       callbacks}
+\textcolor{comment}{         in order to get notifications about friend status.}
+\textcolor{comment}{         */}
+        vtable.notify_presence_recv=notify\_presence\_recv\_updated;
+        vtable.new_subscription_request=new\_subscription\_request;
+        vtable.registration_state_changed=registration\_state\_changed; \textcolor{comment}{/*just in case sip proxy is used*/}
+
+        \textcolor{comment}{/*}
+\textcolor{comment}{         Instantiate a LinphoneCore object given the LinphoneCoreVTable}
+\textcolor{comment}{        */}
+        lc=linphone_core_new(&vtable,NULL,NULL,NULL);
+        \textcolor{comment}{/*sip proxy might be requested*/}
+        \textcolor{keywordflow}{if} (identity != NULL)  \{
+                \textcolor{comment}{/*create proxy config*/}
+                LinphoneProxyConfig* proxy\_cfg = linphone_proxy_config_new();
+                \textcolor{comment}{/*parse identity*/}
+                LinphoneAddress *from = linphone_address_new(identity);
+                \textcolor{keywordflow}{if} (from==NULL)\{
+                        printf(\textcolor{stringliteral}{"%s not a valid sip uri, must be like sip:toto@sip.linphone.org \(\backslash\)n"},identity
+      );
+                        \textcolor{keywordflow}{goto} end;
+                \}
+                LinphoneAuthInfo *info;
+                \textcolor{keywordflow}{if} (password!=NULL)\{
+                        info=linphone_auth_info_new(
+      linphone_address_get_username(from),NULL,password,NULL,NULL); \textcolor{comment}{/*create authentication structure from
+       identity*/}
+                        linphone_core_add_auth_info(lc,info); \textcolor{comment}{/*add authentication info to LinphoneCore*/}
+                \}
+
+                \textcolor{comment}{// configure proxy entries}
+                linphone_proxy_config_set_identity(proxy\_cfg,identity); \textcolor{comment}{/*set identity with user name and
+       domain*/}
+                linphone_proxy_config_set_server_addr(proxy\_cfg,
+      linphone_address_get_domain(from)); \textcolor{comment}{/* we assume domain = proxy server address*/}
+                linphone_proxy_config_enable_register(proxy\_cfg,TRUE); \textcolor{comment}{/*activate registration for this
+       proxy config*/}
+                linphone_proxy_config_enable_publish(proxy\_cfg,TRUE); \textcolor{comment}{/* enable presence satus publication
+       for this proxy*/}
+                linphone_address_destroy(from); \textcolor{comment}{/*release resource*/}
+
+                linphone_core_add_proxy_config(lc,proxy\_cfg); \textcolor{comment}{/*add proxy config to linphone core*/}
+                linphone_core_set_default_proxy(lc,proxy\_cfg); \textcolor{comment}{/*set to default proxy*/}
+
+
+                \textcolor{comment}{/* Loop until registration status is available */}
+                \textcolor{keywordflow}{do} \{
+                        linphone_core_iterate(lc); \textcolor{comment}{/* first iterate initiates registration */}
+                        ms\_usleep(100000);
+                \}
+                \textcolor{keywordflow}{while}(  running && linphone\_proxy\_config\_get\_state(proxy\_cfg) == 
+      LinphoneRegistrationProgress);
+
+        \}
+        LinphoneFriend* my\_friend=NULL;
+
+        \textcolor{keywordflow}{if} (dest\_friend) \{
+                my\_friend = linphone_friend_new_with_address(dest\_friend); \textcolor{comment}{/*creates friend object from
+       dest*/}
+                \textcolor{keywordflow}{if} (my\_friend == NULL) \{
+                        printf(\textcolor{stringliteral}{"bad destination uri for friend [%s]\(\backslash\)n"},dest\_friend);
+                        \textcolor{keywordflow}{goto} end;
+                \}
+
+                linphone_friend_enable_subscribes(my\_friend,TRUE); \textcolor{comment}{/*configure this friend to emit
+       SUBSCRIBE message after being added to LinphoneCore*/}
+                linphone_friend_set_inc_subscribe_policy(my\_friend,
+      LinphoneSPAccept); \textcolor{comment}{/* Accept incoming subscription request for this friend*/}
+                linphone_core_add_friend(lc,my\_friend); \textcolor{comment}{/* add my friend to the buddy list, initiate
+       SUBSCRIBE message*/}
+
+        \}
+
+        \textcolor{comment}{/*set my status to online*/}
+        linphone_core_set_presence_model(lc, 
+      linphone_presence_model_new_with_activity(LinphonePresenceActivityOnline, NULL));
+
+        \textcolor{comment}{/* main loop for receiving notifications and doing background linphone core work: */}
+        \textcolor{keywordflow}{while}(running)\{
+                linphone_core_iterate(lc); \textcolor{comment}{/* first iterate initiates subscription */}
+                ms\_usleep(50000);
+        \}
+
+        \textcolor{comment}{/* change my presence status to offline*/}
+        linphone_core_set_presence_model(lc, 
+      linphone_presence_model_new_with_activity(LinphonePresenceActivityOffline, NULL));
+        linphone_core_iterate(lc); \textcolor{comment}{/* just to make sure new status is initiate message is issued */}
+
+        linphone_friend_edit(my\_friend); \textcolor{comment}{/* start editing friend */}
+        linphone_friend_enable_subscribes(my\_friend,FALSE); \textcolor{comment}{/*disable subscription for this friend*/}
+        linphone_friend_done(my\_friend); \textcolor{comment}{/*commit changes triggering an UNSUBSCRIBE message*/}
+
+        linphone_core_iterate(lc); \textcolor{comment}{/* just to make sure unsubscribe message is issued */}
+
+end:
+        printf(\textcolor{stringliteral}{"Shutting down...\(\backslash\)n"});
+        linphone_core_destroy(lc);
+        printf(\textcolor{stringliteral}{"Exited\(\backslash\)n"});
+        \textcolor{keywordflow}{return} 0;
+\}
+
+\end{DoxyCodeInclude}
+ 

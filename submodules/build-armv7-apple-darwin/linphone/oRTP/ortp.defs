@@ -1,0 +1,1 @@
+ -D_REENTRANT  -DORTP_INET6 -I/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//../liblinphone-sdk/armv7-apple-darwin/include -I/Users/karimjimo/Downloads/linphone-iphone/submodules/build/..//../liblinphone-sdk/armv7-apple-darwin/include/srtp 

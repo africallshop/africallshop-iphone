@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.5">
+  <compounddef id="struct__LpItem" kind="struct" prot="public">
+    <compoundname>_LpItem</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__LpItem_1a16fb2b343420d69b6ec8cecbd4b1064c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LpItem::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" line="50" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__LpItem_1ac2958f083de86415714902862436c61f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _LpItem::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" line="51" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" line="49" column="1" bodyfile="/Users/karimjimo/Downloads/linphone-iphone/submodules/linphone/coreapi/lpconfig.c" bodystart="49" bodyend="52"/>
+    <listofallmembers>
+      <member refid="struct__LpItem_1a16fb2b343420d69b6ec8cecbd4b1064c" prot="public" virt="non-virtual"><scope>_LpItem</scope><name>key</name></member>
+      <member refid="struct__LpItem_1ac2958f083de86415714902862436c61f" prot="public" virt="non-virtual"><scope>_LpItem</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
